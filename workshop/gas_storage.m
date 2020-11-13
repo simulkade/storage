@@ -135,7 +135,7 @@ while t<t_final
     M_cc = convectionUpwindTerm(u);
     c_init = solvePDE(m, M_tc+M_cc+M_bcc-M_dc, RHS_tc+RHS_bcc);
     
-    visualizeCells(c_init);axis normal;drawnow;
+    % visualizeCells(c_init);axis normal;drawnow;
 end
 
 % visualizeCells(p_val);
