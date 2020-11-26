@@ -1,0 +1,4227 @@
+   Input file: monod.phr
+  Output file: monod.phr.out
+Using PHREEQC: version 3.6.3, compiled February 22, 2020
+Database file: c:\phreeqc\database\phreeqc.dat
+
+------------------
+Reading data base.
+------------------
+
+	SOLUTION_MASTER_SPECIES
+	SOLUTION_SPECIES
+	PHASES
+	EXCHANGE_MASTER_SPECIES
+	EXCHANGE_SPECIES
+	SURFACE_MASTER_SPECIES
+	SURFACE_SPECIES
+	RATES
+	END
+------------------------------------
+Reading input data for simulation 1.
+------------------------------------
+
+	TITLE Monod degradation with Phenol
+	SOLUTION_MASTER_SPECIES
+		Phenol Phenol 0 94.11 94.11 # C6H6O
+	SOLUTION_SPECIES
+		Phenol = Phenol
+		log_k 0
+	SOLUTION 1
+		units g/L
+		Phenol 2
+	RATES
+		Phenol
+		start
+		1 mu_max = parm(1)
+		2 k_half = parm(2)
+		3 S = tot("Phenol")
+		10 rate = (-mu_max )* S/ (k_half + S)
+		50 dS = rate * time
+		90 print M m0 S mu_max k_half rate time
+		100 save dS
+		end
+	KINETICS
+		Phenol
+		formula Phenol 1
+		m0 0
+		parms 1.61e-8 1.7e-3 #mu_max k_half
+		steps 5184000 in 60 #60 days
+		INCREMENTAL_REACTIONS true
+	SELECTED_OUTPUT 
+		reset false
+		file Monod_Phenol_Sensi_2x_mumax.xls
+		totals Phenol
+		kinetic_reactants Phenol
+		time
+	END
+-----
+TITLE
+-----
+
+ Monod degradation with Phenol
+
+-------------------------------------------
+Beginning of initial solution calculations.
+-------------------------------------------
+
+Initial solution 1.	
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.129e-02   2.129e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000    
+                                       pe  =   4.000    
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99904
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   3
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.996e-01     1.744    -0.000     0.000     18.07
+H(0)          1.416e-25
+   H2              7.079e-26   7.079e-26   -25.150   -25.150     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -42.080   -42.080     0.000     30.40
+Phenol        2.129e-02
+   Phenol          2.129e-02   2.129e-02    -1.672    -1.672     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -22.05    -25.15   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -39.19    -42.08   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+-----------------------------------------
+Beginning of batch-reaction calculations.
+-----------------------------------------
+
+Reaction step 1.
+
+           0            0   2.1294e-02   1.6100e-08   1.7000e-03  -1.4910e-08        86400 
+  2.5764e-04            0   2.1037e-02   1.6100e-08   1.7000e-03  -1.4896e-08        86400 
+  3.8620e-04            0   2.0908e-02   1.6100e-08   1.7000e-03  -1.4889e-08        86400 
+  7.7186e-04            0   2.0522e-02   1.6100e-08   1.7000e-03  -1.4868e-08        86400 
+  1.2852e-03            0   2.0009e-02   1.6100e-08   1.7000e-03  -1.4839e-08        86400 
+  1.1249e-03            0   2.0169e-02   1.6100e-08   1.7000e-03  -1.4848e-08        86400 
+  1.2852e-03            0   2.0009e-02   1.6100e-08   1.7000e-03  -1.4839e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 86400 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.285e-03   1.285e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.001e-02   2.001e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.498      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99892
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  50
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.997e-01     1.744    -0.000     0.000     18.07
+H(0)          1.406e-14
+   H2              7.029e-15   7.029e-15   -14.153   -14.153     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.074   -64.074     0.000     30.40
+Phenol        2.001e-02
+   Phenol          2.001e-02   2.001e-02    -1.699    -1.699     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -11.05    -14.15   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -61.18    -64.07   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 2.
+
+  1.2852e-03            0   2.0009e-02   1.6100e-08   1.7000e-03  -1.4839e-08        86400 
+  1.5416e-03            0   1.9753e-02   1.6100e-08   1.7000e-03  -1.4824e-08        86400 
+  1.6696e-03            0   1.9625e-02   1.6100e-08   1.7000e-03  -1.4817e-08        86400 
+  2.0533e-03            0   1.9241e-02   1.6100e-08   1.7000e-03  -1.4793e-08        86400 
+  2.5640e-03            0   1.8730e-02   1.6100e-08   1.7000e-03  -1.4760e-08        86400 
+  2.4045e-03            0   1.8890e-02   1.6100e-08   1.7000e-03  -1.4771e-08        86400 
+  2.5640e-03            0   1.8730e-02   1.6100e-08   1.7000e-03  -1.4760e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 172800 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.279e-03   2.564e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.873e-02   1.873e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.438      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99880
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  17
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.997e-01     1.744    -0.000     0.000     18.07
+H(0)          1.063e-14
+   H2              5.316e-15   5.316e-15   -14.274   -14.274     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -63.831   -63.831     0.000     30.40
+Phenol        1.873e-02
+   Phenol          1.873e-02   1.873e-02    -1.727    -1.727     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -11.17    -14.27   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -60.94    -63.83   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 3.
+
+  2.5640e-03            0   1.8730e-02   1.6100e-08   1.7000e-03  -1.4760e-08        86400 
+  2.8190e-03            0   1.8475e-02   1.6100e-08   1.7000e-03  -1.4743e-08        86400 
+  2.9462e-03            0   1.8348e-02   1.6100e-08   1.7000e-03  -1.4735e-08        86400 
+  3.3278e-03            0   1.7966e-02   1.6100e-08   1.7000e-03  -1.4708e-08        86400 
+  3.8355e-03            0   1.7459e-02   1.6100e-08   1.7000e-03  -1.4671e-08        86400 
+  3.6770e-03            0   1.7617e-02   1.6100e-08   1.7000e-03  -1.4683e-08        86400 
+  3.8355e-03            0   1.7459e-02   1.6100e-08   1.7000e-03  -1.4671e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 259200 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.272e-03   3.836e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.746e-02   1.746e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.438      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99868
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  17
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.997e-01     1.744    -0.000     0.000     18.07
+H(0)          1.063e-14
+   H2              5.316e-15   5.316e-15   -14.274   -14.274     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -63.831   -63.831     0.000     30.40
+Phenol        1.746e-02
+   Phenol          1.746e-02   1.746e-02    -1.758    -1.758     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -11.17    -14.27   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -60.94    -63.83   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 4.
+
+  3.8355e-03            0   1.7459e-02   1.6100e-08   1.7000e-03  -1.4671e-08        86400 
+  4.0890e-03            0   1.7205e-02   1.6100e-08   1.7000e-03  -1.4652e-08        86400 
+  4.2154e-03            0   1.7079e-02   1.6100e-08   1.7000e-03  -1.4643e-08        86400 
+  4.5946e-03            0   1.6700e-02   1.6100e-08   1.7000e-03  -1.4612e-08        86400 
+  5.0989e-03            0   1.6195e-02   1.6100e-08   1.7000e-03  -1.4571e-08        86400 
+  4.9414e-03            0   1.6353e-02   1.6100e-08   1.7000e-03  -1.4584e-08        86400 
+  5.0989e-03            0   1.6195e-02   1.6100e-08   1.7000e-03  -1.4571e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 345600 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.263e-03   5.099e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.620e-02   1.620e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.623      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99856
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  17
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.997e-01     1.744    -0.000     0.000     18.07
+H(0)          2.497e-14
+   H2              1.248e-14   1.248e-14   -13.904   -13.904     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.573   -64.573     0.000     30.40
+Phenol        1.620e-02
+   Phenol          1.620e-02   1.620e-02    -1.791    -1.791     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.80    -13.90   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -61.68    -64.57   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 5.
+
+  5.0989e-03            0   1.6195e-02   1.6100e-08   1.7000e-03  -1.4571e-08        86400 
+  5.3506e-03            0   1.5944e-02   1.6100e-08   1.7000e-03  -1.4549e-08        86400 
+  5.4761e-03            0   1.5818e-02   1.6100e-08   1.7000e-03  -1.4538e-08        86400 
+  5.8525e-03            0   1.5442e-02   1.6100e-08   1.7000e-03  -1.4503e-08        86400 
+  6.3529e-03            0   1.4941e-02   1.6100e-08   1.7000e-03  -1.4455e-08        86400 
+  6.1967e-03            0   1.5098e-02   1.6100e-08   1.7000e-03  -1.4471e-08        86400 
+  6.3529e-03            0   1.4941e-02   1.6100e-08   1.7000e-03  -1.4455e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 432000 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.254e-03   6.353e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.494e-02   1.494e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99844
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  17
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.997e-01     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.494e-02
+   Phenol          1.494e-02   1.494e-02    -1.826    -1.826     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 6.
+
+  6.3529e-03            0   1.4941e-02   1.6100e-08   1.7000e-03  -1.4455e-08        86400 
+  6.6027e-03            0   1.4692e-02   1.6100e-08   1.7000e-03  -1.4430e-08        86400 
+  6.7271e-03            0   1.4567e-02   1.6100e-08   1.7000e-03  -1.4417e-08        86400 
+  7.1003e-03            0   1.4194e-02   1.6100e-08   1.7000e-03  -1.4378e-08        86400 
+  7.5962e-03            0   1.3698e-02   1.6100e-08   1.7000e-03  -1.4323e-08        86400 
+  7.4414e-03            0   1.3853e-02   1.6100e-08   1.7000e-03  -1.4340e-08        86400 
+  7.5962e-03            0   1.3698e-02   1.6100e-08   1.7000e-03  -1.4323e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 518400 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.243e-03   7.596e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.370e-02   1.370e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99833
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  17
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.998e-01     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.370e-02
+   Phenol          1.370e-02   1.370e-02    -1.863    -1.863     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 7.
+
+  7.5962e-03            0   1.3698e-02   1.6100e-08   1.7000e-03  -1.4323e-08        86400 
+  7.8437e-03            0   1.3451e-02   1.6100e-08   1.7000e-03  -1.4293e-08        86400 
+  7.9669e-03            0   1.3327e-02   1.6100e-08   1.7000e-03  -1.4279e-08        86400 
+  8.3364e-03            0   1.2958e-02   1.6100e-08   1.7000e-03  -1.4233e-08        86400 
+  8.8272e-03            0   1.2467e-02   1.6100e-08   1.7000e-03  -1.4168e-08        86400 
+  8.6741e-03            0   1.2620e-02   1.6100e-08   1.7000e-03  -1.4189e-08        86400 
+  8.8272e-03            0   1.2467e-02   1.6100e-08   1.7000e-03  -1.4168e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 604800 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.231e-03   8.827e-03   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.247e-02   1.247e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99821
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.998e-01     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.247e-02
+   Phenol          1.247e-02   1.247e-02    -1.904    -1.904     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 8.
+
+  8.8272e-03            0   1.2467e-02   1.6100e-08   1.7000e-03  -1.4168e-08        86400 
+  9.0720e-03            0   1.2222e-02   1.6100e-08   1.7000e-03  -1.4134e-08        86400 
+  9.1938e-03            0   1.2101e-02   1.6100e-08   1.7000e-03  -1.4117e-08        86400 
+  9.5590e-03            0   1.1735e-02   1.6100e-08   1.7000e-03  -1.4063e-08        86400 
+  1.0044e-02            0   1.1251e-02   1.6100e-08   1.7000e-03  -1.3987e-08        86400 
+  9.8925e-03            0   1.1402e-02   1.6100e-08   1.7000e-03  -1.4011e-08        86400 
+  1.0044e-02            0   1.1251e-02   1.6100e-08   1.7000e-03  -1.3987e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 691200 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.216e-03   1.004e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.125e-02   1.125e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99810
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.998e-01     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.125e-02
+   Phenol          1.125e-02   1.125e-02    -1.949    -1.949     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 9.
+
+  1.0044e-02            0   1.1251e-02   1.6100e-08   1.7000e-03  -1.3987e-08        86400 
+  1.0285e-02            0   1.1009e-02   1.6100e-08   1.7000e-03  -1.3946e-08        86400 
+  1.0405e-02            0   1.0889e-02   1.6100e-08   1.7000e-03  -1.3926e-08        86400 
+  1.0766e-02            0   1.0529e-02   1.6100e-08   1.7000e-03  -1.3862e-08        86400 
+  1.1243e-02            0   1.0051e-02   1.6100e-08   1.7000e-03  -1.3771e-08        86400 
+  1.1094e-02            0   1.0200e-02   1.6100e-08   1.7000e-03  -1.3800e-08        86400 
+  1.1243e-02            0   1.0051e-02   1.6100e-08   1.7000e-03  -1.3771e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 777600 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.199e-03   1.124e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.005e-02   1.005e-02
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.622      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99799
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.998e-01     1.744    -0.000     0.000     18.07
+H(0)          2.484e-14
+   H2              1.242e-14   1.242e-14   -13.906   -13.906     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.568   -64.568     0.000     30.40
+Phenol        1.005e-02
+   Phenol          1.005e-02   1.005e-02    -1.998    -1.998     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.80    -13.91   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -61.68    -64.57   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 10.
+
+  1.1243e-02            0   1.0051e-02   1.6100e-08   1.7000e-03  -1.3771e-08        86400 
+  1.1481e-02            0   9.8133e-03   1.6100e-08   1.7000e-03  -1.3723e-08        86400 
+  1.1599e-02            0   9.6952e-03   1.6100e-08   1.7000e-03  -1.3698e-08        86400 
+  1.1953e-02            0   9.3411e-03   1.6100e-08   1.7000e-03  -1.3621e-08        86400 
+  1.2422e-02            0   8.8723e-03   1.6100e-08   1.7000e-03  -1.3511e-08        86400 
+  1.2276e-02            0   9.0184e-03   1.6100e-08   1.7000e-03  -1.3546e-08        86400 
+  1.2422e-02            0   8.8723e-03   1.6100e-08   1.7000e-03  -1.3511e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 864000 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.179e-03   1.242e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            8.872e-03   8.872e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99788
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.998e-01     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        8.872e-03
+   Phenol          8.872e-03   8.872e-03    -2.052    -2.052     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 11.
+
+  1.2422e-02            0   8.8723e-03   1.6100e-08   1.7000e-03  -1.3511e-08        86400 
+  1.2656e-02            0   8.6388e-03   1.6100e-08   1.7000e-03  -1.3453e-08        86400 
+  1.2771e-02            0   8.5232e-03   1.6100e-08   1.7000e-03  -1.3423e-08        86400 
+  1.3118e-02            0   8.1765e-03   1.6100e-08   1.7000e-03  -1.3329e-08        86400 
+  1.3576e-02            0   7.7182e-03   1.6100e-08   1.7000e-03  -1.3194e-08        86400 
+  1.3433e-02            0   7.8609e-03   1.6100e-08   1.7000e-03  -1.3237e-08        86400 
+  1.3576e-02            0   7.7181e-03   1.6100e-08   1.7000e-03  -1.3194e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 950400 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.154e-03   1.358e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            7.718e-03   7.718e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.788      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99777
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.999e-01     1.744    -0.000     0.000     18.07
+H(0)          5.326e-14
+   H2              2.663e-14   2.663e-14   -13.575   -13.575     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.231   -65.231     0.000     30.40
+Phenol        7.718e-03
+   Phenol          7.718e-03   7.718e-03    -2.112    -2.112     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.47    -13.57   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.34    -65.23   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 12.
+
+  1.3576e-02            0   7.7181e-03   1.6100e-08   1.7000e-03  -1.3194e-08        86400 
+  1.3804e-02            0   7.4902e-03   1.6100e-08   1.7000e-03  -1.3122e-08        86400 
+  1.3917e-02            0   7.3776e-03   1.6100e-08   1.7000e-03  -1.3085e-08        86400 
+  1.4254e-02            0   7.0399e-03   1.6100e-08   1.7000e-03  -1.2968e-08        86400 
+  1.4700e-02            0   6.5946e-03   1.6100e-08   1.7000e-03  -1.2800e-08        86400 
+  1.4561e-02            0   6.7331e-03   1.6100e-08   1.7000e-03  -1.2854e-08        86400 
+  1.4700e-02            0   6.5946e-03   1.6100e-08   1.7000e-03  -1.2800e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.0368e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.124e-03   1.470e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            6.595e-03   6.595e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.788      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99766
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.000e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.999e-01     1.744    -0.000     0.000     18.07
+H(0)          5.326e-14
+   H2              2.663e-14   2.663e-14   -13.575   -13.575     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.231   -65.231     0.000     30.40
+Phenol        6.595e-03
+   Phenol          6.595e-03   6.595e-03    -2.181    -2.181     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.47    -13.57   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.34    -65.23   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 13.
+
+  1.4700e-02            0   6.5946e-03   1.6100e-08   1.7000e-03  -1.2800e-08        86400 
+  1.4921e-02            0   6.3734e-03   1.6100e-08   1.7000e-03  -1.2710e-08        86400 
+  1.5030e-02            0   6.2645e-03   1.6100e-08   1.7000e-03  -1.2664e-08        86400 
+  1.5356e-02            0   5.9381e-03   1.6100e-08   1.7000e-03  -1.2517e-08        86400 
+  1.5785e-02            0   5.5093e-03   1.6100e-08   1.7000e-03  -1.2304e-08        86400 
+  1.5652e-02            0   5.6425e-03   1.6100e-08   1.7000e-03  -1.2372e-08        86400 
+  1.5785e-02            0   5.5092e-03   1.6100e-08   1.7000e-03  -1.2303e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.1232e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.085e-03   1.579e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            5.509e-03   5.509e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.788      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99756
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  18
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.999e-01     1.744    -0.000     0.000     18.07
+H(0)          5.326e-14
+   H2              2.663e-14   2.663e-14   -13.575   -13.575     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.231   -65.231     0.000     30.40
+Phenol        5.509e-03
+   Phenol          5.509e-03   5.509e-03    -2.259    -2.259     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.47    -13.57   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.34    -65.23   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 14.
+
+  1.5785e-02            0   5.5092e-03   1.6100e-08   1.7000e-03  -1.2303e-08        86400 
+  1.5998e-02            0   5.2966e-03   1.6100e-08   1.7000e-03  -1.2188e-08        86400 
+  1.6102e-02            0   5.1926e-03   1.6100e-08   1.7000e-03  -1.2129e-08        86400 
+  1.6414e-02            0   4.8805e-03   1.6100e-08   1.7000e-03  -1.1941e-08        86400 
+  1.6822e-02            0   4.4727e-03   1.6100e-08   1.7000e-03  -1.1666e-08        86400 
+  1.6695e-02            0   4.5991e-03   1.6100e-08   1.7000e-03  -1.1755e-08        86400 
+  1.6822e-02            0   4.4726e-03   1.6100e-08   1.7000e-03  -1.1666e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.2096e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.037e-03   1.682e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            4.473e-03   4.473e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.788      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99746
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  20
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.999e-01     1.744    -0.000     0.000     18.07
+H(0)          5.326e-14
+   H2              2.663e-14   2.663e-14   -13.575   -13.575     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.231   -65.231     0.000     30.40
+Phenol        4.473e-03
+   Phenol          4.473e-03   4.473e-03    -2.349    -2.349     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.47    -13.57   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.34    -65.23   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 15.
+
+  1.6822e-02            0   4.4726e-03   1.6100e-08   1.7000e-03  -1.1666e-08        86400 
+  1.7023e-02            0   4.2710e-03   1.6100e-08   1.7000e-03  -1.1516e-08        86400 
+  1.7121e-02            0   4.1731e-03   1.6100e-08   1.7000e-03  -1.1440e-08        86400 
+  1.7415e-02            0   3.8796e-03   1.6100e-08   1.7000e-03  -1.1195e-08        86400 
+  1.7795e-02            0   3.4991e-03   1.6100e-08   1.7000e-03  -1.0836e-08        86400 
+  1.7678e-02            0   3.6166e-03   1.6100e-08   1.7000e-03  -1.0952e-08        86400 
+  1.7795e-02            0   3.4989e-03   1.6100e-08   1.7000e-03  -1.0835e-08        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.296e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            9.737e-04   1.780e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            3.499e-03   3.499e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.839      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99737
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  21
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   9.999e-01     1.744    -0.000     0.000     18.07
+H(0)          6.747e-14
+   H2              3.374e-14   3.374e-14   -13.472   -13.472     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.436   -65.436     0.000     30.40
+Phenol        3.499e-03
+   Phenol          3.499e-03   3.499e-03    -2.456    -2.456     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.37    -13.47   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.54    -65.44   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 16.
+
+  1.7795e-02            0   3.4989e-03   1.6100e-08   1.7000e-03  -1.0835e-08        86400 
+  1.7983e-02            0   3.3117e-03   1.6100e-08   1.7000e-03  -1.0639e-08        86400 
+  1.8072e-02            0   3.2219e-03   1.6100e-08   1.7000e-03  -1.0539e-08        86400 
+  1.8342e-02            0   2.9526e-03   1.6100e-08   1.7000e-03  -1.0217e-08        86400 
+  1.8686e-02            0   2.6081e-03   1.6100e-08   1.7000e-03  -9.7468e-09        86400 
+  1.8581e-02            0   2.7138e-03   1.6100e-08   1.7000e-03  -9.8990e-09        86400 
+  1.8687e-02            0   2.6077e-03   1.6100e-08   1.7000e-03  -9.7462e-09        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.3824e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            8.912e-04   1.869e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.608e-03   2.608e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.839      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99729
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  21
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          6.747e-14
+   H2              3.374e-14   3.374e-14   -13.472   -13.472     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.436   -65.436     0.000     30.40
+Phenol        2.608e-03
+   Phenol          2.608e-03   2.608e-03    -2.584    -2.584     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.37    -13.47   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.54    -65.44   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 17.
+
+  1.8687e-02            0   2.6077e-03   1.6100e-08   1.7000e-03  -9.7462e-09        86400 
+  1.8855e-02            0   2.4392e-03   1.6100e-08   1.7000e-03  -9.4877e-09        86400 
+  1.8934e-02            0   2.3601e-03   1.6100e-08   1.7000e-03  -9.3587e-09        86400 
+  1.9172e-02            0   2.1225e-03   1.6100e-08   1.7000e-03  -8.9397e-09        86400 
+  1.9469e-02            0   1.8250e-03   1.6100e-08   1.7000e-03  -8.3354e-09        86400 
+  1.9379e-02            0   1.9153e-03   1.6100e-08   1.7000e-03  -8.5294e-09        86400 
+  1.9470e-02            0   1.8241e-03   1.6100e-08   1.7000e-03  -8.3335e-09        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.4688e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            7.835e-04   1.947e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.824e-03   1.824e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.839      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99721
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  22
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          6.747e-14
+   H2              3.374e-14   3.374e-14   -13.472   -13.472     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.436   -65.436     0.000     30.40
+Phenol        1.824e-03
+   Phenol          1.824e-03   1.824e-03    -2.739    -2.739     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.37    -13.47   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.54    -65.44   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 18.
+
+  1.9470e-02            0   1.8241e-03   1.6100e-08   1.7000e-03  -8.3335e-09        86400 
+  1.9614e-02            0   1.6801e-03   1.6100e-08   1.7000e-03  -8.0026e-09        86400 
+  1.9680e-02            0   1.6145e-03   1.6100e-08   1.7000e-03  -7.8425e-09        86400 
+  1.9877e-02            0   1.4173e-03   1.6100e-08   1.7000e-03  -7.3199e-09        86400 
+  2.0115e-02            0   1.1791e-03   1.6100e-08   1.7000e-03  -6.5935e-09        86400 
+  2.0044e-02            0   1.2500e-03   1.6100e-08   1.7000e-03  -6.8220e-09        86400 
+  2.0117e-02            0   1.1774e-03   1.6100e-08   1.7000e-03  -6.5878e-09        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.5552e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            6.468e-04   2.012e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.177e-03   1.177e-03
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.839      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99715
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  16
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          6.747e-14
+   H2              3.374e-14   3.374e-14   -13.472   -13.472     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.436   -65.436     0.000     30.40
+Phenol        1.177e-03
+   Phenol          1.177e-03   1.177e-03    -2.929    -2.929     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.37    -13.47   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.54    -65.44   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 19.
+
+  2.0117e-02            0   1.1774e-03   1.6100e-08   1.7000e-03  -6.5878e-09        86400 
+  2.0231e-02            0   1.0635e-03   1.6100e-08   1.7000e-03  -6.1960e-09        86400 
+  2.0280e-02            0   1.0142e-03   1.6100e-08   1.7000e-03  -6.0161e-09        86400 
+  2.0430e-02            0   8.6466e-04   1.6100e-08   1.7000e-03  -5.4280e-09        86400 
+  2.0600e-02            0   6.9464e-04   1.6100e-08   1.7000e-03  -4.6703e-09        86400 
+  2.0551e-02            0   7.4330e-04   1.6100e-08   1.7000e-03  -4.8980e-09        86400 
+  2.0603e-02            0   6.9136e-04   1.6100e-08   1.7000e-03  -4.6546e-09        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.6416e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            4.860e-04   2.060e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            6.914e-04   6.914e-04
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.839      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99711
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  13
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          6.747e-14
+   H2              3.374e-14   3.374e-14   -13.472   -13.472     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.436   -65.436     0.000     30.40
+Phenol        6.914e-04
+   Phenol          6.914e-04   6.914e-04    -3.160    -3.160     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.37    -13.47   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.54    -65.44   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 20.
+
+  2.0603e-02            0   6.9136e-04   1.6100e-08   1.7000e-03  -4.6546e-09        86400 
+  2.0683e-02            0   6.1093e-04   1.6100e-08   1.7000e-03  -4.2563e-09        86400 
+  2.0716e-02            0   5.7846e-04   1.6100e-08   1.7000e-03  -4.0875e-09        86400 
+  2.0816e-02            0   4.7789e-04   1.6100e-08   1.7000e-03  -3.5328e-09        86400 
+  2.0920e-02            0   3.7385e-04   1.6100e-08   1.7000e-03  -2.9023e-09        86400 
+  2.0893e-02            0   4.0143e-04   1.6100e-08   1.7000e-03  -3.0755e-09        86400 
+  2.0644e-02            0   6.5060e-04   1.6100e-08   1.7000e-03  -4.4562e-09   4.3786e+04 
+  2.0662e-02            0   6.3218e-04   1.6100e-08   1.7000e-03  -4.3642e-09   4.3786e+04 
+  2.0718e-02            0   5.7652e-04   1.6100e-08   1.7000e-03  -4.0773e-09   4.3786e+04 
+  2.0785e-02            0   5.0908e-04   1.6100e-08   1.7000e-03  -3.7102e-09   4.3786e+04 
+  2.0765e-02            0   5.2921e-04   1.6100e-08   1.7000e-03  -3.8221e-09   4.3786e+04 
+  2.0786e-02            0   5.0853e-04   1.6100e-08   1.7000e-03  -3.7072e-09   4.3786e+04 
+  2.0786e-02            0   5.0853e-04   1.6100e-08   1.7000e-03  -3.7072e-09   4.2614e+04 
+  2.0817e-02            0   4.7694e-04   1.6100e-08   1.7000e-03  -3.5273e-09   4.2614e+04 
+  2.0831e-02            0   4.6287e-04   1.6100e-08   1.7000e-03  -3.4455e-09   4.2614e+04 
+  2.0874e-02            0   4.2023e-04   1.6100e-08   1.7000e-03  -3.1910e-09   4.2614e+04 
+  2.0925e-02            0   3.6932e-04   1.6100e-08   1.7000e-03  -2.8734e-09   4.2614e+04 
+  2.0910e-02            0   3.8439e-04   1.6100e-08   1.7000e-03  -2.9690e-09   4.2614e+04 
+  2.0926e-02            0   3.6877e-04   1.6100e-08   1.7000e-03  -2.8699e-09   4.2614e+04 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.728e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.226e-04   2.093e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            3.688e-04   3.688e-04
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99708
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  55
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        3.688e-04
+   Phenol          3.688e-04   3.688e-04    -3.433    -3.433     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 21.
+
+  2.0926e-02            0   3.6877e-04   1.6100e-08   1.7000e-03  -2.8699e-09        86400 
+  2.0975e-02            0   3.1918e-04   1.6100e-08   1.7000e-03  -2.5450e-09        86400 
+  2.0994e-02            0   3.0070e-04   1.6100e-08   1.7000e-03  -2.4198e-09        86400 
+  2.1053e-02            0   2.4140e-04   1.6100e-08   1.7000e-03  -2.0019e-09        86400 
+  2.1107e-02            0   1.8738e-04   1.6100e-08   1.7000e-03  -1.5984e-09        86400 
+  2.1094e-02            0   1.9983e-04   1.6100e-08   1.7000e-03  -1.6934e-09        86400 
+  2.0946e-02            0   3.4784e-04   1.6100e-08   1.7000e-03  -2.7347e-09   3.6458e+04 
+  2.0956e-02            0   3.3849e-04   1.6100e-08   1.7000e-03  -2.6734e-09   3.6458e+04 
+  2.0984e-02            0   3.1015e-04   1.6100e-08   1.7000e-03  -2.4841e-09   3.6458e+04 
+  2.1018e-02            0   2.7612e-04   1.6100e-08   1.7000e-03  -2.2496e-09   3.6458e+04 
+  2.1008e-02            0   2.8623e-04   1.6100e-08   1.7000e-03  -2.3201e-09   3.6458e+04 
+  2.1019e-02            0   2.7578e-04   1.6100e-08   1.7000e-03  -2.2472e-09   3.6458e+04 
+  2.1019e-02            0   2.7578e-04   1.6100e-08   1.7000e-03  -2.2472e-09   4.9942e+04 
+  2.1041e-02            0   2.5333e-04   1.6100e-08   1.7000e-03  -2.0880e-09   4.9942e+04 
+  2.1050e-02            0   2.4390e-04   1.6100e-08   1.7000e-03  -2.0200e-09   4.9942e+04 
+  2.1079e-02            0   2.1490e-04   1.6100e-08   1.7000e-03  -1.8068e-09   4.9942e+04 
+  2.1112e-02            0   1.8252e-04   1.6100e-08   1.7000e-03  -1.5609e-09   4.9942e+04 
+  2.1103e-02            0   1.9169e-04   1.6100e-08   1.7000e-03  -1.6314e-09   4.9942e+04 
+  2.1113e-02            0   1.8163e-04   1.6100e-08   1.7000e-03  -1.5541e-09   4.9942e+04 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.8144e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.871e-04   2.111e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.816e-04   1.816e-04
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.730      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99706
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  47
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          4.079e-14
+   H2              2.040e-14   2.040e-14   -13.690   -13.690     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.999   -64.999     0.000     30.40
+Phenol        1.816e-04
+   Phenol          1.816e-04   1.816e-04    -3.741    -3.741     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.59    -13.69   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.11    -65.00   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 22.
+
+  2.1113e-02            0   1.8163e-04   1.6100e-08   1.7000e-03  -1.5541e-09        86400 
+  2.1140e-02            0   1.5478e-04   1.6100e-08   1.7000e-03  -1.3435e-09        86400 
+  2.1149e-02            0   1.4544e-04   1.6100e-08   1.7000e-03  -1.2689e-09        86400 
+  2.1180e-02            0   1.1426e-04   1.6100e-08   1.7000e-03  -1.0140e-09        86400 
+  2.1205e-02            0   8.9449e-05   1.6100e-08   1.7000e-03  -8.0479e-10        86400 
+  2.1200e-02            0   9.4068e-05   1.6100e-08   1.7000e-03  -8.4417e-10        86400 
+  2.1126e-02            0   1.6796e-04   1.6100e-08   1.7000e-03  -1.4476e-09   4.4002e+04 
+  2.1132e-02            0   1.6217e-04   1.6100e-08   1.7000e-03  -1.4021e-09   4.4002e+04 
+  2.1150e-02            0   1.4441e-04   1.6100e-08   1.7000e-03  -1.2606e-09   4.4002e+04 
+  2.1170e-02            0   1.2437e-04   1.6100e-08   1.7000e-03  -1.0975e-09   4.4002e+04 
+  2.1164e-02            0   1.3009e-04   1.6100e-08   1.7000e-03  -1.1444e-09   4.4002e+04 
+  2.1170e-02            0   1.2387e-04   1.6100e-08   1.7000e-03  -1.0935e-09   4.4002e+04 
+  2.1170e-02            0   1.2387e-04   1.6100e-08   1.7000e-03  -1.0935e-09   4.2398e+04 
+  2.1180e-02            0   1.1460e-04   1.6100e-08   1.7000e-03  -1.0168e-09   4.2398e+04 
+  2.1184e-02            0   1.1069e-04   1.6100e-08   1.7000e-03  -9.8425e-10   4.2398e+04 
+  2.1196e-02            0   9.8685e-05   1.6100e-08   1.7000e-03  -8.8333e-10   4.2398e+04 
+  2.1209e-02            0   8.5183e-05   1.6100e-08   1.7000e-03  -7.6824e-10   4.2398e+04 
+  2.1205e-02            0   8.9028e-05   1.6100e-08   1.7000e-03  -8.0119e-10   4.2398e+04 
+  2.1209e-02            0   8.4832e-05   1.6100e-08   1.7000e-03  -7.6522e-10   4.2398e+04 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.9008e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            9.680e-05   2.121e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            8.483e-05   8.483e-05
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.622      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99705
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  54
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          2.484e-14
+   H2              1.242e-14   1.242e-14   -13.906   -13.906     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.568   -64.568     0.000     30.40
+Phenol        8.483e-05
+   Phenol          8.483e-05   8.483e-05    -4.071    -4.071     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.80    -13.91   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -61.68    -64.57   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 23.
+
+  2.1209e-02            0   8.4832e-05   1.6100e-08   1.7000e-03  -7.6522e-10        86400 
+  2.1223e-02            0   7.1609e-05   1.6100e-08   1.7000e-03  -6.5077e-10        86400 
+  2.1227e-02            0   6.7222e-05   1.6100e-08   1.7000e-03  -6.1242e-10        86400 
+  2.1242e-02            0   5.2105e-05   1.6100e-08   1.7000e-03  -4.7879e-10        86400 
+  2.1253e-02            0   4.1291e-05   1.6100e-08   1.7000e-03  -3.8178e-10        86400 
+  2.1251e-02            0   4.2864e-05   1.6100e-08   1.7000e-03  -3.9596e-10        86400 
+  2.1256e-02            0   3.8463e-05   1.6100e-08   1.7000e-03  -3.5621e-10        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 1.9872e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            4.637e-05   2.126e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            3.846e-05   3.846e-05
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.622      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99705
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  11
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          2.484e-14
+   H2              1.242e-14   1.242e-14   -13.906   -13.906     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.568   -64.568     0.000     30.40
+Phenol        3.846e-05
+   Phenol          3.846e-05   3.846e-05    -4.415    -4.415     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.80    -13.91   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -61.68    -64.57   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 24.
+
+  2.1256e-02            0   3.8463e-05   1.6100e-08   1.7000e-03  -3.5621e-10        86400 
+  2.1262e-02            0   3.2308e-05   1.6100e-08   1.7000e-03  -3.0027e-10        86400 
+  2.1264e-02            0   3.0317e-05   1.6100e-08   1.7000e-03  -2.8209e-10        86400 
+  2.1271e-02            0   2.3331e-05   1.6100e-08   1.7000e-03  -2.1797e-10        86400 
+  2.1276e-02            0   1.8651e-05   1.6100e-08   1.7000e-03  -1.7472e-10        86400 
+  2.1275e-02            0   1.9202e-05   1.6100e-08   1.7000e-03  -1.7982e-10        86400 
+  2.1277e-02            0   1.7184e-05   1.6100e-08   1.7000e-03  -1.6111e-10        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.0736e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            2.128e-05   2.128e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.718e-05   1.718e-05
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.746      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  11
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          4.402e-14
+   H2              2.201e-14   2.201e-14   -13.657   -13.657     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.065   -65.065     0.000     30.40
+Phenol        1.718e-05
+   Phenol          1.718e-05   1.718e-05    -4.765    -4.765     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.56    -13.66   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.17    -65.07   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 25.
+
+  2.1277e-02            0   1.7184e-05   1.6100e-08   1.7000e-03  -1.6111e-10        86400 
+  2.1280e-02            0   1.4400e-05   1.6100e-08   1.7000e-03  -1.3523e-10        86400 
+  2.1281e-02            0   1.3511e-05   1.6100e-08   1.7000e-03  -1.2695e-10        86400 
+  2.1284e-02            0   1.0361e-05   1.6100e-08   1.7000e-03  -9.7532e-11        86400 
+  2.1286e-02            0   8.3224e-06   1.6100e-08   1.7000e-03  -7.8434e-11        86400 
+  2.1286e-02            0   8.5312e-06   1.6100e-08   1.7000e-03  -8.0392e-11        86400 
+  2.1287e-02            0   7.6242e-06   1.6100e-08   1.7000e-03  -7.1883e-11        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.16e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            9.559e-06   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            7.624e-06   7.624e-06
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.722      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  11
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.932e-14
+   H2              1.966e-14   1.966e-14   -13.706   -13.706     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.967   -64.967     0.000     30.40
+Phenol        7.624e-06
+   Phenol          7.624e-06   7.624e-06    -5.118    -5.118     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.97   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 26.
+
+  2.1287e-02            0   7.6242e-06   1.6100e-08   1.7000e-03  -7.1883e-11        86400 
+  2.1288e-02            0   6.3820e-06   1.6100e-08   1.7000e-03  -6.0216e-11        86400 
+  2.1288e-02            0   5.9878e-06   1.6100e-08   1.7000e-03  -5.6509e-11        86400 
+  2.1290e-02            0   4.5845e-06   1.6100e-08   1.7000e-03  -4.3301e-11        86400 
+  2.1291e-02            0   3.6910e-06   1.6100e-08   1.7000e-03  -3.4880e-11        86400 
+  2.1291e-02            0   3.7757e-06   1.6100e-08   1.7000e-03  -3.5679e-11        86400 
+  2.1291e-02            0   3.3722e-06   1.6100e-08   1.7000e-03  -3.1874e-11        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.2464e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            4.252e-06   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            3.372e-06   3.372e-06
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.642      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  11
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          2.721e-14
+   H2              1.360e-14   1.360e-14   -13.866   -13.866     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.647   -64.647     0.000     30.40
+Phenol        3.372e-06
+   Phenol          3.372e-06   3.372e-06    -5.472    -5.472     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.77    -13.87   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -61.76    -64.65   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 27.
+
+  2.1291e-02            0   3.3722e-06   1.6100e-08   1.7000e-03  -3.1874e-11        86400 
+  2.1291e-02            0   2.8214e-06   1.6100e-08   1.7000e-03  -2.6677e-11        86400 
+  2.1292e-02            0   2.6471e-06   1.6100e-08   1.7000e-03  -2.5031e-11        86400 
+  2.1292e-02            0   2.0253e-06   1.6100e-08   1.7000e-03  -1.9158e-11        86400 
+  2.1293e-02            0   1.6323e-06   1.6100e-08   1.7000e-03  -1.5444e-11        86400 
+  2.1293e-02            0   1.6682e-06   1.6100e-08   1.7000e-03  -1.5783e-11        86400 
+  2.1293e-02            0   1.4895e-06   1.6100e-08   1.7000e-03  -1.4094e-11        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.3328e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.883e-06   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.489e-06   1.489e-06
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.736      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  11
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          4.205e-14
+   H2              2.102e-14   2.102e-14   -13.677   -13.677     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -65.025   -65.025     0.000     30.40
+Phenol        1.489e-06
+   Phenol          1.489e-06   1.489e-06    -5.827    -5.827     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.58    -13.68   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.13    -65.03   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 28.
+
+  2.1293e-02            0   1.4895e-06   1.6100e-08   1.7000e-03  -1.4094e-11        86400 
+  2.1293e-02            0   1.2459e-06   1.6100e-08   1.7000e-03  -1.1791e-11        86400 
+  2.1293e-02            0   1.1689e-06   1.6100e-08   1.7000e-03  -1.1063e-11        86400 
+  2.1293e-02            0   8.9405e-07   1.6100e-08   1.7000e-03  -8.4627e-12        86400 
+  2.1294e-02            0   7.2091e-07   1.6100e-08   1.7000e-03  -6.8246e-12        86400 
+  2.1294e-02            0   7.3646e-07   1.6100e-08   1.7000e-03  -6.9716e-12        86400 
+  2.1294e-02            0   6.5748e-07   1.6100e-08   1.7000e-03  -6.2243e-12        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.4192e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            8.320e-07   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            6.575e-07   6.575e-07
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.721      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  11
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.916e-14
+   H2              1.958e-14   1.958e-14   -13.708   -13.708     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.964   -64.964     0.000     30.40
+Phenol        6.575e-07
+   Phenol          6.575e-07   6.575e-07    -6.182    -6.182     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 29.
+
+  2.1294e-02            0   6.5748e-07   1.6100e-08   1.7000e-03  -6.2243e-12        86400 
+  2.1294e-02            0   5.4993e-07   1.6100e-08   1.7000e-03  -5.2064e-12        86400 
+  2.1294e-02            0   5.1594e-07   1.6100e-08   1.7000e-03  -4.8847e-12        86400 
+  2.1294e-02            0   3.9455e-07   1.6100e-08   1.7000e-03  -3.7358e-12        86400 
+  2.1294e-02            0   3.1821e-07   1.6100e-08   1.7000e-03  -3.0131e-12        86400 
+  2.1294e-02            0   3.2501e-07   1.6100e-08   1.7000e-03  -3.0775e-12        86400 
+  2.1294e-02            0   2.9015e-07   1.6100e-08   1.7000e-03  -2.7474e-12        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.5056e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.673e-07   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.901e-07   2.901e-07
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.721      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   7
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.916e-14
+   H2              1.958e-14   1.958e-14   -13.708   -13.708     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.964   -64.964     0.000     30.40
+Phenol        2.901e-07
+   Phenol          2.901e-07   2.901e-07    -6.537    -6.537     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 30.
+
+  2.1294e-02            0   2.9015e-07   1.6100e-08   1.7000e-03  -2.7474e-12        86400 
+  2.1294e-02            0   2.4267e-07   1.6100e-08   1.7000e-03  -2.2979e-12        86400 
+  2.1294e-02            0   2.2767e-07   1.6100e-08   1.7000e-03  -2.1559e-12        86400 
+  2.1294e-02            0   1.7410e-07   1.6100e-08   1.7000e-03  -1.6486e-12        86400 
+  2.1294e-02            0   1.4043e-07   1.6100e-08   1.7000e-03  -1.3298e-12        86400 
+  2.1294e-02            0   1.4341e-07   1.6100e-08   1.7000e-03  -1.3581e-12        86400 
+  2.1294e-02            0   1.2802e-07   1.6100e-08   1.7000e-03  -1.2124e-12        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.592e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.621e-07   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.280e-07   1.280e-07
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.721      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   7
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.916e-14
+   H2              1.958e-14   1.958e-14   -13.708   -13.708     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.964   -64.964     0.000     30.40
+Phenol        1.280e-07
+   Phenol          1.280e-07   1.280e-07    -6.893    -6.893     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 31.
+
+  2.1294e-02            0   1.2802e-07   1.6100e-08   1.7000e-03  -1.2124e-12        86400 
+  2.1294e-02            0   1.0707e-07   1.6100e-08   1.7000e-03  -1.0140e-12        86400 
+  2.1294e-02            0   1.0046e-07   1.6100e-08   1.7000e-03  -9.5133e-13        86400 
+  2.1294e-02            0   7.6815e-08   1.6100e-08   1.7000e-03  -7.2745e-13        86400 
+  2.1294e-02            0   6.1961e-08   1.6100e-08   1.7000e-03  -5.8679e-13        86400 
+  2.1294e-02            0   6.3278e-08   1.6100e-08   1.7000e-03  -5.9926e-13        86400 
+  2.1294e-02            0   5.6487e-08   1.6100e-08   1.7000e-03  -5.3495e-13        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.6784e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            7.154e-08   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            5.649e-08   5.649e-08
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =  10
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        5.649e-08
+   Phenol          5.649e-08   5.649e-08    -7.248    -7.248     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 32.
+
+  2.1294e-02            0   5.6487e-08   1.6100e-08   1.7000e-03  -5.3495e-13        86400 
+  2.1294e-02            0   4.7243e-08   1.6100e-08   1.7000e-03  -4.4741e-13        86400 
+  2.1294e-02            0   4.4323e-08   1.6100e-08   1.7000e-03  -4.1975e-13        86400 
+  2.1294e-02            0   1.8828e-08   1.6100e-08   1.7000e-03  -1.7831e-13        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.7648e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.766e-08   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.883e-08   1.883e-08
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   7
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.883e-08
+   Phenol          1.883e-08   1.883e-08    -7.725    -7.725     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 33.
+
+  2.1294e-02            0   1.8828e-08   1.6100e-08   1.7000e-03  -1.7831e-13        86400 
+  2.1294e-02            0   1.5747e-08   1.6100e-08   1.7000e-03  -1.4913e-13        86400 
+  2.1294e-02            0   1.4773e-08   1.6100e-08   1.7000e-03  -1.3991e-13        86400 
+  2.1294e-02            0   6.2754e-09   1.6100e-08   1.7000e-03  -5.9432e-14        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.8512e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.255e-08   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            6.275e-09   6.275e-09
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   7
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        6.275e-09
+   Phenol          6.275e-09   6.275e-09    -8.202    -8.202     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 34.
+
+  2.1294e-02            0   6.2754e-09   1.6100e-08   1.7000e-03  -5.9432e-14        86400 
+  2.1294e-02            0   5.2484e-09   1.6100e-08   1.7000e-03  -4.9706e-14        86400 
+  2.1294e-02            0   4.9240e-09   1.6100e-08   1.7000e-03  -4.6633e-14        86400 
+  2.1294e-02            0   2.0916e-09   1.6100e-08   1.7000e-03  -1.9809e-14        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 2.9376e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            4.184e-09   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.092e-09   2.092e-09
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   7
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        2.092e-09
+   Phenol          2.092e-09   2.092e-09    -8.680    -8.680     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 35.
+
+  2.1294e-02            0   2.0916e-09   1.6100e-08   1.7000e-03  -1.9809e-14        86400 
+  2.1294e-02            0   3.8013e-10   1.6100e-08   1.7000e-03  -3.6001e-15        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.024e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.711e-09   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            3.801e-10   3.801e-10
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        3.801e-10
+   Phenol          3.801e-10   3.801e-10    -9.420    -9.420     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 36.
+
+  2.1294e-02            0   3.8013e-10   1.6100e-08   1.7000e-03  -3.6001e-15        86400 
+  2.1294e-02            0   6.9086e-11   1.6100e-08   1.7000e-03  -6.5428e-16        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.1104e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.110e-10   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            6.909e-11   6.909e-11
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        6.909e-11
+   Phenol          6.909e-11   6.909e-11   -10.161   -10.161     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 37.
+
+  2.1294e-02            0   6.9086e-11   1.6100e-08   1.7000e-03  -6.5428e-16        86400 
+  2.1294e-02            0   1.2556e-11   1.6100e-08   1.7000e-03  -1.1891e-16        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.1968e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            5.653e-11   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.256e-11   1.256e-11
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.256e-11
+   Phenol          1.256e-11   1.256e-11   -10.901   -10.901     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 38.
+
+  2.1294e-02            0   1.2556e-11   1.6100e-08   1.7000e-03  -1.1891e-16        86400 
+  2.1294e-02            0   2.2819e-12   1.6100e-08   1.7000e-03  -2.1611e-17        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.2832e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.027e-11   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.282e-12   2.282e-12
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        2.282e-12
+   Phenol          2.282e-12   2.282e-12   -11.642   -11.642     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 39.
+
+  2.1294e-02            0   2.2819e-12   1.6100e-08   1.7000e-03  -2.1611e-17        86400 
+  2.1294e-02            0   4.1471e-13   1.6100e-08   1.7000e-03  -3.9276e-18        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.3696e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.867e-12   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            4.147e-13   4.147e-13
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        4.147e-13
+   Phenol          4.147e-13   4.147e-13   -12.382   -12.382     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 40.
+
+  2.1294e-02            0   4.1471e-13   1.6100e-08   1.7000e-03  -3.9276e-18        86400 
+  2.1294e-02            0   7.5370e-14   1.6100e-08   1.7000e-03  -7.1380e-19        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.456e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.393e-13   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            7.537e-14   7.537e-14
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        7.537e-14
+   Phenol          7.537e-14   7.537e-14   -13.123   -13.123     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 41.
+
+  2.1294e-02            0   7.5370e-14   1.6100e-08   1.7000e-03  -7.1380e-19        86400 
+  2.1294e-02            0   1.3698e-14   1.6100e-08   1.7000e-03  -1.2973e-19        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.5424e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            6.167e-14   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.370e-14   1.370e-14
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.370e-14
+   Phenol          1.370e-14   1.370e-14   -13.863   -13.863     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 42.
+
+  2.1294e-02            0   1.3698e-14   1.6100e-08   1.7000e-03  -1.2973e-19        86400 
+  2.1294e-02            0   2.4895e-15   1.6100e-08   1.7000e-03  -2.3577e-20        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.6288e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.121e-14   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.489e-15   2.489e-15
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        2.489e-15
+   Phenol          2.489e-15   2.489e-15   -14.604   -14.604     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 43.
+
+  2.1294e-02            0   2.4895e-15   1.6100e-08   1.7000e-03  -2.3577e-20        86400 
+  2.1294e-02            0   4.5244e-16   1.6100e-08   1.7000e-03  -4.2849e-21        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.7152e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            2.037e-15   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            4.524e-16   4.524e-16
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        4.524e-16
+   Phenol          4.524e-16   4.524e-16   -15.344   -15.344     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 44.
+
+  2.1294e-02            0   4.5244e-16   1.6100e-08   1.7000e-03  -4.2849e-21        86400 
+  2.1294e-02            0   8.2227e-17   1.6100e-08   1.7000e-03  -7.7874e-22        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.8016e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.712e-16   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            8.223e-17   8.223e-17
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        8.223e-17
+   Phenol          8.223e-17   8.223e-17   -16.085   -16.085     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 45.
+
+  2.1294e-02            0   8.2227e-17   1.6100e-08   1.7000e-03  -7.7874e-22        86400 
+  2.1294e-02            0   1.4944e-17   1.6100e-08   1.7000e-03  -1.4153e-22        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.888e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            6.592e-17   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.494e-17   1.494e-17
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.494e-17
+   Phenol          1.494e-17   1.494e-17   -16.826   -16.826     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 46.
+
+  2.1294e-02            0   1.4944e-17   1.6100e-08   1.7000e-03  -1.4153e-22        86400 
+  2.1294e-02            0   2.7159e-18   1.6100e-08   1.7000e-03  -2.5722e-23        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 3.9744e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            1.388e-17   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.716e-18   2.716e-18
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        2.716e-18
+   Phenol          2.716e-18   2.716e-18   -17.566   -17.566     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 47.
+
+  2.1294e-02            0   2.7159e-18   1.6100e-08   1.7000e-03  -2.5722e-23        86400 
+  2.1294e-02            0   4.9360e-19   1.6100e-08   1.7000e-03  -4.6747e-24        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.0608e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol            3.469e-18   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            4.936e-19   4.936e-19
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        4.936e-19
+   Phenol          4.936e-19   4.936e-19   -18.307   -18.307     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 48.
+
+  2.1294e-02            0   4.9360e-19   1.6100e-08   1.7000e-03  -4.6747e-24        86400 
+  2.1294e-02            0   8.9707e-20   1.6100e-08   1.7000e-03  -8.4958e-25        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.1472e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            8.971e-20   8.971e-20
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        8.971e-20
+   Phenol          8.971e-20   8.971e-20   -19.047   -19.047     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 49.
+
+  2.1294e-02            0   8.9707e-20   1.6100e-08   1.7000e-03  -8.4958e-25        86400 
+  2.1294e-02            0   1.6303e-20   1.6100e-08   1.7000e-03  -1.5440e-25        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.2336e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.630e-20   1.630e-20
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.630e-20
+   Phenol          1.630e-20   1.630e-20   -19.788   -19.788     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 50.
+
+  2.1294e-02            0   1.6303e-20   1.6100e-08   1.7000e-03  -1.5440e-25        86400 
+  2.1294e-02            0   2.9630e-21   1.6100e-08   1.7000e-03  -2.8062e-26        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.32e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            2.963e-21   2.963e-21
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        2.963e-21
+   Phenol          2.963e-21   2.963e-21   -20.528   -20.528     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 51.
+
+  2.1294e-02            0   2.9630e-21   1.6100e-08   1.7000e-03  -2.8062e-26        86400 
+  2.1294e-02            0   5.3850e-22   1.6100e-08   1.7000e-03  -5.0999e-27        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.4064e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            5.385e-22   5.385e-22
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        5.385e-22
+   Phenol          5.385e-22   5.385e-22   -21.269   -21.269     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 52.
+
+  2.1294e-02            0   5.3850e-22   1.6100e-08   1.7000e-03  -5.0999e-27        86400 
+  2.1294e-02            0   9.7868e-23   1.6100e-08   1.7000e-03  -9.2687e-28        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.4928e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            9.787e-23   9.787e-23
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        9.787e-23
+   Phenol          9.787e-23   9.787e-23   -22.009   -22.009     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 53.
+
+  2.1294e-02            0   9.7868e-23   1.6100e-08   1.7000e-03  -9.2687e-28        86400 
+  2.1294e-02            0   1.7787e-23   1.6100e-08   1.7000e-03  -1.6845e-28        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.5792e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.779e-23   1.779e-23
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.779e-23
+   Phenol          1.779e-23   1.779e-23   -22.750   -22.750     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 54.
+
+  2.1294e-02            0   1.7787e-23   1.6100e-08   1.7000e-03  -1.6845e-28        86400 
+  2.1294e-02            0   3.2326e-24   1.6100e-08   1.7000e-03  -3.0614e-29        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.6656e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            3.233e-24   3.233e-24
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        3.233e-24
+   Phenol          3.233e-24   3.233e-24   -23.490   -23.490     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 55.
+
+  2.1294e-02            0   3.2326e-24   1.6100e-08   1.7000e-03  -3.0614e-29        86400 
+  2.1294e-02            0   5.8749e-25   1.6100e-08   1.7000e-03  -5.5639e-30        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.752e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            5.875e-25   5.875e-25
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        5.875e-25
+   Phenol          5.875e-25   5.875e-25   -24.231   -24.231     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 56.
+
+  2.1294e-02            0   5.8749e-25   1.6100e-08   1.7000e-03  -5.5639e-30        86400 
+  2.1294e-02            0   1.0677e-25   1.6100e-08   1.7000e-03  -1.0112e-30        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.8384e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.068e-25   1.068e-25
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.068e-25
+   Phenol          1.068e-25   1.068e-25   -24.972   -24.972     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 57.
+
+  2.1294e-02            0   1.0677e-25   1.6100e-08   1.7000e-03  -1.0112e-30        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 4.9248e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.068e-25   1.068e-25
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.068e-25
+   Phenol          1.068e-25   1.068e-25   -24.972   -24.972     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 58.
+
+  2.1294e-02            0   1.0677e-25   1.6100e-08   1.7000e-03  -1.0112e-30        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 5.0112e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.068e-25   1.068e-25
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.068e-25
+   Phenol          1.068e-25   1.068e-25   -24.972   -24.972     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 59.
+
+  2.1294e-02            0   1.0677e-25   1.6100e-08   1.7000e-03  -1.0112e-30        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 5.0976e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.068e-25   1.068e-25
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.068e-25
+   Phenol          1.068e-25   1.068e-25   -24.972   -24.972     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+Reaction step 60.
+
+  2.1294e-02            0   1.0677e-25   1.6100e-08   1.7000e-03  -1.0112e-30        86400 
+Using solution 1.	
+Using kinetics 1.	
+
+Kinetics 1.	
+
+	Time step: 86400 seconds  (Incremented time: 5.184e+06 seconds)
+
+	Rate name       Delta Moles Total Moles   Reactant        Coefficient
+
+	Phenol           -0.000e+00   2.129e-02   Phenol                    1
+
+-----------------------------Solution composition------------------------------
+
+	Elements           Molality       Moles
+
+	Phenol            1.068e-25   1.068e-25
+
+----------------------------Description of solution----------------------------
+
+                                       pH  =   7.000      Charge balance
+                                       pe  =  -1.720      Adjusted to redox equilibrium
+      Specific Conductance (µS/cm,  25°C)  = 0
+                          Density (g/cm³)  =   0.99704
+                               Volume (L)  =   1.00297
+                        Activity of water  =   1.000
+                 Ionic strength (mol/kgw)  =   1.006e-07
+                       Mass of water (kg)  =   1.000e+00
+                 Total alkalinity (eq/kg)  =   1.180e-09
+                         Temperature (°C)  =  25.00
+                  Electrical balance (eq)  =  -1.180e-09
+ Percent error, 100*(Cat-|An|)/(Cat+|An|)  =  -0.59
+                               Iterations  =   0
+                                  Total H  = 1.110124e+02
+                                  Total O  = 5.550622e+01
+
+----------------------------Distribution of species----------------------------
+
+                                               Log       Log       Log    mole V
+   Species          Molality    Activity  Molality  Activity     Gamma   cm³/mol
+
+   OH-             1.012e-07   1.012e-07    -6.995    -6.995    -0.000     -4.14
+   H+              1.001e-07   1.000e-07    -7.000    -7.000    -0.000      0.00
+   H2O             5.551e+01   1.000e+00     1.744    -0.000     0.000     18.07
+H(0)          3.905e-14
+   H2              1.953e-14   1.953e-14   -13.709   -13.709     0.000     28.61
+O(0)          0.000e+00
+   O2              0.000e+00   0.000e+00   -64.961   -64.961     0.000     30.40
+Phenol        1.068e-25
+   Phenol          1.068e-25   1.068e-25   -24.972   -24.972     0.000     (0)  
+
+------------------------------Saturation indices-------------------------------
+
+  Phase               SI** log IAP   log K(298 K,   1 atm)
+
+  H2(g)           -10.61    -13.71   -3.10  H2
+  H2O(g)           -1.50     -0.00    1.50  H2O
+  O2(g)           -62.07    -64.96   -2.89  O2
+
+**For a gas, SI = log10(fugacity). Fugacity = pressure * phi / 1 atm.
+  For ideal gases, phi = 1.
+
+------------------
+End of simulation.
+------------------
+
+------------------------------------
+Reading input data for simulation 2.
+------------------------------------
+
+-------------------------------
+End of Run after 1.869 Seconds.
+-------------------------------
+

@@ -1,0 +1,56 @@
+SOLUTION_MASTER_SPECIES; Xylene Xylene 0 106 106         # C8H10
+SOLUTION_SPECIES; Xylene = Xylene; -log_k 0
+
+RATES
+ S_degradation
+# dS/dt = -mu_max * (B/(Y * 8)) * (S / (k_half + S)) / R    (mol xylene/L/s)
+# mu_max is maximal growth rate, 1/s.                        B is biomass, mol C/L.
+# Y * 8 is yield factor, mol biomass-C/mol xylene            S is xylene conc, mol/L.
+# k_half is half saturation concentration, mol xylene/L.     R is retardation, 1 + K_d
+# K_d = q_xylene / c_xylene.
+ -start
+  1 mu_max = parm(1); 2 k_half = parm(2); 3 Y = parm(3); 4 R = 1 + parm(4)
+ 10 S = tot("Xylene")
+ 20 if S < 1e-9 then goto 60
+ 30 B = kin("Biomass")                     # kin(".i.") gives moles of "Biomass"
+ 40 rate = -mu_max * (B / (Y * 8)) * (S /(k_half + S)) / R
+# 40 rate = -mu_max * (B / (Y * 8)) * (S /(k_half + S + S^2/8.65e-4)) / R
+ 50 dS = rate * time
+ 60 save dS                                # d mol(C8H10)
+ 70 put(rate, 1)                           # Store dS/dt for use in Biomass rate
+ -end
+
+ Biomass
+# dB/dt = dBg/dt - dBd/dt
+# dBg/dt = - Y dS/dt is biomass growth rate.  dBd / dt = k_Bd * B is biomass death rate.
+# k_Bd is death rate coefficient, 1/s.
+#
+ -start
+  1 Y = parm(1); 2 R = 1 + parm(2); 3 k_Bd = parm(3)
+ 10 rate_S = get(1) * R               # Get degradation rate, multiply by Retardation
+ 20 B = m
+ 30 rate = -Y * 8 * rate_S - k_Bd * B
+ 40 dB = rate * time
+ 50 save -dB                          # dB is positive, counts negative to solution
+ -end
+
+SOLUTION 1; -units mg/L; Xylene 8.6
+
+KINETICS 1
+# xylene, Schirmer et al., 1999. JCH 37, 69-86, expt. Figure 6b...
+ S_degradation;   -formula Xylene 1; -m0 0
+  -parms 2.49e-5 7.45e-6 0.305 0.86                 # mu_max, k_half, Y, K_d
+ Biomass;         -formula C 0;      -m0 0.75e-7 # 1.33e-7 with Haldane inhibition
+  -parms 0.305 0.86 0                               # Y, K_d, k_Bd
+  -steps 0.6e6 in 50
+INCREMENTAL_REACTIONS
+
+USER_GRAPH
+ -headings time c_xylene Biomass
+ -axis_scale y_axis 0 10 2 1; -axis_scale x-axis 0 6 1 0.5
+ -axis_titles "Time / days" "mg / L"
+ -start
+ 10 graph_x total_time / 86400
+ 20 graph_y tot("Xylene") * 106e3, kin("Biomass") * 22.6e3
+ -end
+END

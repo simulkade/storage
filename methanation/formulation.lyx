@@ -101,6 +101,47 @@ Mathematical model
 \end_layout
 
 \begin_layout Standard
+The mathematical model consists of several consecutive steps that closely
+ follows the physics of the nanocatalysed methanation reaction.
+\end_layout
+
+\begin_layout Enumerate
+Nanoparticle injection and adsorption in the reservoir
+\end_layout
+
+\begin_layout Enumerate
+Biomass growth and biological conversion of oil to methane
+\end_layout
+
+\begin_layout Enumerate
+Migration of the produced gas in the reservoir
+\end_layout
+
+\begin_layout Subsection
+Nanoparticle flow and adsorption in the reservoir
+\end_layout
+
+\begin_layout Standard
+The flow of nanoparticles int he reservoir can be described by the following
+ equation:
+\begin_inset Formula 
+\[
+advective\:transport+filtration+adsorption
+\]
+
+\end_inset
+
+where ...
+\end_layout
+
+\begin_layout Standard
+The above equation is solved assuming no filtration of nanoparticles in
+ the reservoir.
+ We also assume that the particles are designed such that they adsorb uniformly
+ on the oil/water and rock/water interfaces.
+\end_layout
+
+\begin_layout Standard
 The model consists of a domain initially filled with a uniform saturation
  of oil and water.
  The water phase contains nutrients and that quickly diffuse to the oil-water
@@ -122,6 +163,18 @@ For the bacterial growth, we assume that the microbial population is homogeneous
 
 \begin_layout Standard
 The Monod kinetic reads
+\begin_inset Formula 
+\[
+monod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where ...
 \end_layout
 
 \end_body
