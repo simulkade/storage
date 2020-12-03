@@ -76,33 +76,12 @@
 \begin_body
 
 \begin_layout Section
-Introduction
-\end_layout
-
-\begin_layout Standard
-This is the formulation of the two-phase and three phase problems in a chalk
- reservoir.
- The idea is to first run a capillary and gravity driven flow of oil and
- water in a reservoir with a mild heterogeneity and then use the distribution
- of the oil phase to estimate the available interfacial area and estimate
- the biodegradation of oil to methane.
- The first model uses a simple Monod kinetic for the methanation reaction.
-\end_layout
-
-\begin_layout Standard
-We first begin with a simple 1D model with a specified uniform remaining
- oil saturation.
- This model does not solve for the two phase flow but only considers the
- biodegradation of oil.
-\end_layout
-
-\begin_layout Section
 Mathematical model
 \end_layout
 
 \begin_layout Standard
 The mathematical model consists of several consecutive steps that closely
- follows the physics of the nanocatalysed methanation reaction.
+ follows the physics of the subsurface nanocatalysed methanation process:
 \end_layout
 
 \begin_layout Enumerate
@@ -115,6 +94,255 @@ Biomass growth and biological conversion of oil to methane
 
 \begin_layout Enumerate
 Migration of the produced gas in the reservoir
+\end_layout
+
+\begin_layout Standard
+Instead of modelling the nanoparticle injection, we assume that the injected
+ nanoparticle can be uniformly distributed in the reservoir.
+ Moreover, we did not model the capillary and gravity dominated flow of
+ methane and other gases in the reservoir since it can be done by all the
+ industry-standard reservoir simulators.
+ Moreover, including it in the model severely increases the computational
+ load and slows down the computation of the biodegradation of oil and methanatio
+n reaction.
+\end_layout
+
+\begin_layout Subsection
+Biodegradation under methanogenic conditions
+\end_layout
+
+\begin_layout Standard
+To the best of our knowledge, there is no reported reaction rate equations
+ for the biodegradation of the North Sea oil under methanogenic condition.
+ Therefore, we use a Monod model that qualitatively matches the published
+ experimental data for the bacterial conversion of oil to methane.
+ The model is originally suggested for the biodegradation of phenol.
+ We replace phenol by hexadecane as an alkane that represent the North Sea
+ oil.
+ The biodegradation of hexadecane to acetate can be shown by the following
+ reaction:
+\begin_inset Formula 
+\[
+C_{16}H_{34}+16H_{2}\rightarrow8CH_{3}COO^{-}+8H^{+}+17H_{2}
+\]
+
+\end_inset
+
+The Monod kinetic for the conversion rate of hexadecane reads
+\begin_inset Formula 
+\[
+\frac{dS}{dt}=-k_{max}\frac{S}{k_{1/2}+S},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $S$
+\end_inset
+
+ [mol/l] denotes the concentration of hexadecane (substrate), 
+\begin_inset Formula $t$
+\end_inset
+
+ [s] denotes time, 
+\begin_inset Formula $k_{max}$
+\end_inset
+
+ [mol/(l.s)] is the maximum conversion rate, and 
+\begin_inset Formula $k_{1/2}$
+\end_inset
+
+ [mol/l] denotes the half-saturation constant.
+ The value of 
+\begin_inset Formula $k_{max}$
+\end_inset
+
+ [mol/(l.s)] depends on the concentration of bacteria and can be written
+ as
+\begin_inset Formula 
+\[
+k_{max}=\mu_{max}\frac{B}{Y},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mu_{max}$
+\end_inset
+
+ [1/s] denotes the specific bacterial growth rate, 
+\begin_inset Formula $B$
+\end_inset
+
+ [mol C/l] denotes the biomass molarity (in mole carbon per unit volume),
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ [-] denotes the so called yield which is defined as the fraction of hexadecane
+ (
+\begin_inset Formula $S$
+\end_inset
+
+) that is converted to bacteria, i.e.
+\begin_inset Formula 
+\[
+\frac{dB}{dt}=-Y\frac{dS}{dt}.
+\]
+
+\end_inset
+
+We solve the above coupled equation for variables 
+\begin_inset Formula $S$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ using Phreeqc geochemical solver by calling the PhreeqcRM package via an
+ open source Matlab interface.
+ For the biodegradation rates, we modify the Appelo's phreeqc implementation
+ [***] of xylene biodegradation rate based on the measurements of Schirmer
+ et al.
+ [***].
+ The value that are reported for the biodegradation of xylene are not under
+ the methanogenic conditions.
+ Therefore, we adjust the yield value to 
+\begin_inset Formula $Y$
+\end_inset
+
+=0.05 and reduce the value of 
+\begin_inset Formula $k_{1/2}$
+\end_inset
+
+ by an order of magnitude to make the reaction slower as observed in several
+ experiments.
+ Not all the oil in the system is available for biodegradation.
+ The biodegradable oleic species, e.g.
+ hexadecane, first dissolves in water and then is degraded.
+ This process can be controlled by the molecular diffusion and the dissolution
+ rate and solubility of the oleic species in the aqueous phase.
+ Here, we model this process by an equilibrium dissolution:
+\begin_inset Formula 
+\[
+C_{16}H_{34,(oil)}\leftrightarrow C_{16}H_{34,(aq)},
+\]
+
+\end_inset
+
+where the subscripts 
+\begin_inset Formula $aq$
+\end_inset
+
+ and 
+\begin_inset Formula $oil$
+\end_inset
+
+ denote the aqueous and oleic phases, respectively.
+ The zero-valent nanoparticles react with water and CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ to produce methane.
+ The chemical reactions read
+\begin_inset Formula 
+\[
+Fe+2H_{2}O\leftrightarrow Fe^{+2}+H_{2}+2OH^{-},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+CO_{2}+4H_{2}\leftrightarrow CH_{4}+2H_{2}O.
+\]
+
+\end_inset
+
+We add the above reactions to obtain the stoichiometry for the conversion
+ of CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ to methane in presence of zero valent iron (Fe).
+ The above chemical reactions require a large interfacial area between the
+ nanoparticles and the the aqueous phase, which requires a good understanding
+ of the distribution of the injected nanoparticle suspension in the reservoir.
+ Here, we simplify this process as an equilibrium reaction that brings zero-vale
+nt iron particles from the solid phase (
+\begin_inset Formula $s$
+\end_inset
+
+) to the aqueous phase:
+\begin_inset Formula 
+\[
+Fe_{(s)}\leftrightarrow Fe_{(aq)}.
+\]
+
+\end_inset
+
+We also define the conversion of CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ to methane with the following rate equation:
+\begin_inset Formula 
+\[
+\frac{dC_{CH_{4}}}{dt}=-k_{CH_{4}}C_{Fe_{(aq)}},
+\]
+
+\end_inset
+
+where the reaction rate constant is used as a fitting parameter.
+ Here, we use a value of 
+\begin_inset Formula $k_{CH_{4}}$
+\end_inset
+
+=2.8
+\begin_inset Formula $\times$
+\end_inset
+
+10
+\begin_inset Formula $^{-4}$
+\end_inset
+
+ 1/s (1 h
+\begin_inset Formula $^{-1}$
+\end_inset
+
+) which fits a spike of H
+\begin_inset Formula $_{2}$
+\end_inset
+
+ production observed at the beginning of the biodegradation experiments.
+ The equilibrium constant for the Fe (solid to aquesous) reaction has a
+ large impact on the amount of CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ in the produced gas.
+\end_layout
+
+\begin_layout Standard
+Finally, we define the methanogenesis reaction as:
+\begin_inset Formula 
+\[
+CH_{3}COO^{-}+H^{+}\rightarrow CH_{4}+CO_{2},
+\]
+
+\end_inset
+
+with a first order reaction rate with a reaction constant of 1 day
+\begin_inset Formula $^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Results and discussion
 \end_layout
 
 \begin_layout Subsection
@@ -175,6 +403,27 @@ monod
 
 \begin_layout Standard
 where ...
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+This is the formulation of the two-phase and three phase problems in a chalk
+ reservoir.
+ The idea is to first run a capillary and gravity driven flow of oil and
+ water in a reservoir with a mild heterogeneity and then use the distribution
+ of the oil phase to estimate the available interfacial area and estimate
+ the biodegradation of oil to methane.
+ The first model uses a simple Monod kinetic for the methanation reaction.
+\end_layout
+
+\begin_layout Standard
+We first begin with a simple 1D model with a specified uniform remaining
+ oil saturation.
+ This model does not solve for the two phase flow but only considers the
+ biodegradation of oil.
 \end_layout
 
 \end_body

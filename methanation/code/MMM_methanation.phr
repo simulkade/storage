@@ -1,0 +1,58 @@
+SOLUTION_MASTER_SPECIES
+	Hdecane Hdecane 0 226 226         # C16H34
+	Methane Methane 0 16  16
+
+SOLUTION_SPECIES
+	Hdecane = Hdecane
+	-log_k 0
+
+RATES
+	S_degradation
+		-start
+		1 mu_max = parm(1)
+		2 k_half = parm(2)
+		3 Y = parm(3)
+		4 R = 1 + parm(4)
+		10 S = tot("Hdecane")
+		20 B = kin("Biomass")
+		30 rate = -mu_max * (B / (Y * 6)) * (S /(k_half + S)) / R
+		40 dS = rate * time
+		50 save dS
+		60 put(rate, 1) # Store dS/dt for use in Biomass rate
+		-end
+
+	Biomass
+		-start
+		1 Y = parm(1)
+		2 R = 1 + parm(2)
+		3 k_Bd = parm(3)
+		10 rate_S = get(1) * # Get degradation rate, multiply by Retardation
+		20 B = m
+		30 rate = -Y * 6 * rate_S - k_Bd * B
+		40 dB = rate * time
+		50 save -dB
+		-end
+
+SOLUTION 1;
+	-units g/L
+	Hdecane 2
+
+KINETICS 1
+	S_degradation
+		-formula Hdecane 1;
+		-m0 0
+		-parms 1.91e-5 1e-8 0.5 0.86 # mu_max, k_half, Y, K_d
+	Biomass
+		-formula C 0;
+		-m0 0.75e-7
+		-parms 0.5 0.86 1e-8 # Y, K_d, k_Bd
+		-steps 2592000 in 60 #30 days
+
+INCREMENTAL_REACTIONS true
+
+SELECTED_OUTPUT
+	-file MM_sensi.csv
+	-reset true
+	-molalities Hdecane
+	-kinetic_reactants Biomass S_degradation
+END

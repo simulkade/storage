@@ -1,0 +1,223 @@
+SOLUTION_RAW                 0 Solution after simulation 1.
+  -temp                      25
+  -pressure                  1
+  -potential                 0
+  -total_h                   125.6657012222
+  -total_o                   17.610953677248
+  -cb                        0.00080912613293753
+  -density                   3.0467200351706
+  -totals
+    Acetate                  2.9468854802894
+    C(-3)                    29.017057083243
+    C(-4)                    0.13476841966979
+    C(2)                     1.188654223458e-10
+    C(4)                     0.0072299443188751
+    Ca                       0.010629941254112
+    Cl(-1)                   0.56405642619231
+    Fe(2)                    0.030857426278491
+    Fe(3)                    3.8752039824341e-13
+    H(0)                     1.6721658245607e-11
+    Hdecane                  2.0645853274188e-06
+    K                        0.010547448746839
+    Methane                  0.00029640762428705
+    Mg                       0.054919076470674
+    Na                       0.48397555234448
+    S(-2)                    0.029177767664083
+    S(2)                     2.2313825609923e-23
+    S(4)                     2.4119568597488e-24
+    S(6)                     2.4065948909014e-24
+    Si                       7.3618065969096e-05
+    Zvi                      2.0645853274188e-05
+  -pH                        2.7749756927728
+  -pe                        0.87487139743706
+  -mu                        1.860985600042
+  -ah2o                      4.1811557111105e-05
+  -mass_water                0.31690668211795
+  -soln_vol                  0.31784610530456
+  -total_alkalinity          0.12247033677301
+  -activities
+    Acetate                  0.94988581951486
+    C(-2)                    -38.372793241293
+    C(-3)                    1.660691971844
+    C(-4)                    -0.37134325713781
+    C(2)                     -9.4258758643216
+    C(4)                     -9.4323844050058
+    Ca                       -2.3642060543537
+    Cl(-1)                   -0.018969595159139
+    Cl(1)                    -55.20646982437
+    Cl(3)                    -103.28857720418
+    Cl(5)                    -137.51844362763
+    Cl(7)                    -176.0500855249
+    E                        -0.87487139743706
+    Fe(2)                    -2.071111836675
+    Fe(3)                    -14.214516251284
+    H(0)                     -10.400145016604
+    Hdecane                  -5
+    K                        -1.7207081425469
+    Methane                  -2.8429434660687
+    Mg                       -1.6766599515383
+    Na                       -0.056188890789096
+    O(0)                     -80.153094978932
+    S(-2)                    -5.2705478938161
+    S(2)                     -23.377137046892
+    S(3)                     -48.381979890254
+    S(4)                     -31.060484888294
+    S(5)                     -53.659213791474
+    S(6)                     -24.519179391057
+    S(7)                     -112.74122637025
+    S(8)                     -84.631348587924
+    Si                       -3.6339469927845
+    Zvi                      -4
+  -gammas
+KINETICS_RAW                 0 
+  # KINETICS_MODIFY candidate identifiers #
+  -step_divide               1
+  -rk                        3
+  -bad_step_max              500
+  -use_cvode                 0
+  -cvode_steps               100
+  -cvode_order               5
+  -component                 S_degradation
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-08
+      -m                     7.0126759046217
+      -m0                    1
+      -namecoef
+        H2                   -17
+        H2O                  16
+        HAcetate             -8
+        Hdecane              1
+      -d_params
+        2.49e-05 7.45e-05 0.305 0.86 
+      # KineticsComp workspace variables #
+      -moles                 -0.062228956995041
+      -initial_moles         6.9504469476266
+  -component                 Biomass
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-08
+      -m                     28.287928325535
+      -m0                    1
+      -namecoef
+        C                    0
+      -d_params
+        0.305 0.86 0 
+      # KineticsComp workspace variables #
+      -moles                 -0.28241989842629
+      -initial_moles         28.005508427109
+  -component                 Acetate_decay
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-08
+      -m                     46.154517203614
+      -m0                    1
+      -namecoef
+        CO2                  -1
+        HAcetate             1
+        Methane              -1
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 -0.538224881554
+      -initial_moles         45.61629232206
+  -component                 ZVI
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-08
+      -m                     1.0308574501962
+      -m0                    1
+      -namecoef
+        CO2                  0.25
+        Fe                   -1
+        H2O                  1.5
+        Methane              -0.25
+        OH                   -2
+        Zvi                  1
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 -9.0702292064204e-05
+      -initial_moles         1.0307667479041
+  -equal_increments           0
+  -count                     0
+  -steps             
+    1 
+  # KINETICS workspace variables #
+  -totals                    
+    Acetate                  -0.0056481112483107
+    C                        0.077516766306614
+    Fe                       1.3036377605761e-05
+    H                        0.01230683091226
+    Hdecane                  -0.0089839892690881
+    Methane                  0.077523284495417
+    O                        0.011296222496621
+    Zvi                      -1.3036377605761e-05
+EQUILIBRIUM_PHASES_RAW       0 Pure-phase assemblage after simulation 1.
+  # EXCHANGE_MODIFY candidates; use new_def=true #
+  -new_def                   0
+  -component                 CO2(g)
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 15.989961610194
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         15.823038642324
+      -totals                
+  -component                 H2(g)
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 Methane(g)
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 45.161935152533
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         44.623681765298
+      -totals                
+  -component                 Oil
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 3.9873226001039
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         4.0495515164901
+      -totals                
+  -component                 ZVI
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0.96912192789899
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0.9692122241031
+      -totals                
+  -eltList                   # List of all elements in phases and alternate reactions
+    C                        1
+    H                        2
+    Hdecane                  1
+    Methane                  1
+    O                        2
+    Zvi                      1
+  # PPassemblage workspace variables #
+  -assemblage_totals

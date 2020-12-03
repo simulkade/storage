@@ -1,0 +1,83 @@
+TITLE Monod degradation with Hexadecane
+SOLUTION_MASTER_SPECIES
+Hdecane Hdecane 0 226 226         # C16H34
+Methane Methane 0 16  16
+
+SOLUTION_SPECIES
+	Hdecane = Hdecane
+	-log_k 0
+	Methane = Methane
+	-log_k 0
+
+PHASES
+	Oil
+	    Hdecane = Hdecane
+	    log_k   -5.0
+	    delta_h   0.0
+	Methane(g)   # copied from llnl database
+		Methane  =  Methane
+		log_k           -2.8502
+		-delta_H	-13.0959	kJ/mol	# Calculated enthalpy of reaction	CH4(g)
+		#	Enthalpy of formation:	-17.88 kcal/mol
+		-analytic -2.4027e+001 4.7146e-003 3.7227e+002 6.4264e+000 2.3362e+005
+
+
+RATES
+	oil_degradation
+		-start
+		1 mu_max = parm(1);
+		2 k_half = parm(2)
+		3 S = tot("Hdecane")
+		10 rate = (-mu_max )* S/ (k_half + S)
+		50 dS = rate * time
+		#90 print M m0 S mu_max k_half rate time
+		100 save dS
+		-end
+	Acetate_decay
+     -start
+     10 rate = -tot("Acetate") # /(3600*24)
+     20 moles = rate*time
+     30 save moles
+     -end
+
+SOLUTION 1
+    units   ppm
+    pH      8.22
+    pe      8.451
+    density 1.023
+    temp    25.0
+    Ca              412.3
+    Mg              1291.8
+    Na              10768.0
+    K               399.1
+    Si              4.28
+    Cl              19353.0
+    Alkalinity      141.682 as HCO3
+    S(6)            2712.0
+    #Hdecane 0.001
+
+EQUILIBRIUM_PHASES 1
+    Oil    0.0   3.0
+    Methane(g)  0.0  0.0
+    CO2(g)  0.0   0.0
+    H2(g)   0.0   0.0
+
+KINETICS 1
+	oil_degradation
+		-formula Hdecane 1 H2O 16 HAcetate -8 H2 -17
+		#-m0 0
+		# -m 0
+		-parms 1.61e-5 1.7e-2 #mu_max k_half
+		#-steps 5184000 in 60 #60 days
+		#INCREMENTAL_REACTIONS true
+	Acetate_decay
+	    # -formula HAcetate 1  CH4  -1
+	    -formula HAcetate 1  CO2 -1  Methane  -1
+	    # -formula HAcetate 1  H2O 2 H2 -4 CO2 -2
+	SELECTED_OUTPUT 1
+	    -reset false
+	USER_PUNCH
+	    -headings  c_Hdecane  c_Acetate   CH4_g   c_CH4   oil_l   CO2_g
+	    10 PUNCH tot("Hdecane")  tot("Acetate") EQUI("Methane(g)")
+	    20 PUNCH tot("Methane")  EQUI("Oil")   EQUI("CO2(g)")  EQUI("H2(g)")
+	END

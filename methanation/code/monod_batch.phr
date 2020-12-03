@@ -1,0 +1,35 @@
+TITLE Monod degradation with Phenol
+SOLUTION_MASTER_SPECIES;
+	Phenol Phenol 0 94.11 94.11 # C6H6O
+	
+SOLUTION_SPECIES;
+	Phenol = Phenol
+	-log_k 0
+	
+SOLUTION 1-40
+	-units g/L
+	Phenol 0
+	
+SOLUTION 0
+	-units g/L
+	Phenol 1
+
+RATES
+	Phenol
+	-start
+	1 mu_max = parm(1);
+	2 k_half = parm(2)
+	3 S = tot("Phenol")
+	10 rate = (-mu_max )* S/ (k_half + S)
+	50 dS = rate * time
+	#90 print M m0 S mu_max k_half rate time
+	100 save dS
+	-end
+KINETICS 1-40
+	Phenol
+	-formula Phenol 1
+	#-m0 0
+	-m 0
+	-parms 1.61e-8 1.7e-3 #mu_max k_half
+	#-steps 5184000 in 60 #60 days
+	#INCREMENTAL_REACTIONS true

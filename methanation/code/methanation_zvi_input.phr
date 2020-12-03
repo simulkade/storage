@@ -1,0 +1,139 @@
+SOLUTION_MASTER_SPECIES
+    Hdecane Hdecane 0 226 226         # C16H34
+	  Methane Methane 0 16  16
+		Zvi	   Zvi	   0.0	  Fe  	  55.85
+
+SOLUTION_SPECIES
+    Hdecane = Hdecane
+    -log_k 0
+		Methane = Methane
+		-log_k 0
+		Zvi = Zvi
+		-log_k  0
+		# ZviO2 = ZviO2
+		# -log_k  0
+		# 2 Zvi + 2 H2O + CO2 = CH4 + 2 ZviO2
+		# -log_k 3.0
+		# ZviO2 + 2 H2 = Zvi + 2 H2O
+		# -log_k  3.0
+    # CH3COO- + H+ = CH4 + CO2
+    #Acetate- + H+ = CH4 + CO2
+    #-log_k   5.0
+    # 4 H2 + CO2 = CH4 + 2 H2O
+    # -log_k 20.0
+    # CO3-2 + 10 H+ + 8 e- = CH4 + 3 H2O
+	#-log_k	41.071
+    # -log_k   40
+
+PHASES
+Oil
+    Hdecane = Hdecane
+    log_k   -6.0
+    delta_h   0.0
+ZVI
+		Zvi = Zvi
+		log_k  -3.3
+		# Zvi + 1.5 H2O + 0.25 CO2 = Fe+2 + 0.25 CH4 + 2 OH-
+		# Zvi + 2 H2O = Fe+2 + H2 + 2 OH-
+	  # H2 + 0.25 CO2 = 0.25 CH4 + 0.5 H2O
+Methane(g)   # copied from llnl database
+	Methane  =  Methane
+	log_k           -2.8502
+	-delta_H	-13.0959	kJ/mol	# Calculated enthalpy of reaction	CH4(g)
+	#	Enthalpy of formation:	-17.88 kcal/mol
+	-analytic -2.4027e+001 4.7146e-003 3.7227e+002 6.4264e+000 2.3362e+005
+
+RATES
+ S_degradation
+# dS/dt = -mu_max * (B/(Y * 8)) * (S / (k_half + S)) / R    (mol Hdecane/L/s)
+# mu_max is maximal growth rate, 1/s.                        B is biomass, mol C/L.
+# Y * 8 is yield factor, mol biomass-C/mol Hdecane            S is Hdecane conc, mol/L.
+# k_half is half saturation concentration, mol Hdecane/L.     R is retardation, 1 + K_d
+# K_d = q_Hdecane / c_Hdecane.
+ -start
+  1 mu_max = parm(1); 2 k_half = parm(2); 3 Y = parm(3); 4 R = 1 + parm(4)
+ 10 S = tot("Hdecane")
+ 20 if S < 1e-9 then goto 60
+ 30 B = kin("Biomass")                     # kin(".i.") gives moles of "Biomass"
+ 40 rate = -mu_max * (B / (Y * 8)) * (S /(k_half + S)) / R
+# 40 rate = -mu_max * (B / (Y * 8)) * (S /(k_half + S + S^2/8.65e-4)) / R
+ 50 dS = rate * time
+ 60 save dS                                # d mol(C8H10)
+ 70 put(rate, 1)                           # Store dS/dt for use in Biomass rate
+ -end
+
+ Biomass
+# dB/dt = dBg/dt - dBd/dt
+# dBg/dt = - Y dS/dt is biomass growth rate.  dBd / dt = k_Bd * B is biomass death rate.
+# k_Bd is death rate coefficient, 1/s.
+#
+ -start
+  1 Y = parm(1); 2 R = 1 + parm(2); 3 k_Bd = parm(3)
+ 10 rate_S = get(1) * R               # Get degradation rate, multiply by Retardation
+ 20 B = m
+ 30 rate = -Y * 8 * rate_S - k_Bd * B
+ 40 dB = rate * time
+ 50 save -dB                          # dB is positive, counts negative to solution
+ -end
+
+ Acetate_decay
+    -start
+    10 rate = -tot("Acetate")/(3600*24)
+    20 moles = rate*time
+    30 save moles
+    -end
+
+ZVI
+   -start
+	 10 rate = -tot("Zvi")
+	 20 moles = rate*time/(3600)
+	 30 save moles
+	 -end
+
+SOLUTION 1
+    units   ppm
+    pH      8.22
+		-pressure     200
+    pe      8.451
+    density 1.023
+    temp    25.0
+    Ca              412.3
+    Mg              1291.8
+    Na              10768.0
+    K               399.1
+    Si              4.28
+    Cl              19353.0
+    Alkalinity      141.682 as HCO3
+    S(6)            2712.0
+		# Zvi             1000.0
+    #Hdecane 0.001
+
+EQUILIBRIUM_PHASES 1
+    Oil    0.0   5.0
+		ZVI    0.0   2.0
+    Methane(g)  0.0  0.0
+    CO2(g)    0.0  0.0
+    H2(g)   0.0   0.0
+
+KINETICS 1
+S_degradation
+    -formula Hdecane 1 H2O 16 HAcetate -8 H2 -17
+    #-m0 0
+    -parms 2.49e-5 7.45e-4 0.05 0.86 # mu_max, k_half, Y, K_d
+Biomass
+    -formula C 0
+    #-m0 0.75e-7 # 1.33e-7 with Haldane inhibition
+    -parms 0.05 0.86 0   # Y, K_d, k_Bd
+Acetate_decay
+    # -formula HAcetate 1  CH4  -1
+    -formula HAcetate 1  CO2 -1  Methane  -1
+    # -formula HAcetate 1  H2O 2 H2 -4 CO2 -2
+ZVI
+	-formula Zvi 1 H2O 1.5 CO2 0.25  Fe -1.0  Methane -0.25  OH  -2.0
+SELECTED_OUTPUT 1
+    -reset false
+USER_PUNCH
+    -headings  Sc_Hdecane Biomass  c_Acetate   CH4_g   c_CH4   oil_l   CO2_g  H2_g  Zvi_l  ZVI
+    10 PUNCH EQUI("Oil") kin("Biomass")  tot("Acetate") EQUI("Methane(g)")
+    20 PUNCH tot("Methane")  EQUI("Oil")   EQUI("CO2(g)")  EQUI("H2(g)")  tot("Zvi")  EQUI("ZVI")
+END
