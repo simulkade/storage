@@ -76,6 +76,47 @@
 \begin_body
 
 \begin_layout Section
+Problem formulation
+\end_layout
+
+\begin_layout Standard
+Figure 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cylindrical_domain.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A cylindrical domain for the simulation of synthetic fuel storage in the
+ subsurface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Single phase flow formulation
 \end_layout
 

@@ -76,11 +76,64 @@
 \begin_body
 
 \begin_layout Section
-Single phase flow formulation
+Problem formulation
 \end_layout
 
 \begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-cylindrical-domain"
+plural "false"
+caps "false"
+noprefix "false"
 
+\end_inset
+
+ shows a 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cylindrical_domain.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-cylindrical-domain"
+
+\end_inset
+
+A cylindrical domain for the simulation of synthetic fuel storage in the
+ subsurface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Single phase flow formulation
 \end_layout
 
 \begin_layout Standard
