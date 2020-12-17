@@ -1,11 +1,30 @@
 % simple gas storage example
 % density data for H2 and methane
 clc
+
+% Input data
+% set up the simulation
+perm = 0.01e-12; % m2
+poros = 0.4; % chalk porosity
+R_field = 500; % m field radius
+H_field = 30; % m field thickness
+well_radius = 0.05; % m
+Nx = 100;
+Ny = 20;
+
+eta_comp = 0.7; % compressor efficiency
+eta_turbine = 0.7; % turbine efficiency
+eta_gen = 0.9; % generator efficiency
+
+% stimulation radius
+r_stim = 50*well_radius; % stimulation radius
+k_stim = 50*perm; % stimulated permeability
+
 comp = 'Air';
 T_ref = 70+273.15; % K reservoir temperature
 p_ref = 200e5; % Pa reservoir pressure
-rho_ref = py.CoolProp.CoolProp.PropsSI('D','P',p_ref,'T',T_ref,comp);
-mu_ref = py.CoolProp.CoolProp.PropsSI('VISCOSITY','P',p_ref,'T',T_ref,comp);
+rho_ref = py.CoolProp.CoolProp.PropsSI('D','P',p_ref,'T',T_ref,comp); % kg/m3
+mu_ref = py.CoolProp.CoolProp.PropsSI('VISCOSITY','P',p_ref,'T',T_ref,comp); % Pa.s
 
 n_data = 20;
 p_range = linspace(p_ref/2, p_ref*1.5, n_data)';
@@ -24,14 +43,7 @@ plot(p_range, rho_data, 'o', p_range, polyval(rho_fit,p_range));
 close all;
 
 
-% set up the simulation
-perm = 0.01e-12; % m2
-poros = 0.4; % chalk porosity
-R_field = 500; % m field radius
-H_field = 30; % m field thickness
-well_radius = 0.05; % m
-Nx = 100;
-Ny = 20;
+
 m = createMeshCylindrical2D(Nx, Ny, R_field, H_field);
 % shift the mesh to create the well
 m.cellcenters.x = m.cellcenters.x+well_radius;
@@ -48,7 +60,6 @@ well_area = pi*well_radius*2*H_field; % m2 well area
 BC = createBC(m);
 
 BC.right.a(:) = 0.0; BC.right.b(:)=1.0; BC.right.c(:) = p_ref;
-[M_BCp, RHS_BCp] = boundaryCondition(BC);
 
 % Tracer
 D_val = 1e-6; % m2/s diffusion coefficient
@@ -68,6 +79,7 @@ clx = 1.1; % correlation length x direction
 cly = 0.1; % correlation length y direction
 rng(1);
 perm_field = field2d(Nx, Ny, perm, V_dp, clx, cly);
+perm_field(1:2,:) = k_stim; % stimulation
 k = createCellVariable(m, perm_field);
 k_face = harmonicMean(k);
 mobil = k_face./mu_ref;
@@ -88,18 +100,27 @@ t_prod = 7*24*3600; % s production time
 t_final = t_inj+t_prod; % total simulation time
 dt = 3600; % s time step
 p_hist = zeros(floor(t_final/dt), 1); % array to store average injection pressure
+t_hist = zeros(floor(t_final/dt), 1);
 t=0;
 j=0;
 T_inj = 40+273.15; % K injection temperature
 p_atm = 1.0e5;
-p_inj = p_ref;
+p_inj = p_ref; % initial estimate
+MW_air = 0.029; % kg/mol
+comp_ratio = 3.5;
 while t<t_final
     t=t+dt;
     if t<t_inj % time dependent injection boundary condition
-        w_isentropic = compressor_station(p_atm, p_inj, comp_ratio, gas, T);
+        w_isentropic = compressor_station(p_atm, p_inj, comp_ratio, comp, T_inj);
+        w_real = w_isentropic/eta_comp;
+        rho_inj = py.CoolProp.CoolProp.PropsSI('D','P',p_inj,'T',T_inj, comp); % density kg/m3, must change with pressure
+        m_inj = surplus_elec*eta_transmission/w_real*MW_air; % kg/s
+        u_inj = m_inj/rho_inj/well_area; % injection velocity
         BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = -u_inj;
+        [M_BCp, RHS_BCp] = boundaryCondition(BC);
     elseif (t>t_inj)
-       BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = -u_inj; 
+       BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = u_inj;
+       [M_BCp, RHS_BCp] = boundaryCondition(BC);
     end
     for i = 1:3 % internal loop
         % solve pressure equation
@@ -138,6 +159,8 @@ while t<t_final
     
     j = j+1;
     p_hist(j) = mean(p_face.xvalue(1,:));
+    t_hist(j) = t;
+    p_inj = p_hist(j);
     
     u = -mobil.*gradientTerm(p_val);
     % solve for concentration
@@ -156,6 +179,11 @@ visualizeCells(p_val); shading interp; axis normal;
 hFig = figure(3);
 set(hFig, 'Position', [200 200 1500 500]);
 visualizeCells(c_init); shading interp; axis normal;
+
+figure(4);
+plot(t_hist/(3600*24), p_hist/1e5);
+xlabel('time[day]')
+ylabel('bar')
 
 % copy-paste from my julia code
 % for i in 1:3 # internal loop
