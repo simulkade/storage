@@ -1,0 +1,353 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Problem formulation
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-cylindrical-domain"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows a gas reservoir represented as a cylindrical domain.
+ The top and bottom of the reservoir are closed, i.e.
+ no flow, and the outskirt of the domain can either be closed or at hydrostatic
+ pressure.
+ The top side of the reservoir is located at depth 
+\begin_inset Formula $L$
+\end_inset
+
+ [m], the thickness of the reservoir is 
+\begin_inset Formula $H_{res}$
+\end_inset
+
+ [m] and the radius of the well and the reservoir are 
+\begin_inset Formula $0.5D_{well}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{res}$
+\end_inset
+
+ [m] respectively.
+ The permeability of the reservoir is 
+\begin_inset Formula $k$
+\end_inset
+
+=10 mD [=10
+\begin_inset Formula $\times$
+\end_inset
+
+10
+\begin_inset Formula $^{-12}$
+\end_inset
+
+ m
+\begin_inset Formula $^{2}$
+\end_inset
+
+] and the porosity is 
+\begin_inset Formula $\varphi$
+\end_inset
+
+=0.37.
+ The reservoir is located close to an offshore windfarm and a surplus electricit
+y of negligible price is provided to the operator to produce ammonia and
+ store it in the subsurface.
+ Ammonia is produced by a catalytic reaction between nitrogen and hydrogen:
+\begin_inset Formula 
+\[
+N_{2}+3H_{2}\rightarrow2NH_{3}.
+\]
+
+\end_inset
+
+Nitrogen is separated from the atmosphere in a cryogenic air separation
+ process and hydrogen is produced from the seawater in an electrolysis unit.
+ All the separation and conversion is done offshore on the platform.
+ There is no constant supply of electricity as the weather forecast gives
+ the wind speed only a day in advance and the windfarm needs to provide
+ electricity to the grid.
+ The surplus electricity that is given to the ammonia production and storage
+ fluctuates between 10 to 1000 MW.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cylindrical_domain.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-cylindrical-domain"
+
+\end_inset
+
+A cylindrical domain for the simulation of synthetic fuel storage in the
+ subsurface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Research questions and approach
+\end_layout
+
+\begin_layout Standard
+The objective of this work is to calculate the energy loss in the process
+ of producing, storing, and extracting ammonia as a synthetic fuel.
+ The two main deliverable are
+\end_layout
+
+\begin_layout Enumerate
+The energy efficiency of the process, i.e.
+ chemical exergy of extracted ammonia divided by the total electricity consumpti
+on
+\end_layout
+
+\begin_layout Enumerate
+The footprint of the process plant, i.e.
+ the surface area (and weight of equipment) that the offshore platforms
+ need to provide.
+\end_layout
+
+\begin_layout Standard
+This problem will be addressed in two steps.
+ First, the air separation, electrolysis, and ammonia synthesis processes
+ will be simulated in Aspen Plus commercial process simulators.
+ Depending on the limitations in the software and time restrictions, different
+ levels of details will be included in the process models.
+ These models are utilized to estimate the energy efficiency of the ammonia
+ synthetic, i.e.
+ the amount of electricity required to synthesize one unit mass of ammonia.
+ The next step is the simulation of the subsurface storage and production.
+ A simplified cylindrical reservoir model with a single well for the injection
+ and production of ammonia will be created in COMSOL Multiphysics software
+ with the boundary conditions described in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-cylindrical-domain"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The reservoir is initially at hydrostatic pressure at a constant temperature
+ of 70
+\begin_inset Formula $^{o}$
+\end_inset
+
+C and the concentration of ammonia in the reservoir is zero.
+ The reservoir will be described by the single phase single component flow
+ of an slightly compressible miscible fluid (ammonia) in the reservoir.
+ The partial differential equations that describe the system are formulated
+ in the next section.
+\end_layout
+
+\begin_layout Section
+Single phase flow formulation
+\end_layout
+
+\begin_layout Standard
+The single phase compressible flow in porous media reads
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\varphi\rho\right)+\nabla.\left(\rho\mathbf{u}\right)=0,
+\]
+
+\end_inset
+
+where the Darcy velocity (assuming single phase flow and negligible gravity
+ effect) and the fluid density are described as
+\begin_inset Formula 
+\[
+\mathbf{u}=-\frac{k}{\mu}\nabla p,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\rho=\rho_{0}+\left(\frac{d\rho}{dp}\right)_{p_{0}}\left(p-p_{0}\right).
+\]
+
+\end_inset
+
+The flow of ammonia in the subsurface is described by
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\varphi c\right)+\nabla\left(\mathbf{u}c-\varphi\mathcal{D}\nabla c\right)=0.
+\]
+
+\end_inset
+
+ In the above equations, 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ [-] denotes porosity, 
+\begin_inset Formula $k$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+] denotes permeability, 
+\begin_inset Formula $\rho$
+\end_inset
+
+ [kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] denotes the fluid density, 
+\begin_inset Formula $p$
+\end_inset
+
+ [Pa] denotes the reservoir pressure, 
+\begin_inset Formula $\mu$
+\end_inset
+
+ [Pa.s] denotes the fluid viscosity, 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+/s] denotes the diffusivity of ammonia, and 
+\begin_inset Formula $c$
+\end_inset
+
+ [mol/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] is the concentration of ammonia.
+ Both viscosity and density are a function of ammonia concentration; however,
+ we ignore this functionality in the preliminary model.
+ The injection rate in the well is a function of the supplied electricity.
+ We assume that for a week a constant power of 1 MW is provided for the
+ synthesis of ammonia and in the following week, there is no supply of electrici
+ty (i.e.
+ ammonia needs to be extracted from the reservoir).
+ The pumping energy is calculated based on the calculated injection pressure
+ in the well.
+ Assume that the reservoir is initially filled with water and the ammonia
+ and water are miscible.
+\end_layout
+
+\end_body
+\end_document
