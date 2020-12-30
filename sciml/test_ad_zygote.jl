@@ -1,7 +1,4 @@
-# sciml practice on BL
-# my first attempt at using the sciml infrastructure
-# of Julia to do parameter estimation
-using DifferentialEquations, Plots, Flux, Optim, DiffEqFlux #, DiffEqSensitivity
+using Zygote, DifferentialEquations, DiffEqSensitivity
 
 # define the domain (global variables)
 L = 0.1 # meter
@@ -98,7 +95,6 @@ tspan = (0.0, 6*3600)
 prob = ODEProblem(BL_ode, sw0, tspan, p0)
 sol = solve(prob)
 
-plot(sol)
 
 # extract the recovery factors
 oil_init = 1.0 - dx/L*sum(sw0)
@@ -138,54 +134,7 @@ function loss(p)
     loss_dp       = sum(abs2, (pressure_drop(sol).-dp_exp)./dp_max_exp)
     loss_total = loss_recovery+loss_dp
     
-    return loss_total, sol
-end
-  
-callback = function (p, l, pred)
-    display(l)
-    # plt = plot(pred, ylim = (0, 6))
-    # display(plt)
-    # Tell sciml_train to not halt the optimization. If return true, then
-    # optimization stops.
-    return false
+    return loss_total
 end
 
-# [krw0, kro0, nw, no, swc, sor]
-p_est = [0.8, 0.3, 2.0, 2.0, 0.1, 0.15]
-
-lb = [0.05, 0.05, 1.0, 1.0, 0.02, 0.02]
-ub = [1.0, 1.0, 4.0, 4.0, 0.3, 0.3]      
-
-function fit_model()
-result_ode = DiffEqFlux.sciml_train(loss, p_est,
-                                    ADAM(0.1),
-                                    cb = callback,
-                                    maxiters = 100,
-                                    lower_bounds=lb,
-                                    upper_bounds=ub)
-    return result_ode
-end                      
-
-# p_min = [0.6875461937595114,
-#  0.48905916428640167,
-#  2.4236909544499854,
-#  2.2117465258145685,
-#  0.4544348486030391,
-#  0.19496540359779663]
-
-result_ode = fit_model()
-p_min = result_ode.minimizer
-
-prob = ODEProblem(BL_ode, sw0, tspan, p_min)
-sol = solve(prob)
-R = zeros(size(sol.t))
-for i in 1:length(sol.t)
-    R[i] = (oil_init-(1.0 - dx/L*sum(sol.u[i])))/oil_init
-end
-
-scatter(t_exp, R_exp)
-
-plot!(sol.t, R)
-
-scatter(t_exp, dp_exp)
-plot!(sol.t, pressure_drop(sol))
+g = gradient(loss, p0)
