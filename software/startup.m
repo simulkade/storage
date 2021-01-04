@@ -11,7 +11,8 @@ function startup()
         % addpath([current_path '/src/Tools']);
         % addpath([current_path '/database']);
         % addpath([current_path '/src/FVTool']);
-        disp('Subsurface energy storage started successfully');
+        disp('Subsurface energy storage started successfully.');
+        disp('Please start the FVTool manually (temporary message).'
     catch 
         error('Something went wrong with the the subsurface energy storage start up. Please download the package again, extract it, and run the startup.m file.'); 
     end

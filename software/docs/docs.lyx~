@@ -355,8 +355,8 @@ Analytical solution of gas storage
 
 \begin_layout Standard
 The single phase flow formulation can be solved analytically in a 1D radial
- system [Hagoort, gas reservoir book].
- The formulation 
+ system.
+ The 
 \end_layout
 
 \end_body
