@@ -549,15 +549,6 @@ m_{i}-m\left(r,t\right)=-\frac{q_{sc}\left(\mu B\right)_{r}}{4\pi kh}\textrm{Ei}
 where the exponential integral function is defined by
 \begin_inset Formula 
 \[
-\textrm{Ei}\left(-x\right)=-\int_{x}^{\infty}\frac{e^{-u}}{u}\textrm{d}u.
-\]
-
-\end_inset
-
-This function can be approximated to 
-\begin_inset Formula 
-\[
-\textrm{Ei}\left(-x\right)=-\ln\left(\gamma x\right),\quad\gamma=1.781\,...
 \]
 
 \end_inset

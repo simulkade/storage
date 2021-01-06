@@ -161,7 +161,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename cylindrical_domain.svg
+	filename /home/ali/projects/storage/projects/cylindrical_domain.svg
 
 \end_inset
 
@@ -354,9 +354,231 @@ Analytical solution of gas storage
 \end_layout
 
 \begin_layout Standard
-The single phase flow formulation can be solved analytically in a 1D radial
- system [Hagoort, gas reservoir book].
- The formulation 
+The single phase flow of a compressible gaseous phase in porous media, shown
+ in Eq.
+ can be solved analytically in a 1D radial system [Hagoort, gas reservoir
+ book].
+ The exact solution that is obtained by Laplace transform is a complex addition
+ of Bessel functions.
+ The solution, however, can be simplified by ignoring the well diameter
+ size and assuming a line source at 
+\begin_inset Formula $r$
+\end_inset
+
+=0, i.e.
+ the position of the well.
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\left(\rho\varphi\right)}{\partial t}+\nabla.\left(\rho\mathbf{u}\right)=0,\label{eq:gas-continuity}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}=-\frac{k}{\mu}\left(\nabla p-\rho\mathbf{g}\right),\label{eq:gas-darcy}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ [kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ [Pa.s] denote the mass density and viscosity of the gas phase, respectively,
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+] and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ [m
+\begin_inset Formula $^{3}$
+\end_inset
+
+/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] denote the permeability and porosity of the porous medium.
+ Both density and viscosity in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gas-continuity"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gas-darcy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are a function of pressure, which makes the equations nonlinear.
+ Al-Hussainy 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "al-hussainy_flow_1966"
+literal "false"
+
+\end_inset
+
+ suggested the use of Kirchhoff's transformation to linearize the equation:
+\begin_inset Formula 
+\begin{equation}
+m\left(p\right)=\frac{1}{\left(\rho/\mu\right)_{r}}\int_{p_{r}}^{p}\frac{\rho}{\mu}\mathrm{d}p,\label{eq:pseudo-pressure}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $m$
+\end_inset
+
+ [Pa] is called pseudo-pressure and subscript 
+\begin_inset Formula $r$
+\end_inset
+
+ denotes an arbitrarily chosen reference pressure.
+ Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pseudo-pressure"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) provides a one-to-one relationship between the pressure and pseudo-pressure
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hagoort_fundamentals_1988"
+literal "false"
+
+\end_inset
+
+.
+ By replacing it in the continuity equation, we obtain
+\begin_inset Formula 
+\[
+\frac{\partial m}{\partial t}-D_{h}\nabla.\left(\delta\nabla m\right)=0,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $D_{h}$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+/s] is called hydraulic diffusivity and is defined by
+\begin_inset Formula 
+\[
+D_{h}=\frac{k}{\varphi\mu c},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $c$
+\end_inset
+
+ [Pa
+\begin_inset Formula $^{-1}$
+\end_inset
+
+] is the gas compressibility:
+\begin_inset Formula 
+\[
+c=\frac{1}{\rho}\frac{\partial\rho}{\partial p}.
+\]
+
+\end_inset
+
+The term 
+\begin_inset Formula $\delta$
+\end_inset
+
+ [-] takes into account the the inertial effects for the non-Darcy flow
+ and is defined by
+\begin_inset Formula 
+\[
+\delta=\left(1+\frac{\rho u\beta k}{\mu}\right)^{-1}.
+\]
+
+\end_inset
+
+The solution for a radial coordinate and a linear source reads
+\begin_inset Formula 
+\[
+m_{i}-m\left(r,t\right)=-\frac{q_{sc}\left(\mu B\right)_{r}}{4\pi kh}\textrm{Ei}\left(-\frac{r^{2}}{4D_{h}t}\right),
+\]
+
+\end_inset
+
+where the exponential integral function is defined by
+\begin_inset Formula 
+\[
+\textrm{Ei}\left(-x\right)=-\int_{x}^{\infty}\frac{e^{-u}}{u}\textrm{d}u.
+\]
+
+\end_inset
+
+This function can be approximated to 
+\begin_inset Formula 
+\[
+\textrm{Ei}\left(-x\right)=-\ln\left(\gamma x\right),\quad\gamma=1.781\,...
+\]
+
+\end_inset
+
+which is a suitable approximation for the calculation of well pressure.
+\end_layout
+
+\begin_layout Section
+Refrences
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "energy_storage"
+options "bibtotoc,plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
