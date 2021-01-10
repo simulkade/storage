@@ -350,6 +350,21 @@ ty (i.e.
 \end_layout
 
 \begin_layout Section
+Synthetic fuel
+\end_layout
+
+\begin_layout Standard
+The production of synthetic fuels can be sustainable and carbon-neutral
+ if the raw material for the synthesis process is obtained from renewable
+ sources and the process is driven by renewable energy, e.g.
+ wind energy.
+ In this work, we look into the synthesis of methane, methanol, and ammonia.
+ We assume that the raw material is carbon dioxide and nitrogen from the
+ atmosphere and hydrogen from the seawater.
+ 
+\end_layout
+
+\begin_layout Subsection
 Methanation reactor
 \end_layout
 
@@ -380,7 +395,81 @@ literal "false"
 \end_inset
 
 .
- 
+ A selectivity of close to 100% is observed for catalytic methanation of
+ CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ over nickel catalyst at temperature close to 300
+\begin_inset Formula $^{o}$
+\end_inset
+
+C.
+ Although theoretically the reaction reaches 100% yield at room temperature,
+ in practice the reaction rate is too small an the methane yield is zero.
+ A temperature of at least 200
+\begin_inset Formula $^{o}$
+\end_inset
+
+C is needed to get the catalytic reaction started.
+ At temperatures above 500
+\begin_inset Formula $^{o}$
+\end_inset
+
+C, the reaction goes backward, i.e.
+ conversion of methane and water to hydrogen and CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+.
+ This reaction is known as methane reforming that is currently the main
+ reaction for the production of the so-called 
+\begin_inset Quotes eld
+\end_inset
+
+blue
+\begin_inset Quotes erd
+\end_inset
+
+ hydrogen.
+\end_layout
+
+\begin_layout Standard
+The conversion rate of CO2 is calculated by
+\begin_inset Formula 
+\[
+r=\frac{k_{f}c_{CO_{2}}c_{H_{2}}-k_{r}c_{CH_{4}}c_{H_{2}O}}{1+K_{H_{2}O}c_{H_{2}O}},
+\]
+
+\end_inset
+
+where the reaction rate constant 
+\begin_inset Formula $k$
+\end_inset
+
+ is defined by
+\begin_inset Formula 
+\[
+k=A\exp\left(\frac{-E_{a}}{RT}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $A$
+\end_inset
+
+ is the pre-exponential or frequency factor and 
+\begin_inset Formula $E_{a}$
+\end_inset
+
+ is the activation energy.
+ The values of these constants are often measured at low pressure and are
+ reported in many publications.
+\end_layout
+
+\begin_layout Subsection
+Methanol from CO2
 \end_layout
 
 \begin_layout Section
