@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass extreport
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -29,6 +29,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -74,6 +76,419 @@
 \end_header
 
 \begin_body
+
+\begin_layout Title
+Physical and chemical energy storage in the abandoned offshore reservoirs
+\end_layout
+
+\begin_layout Author
+Ali A.
+ Eftekhari
+\end_layout
+
+\begin_layout Abstract
+The existing and in development offshore windmills in the North Sea will
+ ensure the availability of abundant and cheap electricity in the region,
+ yet fail to address the intermittent nature of the wind resources.
+ The surplus electricity in the windy days and off peak time can be converted
+ to physical (compressed and hot fluids) or chemical (synthetic fuels such
+ as ammonia, methanol, or methane) forms and stored in the reservoirs.
+ The stored energy is extracted and converted to electricity when there
+ is a shortage of wind, or consumed as clean fuels for transportation.
+ This project aims to study the feasibility of subsurface physical and chemical
+ energy storage and extraction as an alternative for the abandonment of
+ the North Sea oil and gas reservoirs.
+ The feasibility and environmental impacts/benefits of the following energy
+ storage processes will be investigated:
+\end_layout
+
+\begin_layout Abstract
+Hydrogen: recent developments in the electrolysis technology has considerably
+ increased the efficiency of hydrogen production from water.
+ If the process is driven by the clean wind electricity, the produced hydrogen
+ is a zero-emission fuel.
+ Currently, hydrogen is included in all the energy scenarios in the North
+ Sea region countries.
+ For the offshore hydrogen production and storage, the following aspects
+ need further investigations: 
+\end_layout
+
+\begin_layout Abstract
+Fitting the water treatment, electrolysis, and compression equipment on
+ a platform 
+\end_layout
+
+\begin_layout Abstract
+Pipeline integrity (for storage and gas transport) 
+\end_layout
+
+\begin_layout Abstract
+Physico-bio-chemical interactions of hydrogen with the formation fluids
+ and the chalk reservoir 
+\end_layout
+
+\begin_layout Abstract
+Capacity of reservoirs for storage of hydrogen and flow of hydrogen in the
+ reservoir 
+\end_layout
+
+\begin_layout Abstract
+Energy efficiency and economic value of the process 
+\end_layout
+
+\begin_layout Abstract
+In this research, the energy requirement of the process, the size of the
+ process equipment, and the reactive flow of hydrogen in the chalk reservoirs
+ will be addressed.
+ 
+\end_layout
+
+\begin_layout Abstract
+Methane: methane has the lowest carbon dioxide (CO2) emission among the
+ fossil fuels, and therefore is considered as one of the fuels in the low-CO2-em
+ission 2050 energy scenarios for Europe.
+ There are two possibilities for the storage and production of methane:
+ synthetic production of methane from electricity, and the bio-catalytic
+ conversion of the remaining oil to methane in the abandoned reservoirs.
+ The synthetic production of methane requires a carbon source such as CO2,
+ which is unlikely to be provided from a point source or captured from the
+ atmospheric CO2.
+ Therefore, here the focus is on the upgrading of the remaining oil in the
+ reservoir to methane.
+ Hydrogen from electrolysis can also be included in the process to increase
+ the share of the stored clean energy.
+ The focus will be on the insitu upgrading of the crude oil, energy efficiency
+ of the process, and the economic value and CO2 emission of the process
+ and its final product.
+ 
+\end_layout
+
+\begin_layout Abstract
+Methanol: catalytic conversion of carbon dioxide (or other carbon-containing
+ molecules) and hydrogen to methanol is successfully demonstrated in many
+ academic and industrial projects and is a proven technology.
+ Since methanol is in liquid phase at standard conditions, it is easier
+ to handle and store it and there is a smaller risk of leakage.
+ However, its production requires a carbon source that can be provided,
+ e.g., from the atmospheric CO2 or methane (see the previous bullet point).
+ Here, the focus will be on the process equipment that fit on a platform
+ and the energy efficiency of the overall production and storage process
+ (including the flow of methanol in the reservoir and its loss due to mixing)
+ and its economic value and environmental impact.
+ 
+\end_layout
+
+\begin_layout Abstract
+Ammonia: since the ingredients for the production of ammonia, i.e., nitrogen
+ from the air and hydrogen from the seawater, are available in abundance,
+ it is one of the fuels that can be both synthesized and stored offshore
+ provided that the process equipment for the separation of nitrogen from
+ air and treatment and electrolysis of seawater can be installed on a platform.
+ This research will study the topside equipment design specifications for
+ the production of ammonia and its storage in the reservoir.
+ The flow of ammonia in the reservoir and its interaction with the reservoir
+ fluids, the energy efficiency and power requirement of the process, and
+ the environmental impacts are the main topics of investigation.
+ 
+\end_layout
+
+\begin_layout Abstract
+Compressed air: subsurface storage of compressed air is one of the energy
+ storage methods that is widely investigated to address the intermittent
+ nature of wind and solar electricity and to store the electricity produced
+ during the off-peak time in the fossil-fuel power plants.
+ There are two major issues that needs to be addressed here: the mechanical
+ properties of the reservoir and whether it can handle this cyclic compression/d
+ecompression process, and the total energy loss during the compression of
+ the gas, the pressure drop close to the injectors and producers, and the
+ expansion of the compressed gas in turbines.
+ Here, by developing a model for the process including the flow of air in
+ the porous media, all the energy losses of the process will be quantified
+ in order to calculate the net percentage of the electricity that can be
+ stored in a North Sea chalk reservoir or deeper in a salt cavern.
+ 
+\end_layout
+
+\begin_layout Abstract
+The main focus points of the project are the investigation and quantification
+ of 
+\end_layout
+
+\begin_layout Abstract
+1- the importance of subsurface energy storage for the future energy plans
+ of Denmark 
+\end_layout
+
+\begin_layout Abstract
+2- the required subsurface and topside criteria for the operation of the
+ subsurface storage projects 
+\end_layout
+
+\begin_layout Abstract
+3- the energy efficiency and environmental impacts of different energy storage
+ and extraction processes 
+\end_layout
+
+\begin_layout Abstract
+Since a large volume of work needs to be done in a four-month time frame,
+ utmost care will be taken not to repeat the already existing research.
+ Moreover, the feasibility study will be carried out based on the existing
+ fundamental and universally accepted measures such as Energy Return on
+ Energy Investment (EROEI) or exergy analysis.
+ The economic analysis will be built on top of the fundamental physical
+ measures.
+\end_layout
+
+\begin_layout Chapter
+Problem definition
+\end_layout
+
+\begin_layout Standard
+The declining production of oil and gas and the societal pressure 
+\end_layout
+
+\begin_layout Chapter
+Synthetic fuel storage
+\end_layout
+
+\begin_layout Standard
+The oil and gas extraction from the Danish sector of the North Sea has been
+ declining, which will lead to the cessation of production and abandonment
+ (i.e., plugging of the wells and removal of the facilities).
+ Simultaneously, the existing and in development offshore windmills in the
+ North Sea will ensure the availability of abundant and cheap electricity
+ in the region yet fail to address the intermittent nature of the wind resources.
+ This paper hypothesizes that the surplus electricity in the windy days
+ and off-peak time can be converted to physical (compressed hot fluids)
+ or chemical (synthetic fuels, e.g., hydrogen, ammonia, methanol, or methane)
+ forms and stored in the vast space of the abandoned oil and gas reservoirs
+ under the North Sea.
+ The stored energy can be extracted and consumed as carbon-neutral fuels
+ for transportation or be converted back to electricity when there is a
+ shortage of wind.
+ This paper studies the technical and thermodynamic feasibility of offshore
+ conversion of electricity to physical and chemical energy sources and their
+ storage/extraction in/from the North Sea oil and gas reservoirs.
+ The technical feasibility study deals with the sufficiency of the existing
+ infrastructures including platforms, pipelines, and surface facilities
+ to accommodate the process equipment for the conversion of electricity
+ to physical and chemical storable forms.
+ Several processes including nitrogen and carbon dioxide separation from
+ the atmosphere, electrolysis of seawater, and reduction of CO2 and N2 to
+ synthetic fuels are simulated in Aspen Plus process simulator.
+ The simulation results are used for the sizing of process equipment and
+ the calculation of required platform area.
+ The thermodynamic analysis quantifies the exergy loss during the offshore
+ conversion, transportation, and storage/extraction of physical and chemical
+ energy in the reservoirs based on the results of an in-house opensource
+ dynamic model that simulates the multicomponent non-isothermal flow of
+ fluids in the subsurface.
+ The results will finally estimate the amount of wind electricity, offshore
+ installations, and subsurface space that is required to make Denmark self-suffi
+cient and independent of fossil fuels.
+ 
+\end_layout
+
+\begin_layout Section
+Fuel
+\end_layout
+
+\begin_layout Subsection
+Introduction 
+\end_layout
+
+\begin_layout Standard
+About the possibility of fossil fuel storage and what can go wrong 
+\end_layout
+
+\begin_layout Subsection
+Hydrogen 
+\end_layout
+
+\begin_layout Standard
+Recent developments in the electrolysis technology has considerably increased
+ the efficiency of hydrogen production from water.
+ If the process is driven by the clean wind electricity, the produced hydrogen
+ is a zero-emission fuel.
+ Currently, hydrogen is included in all the energy scenarios in the North
+ Sea region countries.
+ For the offshore hydrogen production and storage, the following aspects
+ need further investigations: 
+\end_layout
+
+\begin_layout Standard
+Fitting the water treatment, electrolysis, and compression equipment on
+ a platform 
+\end_layout
+
+\begin_layout Standard
+Pipeline integrity (for storage and gas transport) 
+\end_layout
+
+\begin_layout Standard
+Physico-bio-chemical interactions of hydrogen with the formation fluids
+ and the chalk reservoir 
+\end_layout
+
+\begin_layout Standard
+Capacity of reservoirs for storage of hydrogen and flow of hydrogen in the
+ reservoir 
+\end_layout
+
+\begin_layout Standard
+Energy efficiency and economic value of the process 
+\end_layout
+
+\begin_layout Standard
+In this research, the energy requirement of the process, the size of the
+ process equipment, and the reactive flow of hydrogen in the chalk reservoirs
+ will be addressed.
+ 
+\end_layout
+
+\begin_layout Standard
+Green hydrogen production 
+\end_layout
+
+\begin_layout Standard
+Hydrogen can be produced from the electrolysis of water in the following
+ reaction: 
+\end_layout
+
+\begin_layout Standard
+2H2O→2H2+O2# SEQ Equation 
+\backslash
+∗ ARABIC 1 
+\end_layout
+
+\begin_layout Standard
+The minimum energy required for this reaction is given by the change of
+ Gibbs free energy [1].
+ The enthalpy and Gibbs energy of formation for water, hydrogen, and oxygen
+ are shown in appendix 1.
+ A procedure for calculating the chemical exergy of hydrogen is also presented.
+ 
+\end_layout
+
+\begin_layout Standard
+This reaction requires 39 kWh of electricity per kg hydrogen, but with the
+ state of the art technology the value is closer to 48 kWh/kg [2,3].
+ 
+\end_layout
+
+\begin_layout Standard
+Notes for the hydrogen production process 
+\end_layout
+
+\begin_layout Standard
+Hydrogen is purified by cooling it down to 308 K using cooling water.
+ It removes the moisture from the hydrogen stream.
+ The condensed water is recycled [1].
+ Some extra moisture remains in the hydrogen stream, which will be removed
+ later in the intercoolers between the compression stages [1].
+ Electricity must be provided as direct current (DC), which introduces a
+ loss of 2.5% for AC-DC conversion [1].
+ Rosen assumes an exergy efficiency of around 70% for the electrolysis of
+ water for a mature electrolysis technology in 1995 (not considering other
+ losses).
+ He does not give more information on other steps of the process, e.g.
+ water treatment and purification.
+ 
+\end_layout
+
+\begin_layout Standard
+Hydrogen from electrolysis 
+\end_layout
+
+\begin_layout Standard
+There are several technologies to produce hydrogen from water using electricity.
+ If the electricity is supplied by renewable resources, the produced hydrogen
+ is called “green hydrogen”.
+ 
+\end_layout
+
+\begin_layout Standard
+Alkaline water electrolysis 
+\end_layout
+
+\begin_layout Standard
+Hydrogen storage 
+\end_layout
+
+\begin_layout Standard
+The storage of hydrogen in the subsurface is a relatively old topic.
+ Due to the high consumption of hydrogen, the petrochemical plants have
+ been using salt caverns to store large volumes of hydrogen in the subsurface.
+ 
+\end_layout
+
+\begin_layout Standard
+Synthetic natural gas 
+\end_layout
+
+\begin_layout Standard
+A summary of the review of Bolt, Dincer, and Agelin-Chaab 
+\end_layout
+
+\begin_layout Standard
+Methanation process for the catalytic conversion of CO2 and Co to methane
+ was first suggested by Sendersen and Sabatier.
+ The reaction occurs in multiple steps starting with capturing of CO2 or
+ from an industrial or natural source or producing a mixture of CO2 and
+ CO by burning hydrocarbons (i.e.
+ fossil fuels) or carbohydrates (i.e.
+ biomass).
+ In presence of water vapor and at high temperatures, a considerable amount
+ of CO and H2 are also produced.
+ H2 can react with CO2 and CO and convert them to methane.
+ The reduction of CO2 to methane by hydrogen is known as Sabatier reaction:
+ 
+\end_layout
+
+\begin_layout Standard
+CO2 + 4 H2 ßà CH4 + 2 H2O 
+\end_layout
+
+\begin_layout Standard
+The reaction is often conducted in fixed bed reactors with Nickel catalyst.
+ If the reactants, i.e.
+ hydrogen and CO2 are obtained from the dead state (i.e.
+ seawater and atmosphere) using renewable electricity, 
+\end_layout
+
+\begin_layout Standard
+Compressed air storage 
+\end_layout
+
+\begin_layout Standard
+Compressed air storage is a relatively mature technology.
+ In the US, large tanks are used for the compression of air during the off-peak
+ time to store cheap electricity in the form of high pressure air.
+ The air is later used to drive a turbine and produce electricity during
+ the peak time.
+ This approach, although not energy efficient, is economical due to the
+ special model of electricity pricing that encourages the consumers to shift
+ their electricity demand to the off-peak hours.
+ The large scale storage of electricity in the subsurface was first suggested
+ as a method to reduce the waste energy of the large fossil fuel power plants.
+ Many of the power plants are designed for a continuous operation and therefore
+ their efficiency is significantly reduced if they operate under the design
+ condition.
+ It is not convenient to shut down the power plants when there is no consumer
+ for the produced electricity because the start up is time consuming, expensive,
+ and inefficient.
+ Compressed air storage is one way of storing the surplus energy of a power
+ plant that operates at its design condition.
+ The large amount of stored energy can provide extra electricity during
+ the peak time to balance the demand.
+ The same idea can be used with the offshore windfarms, utilizing the abandoned
+ gas fields as a storage space.
+ 
+\end_layout
+
+\begin_layout Chapter
+Physical energy storage
+\end_layout
 
 \begin_layout Section
 Problem formulation

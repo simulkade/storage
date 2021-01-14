@@ -464,7 +464,8 @@ where
 \end_inset
 
  is the activation energy.
- 
+ The values of these constants are often measured at low pressure and are
+ reported in many publications.
 \end_layout
 
 \begin_layout Subsection
@@ -478,8 +479,15 @@ Analytical solution of gas storage
 \begin_layout Standard
 The single phase flow of a compressible gaseous phase in porous media, shown
  in Eq.
- can be solved analytically in a 1D radial system [Hagoort, gas reservoir
- book].
+ can be solved analytically in a 1D radial system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hagoort_fundamentals_1988"
+literal "false"
+
+\end_inset
+
+.
  The exact solution that is obtained by Laplace transform is a complex addition
  of Bessel functions.
  The solution, however, can be simplified by ignoring the well diameter
