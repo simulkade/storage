@@ -3,7 +3,6 @@ classdef Model
     properties
         domain
         pressure_bc
-
     end
     
 end

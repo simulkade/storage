@@ -2,7 +2,7 @@
 % reservoir to be modeled.
 classdef Reservoir
     properties
-        name = 'Danish North Sea'
+        name
         domain_shape
         domain_length
         domain_width
@@ -17,17 +17,32 @@ classdef Reservoir
     end
 
     methods
-        function phrm = PhreeqcRM(n_cells, n_threads)
-            %{
-            phrm = PhreeqcRM(n_cells, n_threads) 
-            n_cells: number of reaction cells
-            n_threads: number of CPU cores for OpenMP
-            %}
-            if ~libisloaded('libphreeqcrm')
-                loadlibrary('libphreeqcrm','RM_interface_C.h');
-            end
-			phrm.ncells = n_cells;
-			phrm.nthreads = n_threads;
+        function res = Reservoir(name, ...
+            domain_shape, ...
+            domain_length, ...
+            domain_width, ...
+            domain_thickness, ...
+            reservoir_depth, ...
+            permeability, ...
+            porosity, ...
+            oil_saturation, ...
+            water_saturation, ...
+            gas_saturation, ...
+            dykstra_parsons_coef)
+
+            res.name = name;
+            res.domain_shape = domain_shape; 
+            res.domain_length = domain_length;
+            res.domain_width = domain_width;
+            res.domain_thickness = domain_thickness;
+            res.reservoir_depth = reservoir_depth;
+            res.permeability = permeability;
+            res.porosity = porosity;
+            res.oil_saturation = oil_saturation;
+            res.water_saturation = water_saturation;
+            res.gas_saturation = gas_saturation;
+            res.dykstra_parsons_coef = dykstra_parsons_coef;
         end
+
     end
 end

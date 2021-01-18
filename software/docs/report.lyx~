@@ -244,7 +244,32 @@ Problem definition
 \end_layout
 
 \begin_layout Standard
-The declining production of oil and gas and the societal pressure 
+There are more and more scientific evidence for the of anthropological carbon
+ dioxide emission in an accelerated climate change, with potentially disastrous
+ -although uncertain- aftermath.
+ This has increased the societal pressure for a faster transition from hydrocarb
+on-based to renewable-based energy.
+ Besides these political and societal pressures, the declining conventional
+ oil resources has reduced the efficiency of oil and gas operation and increased
+ the costs, leading eventually to the cessation of production and abandonment
+ of the fields.
+ The infrastructures, e.g.
+ wells, platforms, topside equipment for transport and processing, and transport
+ pipelines, even though still functional, will have to be removed as part
+ of the abandonment operation.
+ 
+\end_layout
+
+\begin_layout Standard
+At the same time, the renewable energy resources will grow in many areas
+ of the world.
+ In the North Sea, several new windfarms are planed or under construction,
+ which will quadruple the capacity of renewable electricity production.
+ This capacity that is several times more than the electricity demand in
+ Denmark, is variable and intermittent and thus will not replace the reliable
+ fossil-fuel power plants.
+ The key factor in the transition to a fully renewable energy infrastructure
+ is a large scale energy storage that can act as a buffer to the 
 \end_layout
 
 \begin_layout Chapter
@@ -252,7 +277,242 @@ Synthetic fuel storage
 \end_layout
 
 \begin_layout Standard
+The oil and gas extraction from the Danish sector of the North Sea has been
+ declining, which will lead to the cessation of production and abandonment
+ (i.e., plugging of the wells and removal of the facilities).
+ Simultaneously, the existing and in development offshore windmills in the
+ North Sea will ensure the availability of abundant and cheap electricity
+ in the region yet fail to address the intermittent nature of the wind resources.
+ This paper hypothesizes that the surplus electricity in the windy days
+ and off-peak time can be converted to physical (compressed hot fluids)
+ or chemical (synthetic fuels, e.g., hydrogen, ammonia, methanol, or methane)
+ forms and stored in the vast space of the abandoned oil and gas reservoirs
+ under the North Sea.
+ The stored energy can be extracted and consumed as carbon-neutral fuels
+ for transportation or be converted back to electricity when there is a
+ shortage of wind.
+ This paper studies the technical and thermodynamic feasibility of offshore
+ conversion of electricity to physical and chemical energy sources and their
+ storage/extraction in/from the North Sea oil and gas reservoirs.
+ The technical feasibility study deals with the sufficiency of the existing
+ infrastructures including platforms, pipelines, and surface facilities
+ to accommodate the process equipment for the conversion of electricity
+ to physical and chemical storable forms.
+ Several processes including nitrogen and carbon dioxide separation from
+ the atmosphere, electrolysis of seawater, and reduction of CO2 and N2 to
+ synthetic fuels are simulated in Aspen Plus process simulator.
+ The simulation results are used for the sizing of process equipment and
+ the calculation of required platform area.
+ The thermodynamic analysis quantifies the exergy loss during the offshore
+ conversion, transportation, and storage/extraction of physical and chemical
+ energy in the reservoirs based on the results of an in-house opensource
+ dynamic model that simulates the multicomponent non-isothermal flow of
+ fluids in the subsurface.
+ The results will finally estimate the amount of wind electricity, offshore
+ installations, and subsurface space that is required to make Denmark self-suffi
+cient and independent of fossil fuels.
+ 
+\end_layout
 
+\begin_layout Section
+Fuel
+\end_layout
+
+\begin_layout Subsection
+Introduction 
+\end_layout
+
+\begin_layout Standard
+About the possibility of fossil fuel storage and what can go wrong 
+\end_layout
+
+\begin_layout Subsection
+Hydrogen 
+\end_layout
+
+\begin_layout Standard
+Recent developments in the electrolysis technology has considerably increased
+ the efficiency of hydrogen production from water.
+ If the process is driven by the clean wind electricity, the produced hydrogen
+ is a zero-emission fuel.
+ Currently, hydrogen is included in all the energy scenarios in the North
+ Sea region countries.
+ For the offshore hydrogen production and storage, the following aspects
+ need further investigations: 
+\end_layout
+
+\begin_layout Standard
+Fitting the water treatment, electrolysis, and compression equipment on
+ a platform 
+\end_layout
+
+\begin_layout Standard
+Pipeline integrity (for storage and gas transport) 
+\end_layout
+
+\begin_layout Standard
+Physico-bio-chemical interactions of hydrogen with the formation fluids
+ and the chalk reservoir 
+\end_layout
+
+\begin_layout Standard
+Capacity of reservoirs for storage of hydrogen and flow of hydrogen in the
+ reservoir 
+\end_layout
+
+\begin_layout Standard
+Energy efficiency and economic value of the process 
+\end_layout
+
+\begin_layout Standard
+In this research, the energy requirement of the process, the size of the
+ process equipment, and the reactive flow of hydrogen in the chalk reservoirs
+ will be addressed.
+ 
+\end_layout
+
+\begin_layout Standard
+Green hydrogen production 
+\end_layout
+
+\begin_layout Standard
+Hydrogen can be produced from the electrolysis of water in the following
+ reaction: 
+\end_layout
+
+\begin_layout Standard
+2H2O→2H2+O2# SEQ Equation 
+\backslash
+∗ ARABIC 1 
+\end_layout
+
+\begin_layout Standard
+The minimum energy required for this reaction is given by the change of
+ Gibbs free energy [1].
+ The enthalpy and Gibbs energy of formation for water, hydrogen, and oxygen
+ are shown in appendix 1.
+ A procedure for calculating the chemical exergy of hydrogen is also presented.
+ 
+\end_layout
+
+\begin_layout Standard
+This reaction requires 39 kWh of electricity per kg hydrogen, but with the
+ state of the art technology the value is closer to 48 kWh/kg [2,3].
+ 
+\end_layout
+
+\begin_layout Standard
+Notes for the hydrogen production process 
+\end_layout
+
+\begin_layout Standard
+Hydrogen is purified by cooling it down to 308 K using cooling water.
+ It removes the moisture from the hydrogen stream.
+ The condensed water is recycled [1].
+ Some extra moisture remains in the hydrogen stream, which will be removed
+ later in the intercoolers between the compression stages [1].
+ Electricity must be provided as direct current (DC), which introduces a
+ loss of 2.5% for AC-DC conversion [1].
+ Rosen assumes an exergy efficiency of around 70% for the electrolysis of
+ water for a mature electrolysis technology in 1995 (not considering other
+ losses).
+ He does not give more information on other steps of the process, e.g.
+ water treatment and purification.
+ 
+\end_layout
+
+\begin_layout Standard
+Hydrogen from electrolysis 
+\end_layout
+
+\begin_layout Standard
+There are several technologies to produce hydrogen from water using electricity.
+ If the electricity is supplied by renewable resources, the produced hydrogen
+ is called “green hydrogen”.
+ 
+\end_layout
+
+\begin_layout Standard
+Alkaline water electrolysis 
+\end_layout
+
+\begin_layout Standard
+Hydrogen storage 
+\end_layout
+
+\begin_layout Standard
+The storage of hydrogen in the subsurface is a relatively old topic.
+ Due to the high consumption of hydrogen, the petrochemical plants have
+ been using salt caverns to store large volumes of hydrogen in the subsurface.
+ 
+\end_layout
+
+\begin_layout Standard
+Synthetic natural gas 
+\end_layout
+
+\begin_layout Standard
+A summary of the review of Bolt, Dincer, and Agelin-Chaab 
+\end_layout
+
+\begin_layout Standard
+Methanation process for the catalytic conversion of CO2 and Co to methane
+ was first suggested by Sendersen and Sabatier.
+ The reaction occurs in multiple steps starting with capturing of CO2 or
+ from an industrial or natural source or producing a mixture of CO2 and
+ CO by burning hydrocarbons (i.e.
+ fossil fuels) or carbohydrates (i.e.
+ biomass).
+ In presence of water vapor and at high temperatures, a considerable amount
+ of CO and H2 are also produced.
+ H2 can react with CO2 and CO and convert them to methane.
+ The reduction of CO2 to methane by hydrogen is known as Sabatier reaction:
+ 
+\end_layout
+
+\begin_layout Standard
+CO2 + 4 H2 ßà CH4 + 2 H2O 
+\end_layout
+
+\begin_layout Standard
+The reaction is often conducted in fixed bed reactors with Nickel catalyst.
+ If the reactants, i.e.
+ hydrogen and CO2 are obtained from the dead state (i.e.
+ seawater and atmosphere) using renewable electricity, 
+\end_layout
+
+\begin_layout Standard
+Compressed air storage 
+\end_layout
+
+\begin_layout Standard
+Compressed air storage is a relatively mature technology.
+ In the US, large tanks are used for the compression of air during the off-peak
+ time to store cheap electricity in the form of high pressure air.
+ The air is later used to drive a turbine and produce electricity during
+ the peak time.
+ This approach, although not energy efficient, is economical due to the
+ special model of electricity pricing that encourages the consumers to shift
+ their electricity demand to the off-peak hours.
+ The large scale storage of electricity in the subsurface was first suggested
+ as a method to reduce the waste energy of the large fossil fuel power plants.
+ Many of the power plants are designed for a continuous operation and therefore
+ their efficiency is significantly reduced if they operate under the design
+ condition.
+ It is not convenient to shut down the power plants when there is no consumer
+ for the produced electricity because the start up is time consuming, expensive,
+ and inefficient.
+ Compressed air storage is one way of storing the surplus energy of a power
+ plant that operates at its design condition.
+ The large amount of stored energy can provide extra electricity during
+ the peak time to balance the demand.
+ The same idea can be used with the offshore windfarms, utilizing the abandoned
+ gas fields as a storage space.
+ 
+\end_layout
+
+\begin_layout Chapter
+Physical energy storage
 \end_layout
 
 \begin_layout Section
@@ -440,34 +700,34 @@ The single phase compressible flow in porous media reads
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\frac{\partial}{\partial t}\left(\varphi\rho\right)+\nabla.\left(\rho\mathbf{u}\right)=0,
-\]
+\begin{equation}
+\frac{\partial}{\partial t}\left(\varphi\rho\right)+\nabla.\left(\rho\mathbf{u}\right)=0,\label{eq:continuity}
+\end{equation}
 
 \end_inset
 
 where the Darcy velocity (assuming single phase flow and negligible gravity
  effect) and the fluid density are described as
 \begin_inset Formula 
-\[
-\mathbf{u}=-\frac{k}{\mu}\nabla p,
-\]
+\begin{equation}
+\mathbf{u}=-\frac{k}{\mu}\nabla p,\label{eq:darcy}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\rho=\rho_{0}+\left(\frac{d\rho}{dp}\right)_{p_{0}}\left(p-p_{0}\right).
-\]
+\begin{equation}
+\rho=\rho_{0}+\left(\frac{d\rho}{dp}\right)_{p_{0}}\left(p-p_{0}\right).\label{eq:density-pressure}
+\end{equation}
 
 \end_inset
 
 The flow of ammonia in the subsurface is described by
 \begin_inset Formula 
-\[
-\frac{\partial}{\partial t}\left(\varphi c\right)+\nabla\left(\mathbf{u}c-\varphi\mathcal{D}\nabla c\right)=0.
-\]
+\begin{equation}
+\frac{\partial}{\partial t}\left(\varphi c\right)+\nabla\left(\mathbf{u}c-\varphi\mathcal{D}\nabla c\right)=0.\label{eq:adv-diff-single}
+\end{equation}
 
 \end_inset
 
@@ -875,7 +1135,285 @@ This function can be approximated to
 which is a suitable approximation for the calculation of well pressure.
 \end_layout
 
+\begin_layout Chapter
+Conclusions and suggestions
+\end_layout
+
+\begin_layout Standard
+The storage of energy is an inefficient process, with several bottlenecks
+ that can still be improved compared to the achievable theoretical efficiency.
+ 
+\end_layout
+
+\begin_layout Standard
+The large and safe space of the offshore reservoirs offer an excellent storage
+ room for different types of synthetic fuels.
+ However, offshore production of the synthetic fuels presents the biggest
+ challenge.
+ It is generally advisable that if the produced synthetic fuel is going
+ to be consumed onshore, it is easier to perform the whole process, including
+ storage, in the onshore facilities and subsurface reservoirs.
+ However, for specific applications such as shipping industry, it is feasible
+ to produce and store the fuel offshore.
+ 
+\end_layout
+
+\begin_layout Standard
+One important question regarding the utilization of the surplus renewable
+ electricity is how much carbon dioxide emission can be avoided.
+ For this, we compared the CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ storage in the reservoirs with the CO2 emission that is indirectly avoided
+ by addressing the intermittency.
+\end_layout
+
 \begin_layout Section
+References
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "energy_storage"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\start_of_appendix
+Analytical solutions
+\end_layout
+
+\begin_layout Section
+Analytical solution of gas storage
+\end_layout
+
+\begin_layout Standard
+The single phase flow of a compressible gaseous phase in porous media, shown
+ in Eq.
+ can be solved analytically in a 1D radial system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hagoort_fundamentals_1988"
+literal "false"
+
+\end_inset
+
+.
+ The exact solution that is obtained by Laplace transform is a complex addition
+ of Bessel functions.
+ The solution, however, can be simplified by ignoring the well diameter
+ size and assuming a line source at 
+\begin_inset Formula $r$
+\end_inset
+
+=0, i.e.
+ the position of the well.
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\left(\rho\varphi\right)}{\partial t}+\nabla.\left(\rho\mathbf{u}\right)=0,\label{eq:gas-continuity-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}=-\frac{k}{\mu}\left(\nabla p-\rho\mathbf{g}\right),\label{eq:gas-darcy-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ [kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ [Pa.s] denote the mass density and viscosity of the gas phase, respectively,
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+] and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ [m
+\begin_inset Formula $^{3}$
+\end_inset
+
+/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] denote the permeability and porosity of the porous medium.
+ Both density and viscosity in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gas-continuity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gas-darcy-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are a function of pressure, which makes the equations nonlinear.
+ Al-Hussainy 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "al-hussainy_flow_1966"
+literal "false"
+
+\end_inset
+
+ suggested the use of Kirchhoff's transformation to linearize the equation:
+\begin_inset Formula 
+\begin{equation}
+m\left(p\right)=\frac{1}{\left(\rho/\mu\right)_{r}}\int_{p_{r}}^{p}\frac{\rho}{\mu}\mathrm{d}p,\label{eq:pseudo-pressure-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $m$
+\end_inset
+
+ [Pa] is called pseudo-pressure and subscript 
+\begin_inset Formula $r$
+\end_inset
+
+ denotes an arbitrarily chosen reference pressure.
+ Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pseudo-pressure-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) provides a one-to-one relationship between the pressure and pseudo-pressure
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hagoort_fundamentals_1988"
+literal "false"
+
+\end_inset
+
+.
+ By replacing it in the continuity equation, we obtain
+\begin_inset Formula 
+\[
+\frac{\partial m}{\partial t}-D_{h}\nabla.\left(\delta\nabla m\right)=0,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $D_{h}$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+/s] is called hydraulic diffusivity and is defined by
+\begin_inset Formula 
+\[
+D_{h}=\frac{k}{\varphi\mu c},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $c$
+\end_inset
+
+ [Pa
+\begin_inset Formula $^{-1}$
+\end_inset
+
+] is the gas compressibility:
+\begin_inset Formula 
+\[
+c=\frac{1}{\rho}\frac{\partial\rho}{\partial p}.
+\]
+
+\end_inset
+
+The term 
+\begin_inset Formula $\delta$
+\end_inset
+
+ [-] takes into account the the inertial effects for the non-Darcy flow
+ and is defined by
+\begin_inset Formula 
+\[
+\delta=\left(1+\frac{\rho u\beta k}{\mu}\right)^{-1}.
+\]
+
+\end_inset
+
+The solution for a radial coordinate and a linear source reads
+\begin_inset Formula 
+\[
+m_{i}-m\left(r,t\right)=-\frac{q_{sc}\left(\mu B\right)_{r}}{4\pi kh}\textrm{Ei}\left(-\frac{r^{2}}{4D_{h}t}\right),
+\]
+
+\end_inset
+
+where the exponential integral function is defined by
+\begin_inset Formula 
+\[
+\textrm{Ei}\left(-x\right)=-\int_{x}^{\infty}\frac{e^{-u}}{u}\textrm{d}u.
+\]
+
+\end_inset
+
+This function can be approximated to 
+\begin_inset Formula 
+\[
+\textrm{Ei}\left(-x\right)=-\ln\left(\gamma x\right),\quad\gamma=1.781\,...
+\]
+
+\end_inset
+
+which is a suitable approximation for the calculation of well pressure.
+\end_layout
+
+\begin_layout Chapter
 Not yet thrown away
 \end_layout
 
@@ -905,22 +1443,6 @@ literal "false"
 \begin{equation}
 r=\frac{k_{s}K_{c}K_{h}^{4}p_{c}p_{h}^{4}}{\left(1+K_{c}p_{c}+K_{h}p_{h}\right)^{5}}\label{eq:co2-meth-quach}
 \end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Refrences
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "energy_storage"
-options "bibtotoc,plain"
 
 \end_inset
 

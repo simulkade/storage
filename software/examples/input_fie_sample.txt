@@ -12,6 +12,7 @@
 # and also explained in the report
 # Add as many empty lines as you like to separate the input lines
 
+
 # 1- computational domain
 COORDINATE CARTESIAN # Can take values CARTESIAN, CYLINDRICAL
 DIMENSION 2         # takes also 1 and 3 (1D, 2D, 3D)
@@ -26,6 +27,7 @@ NY 20                # number of cells in the vertical Y (Z) for Cartesian (Cyli
 NZ 10                # number of cells in the second horizontal Z (theta) for Cartesian (Cylindrical)
 
 # 2- Reservoir
+RESERVOIR_NAME Halfdan  # Name of the reservoir
 PERM 0.01e-12        # reservoir permeability, m^2
 POROS 0.4            # porosity, -
 STIM_PERM 10e-12     # permeability after stimulation, m^2
@@ -35,5 +37,8 @@ OIL_SAT   0.1        # initial oil saturation
 WATER_SAT 0.8        # initial water saturation
 GAS_SAT   0.1        # initial gas saturation
 P_INIT    200e5      # initial pressure, Pa
+DP        0.7        # Dykstra-Parsons coefficient, [0, 1]
+X_COR     0.2        # Correlation length in x direction [0, 1+]
+Y_COR     0.1        # Correlation length in y direction [0, 1+]
 
 # 3- boundary condition
