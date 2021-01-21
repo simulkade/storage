@@ -339,7 +339,94 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-About the possibility of fossil fuel storage and what can go wrong 
+Literature review
+\end_layout
+
+\begin_layout Standard
+Gas storage has been around for a long time.
+ There are several points that need to be addressed regarding the safety
+ of storage and the physicochemical interaction of the stored fuel with
+ its environment.
+\end_layout
+
+\begin_layout Standard
+About the possibility of fossil fuel storage, the required space, the efficiency.
+\end_layout
+
+\begin_layout Subsection
+Physical properties
+\end_layout
+
+\begin_layout Standard
+The important thermodynamic and transport properties of the fuels are discussed
+ here.
+\end_layout
+
+\begin_layout Subsubsection
+Density
+\end_layout
+
+\begin_layout Standard
+The density of the fuels is used on the calculation of the volume of the
+ reservoir that is required for the storage of a specific mass of the fuel.
+ In this work, we calculate the density of all the fuels with the software
+ CoolProp, which uses the Helmholtz energy based equations of state developed
+ specifically for the accurate calculation of the thermodynamic properties
+ of fluids.
+ In the simulation, running the equation of state in each iteration can
+ add a significant computational overhead; therefore, we use a correlation
+ that is often used in reservoir simulation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "aziz_petroleum_1979"
+literal "false"
+
+\end_inset
+
+ for the density of compressible fluids as a function of pressure at constant
+ temperature, i.e.
+\begin_inset Formula 
+\[
+\rho=\rho_{0}\exp\left(c_{f}\left(p-p_{0}\right)\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ [Pa] is an arbitrarily chosen reference pressure and 
+\begin_inset Formula $\rho_{0}$
+\end_inset
+
+ [kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] is the fluid density at the reference pressure.
+ The above equation works fine for slightly to moderately compressible fluids.
+ The fluid compressibility is defined by
+\begin_inset Formula 
+\[
+c_{f}=\frac{1}{\rho}\left(\frac{\partial\rho}{\partial p}\right)_{T}.
+\]
+
+\end_inset
+
+When we have the density data for a range of pressure, 
+\begin_inset Formula $c_{f}$
+\end_inset
+
+ [1/Pa] can be calculated by
+\begin_inset Formula 
+\[
+c_{f}=\frac{\ln\left(\rho/\rho_{0}\right)}{p-p0}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -527,6 +614,23 @@ Compressed air storage is a relatively mature technology.
  
 \end_layout
 
+\begin_layout Standard
+As this report is being written, there are several green hydrogen production
+ being announced.
+ Ørsted has announce that as part of project H2RES, supported by The Energy
+ Technology Development and Demonstration Programme (EUDP) under the Danish
+ Energy Agency, a hydrogen production unit with a 2 MW capacity will be
+ built by the end of 2021 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_orsted_nodate"
+literal "false"
+
+\end_inset
+
+ that will produce up to 1000 kg/day of green hydrogen.
+\end_layout
+
 \begin_layout Chapter
 Physical energy storage
 \end_layout
@@ -707,7 +811,26 @@ C and the concentration of ammonia in the reservoir is zero.
 \end_layout
 
 \begin_layout Section
-Single phase flow formulation
+Subsurface storage model
+\end_layout
+
+\begin_layout Standard
+For the storage of the gas phase synthetic fuels and compressed air in the
+ gas reservoirs, I use a single-phase multi-component flow formulation.
+ The storage of gas in the water flooded reservoirs is not a good idea since
+ most of the gas will be trapped by capillary forces, and therefore will
+ be permanently stored.
+ It is possible to dry out the reservoir and prepare it for the gas injection
+ by, e.g.
+ injection of superheated steam or hot gases.
+ However, it will require large amount of energy and can potentially create
+ thermally-induced fractures in the reservoir.
+ I will therefore only consider the gas reservoirs for the storage of gaseous
+ phase energy careers.
+ For the liquid phase, we will use both gas and oil reservoirs.
+ In both cases, we will include the compressibility of the fluids in the
+ model as it is a major contributing driving force in the extraction of
+ the fluids from the reservoir.
 \end_layout
 
 \begin_layout Standard
