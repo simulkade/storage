@@ -33,6 +33,10 @@ for i = 1:length(f)
     if strcmp(f{i}, 'HourDK')
         continue
     end
+    idx = ismissing(d1{:, f{i}});
+    d1{:, f{i}}(idx)=0;
+    idx = ismissing(d2{:, f{i}});
+    d2{:, f{i}}(idx)=0;
     d_new{:, f{i}} = d1{:, f{i}}+d2{:, f{i}};
 end
 

@@ -331,7 +331,486 @@ cient and independent of fossil fuels.
 \end_layout
 
 \begin_layout Section
-Fuel
+Fuels
+\end_layout
+
+\begin_layout Subsection
+Hydrogen
+\end_layout
+
+\begin_layout Standard
+Recent developments in the electrolysis technology has considerably increased
+ the efficiency of hydrogen production from water.
+ If the process is driven by the clean wind electricity, the produced hydrogen
+ is a zero-emission fuel.
+ Currently, hydrogen is included in all the energy scenarios in the North
+ Sea region countries.
+ For the offshore hydrogen production and storage, the following aspects
+ need further investigations: 
+\end_layout
+
+\begin_layout Standard
+Fitting the water treatment, electrolysis, and compression equipment on
+ a platform 
+\end_layout
+
+\begin_layout Standard
+Pipeline integrity (for storage and gas transport) 
+\end_layout
+
+\begin_layout Standard
+Physico-bio-chemical interactions of hydrogen with the formation fluids
+ and the chalk reservoir 
+\end_layout
+
+\begin_layout Standard
+Capacity of reservoirs for storage of hydrogen and flow of hydrogen in the
+ reservoir 
+\end_layout
+
+\begin_layout Standard
+Energy efficiency and economic value of the process 
+\end_layout
+
+\begin_layout Standard
+In this research, the energy requirement of the process, the size of the
+ process equipment, and the reactive flow of hydrogen in the chalk reservoirs
+ will be addressed.
+ 
+\end_layout
+
+\begin_layout Standard
+Green hydrogen production 
+\end_layout
+
+\begin_layout Standard
+Hydrogen can be produced from the electrolysis of water in the following
+ reaction: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+2H_{2}O→2H_{2}+O_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The minimum energy required for this reaction is given by the change of
+ Gibbs free energy [1].
+ The enthalpy and Gibbs energy of formation for water, hydrogen, and oxygen
+ are shown in appendix 1.
+ A procedure for calculating the chemical exergy of hydrogen is also presented.
+ 
+\end_layout
+
+\begin_layout Standard
+This reaction requires 39 kWh of electricity per kg hydrogen, but with the
+ state of the art technology the value is closer to 48 kWh/kg [2,3].
+ 
+\end_layout
+
+\begin_layout Standard
+Notes for the hydrogen production process 
+\end_layout
+
+\begin_layout Standard
+Hydrogen is purified by cooling it down to 308 K using cooling water.
+ It removes the moisture from the hydrogen stream.
+ The condensed water is recycled [1].
+ Some extra moisture remains in the hydrogen stream, which will be removed
+ later in the intercoolers between the compression stages [1].
+ Electricity must be provided as direct current (DC), which introduces a
+ loss of 2.5% for AC-DC conversion [1].
+ Rosen assumes an exergy efficiency of around 70% for the electrolysis of
+ water for a mature electrolysis technology in 1995 (not considering other
+ losses).
+ He does not give more information on other steps of the process, e.g.
+ water treatment and purification.
+ 
+\end_layout
+
+\begin_layout Standard
+Hydrogen from electrolysis 
+\end_layout
+
+\begin_layout Standard
+There are several technologies to produce hydrogen from water using electricity.
+ If the electricity is supplied by renewable resources, the produced hydrogen
+ is called “green hydrogen”.
+ 
+\end_layout
+
+\begin_layout Standard
+Alkaline water electrolysis 
+\end_layout
+
+\begin_layout Standard
+Hydrogen storage 
+\end_layout
+
+\begin_layout Standard
+The storage of hydrogen in the subsurface is a relatively old topic.
+ Due to the high consumption of hydrogen, the petrochemical plants have
+ been using salt caverns to store large volumes of hydrogen in the subsurface.
+ 
+\end_layout
+
+\begin_layout Standard
+Synthetic natural gas 
+\end_layout
+
+\begin_layout Standard
+A summary of the review of Bolt, Dincer, and Agelin-Chaab 
+\end_layout
+
+\begin_layout Standard
+Methanation process for the catalytic conversion of CO2 and Co to methane
+ was first suggested by Sendersen and Sabatier.
+ The reaction occurs in multiple steps starting with capturing of CO2 or
+ from an industrial or natural source or producing a mixture of CO2 and
+ CO by burning hydrocarbons (i.e.
+ fossil fuels) or carbohydrates (i.e.
+ biomass).
+ In presence of water vapor and at high temperatures, a considerable amount
+ of CO and H2 are also produced.
+ H2 can react with CO2 and CO and convert them to methane.
+ The reduction of CO2 to methane by hydrogen is known as Sabatier reaction:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+CO_{2}+4H_{2}\rightleftarrows CH_{4}+2H_{2}O
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The reaction is often conducted in fixed bed reactors with Nickel catalyst.
+ If the reactants, i.e.
+ hydrogen and CO2 are obtained from the dead state (i.e.
+ seawater and atmosphere) using renewable electricity, 
+\end_layout
+
+\begin_layout Standard
+Compressed air storage 
+\end_layout
+
+\begin_layout Standard
+Compressed air storage is a relatively mature technology.
+ In the US, large tanks are used for the compression of air during the off-peak
+ time to store cheap electricity in the form of high pressure air.
+ The air is later used to drive a turbine and produce electricity during
+ the peak time.
+ This approach, although not energy efficient, is economical due to the
+ special model of electricity pricing that encourages the consumers to shift
+ their electricity demand to the off-peak hours.
+ The large scale storage of electricity in the subsurface was first suggested
+ as a method to reduce the waste energy of the large fossil fuel power plants.
+ Many of the power plants are designed for a continuous operation and therefore
+ their efficiency is significantly reduced if they operate under the design
+ condition.
+ It is not convenient to shut down the power plants when there is no consumer
+ for the produced electricity because the start up is time consuming, expensive,
+ and inefficient.
+ Compressed air storage is one way of storing the surplus energy of a power
+ plant that operates at its design condition.
+ The large amount of stored energy can provide extra electricity during
+ the peak time to balance the demand.
+ The same idea can be used with the offshore windfarms, utilizing the abandoned
+ gas fields as a storage space.
+ 
+\end_layout
+
+\begin_layout Standard
+As this report is being written, there are several green hydrogen production
+ being announced.
+ Ørsted has announce that as part of project H2RES, supported by The Energy
+ Technology Development and Demonstration Programme (EUDP) under the Danish
+ Energy Agency, a hydrogen production unit with a 2 MW capacity will be
+ built by the end of 2021 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_orsted_nodate"
+literal "false"
+
+\end_inset
+
+ that will produce up to 1000 kg/day of green hydrogen.
+\end_layout
+
+\begin_layout Subsection
+Methane
+\end_layout
+
+\begin_layout Standard
+Carbon dioxide can be reduced to methane via Sabatier reaction, that reads
+\begin_inset Formula 
+\[
+CO_{2}+4H_{2}\rightleftarrows CH_{4}+2H_{2}O\qquad\Delta H_{0}=-165\,\textrm{kJ/mol}.
+\]
+
+\end_inset
+
+This reaction can be a pathway to sustainable fuel if the carbon dioxide
+ can be extracted from the atmosphere and hydrogen can be provided from
+ the electrolysis of water driven by renewable electricity.
+ The reaction can be catalyzed by nickel or ruthenium and can be conducted
+ in a packed bed reactor.
+ The reaction rate in different ranges of pressure and temperature are reported
+ in the literature.
+ Although other reactions can occur at the high temperature and pressure
+ of the methanations reactors, it is observed that the selectivity of the
+ reaction towards methane is high 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "loder_reaction_2020"
+literal "false"
+
+\end_inset
+
+.
+ A selectivity of close to 100% is observed for catalytic methanation of
+ CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ over nickel catalyst at temperature close to 300
+\begin_inset Formula $^{o}$
+\end_inset
+
+C.
+ Although theoretically the reaction reaches 100% yield at room temperature,
+ in practice the reaction rate is too small an the methane yield is zero.
+ A temperature of at least 200
+\begin_inset Formula $^{o}$
+\end_inset
+
+C is needed to get the catalytic reaction started.
+ At temperatures above 500
+\begin_inset Formula $^{o}$
+\end_inset
+
+C, the reaction goes backward, i.e.
+ conversion of methane and water to hydrogen and CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+.
+ This reaction is also known as methane reforming that is currently the
+ main reaction for the production of the so-called 
+\begin_inset Quotes eld
+\end_inset
+
+blue
+\begin_inset Quotes erd
+\end_inset
+
+ hydrogen.
+ A schematic of the process for the production of green methane is shown
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:methane-process"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In this process, the required hydrogen and carbon dioxide are produced
+ by the electrolysis of water and separation of atmospheric CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+, respectively.
+ The carbon source can also be provided from other alternative sources such
+ as biomass or from the captured carbon dioxide from, e.g.
+ cement or steel industries.
+ However, capturing CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ from the atmosphere has the benefit of making the produced methane carbon-neutr
+al or so-called 
+\begin_inset Quotes eld
+\end_inset
+
+green
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sabatier.gv.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:methane-process"
+
+\end_inset
+
+A block flow diagram of Sabatier process for the production of methane
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ammonia
+\end_layout
+
+\begin_layout Standard
+Ammonia, as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Haber-process"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ An ammonia reactor is operated at 200 bar and a temperature of 300 to 500
+\begin_inset Formula $^{o}$
+\end_inset
+
+C 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "elnashaie_simulation_1988,morud_analysis_1998"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename haber.gv.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Haber-process"
+
+\end_inset
+
+Haber process for the production of ammonia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Methanol
+\end_layout
+
+\begin_layout Standard
+Methanol can be synthesized from the catalytic reaction of hydrogen and
+ carbon dioxide.
+ The reactor operates at 100 bar and 264
+\begin_inset Formula $^{o}$
+\end_inset
+
+C [Luyben ***].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename methanol.gv.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Methanol synthesis process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -431,204 +910,6 @@ c_{f}=\frac{\ln\left(\rho/\rho_{0}\right)}{p-p0}.
 
 \begin_layout Subsection
 Hydrogen 
-\end_layout
-
-\begin_layout Standard
-Recent developments in the electrolysis technology has considerably increased
- the efficiency of hydrogen production from water.
- If the process is driven by the clean wind electricity, the produced hydrogen
- is a zero-emission fuel.
- Currently, hydrogen is included in all the energy scenarios in the North
- Sea region countries.
- For the offshore hydrogen production and storage, the following aspects
- need further investigations: 
-\end_layout
-
-\begin_layout Standard
-Fitting the water treatment, electrolysis, and compression equipment on
- a platform 
-\end_layout
-
-\begin_layout Standard
-Pipeline integrity (for storage and gas transport) 
-\end_layout
-
-\begin_layout Standard
-Physico-bio-chemical interactions of hydrogen with the formation fluids
- and the chalk reservoir 
-\end_layout
-
-\begin_layout Standard
-Capacity of reservoirs for storage of hydrogen and flow of hydrogen in the
- reservoir 
-\end_layout
-
-\begin_layout Standard
-Energy efficiency and economic value of the process 
-\end_layout
-
-\begin_layout Standard
-In this research, the energy requirement of the process, the size of the
- process equipment, and the reactive flow of hydrogen in the chalk reservoirs
- will be addressed.
- 
-\end_layout
-
-\begin_layout Standard
-Green hydrogen production 
-\end_layout
-
-\begin_layout Standard
-Hydrogen can be produced from the electrolysis of water in the following
- reaction: 
-\end_layout
-
-\begin_layout Standard
-2H2O→2H2+O2# SEQ Equation 
-\backslash
-∗ ARABIC 1 
-\end_layout
-
-\begin_layout Standard
-The minimum energy required for this reaction is given by the change of
- Gibbs free energy [1].
- The enthalpy and Gibbs energy of formation for water, hydrogen, and oxygen
- are shown in appendix 1.
- A procedure for calculating the chemical exergy of hydrogen is also presented.
- 
-\end_layout
-
-\begin_layout Standard
-This reaction requires 39 kWh of electricity per kg hydrogen, but with the
- state of the art technology the value is closer to 48 kWh/kg [2,3].
- 
-\end_layout
-
-\begin_layout Standard
-Notes for the hydrogen production process 
-\end_layout
-
-\begin_layout Standard
-Hydrogen is purified by cooling it down to 308 K using cooling water.
- It removes the moisture from the hydrogen stream.
- The condensed water is recycled [1].
- Some extra moisture remains in the hydrogen stream, which will be removed
- later in the intercoolers between the compression stages [1].
- Electricity must be provided as direct current (DC), which introduces a
- loss of 2.5% for AC-DC conversion [1].
- Rosen assumes an exergy efficiency of around 70% for the electrolysis of
- water for a mature electrolysis technology in 1995 (not considering other
- losses).
- He does not give more information on other steps of the process, e.g.
- water treatment and purification.
- 
-\end_layout
-
-\begin_layout Standard
-Hydrogen from electrolysis 
-\end_layout
-
-\begin_layout Standard
-There are several technologies to produce hydrogen from water using electricity.
- If the electricity is supplied by renewable resources, the produced hydrogen
- is called “green hydrogen”.
- 
-\end_layout
-
-\begin_layout Standard
-Alkaline water electrolysis 
-\end_layout
-
-\begin_layout Standard
-Hydrogen storage 
-\end_layout
-
-\begin_layout Standard
-The storage of hydrogen in the subsurface is a relatively old topic.
- Due to the high consumption of hydrogen, the petrochemical plants have
- been using salt caverns to store large volumes of hydrogen in the subsurface.
- 
-\end_layout
-
-\begin_layout Standard
-Synthetic natural gas 
-\end_layout
-
-\begin_layout Standard
-A summary of the review of Bolt, Dincer, and Agelin-Chaab 
-\end_layout
-
-\begin_layout Standard
-Methanation process for the catalytic conversion of CO2 and Co to methane
- was first suggested by Sendersen and Sabatier.
- The reaction occurs in multiple steps starting with capturing of CO2 or
- from an industrial or natural source or producing a mixture of CO2 and
- CO by burning hydrocarbons (i.e.
- fossil fuels) or carbohydrates (i.e.
- biomass).
- In presence of water vapor and at high temperatures, a considerable amount
- of CO and H2 are also produced.
- H2 can react with CO2 and CO and convert them to methane.
- The reduction of CO2 to methane by hydrogen is known as Sabatier reaction:
- 
-\end_layout
-
-\begin_layout Standard
-CO2 + 4 H2 ßà CH4 + 2 H2O 
-\end_layout
-
-\begin_layout Standard
-The reaction is often conducted in fixed bed reactors with Nickel catalyst.
- If the reactants, i.e.
- hydrogen and CO2 are obtained from the dead state (i.e.
- seawater and atmosphere) using renewable electricity, 
-\end_layout
-
-\begin_layout Standard
-Compressed air storage 
-\end_layout
-
-\begin_layout Standard
-Compressed air storage is a relatively mature technology.
- In the US, large tanks are used for the compression of air during the off-peak
- time to store cheap electricity in the form of high pressure air.
- The air is later used to drive a turbine and produce electricity during
- the peak time.
- This approach, although not energy efficient, is economical due to the
- special model of electricity pricing that encourages the consumers to shift
- their electricity demand to the off-peak hours.
- The large scale storage of electricity in the subsurface was first suggested
- as a method to reduce the waste energy of the large fossil fuel power plants.
- Many of the power plants are designed for a continuous operation and therefore
- their efficiency is significantly reduced if they operate under the design
- condition.
- It is not convenient to shut down the power plants when there is no consumer
- for the produced electricity because the start up is time consuming, expensive,
- and inefficient.
- Compressed air storage is one way of storing the surplus energy of a power
- plant that operates at its design condition.
- The large amount of stored energy can provide extra electricity during
- the peak time to balance the demand.
- The same idea can be used with the offshore windfarms, utilizing the abandoned
- gas fields as a storage space.
- 
-\end_layout
-
-\begin_layout Standard
-As this report is being written, there are several green hydrogen production
- being announced.
- Ørsted has announce that as part of project H2RES, supported by The Energy
- Technology Development and Demonstration Programme (EUDP) under the Danish
- Energy Agency, a hydrogen production unit with a 2 MW capacity will be
- built by the end of 2021 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_orsted_nodate"
-literal "false"
-
-\end_inset
-
- that will produce up to 1000 kg/day of green hydrogen.
 \end_layout
 
 \begin_layout Chapter
@@ -825,9 +1106,12 @@ For the storage of the gas phase synthetic fuels and compressed air in the
  injection of superheated steam or hot gases.
  However, it will require large amount of energy and can potentially create
  thermally-induced fractures in the reservoir.
- We will therefore only consider the gas reservoirs for the storage of gaseous
+ I will therefore only consider the gas reservoirs for the storage of gaseous
  phase energy careers.
  For the liquid phase, we will use both gas and oil reservoirs.
+ In both cases, we will include the compressibility of the fluids in the
+ model as it is a major contributing driving force in the extraction of
+ the fluids from the reservoir.
 \end_layout
 
 \begin_layout Standard
@@ -942,72 +1226,6 @@ The production of synthetic fuels can be sustainable and carbon-neutral
 
 \begin_layout Subsection
 Methanation reactor
-\end_layout
-
-\begin_layout Standard
-Carbon dioxide can be reduced to methane via Sabatier reaction, that reads
-\begin_inset Formula 
-\[
-CO2+4H2\rightleftarrows CH_{4}+2H_{2}O\qquad\Delta H_{0}=-165\,\textrm{kJ/mol}.
-\]
-
-\end_inset
-
-This reaction can be a pathway to sustainable fuel if the carbon dioxide
- can be extracted from the atmosphere and hydrogen can be provided from
- the electrolysis of water driven by renewable electricity.
- The reaction can be catalyzed by nickel or ruthenium and can be conducted
- in a packed bed reactor.
- The reaction rate in different ranges of pressure and temperature are reported
- in the literature.
- Although other reactions can occur at the high temperature and pressure
- of the methanations reactors, it is observed that the selectivity of the
- reaction towards methane is high 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "loder_reaction_2020"
-literal "false"
-
-\end_inset
-
-.
- A selectivity of close to 100% is observed for catalytic methanation of
- CO
-\begin_inset Formula $_{2}$
-\end_inset
-
- over nickel catalyst at temperature close to 300
-\begin_inset Formula $^{o}$
-\end_inset
-
-C.
- Although theoretically the reaction reaches 100% yield at room temperature,
- in practice the reaction rate is too small an the methane yield is zero.
- A temperature of at least 200
-\begin_inset Formula $^{o}$
-\end_inset
-
-C is needed to get the catalytic reaction started.
- At temperatures above 500
-\begin_inset Formula $^{o}$
-\end_inset
-
-C, the reaction goes backward, i.e.
- conversion of methane and water to hydrogen and CO
-\begin_inset Formula $_{2}$
-\end_inset
-
-.
- This reaction is known as methane reforming that is currently the main
- reaction for the production of the so-called 
-\begin_inset Quotes eld
-\end_inset
-
-blue
-\begin_inset Quotes erd
-\end_inset
-
- hydrogen.
 \end_layout
 
 \begin_layout Standard
