@@ -26,8 +26,8 @@ function d = extract_elect_data(begin_date, end_date, file_name)
     date_all = datenum(datetime(d_base.HourDK, 'Format', 'yyyy-MM-dd''T''HH:mm:ss'));
     % date_all = datenum(d_base.HourDK);
 
-    ind1 = find(date1<=date_all, 1)
-    ind2 = find(date2<=date_all, 1)
+    ind1 = find(date1<=date_all, 1);
+    ind2 = find(date2<=date_all, 1);
     
     d = d_base(ind1:ind2, :);
 
