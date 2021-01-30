@@ -288,7 +288,145 @@ to-be-abandoned
  Sea region.
 \end_layout
 
+\begin_layout Standard
+There are three major questions that will be answered in this work.
+ First, how much energy storage is needed in Denmark? Secondly, to what
+ extent can the subsurface storage be helpful? Thirdly, what are the promising
+ technologies from a technical point of view.
+ This report will provide simple, reproducible, and realistic procedures
+ and quantitative values to answer these questions.
+\end_layout
+
+\begin_layout Section
+Future energy need of Denmark
+\end_layout
+
+\begin_layout Standard
+Denmark currently consumes around 100 kWh per person per day of energy in
+ different forms.
+ Eftekhari 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "eftekhari_quantifying_2020"
+literal "false"
+
+\end_inset
+
+ showed that this can be further categorized into a 30-30-40 category: 30%
+ electricity, 30% heat, and 40% hydrocarbon fuel.
+ Note that the hydrocarbon consumption for electricity production is not
+ included in the 40% hydrocarbon fuel.
+ We can assume that in the future, all the warming systems and short distance
+ transport will be electrified; therefore, by assuming a realistic coefficient
+ of performance for the future warming systems, the 30-30-40 can be roughly
+ converted to 45-40, i.e.
+ a demand of 45 kWh/day electricity per person and 40 kWh/day liquid fuel
+ per person.
+ This is the energy demand that I will use in the rest of this report.
+ As for electricity production, the current plans is to quadruple the current
+ electricity capacity of the wind mills in the North Sea.
+ Since the capacity is not equal to the actual produced electricity (due
+ to, e.g.
+ technical problems, curtailment, weather conditions, etc.) I will estimate
+ the intermittent electricity production of the windmills by quadrupling
+ the current electricity production in Denmark.
+ The data is available from Energinet.dk website and also handed it as an
+ electronic attachment to this report, including several Matlab functions
+ for analysis and visualizations.
+\end_layout
+
+\begin_layout Standard
+Fig.
+ *** shows the integration of electricity supply and demand integrated over
+ a certain period of time by
+\begin_inset Formula 
+\begin{equation}
+\bar{E}=\frac{1}{t_{2}-t_{1}}\int_{t_{1}}^{t_{2}}E\left(t\right)dt,\label{eq:average-energy-demand}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $E(t)$
+\end_inset
+
+ [MW] is the electricity supply or demand in the future and 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ [s] and 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+ [s] represent a certain time period.
+ The future energy supply and demand are estimated by using the correction
+ factor extracted from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "eftekhari_quantifying_2020"
+literal "false"
+
+\end_inset
+
+, e.g.
+\begin_inset Formula 
+\[
+E_{future}=\lambda_{i}E_{current},\quad i=s,\,d
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda_{d}=1.5$
+\end_inset
+
+ denotes a 50% in electricity demand and 
+\begin_inset Formula $\lambda_{s}=4.0$
+\end_inset
+
+ denotes a 400% increase of windmill capacity in Denmark.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+***
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Current and future electricity supply and demand of Denmark 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the next chapter, several energy storage solutions will be discussed,
+ and a thermodynamic model will be used to compare these solutions.
+ The last chapter discusses the technical opportunities and limitations
+ of each solution.
+\end_layout
+
 \begin_layout Chapter
+Physical and chemical energy storage
+\end_layout
+
+\begin_layout Section
 Synthetic fuel storage
 \end_layout
 
@@ -917,6 +1055,30 @@ c_{f}=\frac{\ln\left(\rho/\rho_{0}\right)}{p-p0}.
 
 \begin_layout Subsection
 Hydrogen 
+\end_layout
+
+\begin_layout Section
+Storage volumes
+\end_layout
+
+\begin_layout Standard
+The equation for the calculation of the diameter is derived from
+\begin_inset Formula 
+\[
+V_{fluid}=\varphi\pi r_{res}^{2}H_{res},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+r_{res}=\sqrt{\frac{V_{fluid}}{\varphi\pi H_{res}}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

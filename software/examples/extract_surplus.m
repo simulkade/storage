@@ -1,4 +1,4 @@
-function [new_elec,current_demand,surplus_elec,shortage_elec] = extract_surplus(d, future_coef)
+function [new_elec,current_demand,surplus_elec,shortage_elec] = extract_surplus(d, future_coef, demand_coef)
 % extract the surplus, deficit, and other relevant values for data d
 % future_coef is a multiplier for that is used to calculate the future
 % wind electricity production in Denmark
@@ -10,11 +10,11 @@ function [new_elec,current_demand,surplus_elec,shortage_elec] = extract_surplus(
 d.HourDK = datetime(d.HourDK, 'Format', 'yyyy-MM-dd''T''HH:mm:ss');
 
 new_elec = future_coef*(d.OnshoreWindPower+d.OffshoreWindPower);
-surplus_elec = new_elec-d.TotalLoad;
-new_elec(new_elec>d.TotalLoad) = d.TotalLoad(new_elec>d.TotalLoad);
+current_demand = demand_coef*d.TotalLoad;
+surplus_elec = new_elec-current_demand;
+new_elec(new_elec>current_demand) = current_demand(new_elec>current_demand);
 surplus_elec(surplus_elec<0) = 0;
-shortage_elec = d.TotalLoad-new_elec;
-current_demand = d.TotalLoad;
+shortage_elec = current_demand-new_elec;
 
 end
 
