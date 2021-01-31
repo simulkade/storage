@@ -1081,6 +1081,16 @@ r_{res}=\sqrt{\frac{V_{fluid}}{\varphi\pi H_{res}}}
 
 \end_layout
 
+\begin_layout Section
+Platform
+\end_layout
+
+\begin_layout Standard
+As an example, Dan F host 6,800 tonnes of facilities and provides a power
+ of 55 MW to the facilities.
+ The highest point on the platform is 132 m above water.
+\end_layout
+
 \begin_layout Chapter
 Physical energy storage
 \end_layout
@@ -1171,7 +1181,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/ali/projects/storage/projects/cylindrical_domain.svg
+	filename C:/home/ali/projects/storage/projects/cylindrical_domain.svg
 
 \end_inset
 
