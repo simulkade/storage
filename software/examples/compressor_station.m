@@ -12,7 +12,12 @@ for i = 1:n_stage
     p2 = p_in*comp_ratio_adj^i;
     S_in=py.CoolProp.CoolProp.PropsSI("SMOLAR", "T", T, "P", p1, gas); % molar entropy J/(mol.K)
     H_in=py.CoolProp.CoolProp.PropsSI("HMOLAR", "T", T, "P", p1, gas); % molar enthalpy J/mol
-    T_out=py.CoolProp.CoolProp.PropsSI("T", "SMOLAR", S_in, "P", p2, gas);
+    try
+        T_out=py.CoolProp.CoolProp.PropsSI("T", "SMOLAR", S_in, "P", p2, gas);
+    catch
+        f = @(T)(py.CoolProp.CoolProp.PropsSI("SMOLAR", "T", T, "P", p2, gas)-S_in);
+        T_out = fzero(f, T);
+    end
     H_out=py.CoolProp.CoolProp.PropsSI("HMOLAR", "T", T_out, "P", p2, gas); % molar enthalpy J/mol
     w_isentropic = w_isentropic + H_out-H_in; % J/mol
     

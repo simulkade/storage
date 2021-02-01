@@ -2,44 +2,72 @@
 % density data for H2 and methane
 clc
 
+% extract injection data:
+date_begin = '2020-10-01';
+date_end = '2021-01-20';
+d_long = extract_elect_data(date_begin, date_end);
+d_long.HourDK = datetime(d_long.HourDK, 'Format', 'yyyy-MM-dd''T''HH:mm:ss');
+date_num = datenum(d_long.HourDK);
+future_demand = 1.5; % including 50% increase of demand for heating and cars
+future_capacity = 4.0; % windmill capacity will be quadruppled
+[wind_elec, elec_demand, surplus, shortage] = extract_surplus(d_long, future_capacity, future_demand);
+
+% Lets inject into the reservoir for 4 month and produce/inject later for 2 months
+end_storage = '2020-11-30';
+ind_end_storage = find(datenum(end_storage)<date_num, 1); % index of end of storage
+
+% injecting for a week
+t0 = date_num(1)*24*3600; % [s]
+t = t0;
+t_inj = date_num(ind_end_storage)*24*3600; % s injection time
+% t_prod = 7*24*3600; % s production time
+t_final = date_num(end)*24*3600; % total simulation time
+dt = 3600; % s time step (one hour time steps)
+
+
 % Input data
 % set up the simulation
 perm = 0.01e-12; % m2
-poros = 0.18; % chalk porosity
-R_field = 500; % m field radius
-H_field = 30; % m field thickness
-well_radius = 0.05; % m
+poros = 0.4; % chalk porosity
+R_field = 1000; % m field radius
+H_field = 4000; % m field thickness
+well_radius = 5*0.0254/2; % m (converting inch to m)
+N_well = 10; % number of wells
 Nx = 100;
 Ny = 20;
 
-eta_comp = 0.7; % compressor efficiency
-eta_turbine = 0.7; % turbine efficiency
+p_0 = 75e5; % [Pa] for a depleted reservoir
+p_std = 1e5; % [Pa]
+
+eta_comp = 0.8; % compressor efficiency
+eta_turbine = 0.8; % turbine efficiency
 eta_gen = 0.9; % generator efficiency
 
 % stimulation radius
-r_stim = 50*well_radius; % stimulation radius
+r_stim = 100*well_radius; % stimulation radius
 k_stim = 100*perm; % stimulated permeability
 
 comp = 'Air';
-T_ref = 70+273.15; % K reservoir temperature
-p_ref = 200e5; % Pa reservoir pressure
+T_ref = 135+273.15; % K reservoir temperature
+p_ref = 3500e5; % Pa reservoir pressure
 rho_ref = py.CoolProp.CoolProp.PropsSI('D','P',p_ref,'T',T_ref,comp); % kg/m3
 mu_ref = py.CoolProp.CoolProp.PropsSI('VISCOSITY','P',p_ref,'T',T_ref,comp); % Pa.s
 
-n_data = 20;
-p_range = linspace(p_ref/2, p_ref*1.5, n_data)';
+n_data = 100;
+p_range = linspace(p_std, p_ref*3, n_data)';
 rho_data = zeros(n_data, 1);
 for i=1:n_data
     rho_data(i) = py.CoolProp.CoolProp.PropsSI('D','P',p_range(i),'T',T_ref, comp);
 end
 
-rho_fit = polyfit(p_range, rho_data, 1); % line for now
-drho_fit = polyder(rho_fit);
-rho = @(p)polyval(rho_fit, p);
-drho = @(p)polyval(drho_fit, p);
+rho = @(p)interp1(p_range, rho_data, p); % line for now
+% drho_fit = polyder(rho_fit);
+% rho = @(p)polyval(rho_fit, p);
+eps1 = 10; % [Pa]
+drho = @(p)((rho(p+eps1)-rho(p))/eps1);
 
 figure(1);
-plot(p_range, rho_data, 'o', p_range, polyval(rho_fit,p_range));
+plot(p_range, rho_data, 'o', p_range, rho(p_range));
 close all;
 
 
@@ -50,8 +78,8 @@ m.cellcenters.x = m.cellcenters.x+well_radius;
 m.facecenters.x = m.facecenters.x+well_radius;
 
 
-% gas production
-surplus_elec = 10e6; % 10e6 Watt (10 MW)
+% % gas production
+% surplus_elec = 10e6; % 10e6 Watt (10 MW)
 eta_transmission = 0.95; % conversion and transmission efficiency for electricity
 
 well_area = pi*well_radius*2*H_field; % m2 well area
@@ -59,7 +87,8 @@ well_area = pi*well_radius*2*H_field; % m2 well area
 
 BC = createBC(m);
 
-BC.right.a(:) = 0.0; BC.right.b(:)=1.0; BC.right.c(:) = p_ref;
+% BC.right.a(:) = 0.0; BC.right.b(:)=1.0; BC.right.c(:) = p_0;
+BC.right.a(:) = 1.0; BC.right.b(:)=0.0; BC.right.c(:) = 0;
 
 % Tracer
 D_val = 1e-6; % m2/s diffusion coefficient
@@ -88,39 +117,43 @@ set(hFig, 'Position', [200 200 1500 500]);
 visualizeCells(k); axis normal; shading interp;
 
 % initial condition
-p_init = createCellVariable(m, p_ref, BC); % ignoring gravity
+p_init = createCellVariable(m, p_0, BC); % ignoring gravity
 p_val = p_init;
 rho_val = createCellVariable(m, rho_ref);
 drho_val = createCellVariable(m, 0);
 rho_init = rho_val;
 
-% injecting for a week
-t_inj = 7*24*3600; % s injection time
-t_prod = 7*24*3600; % s production time
-t_final = t_inj+t_prod; % total simulation time
-dt = 3600; % s time step
+
 p_hist = zeros(floor(t_final/dt), 1); % array to store average injection pressure
 t_hist = zeros(floor(t_final/dt), 1);
-t=0;
 j=0;
-T_inj = 40+273.15; % K injection temperature
+T_inj = 135+273.15; % K injection temperature
 p_atm = 1.0e5;
 p_inj = p_ref; % initial estimate
 MW_air = 0.029; % kg/mol
 comp_ratio = 3.5;
 while t<t_final
     t=t+dt;
+    j = j+1;
     if t<t_inj % time dependent injection boundary condition
         w_isentropic = compressor_station(p_atm, p_inj, comp_ratio, comp, T_inj);
         w_real = w_isentropic/eta_comp;
         rho_inj = py.CoolProp.CoolProp.PropsSI('D','P',p_inj,'T',T_inj, comp); % density kg/m3, must change with pressure
-        m_inj = surplus_elec*eta_transmission/w_real*MW_air; % kg/s
-        u_inj = m_inj/rho_inj/well_area; % injection velocity
+        m_inj = surplus(j)*1e6*eta_transmission/w_real*MW_air; % kg/s
+        u_inj = m_inj/rho_inj/well_area/N_well; % injection velocity
         BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = -u_inj;
         [M_BCp, RHS_BCp] = boundaryCondition(BC);
     elseif (t>t_inj)
-       BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = u_inj;
-       [M_BCp, RHS_BCp] = boundaryCondition(BC);
+%         BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = u_inj;
+%         [M_BCp, RHS_BCp] = boundaryCondition(BC);
+        
+        w_isentropic = compressor_station(p_atm, p_inj, comp_ratio, comp, T_inj);
+        w_real = w_isentropic/eta_comp;
+        rho_inj = py.CoolProp.CoolProp.PropsSI('D','P',p_inj,'T',T_inj, comp); % density kg/m3, must change with pressure
+        m_inj = sign(surplus(j)-shortage(j))*max(surplus(j), shortage(j))*1e6*eta_transmission/w_real*MW_air; % kg/s
+        u_inj = m_inj/rho_inj/well_area/N_well; % injection velocity
+        BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = -u_inj;
+        [M_BCp, RHS_BCp] = boundaryCondition(BC);
     end
     for i = 1:3 % internal loop
         % solve pressure equation
@@ -157,10 +190,11 @@ while t<t_final
     p_init = p_val;
     %visualizeCells(p_val);drawnow;
     
-    j = j+1;
+    
     p_hist(j) = mean(p_face.xvalue(1,:));
     t_hist(j) = t;
     p_inj = p_hist(j);
+    disp(p_inj);
     
     u = -mobil.*gradientTerm(p_val);
     % solve for concentration
