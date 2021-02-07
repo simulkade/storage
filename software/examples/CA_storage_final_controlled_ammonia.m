@@ -30,11 +30,11 @@ dt = 3600; % s time step (one hour time steps)
 perm = 0.01e-12; % m2
 poros = 0.18; % sandstone porosity
 R_field = 1000; % m field radius
-H_field = 4000; % m field thickness
+H_field = 100; % m field thickness
 well_radius = 5*0.0254/2; % m (converting inch to m)
-N_well = 10; % number of wells
+N_well = 1; % number of wells
 Nx = 100;
-Ny = 20;
+Ny = 10;
 
 p_0 = 75e5; % [Pa] for a depleted reservoir
 p_std = 1e5; % [Pa]
@@ -47,7 +47,7 @@ eta_gen = 0.9; % generator efficiency
 r_stim = 100*well_radius; % stimulation radius
 k_stim = 100*perm; % stimulated permeability
 
-comp = 'Air';
+comp = 'NH3';
 T_ref = 135+273.15; % K reservoir temperature
 p_ref = 3500e5; % Pa reservoir pressure
 rho_ref = py.CoolProp.CoolProp.PropsSI('D','P',p_ref,'T',T_ref,comp); % kg/m3
@@ -124,33 +124,41 @@ drho_val = createCellVariable(m, 0);
 rho_init = rho_val;
 
 
-p_hist = zeros(floor(t_final/dt), 1); % array to store average injection pressure
-t_hist = zeros(floor(t_final/dt), 1);
+p_hist = zeros(length(date_num), 1); % array to store average injection pressure
+t_hist = zeros(length(date_num), 1);
+m_hist = zeros(length(date_num), 1);
 j=0;
 T_inj = 135+273.15; % K injection temperature
 p_atm = 1.0e5;
 p_inj = p_ref; % initial estimate
-MW_air = 0.029; % kg/mol
+MW_ammonia = 0.017; % kg/mol
+chem_ex = 330000; % J/mol
+eff_prod = 0.45; % production efficiency
 comp_ratio = 3.5;
+elec_max = 100e6; % J/s
+shortage_max = 0.2*elec_max; % J/s
 while t<t_final
     t=t+dt;
     j = j+1;
     if t<t_inj % time dependent injection boundary condition
-        w_isentropic = compressor_station(p_atm, p_inj, comp_ratio, comp, T_inj);
-        w_real = w_isentropic/eta_comp;
         rho_inj = py.CoolProp.CoolProp.PropsSI('D','P',p_inj,'T',T_inj, comp); % density kg/m3, must change with pressure
-        m_inj = surplus(j)*1e6*eta_transmission/w_real*MW_air; % kg/s
+        m_inj = (surplus(j)>0)*elec_max/(chem_ex/MW_ammonia/eff_prod); % kg/s
         u_inj = m_inj/rho_inj/well_area/N_well; % injection velocity
         BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = -u_inj;
         [M_BCp, RHS_BCp] = boundaryCondition(BC);
     elseif (t>t_inj)
+        % production/storage time
 %         BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = u_inj;
 %         [M_BCp, RHS_BCp] = boundaryCondition(BC);
         
-        w_isentropic = compressor_station(p_atm, p_inj, comp_ratio, comp, T_inj);
-        w_real = w_isentropic/eta_comp;
+        
         rho_inj = py.CoolProp.CoolProp.PropsSI('D','P',p_inj,'T',T_inj, comp); % density kg/m3, must change with pressure
-        m_inj = sign(surplus(j)-shortage(j))*max(surplus(j), shortage(j))*1e6*eta_transmission/w_real*MW_air; % kg/s
+        if surplus(j)>0
+            elec_bound = elec_max;
+        else
+            elec_bound = shortage_max;
+        end
+        m_inj = sign(surplus(j)-shortage(j))*elec_bound/(chem_ex/MW_ammonia/eff_prod); % kg/s
         u_inj = m_inj/rho_inj/well_area/N_well; % injection velocity
         BC.left.a(:) = perm/mu_ref; BC.left.b(:)=0.0; BC.left.c(:) = -u_inj;
         [M_BCp, RHS_BCp] = boundaryCondition(BC);
@@ -194,6 +202,7 @@ while t<t_final
     p_hist(j) = mean(p_face.xvalue(1,:));
     t_hist(j) = t;
     p_inj = p_hist(j);
+    m_hist(j) = m_inj;
     disp(p_inj);
     
     u = -mobil.*gradientTerm(p_val);

@@ -1057,6 +1057,30 @@ c_{f}=\frac{\ln\left(\rho/\rho_{0}\right)}{p-p0}.
 Hydrogen 
 \end_layout
 
+\begin_layout Section
+Storage volumes
+\end_layout
+
+\begin_layout Standard
+The equation for the calculation of the diameter is derived from
+\begin_inset Formula 
+\[
+V_{fluid}=\varphi\pi r_{res}^{2}H_{res},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+r_{res}=\sqrt{\frac{V_{fluid}}{\varphi\pi H_{res}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Physical energy storage
 \end_layout
