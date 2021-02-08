@@ -28,10 +28,11 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
@@ -49,7 +50,7 @@
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
+\suppress_date true
 \justification true
 \use_refstyle 1
 \use_minted 0
@@ -59,8 +60,8 @@
 \end_index
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
@@ -244,7 +245,7 @@ Problem definition
 \end_layout
 
 \begin_layout Standard
-There are more and more scientific evidence for the of anthropological carbon
+There are exceeding scientific evidence for the of anthropological carbon
  dioxide emission in an accelerated climate change, with potentially disastrous
  -although uncertain- aftermath.
  This has increased the societal pressure for a faster transition from hydrocarb
@@ -294,7 +295,7 @@ There are three major questions that will be answered in this work.
  extent can the subsurface storage be helpful? Thirdly, what are the promising
  technologies from a technical point of view.
  This report will provide simple, reproducible, and realistic procedures
- and quantitative values to answer these questions.
+ and quantitative answers these questions.
 \end_layout
 
 \begin_layout Section
@@ -395,7 +396,20 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-***
+\begin_inset Graphics
+	filename denmark_elec_jan2021.jpg
+	width 8cm
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename supply_demand_jan2050_dk.jpg
+	width 8cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1081,6 +1095,16 @@ r_{res}=\sqrt{\frac{V_{fluid}}{\varphi\pi H_{res}}}
 
 \end_layout
 
+\begin_layout Section
+Platform
+\end_layout
+
+\begin_layout Standard
+As an example, Dan F host 6,800 tonnes of facilities and provides a power
+ of 55 MW to the facilities.
+ The highest point on the platform is 132 m above water.
+\end_layout
+
 \begin_layout Chapter
 Physical energy storage
 \end_layout
@@ -1171,7 +1195,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/ali/projects/storage/projects/cylindrical_domain.svg
+	filename cylindrical_domain.svg
 
 \end_inset
 
