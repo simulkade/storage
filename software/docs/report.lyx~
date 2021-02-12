@@ -265,7 +265,7 @@ on-based to renewable-based energy.
 At the same time, the renewable energy resources will grow in many areas
  of the world.
  In the North Sea, several new windfarms are planed or under construction,
- which will quadruple the capacity of renewable electricity production.
+ which will quadruple the capacity of renewable electricity production .
  This capacity that is several times more than the electricity demand in
  Denmark, is variable and intermittent and thus will not replace the reliable
  fossil-fuel power plants.
@@ -338,7 +338,17 @@ literal "false"
 
 \begin_layout Standard
 Fig.
- *** shows the integration of electricity supply and demand integrated over
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Current-and-future"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the integration of electricity supply and demand integrated over
  a certain period of time by
 \begin_inset Formula 
 \begin{equation}
@@ -416,6 +426,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Current-and-future"
+
+\end_inset
+
 Current and future electricity supply and demand of Denmark 
 \end_layout
 
