@@ -1,0 +1,465 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Analytical solutions
+\end_layout
+
+\begin_layout Section
+Analytical solution of gas storage
+\end_layout
+
+\begin_layout Standard
+The single phase flow of a compressible gaseous phase in porous media, shown
+ in Eq.
+ can be solved analytically in a 1D radial system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hagoort_fundamentals_1988"
+literal "false"
+
+\end_inset
+
+.
+ The exact solution that is obtained by Laplace transform is a complex addition
+ of Bessel functions.
+ The solution, however, can be simplified by ignoring the well diameter
+ size and assuming a line source at 
+\begin_inset Formula $r$
+\end_inset
+
+=0, i.e.
+ the position of the well.
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\left(\rho\varphi\right)}{\partial t}+\nabla.\left(\rho\mathbf{u}\right)=0,\label{eq:gas-continuity-1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}=-\frac{k}{\mu}\left(\nabla p-\rho\mathbf{g}\right),\label{eq:gas-darcy-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ [kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ [Pa.s] denote the mass density and viscosity of the gas phase, respectively,
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+] and 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ [m
+\begin_inset Formula $^{3}$
+\end_inset
+
+/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] denote the permeability and porosity of the porous medium.
+ Both density and viscosity in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gas-continuity-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gas-darcy-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) are a function of pressure, which makes the equations nonlinear.
+ Al-Hussainy 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "al-hussainy_flow_1966"
+literal "false"
+
+\end_inset
+
+ suggested the use of Kirchhoff's transformation to linearize the equation:
+\begin_inset Formula 
+\begin{equation}
+m\left(p\right)=\frac{1}{\left(\rho/\mu\right)_{r}}\int_{p_{r}}^{p}\frac{\rho}{\mu}\mathrm{d}p,\label{eq:pseudo-pressure-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $m$
+\end_inset
+
+ [Pa] is called pseudo-pressure and subscript 
+\begin_inset Formula $r$
+\end_inset
+
+ denotes an arbitrarily chosen reference pressure.
+ Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pseudo-pressure-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) provides a one-to-one relationship between the pressure and pseudo-pressure
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hagoort_fundamentals_1988"
+literal "false"
+
+\end_inset
+
+.
+ By replacing it in the continuity equation, we obtain
+\begin_inset Formula 
+\[
+\frac{\partial m}{\partial t}-D_{h}\nabla.\left(\delta\nabla m\right)=0,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $D_{h}$
+\end_inset
+
+ [m
+\begin_inset Formula $^{2}$
+\end_inset
+
+/s] is called hydraulic diffusivity and is defined by
+\begin_inset Formula 
+\[
+D_{h}=\frac{k}{\varphi\mu c},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $c$
+\end_inset
+
+ [Pa
+\begin_inset Formula $^{-1}$
+\end_inset
+
+] is the gas compressibility:
+\begin_inset Formula 
+\[
+c=\frac{1}{\rho}\frac{\partial\rho}{\partial p}.
+\]
+
+\end_inset
+
+The term 
+\begin_inset Formula $\delta$
+\end_inset
+
+ [-] takes into account the the inertial effects for the non-Darcy flow
+ and is defined by
+\begin_inset Formula 
+\[
+\delta=\left(1+\frac{\rho u\beta k}{\mu}\right)^{-1}.
+\]
+
+\end_inset
+
+The solution for a radial coordinate and a linear source reads
+\begin_inset Formula 
+\[
+m_{i}-m\left(r,t\right)=-\frac{q_{sc}\left(\mu B\right)_{r}}{4\pi kh}\textrm{Ei}\left(-\frac{r^{2}}{4D_{h}t}\right),
+\]
+
+\end_inset
+
+where the exponential integral function is defined by
+\begin_inset Formula 
+\[
+\textrm{Ei}\left(-x\right)=-\int_{x}^{\infty}\frac{e^{-u}}{u}\textrm{d}u.
+\]
+
+\end_inset
+
+This function can be approximated to 
+\begin_inset Formula 
+\[
+\textrm{Ei}\left(-x\right)=-\ln\left(\gamma x\right),\quad\gamma=1.781\,...
+\]
+
+\end_inset
+
+which is a suitable approximation for the calculation of well pressure.
+\end_layout
+
+\begin_layout Chapter
+Not yet thrown away
+\end_layout
+
+\begin_layout Standard
+Most of the measurements are done at lower peressures in the context of
+ the conversion of Mars atmosphere to water and methane.
+ Phung et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "quach_kinetics_1976"
+literal "false"
+
+\end_inset
+
+ reported the reaction rate of CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ and H
+\begin_inset Formula $_{2}$
+\end_inset
+
+ over a surface coated ruthenium catalysts in a stirred tank reactor, which
+ reads in the form of a Hougen-Watson rate equation:
+\begin_inset Formula 
+\begin{equation}
+r=\frac{k_{s}K_{c}K_{h}^{4}p_{c}p_{h}^{4}}{\left(1+K_{c}p_{c}+K_{h}p_{h}\right)^{5}}\label{eq:co2-meth-quach}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Introduction 
+\end_layout
+
+\begin_layout Standard
+Literature review
+\end_layout
+
+\begin_layout Standard
+Gas storage has been around for a long time.
+ There are several points that need to be addressed regarding the safety
+ of storage and the physicochemical interaction of the stored fuel with
+ its environment.
+\end_layout
+
+\begin_layout Standard
+About the possibility of fossil fuel storage, the required space, the efficiency.
+\end_layout
+
+\begin_layout Subsection
+Physical properties
+\end_layout
+
+\begin_layout Standard
+The important thermodynamic and transport properties of the fuels are discussed
+ here.
+\end_layout
+
+\begin_layout Subsubsection
+Density
+\end_layout
+
+\begin_layout Standard
+The density of the fuels is used on the calculation of the volume of the
+ reservoir that is required for the storage of a specific mass of the fuel.
+ In this work, we calculate the density of all the fuels with the software
+ CoolProp, which uses the Helmholtz energy based equations of state developed
+ specifically for the accurate calculation of the thermodynamic properties
+ of fluids.
+ In the simulation, running the equation of state in each iteration can
+ add a significant computational overhead; therefore, we use a correlation
+ that is often used in reservoir simulation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "aziz_petroleum_1979"
+literal "false"
+
+\end_inset
+
+ for the density of compressible fluids as a function of pressure at constant
+ temperature, i.e.
+\begin_inset Formula 
+\[
+\rho=\rho_{0}\exp\left(c_{f}\left(p-p_{0}\right)\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ [Pa] is an arbitrarily chosen reference pressure and 
+\begin_inset Formula $\rho_{0}$
+\end_inset
+
+ [kg/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+] is the fluid density at the reference pressure.
+ The above equation works fine for slightly to moderately compressible fluids.
+ The fluid compressibility is defined by
+\begin_inset Formula 
+\[
+c_{f}=\frac{1}{\rho}\left(\frac{\partial\rho}{\partial p}\right)_{T}.
+\]
+
+\end_inset
+
+When we have the density data for a range of pressure, 
+\begin_inset Formula $c_{f}$
+\end_inset
+
+ [1/Pa] can be calculated by
+\begin_inset Formula 
+\[
+c_{f}=\frac{\ln\left(\rho/\rho_{0}\right)}{p-p0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hydrogen 
+\end_layout
+
+\begin_layout Section
+Storage volumes
+\end_layout
+
+\begin_layout Standard
+The equation for the calculation of the diameter is derived from
+\begin_inset Formula 
+\[
+V_{fluid}=\varphi\pi r_{res}^{2}H_{res},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+r_{res}=\sqrt{\frac{V_{fluid}}{\varphi\pi H_{res}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
