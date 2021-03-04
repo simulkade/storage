@@ -1,0 +1,43 @@
+digraph "Process flow diagram" {
+	rankdir=LR
+	node [shape=none]
+	grid [label="Electricity grid"]
+	node [shape=rectangle]
+	renewable [label="Renewable energy source" fillcolor=green style=filled]
+	gas [label=Gas fillcolor=gray style=filled]
+	oil [label=Oil fillcolor=black fontcolor=white style=filled]
+	coal [label=Coal fillcolor=saddlebrown fontcolor=white style=filled]
+	biomass [label=Biomass fillcolor=springgreen fontcolor=black style=filled]
+	elec [label=Electricity]
+	elec2 [label=Electricity]
+	elec3 [label=Electricity]
+	water [label=Water fillcolor=aqua style=filled]
+	gasification [label=Gasification]
+	smr [label=SMR]
+	h2 [label=Hydrogen fontcolor=blue]
+	h2g [label=Hydrogen fontcolor=green]
+	co2 [label="Carbon dioxide"]
+	electrolysis [label=Electrolysis]
+	pp [label="Power plants"]
+	renewable -> elec2
+	coal -> pp
+	oil -> pp
+	gas -> pp
+	pp -> elec
+	pp -> co2
+	gas -> smr
+	coal -> gasification
+	biomass -> gasification
+	smr -> h2
+	smr -> co2
+	gasification -> h2
+	gasification -> co2
+	elec2 -> electrolysis
+	water -> electrolysis
+	electrolysis -> h2g
+	h2 -> elec3
+	h2g -> elec3
+	elec3 -> grid
+	elec -> grid
+	elec2 -> grid
+}
