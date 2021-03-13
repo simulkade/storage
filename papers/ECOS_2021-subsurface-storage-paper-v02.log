@@ -1,0 +1,931 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.10)  13 MAR 2021 21:09
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02
+(/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (./ECOS_2021.cls (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count177
+\calc@Cskip=\skip51
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks14
+\labelindent=\skip52
+\enit@outerparindent=\dimen137
+\enit@toks=\toks15
+\enit@inbox=\box45
+\enit@count@id=\count178
+\enitdp@description=\count179
+)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen138
+\Gin@req@width=\dimen139
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen140
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen141
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count180
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count181
+\leftroot@=\count182
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count183
+\DOTSCASE@=\count184
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count185
+\c@MaxMatrixCols=\count186
+\dotsspace@=\muskip16
+\c@parentequation=\count187
+\dspbrk@lvl=\count188
+\tag@help=\toks18
+\row@=\count189
+\column@=\count190
+\maxfields@=\count191
+\andhelp@=\toks19
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks20
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
+ (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count192
+\l_MT_multwidth_dim=\dimen149
+\origjot=\skip56
+\l_MT_shortvdotswithinadjustabove_dim=\dimen150
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen151
+\l_MT_above_intertext_sep=\dimen152
+\l_MT_below_intertext_sep=\dimen153
+\l_MT_above_shortintertext_sep=\dimen154
+\l_MT_below_shortintertext_sep=\dimen155
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+) (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen156
+\Hy@linkcounter=\count193
+\Hy@pagecounter=\count194
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count195
+\pdfmajorversion=\count196
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count197
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen157
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count198
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+ (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count199
+\c@Item=\count266
+\c@Hfootnote=\count267
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count268
+\c@bookmark@seq@number=\count269
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip57
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count270
+\float@exts=\toks22
+\float@box=\box48
+\@float@everytoks=\toks23
+\@floatcapt=\box49
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+Package babel Info: You haven't specified a language. I'll use 'nil'
+(babel)             as the main language. Reported on input line 572.
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2020/02/14 3.40 Nil language
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count271
+\U@D=\dimen160
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
+)
+\l@nil=\language7
+))
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 23.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count273
+\l__pdf_internal_box=\box50
+)
+No file ECOS_2021-subsurface-storage-paper-v02.aux.
+\openout1 = `ECOS_2021-subsurface-storage-paper-v02.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 67.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count274
+\scratchdimen=\dimen161
+\scratchbox=\box51
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen162
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \celsius on input line 67.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 67.
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 67.
+Package gensymb Info: Using \Omega for \ohm on input line 67.
+
+Package gensymb Warning: Not defining \micro.
+
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring OFF on input line 67.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count280
+)
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
+\@outlinefile=\write3
+\openout3 = `ECOS_2021-subsurface-storage-paper-v02.out'.
+
+
+
+LaTeX Warning: Citation `gibescuEstimationVariabilityPredictability2009' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Citation `ummelsImpactsWindPower2007' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Citation `lewWindSolarCurtailment2013' on page 1 undefined on input line 84.
+
+
+LaTeX Warning: Citation `GlobalOffshoreRenewable' on page 1 undefined on input line 89.
+
+
+LaTeX Warning: Citation `meibomEnergyComesTogether2013' on page 1 undefined on input line 94.
+
+
+LaTeX Warning: Citation `pedersenEnergyStorageTechnologies2019' on page 1 undefined on input line 96.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `eftekhariFVToolFiniteVolume2015b' on page 2 undefined on input line 125.
+
+
+Overfull \hbox (31.4706pt too wide) in paragraph at lines 98--126
+\OT1/ptm/m/n/12 analysis quantifies the exergy loss during the conversion of electricity to fuel and back, and storage/extraction
+ []
+
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 2 undefined on input line 139.
+
+
+LaTeX Warning: Citation `eftekhariSimulkadeStorageFirst2021' on page 2 undefined on input line 155.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 2 undefined on input line 158.
+
+
+LaTeX Warning: Reference `eq:average-energy-demand' on page 2 undefined on input line 160.
+
+
+LaTeX Warning: Reference `eq:average-energy-demand' on page 2 undefined on input line 163.
+
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 2 undefined on input line 170.
+
+[2]
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 3 undefined on input line 175.
+
+
+LaTeX Warning: Citation `danishenergyagencyEnergyIslands2021' on page 3 undefined on input line 177.
+
+
+LaTeX Warning: Citation `dandreaSynergiesOffshoreEnergy2021' on page 3 undefined on input line 177.
+
+
+LaTeX Warning: Reference `eq:demand-adjust' on page 3 undefined on input line 180.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 3 undefined on input line 183.
+
+
+LaTeX Warning: Reference `fig:Average-electricity-supply' on page 3 undefined on input line 187.
+
+<smoothed_surplus.jpg, id=30, 878.28125pt x 658.46pt>
+File: smoothed_surplus.jpg Graphic file (type jpg)
+<use smoothed_surplus.jpg>
+Package pdftex.def Info: smoothed_surplus.jpg  used on input line 207.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+<smoothed_deficit.jpg, id=31, 878.28125pt x 658.46pt>
+File: smoothed_deficit.jpg Graphic file (type jpg)
+<use smoothed_deficit.jpg>
+Package pdftex.def Info: smoothed_deficit.jpg  used on input line 207.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+<supply_demand_six_month_dk.jpg, id=32, 878.28125pt x 658.46pt>
+File: supply_demand_six_month_dk.jpg Graphic file (type jpg)
+<use supply_demand_six_month_dk.jpg>
+Package pdftex.def Info: supply_demand_six_month_dk.jpg  used on input line 215.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+
+LaTeX Warning: Reference `eq:average-energy-demand' on page 3 undefined on input line 219.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 3 undefined on input line 226.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 3 undefined on input line 228.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 3 undefined on input line 230.
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.234 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.234 
+       <./smoothed_surplus.jpg> <./smoothed_deficit.jpg> <./supply_demand_six_month_dk.jpg>]
+
+LaTeX Warning: Reference `tab:Exergy-value-efficiency' on page 4 undefined on input line 237.
+
+
+LaTeX Warning: Reference `tab:Exergy-value-efficiency' on page 4 undefined on input line 242.
+
+
+LaTeX Warning: Reference `fig:Diameter-reservoir' on page 4 undefined on input line 259.
+
+<res_radius_8month_storage.jpg, id=40, 878.28125pt x 658.46pt>
+File: res_radius_8month_storage.jpg Graphic file (type jpg)
+<use res_radius_8month_storage.jpg>
+Package pdftex.def Info: res_radius_8month_storage.jpg  used on input line 290.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.296 
+      ]
+
+LaTeX Warning: Citation `freiMethanolHydrogenCarrier2020b' on page 5 undefined on input line 303.
+
+
+LaTeX Warning: Citation `barbarossaCO2ConversionCH42013' on page 5 undefined on input line 303.
+
+
+LaTeX Warning: Citation `ghaibPowertoMethaneStateoftheartReview2018' on page 5 undefined on input line 303.
+
+
+LaTeX Warning: Citation `guerraMethaneProductionCombined2018' on page 5 undefined on input line 303.
+
+
+LaTeX Warning: Citation `koponenReviewWaterElectrolysis2015' on page 5 undefined on input line 303.
+
+
+LaTeX Warning: Citation `mendoza-hernandezExergyValorizationWater2019' on page 5 undefined on input line 303.
+
+
+LaTeX Warning: Reference `fig:Ammonia-synthesis-cryogenic' on page 5 undefined on input line 320.
+
+<ammonia_cryogenic.jpg, id=46, 1467.4825pt x 530.98375pt>
+File: ammonia_cryogenic.jpg Graphic file (type jpg)
+<use ammonia_cryogenic.jpg>
+Package pdftex.def Info: ammonia_cryogenic.jpg  used on input line 339.
+(pdftex.def)             Requested size: 398.33858pt x 144.12912pt.
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.344 
+       <./res_radius_8month_storage.jpg>]
+
+LaTeX Warning: Citation `sankaranarayananEfficiencySustainabilityEnergy2010' on page 6 undefined on input line 352.
+
+
+LaTeX Warning: Citation `keithWhyCaptureCO22009a' on page 6 undefined on input line 363.
+
+
+LaTeX Warning: Citation `mahmoudkhaniLowenergySodiumHydroxide2009' on page 6 undefined on input line 363.
+
+
+LaTeX Warning: Citation `internationalenergyagencyDirectAirCapture' on page 6 undefined on input line 368.
+
+
+LaTeX Warning: Citation `DirectAirCapture2021' on page 6 undefined on input line 374.
+
+
+LaTeX Warning: Citation `mcqueenCostAnalysisDirect2020' on page 6 undefined on input line 374.
+
+
+Overfull \hbox (14.53864pt too wide) in paragraph at lines 390--404
+[]\OT1/ptm/m/n/12 Recent developments in the electrolysis technology has considerably increased the efficiency of hydrogen
+ []
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.410 \[
+         <./ammonia_cryogenic.jpg>]
+
+LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 7 undefined on input line 415.
+
+
+LaTeX Warning: Citation `gardnerHydrogenProductionRenewables2009' on page 7 undefined on input line 417.
+
+
+LaTeX Warning: Citation `ozarslanLargescaleHydrogenEnergy2012' on page 7 undefined on input line 417.
+
+
+LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 7 undefined on input line 421.
+
+
+LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 7 undefined on input line 423.
+
+
+LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 7 undefined on input line 425.
+
+
+LaTeX Warning: Citation `braunsAlkalineWaterElectrolysis2020' on page 7 undefined on input line 432.
+
+
+LaTeX Warning: Citation `babicCriticalReviewIdentifying2017' on page 7 undefined on input line 433.
+
+
+LaTeX Warning: Citation `granovskiiExergeticLifeCycle2007' on page 7 undefined on input line 436.
+
+
+LaTeX Warning: Citation `ozarslanLargescaleHydrogenEnergy2012' on page 7 undefined on input line 442.
+
+
+LaTeX Warning: Citation `zivarUndergroundHydrogenStorage2020' on page 7 undefined on input line 442.
+
+
+LaTeX Warning: Citation `ozarslanLargescaleHydrogenEnergy2012' on page 7 undefined on input line 445.
+
+
+LaTeX Warning: Citation `OrstedTakesFinal' on page 7 undefined on input line 454.
+
+
+LaTeX Warning: Reference `chap:Problem-definition' on page 7 undefined on input line 458.
+
+
+LaTeX Warning: Reference `chap:Problem-definition' on page 7 undefined on input line 461.
+
+[7]
+
+LaTeX Warning: Citation `boltCriticalReviewSynthetic2020' on page 8 undefined on input line 493.
+
+
+LaTeX Warning: Citation `boltCriticalReviewSynthetic2020' on page 8 undefined on input line 501.
+
+
+LaTeX Warning: Citation `loderReactionKineticsCO22020' on page 8 undefined on input line 514.
+
+
+LaTeX Warning: Reference `fig:methane-process' on page 8 undefined on input line 526.
+
+
+LaTeX Warning: Citation `er-rbibModellingSimulationMethanation2013' on page 8 undefined on input line 533.
+
+
+LaTeX Warning: Citation `eftekhariExergyAnalysisUnderground2012f' on page 8 undefined on input line 540.
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:557: Undefined control sequence.
+<argument> sabatierlyxdot 
+                          gv
+l.557 ...egraphics[width=12cm]{sabatier\lyxdot gv}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:557: Undefined control sequence.
+ ...rrmessage  LaTeX Error: File `sabatier\lyxdot 
+                                                  gv' not found.
+
+See the La...
+l.557 ...egraphics[width=12cm]{sabatier\lyxdot gv}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:557: LaTeX Error: File `sabatiergv' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.557 ...egraphics[width=12cm]{sabatier\lyxdot gv}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 8 undefined on input line 560.
+
+
+LaTeX Warning: Reference `fig:Haber-process' on page 8 undefined on input line 566.
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.571 \]
+        ]
+
+LaTeX Warning: Citation `elnashaieSimulationOptimizationIndustrial1988' on page 9 undefined on input line 573.
+
+
+LaTeX Warning: Citation `morudAnalysisInstabilityIndustrial1998' on page 9 undefined on input line 573.
+
+
+LaTeX Warning: Reference `fig:ammonia-new-design' on page 9 undefined on input line 589.
+
+
+LaTeX Warning: Reference `fig:Ammonia-synthesis-cryogenic' on page 9 undefined on input line 606.
+
+
+LaTeX Warning: Citation `elnashaieSimulationOptimizationIndustrial1988' on page 9 undefined on input line 614.
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:617: Undefined control sequence.
+<argument> haberlyxdot 
+                       gv
+l.617 ...ludegraphics[width=12cm]{haber\lyxdot gv}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:617: Undefined control sequence.
+ ->\errmessage  LaTeX Error: File `haber\lyxdot 
+                                                gv' not found.
+
+See the LaTe...
+l.617 ...ludegraphics[width=12cm]{haber\lyxdot gv}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:617: LaTeX Error: File `habergv' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.617 ...ludegraphics[width=12cm]{haber\lyxdot gv}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 9 undefined on input line 619.
+
+<ammonia_new_design.jpg, id=77, 1641.13126pt x 784.9325pt>
+File: ammonia_new_design.jpg Graphic file (type jpg)
+<use ammonia_new_design.jpg>
+Package pdftex.def Info: ammonia_new_design.jpg  used on input line 623.
+(pdftex.def)             Requested size: 398.33858pt x 190.51956pt.
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.627 
+      ]
+
+LaTeX Warning: Citation `luybenDesignControlMethanol2010' on page 10 undefined on input line 636.
+
+
+LaTeX Warning: Citation `sousaDeepsubsurfaceSulfateReducer2018' on page 10 undefined on input line 653.
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:660: Undefined control sequence.
+<argument> methanollyxdot 
+                          gv
+l.660 ...egraphics[width=12cm]{methanol\lyxdot gv}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:660: Undefined control sequence.
+ ...rrmessage  LaTeX Error: File `methanol\lyxdot 
+                                                  gv' not found.
+
+See the La...
+l.660 ...egraphics[width=12cm]{methanol\lyxdot gv}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:660: LaTeX Error: File `methanolgv' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.660 ...egraphics[width=12cm]{methanol\lyxdot gv}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 10 undefined on input line 662.
+
+
+LaTeX Warning: Reference `fig:A-cylindrical-domain' on page 10 undefined on input line 684.
+
+[10pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.685 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.685 
+       <./ammonia_new_design.jpg>]
+
+LaTeX Warning: Reference `fig:A-cylindrical-domain' on page 11 undefined on input line 688.
+
+
+LaTeX Warning: Citation `hagoortFundamentalsGasReservoir1988' on page 11 undefined on input line 727.
+
+
+LaTeX Warning: Citation `al-hussainyApplicationRealGas1966' on page 11 undefined on input line 727.
+
+
+LaTeX Warning: Citation `al-hussainyFlowRealGases1966' on page 11 undefined on input line 727.
+
+
+/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v02.tex:731: LaTeX Error: Unknown graphics extension: .svg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.731 ...aphics[width=8cm]{cylindrical_domain.svg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.763 \end{equation}
+                    ]
+
+LaTeX Warning: Citation `eftekhariFVToolFiniteVolume2015b' on page 12 undefined on input line 780.
+
+
+LaTeX Warning: Reference `fig:Permeability-field' on page 12 undefined on input line 785.
+
+<CA_perm_harald.jpg, id=102, 2352.79pt x 783.92876pt>
+File: CA_perm_harald.jpg Graphic file (type jpg)
+<use CA_perm_harald.jpg>
+Package pdftex.def Info: CA_perm_harald.jpg  used on input line 788.
+(pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
+
+LaTeX Warning: Reference `fig:Permeability-field' on page 12 undefined on input line 801.
+
+
+LaTeX Warning: Reference `fig:Bottom-hole-pressure-NH3' on page 12 undefined on input line 825.
+
+
+LaTeX Warning: Reference `fig:Pressure-profile-NH3' on page 12 undefined on input line 831.
+
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.841 
+       <./CA_perm_harald.jpg>]
+<ammonia_p_hist.jpg, id=111, 878.28125pt x 658.46pt>
+File: ammonia_p_hist.jpg Graphic file (type jpg)
+<use ammonia_p_hist.jpg>
+Package pdftex.def Info: ammonia_p_hist.jpg  used on input line 843.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+<ammonia_pressure_harald.jpg, id=112, 2352.79pt x 783.92876pt>
+File: ammonia_pressure_harald.jpg Graphic file (type jpg)
+<use ammonia_pressure_harald.jpg>
+Package pdftex.def Info: ammonia_pressure_harald.jpg  used on input line 850.
+(pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
+
+
+LaTeX Warning: Reference `fig:concentration-profile-NH3' on page 13 undefined on input line 856.
+
+<ammonia_tracer_harald.jpg, id=113, 2352.79pt x 783.92876pt>
+File: ammonia_tracer_harald.jpg Graphic file (type jpg)
+<use ammonia_tracer_harald.jpg>
+Package pdftex.def Info: ammonia_tracer_harald.jpg  used on input line 868.
+(pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.874 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.874 
+       <./ammonia_p_hist.jpg> <./ammonia_pressure_harald.jpg>]
+Overfull \hbox (3.88002pt too wide) in paragraph at lines 904--913
+[]\OT1/ptm/m/n/12 Methanol and methane require a large carbon source, e.g. CO$[]$. Air capture (the direct absorption
+ []
+
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.929 \end{enumerate}
+                      <./ammonia_tracer_harald.jpg>]
+Overfull \hbox (16.32668pt too wide) in paragraph at lines 938--944
+\OT1/ptm/m/n/12 Danish Hydrocarbon Research and Technology Centre (DHRTC) at the Technical University of Denmark.
+ []
+
+No file ECOS_2021-subsurface-storage-paper-v02.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 952.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 952.
+ (./ECOS_2021-subsurface-storage-paper-v02.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 952.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 952.
+
+
+Package rerunfilecheck Warning: File `ECOS_2021-subsurface-storage-paper-v02.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ECOS_2021-subsurface-storage-paper-v02.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  406C910088DD6E10A873CA324833F72F;925.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 952.
+ ) 
+Here is how much of TeX's memory you used:
+ 8349 strings out of 483107
+ 125957 string characters out of 5964630
+ 396348 words of memory out of 5000000
+ 23125 multiletter control sequences out of 15000+600000
+ 562389 words of font info for 87 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 34i,9n,29p,441b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ECOS_2021-subsurface-storage-paper-v02.pdf (15 pages, 887867 bytes).
+PDF statistics:
+ 210 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+

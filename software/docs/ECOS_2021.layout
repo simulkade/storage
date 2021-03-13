@@ -1,0 +1,7 @@
+#% Do not delete the line below; configure depends on this
+#   \DeclareLaTeXClass[ECOS_2021]{ECOS}
+#  \DeclareCategory{Articles}
+# Article textclass definition file. Taken from initial LyX source code
+# Author : Matthias Ettrich <ettrich@informatik.uni-tuebingen.de>
+# Transposed by Pascal André <andre@via.ecp.fr>
+# Heavily modifed and enhanced by serveral developers.

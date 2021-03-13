@@ -1,0 +1,590 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.10)  12 MAR 2021 21:35
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/ali/projects/storage/software/docs/ECOS_paper_chemical
+(/home/ali/projects/storage/software/docs/ECOS_paper_chemical.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/home/ali/texmf/tex/latex/ECOS_2021.cls (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count177
+\calc@Cskip=\skip51
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks14
+\labelindent=\skip52
+\enit@outerparindent=\dimen137
+\enit@toks=\toks15
+\enit@inbox=\box45
+\enit@count@id=\count178
+\enitdp@description=\count179
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+ (/usr/share/texlive/texmf-dist/tex/latex/base/latin9.def
+File: latin9.def 2018/08/11 v1.3c Input encoding file
+)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count180
+\float@exts=\toks18
+\float@box=\box46
+\@float@everytoks=\toks19
+\@floatcapt=\box47
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen138
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/esint/esint.sty
+Package: esint 
+\symlargesymbolsA=\mathgroup6
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+Package babel Info: You haven't specified a language. I'll use 'nil'
+(babel)             as the main language. Reported on input line 572.
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2020/02/14 3.40 Nil language
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count181
+\U@D=\dimen141
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count182
+)
+\l@nil=\language7
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count183
+\l__pdf_internal_box=\box48
+)
+No file ECOS_paper_chemical.aux.
+\openout1 = `ECOS_paper_chemical.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+esint on input line 76.
+ (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+)
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 76.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 76.
+
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 76.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 76.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count184
+\scratchdimen=\dimen142
+\scratchbox=\box49
+\nofMPsegments=\count185
+\nofMParguments=\count186
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count187
+\MPscratchDim=\dimen143
+\MPnumerator=\count188
+\makeMPintoPDFobject=\count189
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+
+LaTeX Warning: Citation `GlobalOffshoreRenewable' on page 1 undefined on input line 94.
+
+[1
+
+
+Non-PDF special ignored!
+<special> papersize=597.50787pt,845.04684pt
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 2 undefined on input line 138.
+
+
+LaTeX Warning: Citation `bauerImpactsUseGeological2013' on page 2 undefined on input line 154.
+
+[2]
+
+LaTeX Warning: Citation `eftekhari_quantifying_2020' on page 3 undefined on input line 171.
+
+
+LaTeX Warning: Reference `fig:Current-and-future' on page 3 undefined on input line 191.
+
+
+LaTeX Warning: Reference `eq:average-energy-demand' on page 3 undefined on input line 195.
+
+
+LaTeX Warning: Citation `eftekhari_quantifying_2020' on page 3 undefined on input line 202.
+
+
+LaTeX Warning: Citation `noauthor_denmark_2020' on page 3 undefined on input line 209.
+
+
+LaTeX Warning: Citation `noauthor_energy_2021' on page 3 undefined on input line 209.
+
+
+LaTeX Warning: Reference `eq:demand-adjust' on page 3 undefined on input line 212.
+
+
+LaTeX Warning: Reference `fig:Current-and-future' on page 3 undefined on input line 215.
+
+
+LaTeX Warning: Reference `fig:Average-electricity-supply' on page 3 undefined on input line 219.
+
+<denmark_elec_jan2021.jpg, id=21, 878.28125pt x 658.46pt>
+File: denmark_elec_jan2021.jpg Graphic file (type jpg)
+<use denmark_elec_jan2021.jpg>
+Package pdftex.def Info: denmark_elec_jan2021.jpg  used on input line 239.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+<supply_demand_jan2050_dk.jpg, id=22, 526.96875pt x 395.076pt>
+File: supply_demand_jan2050_dk.jpg Graphic file (type jpg)
+<use supply_demand_jan2050_dk.jpg>
+Package pdftex.def Info: supply_demand_jan2050_dk.jpg  used on input line 239.
+(pdftex.def)             Requested size: 227.62204pt x 170.65099pt.
+[3]
+<supply_demand_six_month_dk.jpg, id=30, 878.28125pt x 658.46pt>
+File: supply_demand_six_month_dk.jpg Graphic file (type jpg)
+<use supply_demand_six_month_dk.jpg>
+Package pdftex.def Info: supply_demand_six_month_dk.jpg  used on input line 246.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+
+
+LaTeX Warning: Reference `eq:average-energy-demand' on page 4 undefined on input line 250.
+
+
+LaTeX Warning: Reference `eq:average-energy-demand' on page 4 undefined on input line 250.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 4 undefined on input line 257.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 4 undefined on input line 259.
+
+
+LaTeX Warning: Reference `fig:Electricity-surplus-smooth' on page 4 undefined on input line 261.
+
+<smoothed_surplus.jpg, id=31, 878.28125pt x 658.46pt>
+File: smoothed_surplus.jpg Graphic file (type jpg)
+<use smoothed_surplus.jpg>
+Package pdftex.def Info: smoothed_surplus.jpg  used on input line 267.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+<smoothed_deficit.jpg, id=32, 878.28125pt x 658.46pt>
+File: smoothed_deficit.jpg Graphic file (type jpg)
+<use smoothed_deficit.jpg>
+Package pdftex.def Info: smoothed_deficit.jpg  used on input line 267.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+[4 <./denmark_elec_jan2021.jpg> <./supply_demand_jan2050_dk.jpg> <./supply_demand_six_month_dk.jpg>]
+
+LaTeX Warning: Reference `tab:Exergy-value-efficiency' on page 5 undefined on input line 276.
+
+
+LaTeX Warning: Reference `tab:Exergy-value-efficiency' on page 5 undefined on input line 281.
+
+
+LaTeX Warning: Reference `fig:Diameter-reservoir' on page 5 undefined on input line 298.
+
+<res_radius_8month_storage.jpg, id=38, 878.28125pt x 658.46pt>
+File: res_radius_8month_storage.jpg Graphic file (type jpg)
+<use res_radius_8month_storage.jpg>
+Package pdftex.def Info: res_radius_8month_storage.jpg  used on input line 334.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+[5 <./smoothed_surplus.jpg> <./smoothed_deficit.jpg>]
+
+LaTeX Warning: Reference `fig:Ammonia-synthesis-cryogenic' on page 6 undefined on input line 369.
+
+<ammonia_cryogenic.jpg, id=42, 1467.4825pt x 530.98375pt>
+File: ammonia_cryogenic.jpg Graphic file (type jpg)
+<use ammonia_cryogenic.jpg>
+Package pdftex.def Info: ammonia_cryogenic.jpg  used on input line 386.
+(pdftex.def)             Requested size: 398.33858pt x 144.12912pt.
+[6 <./res_radius_8month_storage.jpg>]
+
+LaTeX Warning: Citation `sankaranarayanan_efficiency_2010' on page 7 undefined on input line 399.
+
+
+LaTeX Warning: Citation `keith_why_2009' on page 7 undefined on input line 410.
+
+
+LaTeX Warning: Citation `mahmoudkhani_low-energy_2009' on page 7 undefined on input line 410.
+
+
+LaTeX Warning: Citation `noauthor_direct_nodate' on page 7 undefined on input line 415.
+
+
+LaTeX Warning: Citation `noauthor_direct_2021' on page 7 undefined on input line 421.
+
+
+LaTeX Warning: Citation `mcqueen_cost_2020' on page 7 undefined on input line 421.
+
+
+Overfull \hbox (45.2505pt too wide) in paragraph at lines 417--423
+\T1/cmr/m/n/12 has a large footprint since a large mass transfer area is needed between the air and adsorbents/absorbents;
+ []
+
+[7 <./ammonia_cryogenic.jpg>]
+
+LaTeX Warning: Citation `rosen_energy_1995' on page 8 undefined on input line 471.
+
+
+LaTeX Warning: Citation `gardner_hydrogen_2009' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Citation `ozarslan_large-scale_2012' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Citation `rosen_energy_1995' on page 8 undefined on input line 477.
+
+
+LaTeX Warning: Citation `rosen_energy_1995' on page 8 undefined on input line 479.
+
+
+LaTeX Warning: Citation `rosen_energy_1995' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Citation `brauns_alkaline_2020' on page 8 undefined on input line 489.
+
+
+LaTeX Warning: Citation `babic_critical_2017' on page 8 undefined on input line 490.
+
+
+LaTeX Warning: Citation `granovskii_exergetic_2007' on page 8 undefined on input line 493.
+
+
+LaTeX Warning: Citation `ozarslan_large-scale_2012' on page 8 undefined on input line 499.
+
+
+LaTeX Warning: Citation `zivar_underground_2020' on page 8 undefined on input line 499.
+
+
+LaTeX Warning: Citation `ozarslan_large-scale_2012' on page 8 undefined on input line 502.
+
+
+LaTeX Warning: Citation `noauthor_orsted_nodate' on page 8 undefined on input line 511.
+
+
+LaTeX Warning: Reference `chap:Problem-definition' on page 8 undefined on input line 515.
+
+
+LaTeX Warning: Reference `chap:Problem-definition' on page 8 undefined on input line 518.
+
+[8]
+
+LaTeX Warning: Citation `bolt_critical_2020' on page 9 undefined on input line 549.
+
+
+LaTeX Warning: Citation `bolt_critical_2020' on page 9 undefined on input line 557.
+
+
+LaTeX Warning: Citation `loder_reaction_2020' on page 9 undefined on input line 570.
+
+
+LaTeX Warning: Reference `fig:methane-process' on page 9 undefined on input line 581.
+
+
+LaTeX Warning: Citation `er-rbib_modelling_2013' on page 9 undefined on input line 588.
+
+
+LaTeX Warning: Citation `eftekhari_exergy_2012' on page 9 undefined on input line 595.
+
+
+LaTeX Warning: Reference `subsec:Compression-exergy' on page 9 undefined on input line 602.
+
+[9]
+
+LaTeX Warning: File `sabatier.gv' not found on input line 613.
+
+
+/home/ali/projects/storage/software/docs/ECOS_paper_chemical.tex:613: LaTeX Error: Unknown graphics extension: .gv.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.613 ...egraphics[width=12cm]{sabatier\lyxdot gv}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `fig:Haber-process' on page 10 undefined on input line 622.
+
+
+LaTeX Warning: Citation `elnashaie_simulation_1988' on page 10 undefined on input line 629.
+
+
+LaTeX Warning: Citation `morud_analysis_1998' on page 10 undefined on input line 629.
+
+
+LaTeX Warning: Reference `fig:ammonia-new-design' on page 10 undefined on input line 645.
+
+
+LaTeX Warning: Reference `fig:Ammonia-synthesis-cryogenic' on page 10 undefined on input line 662.
+
+
+LaTeX Warning: Citation `elnashaie_simulation_1988' on page 10 undefined on input line 670.
+
+
+LaTeX Warning: File `haber.gv' not found on input line 673.
+
+
+/home/ali/projects/storage/software/docs/ECOS_paper_chemical.tex:673: LaTeX Error: Unknown graphics extension: .gv.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.673 ...ludegraphics[width=12cm]{haber\lyxdot gv}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[10]
+<ammonia_new_design.jpg, id=63, 1641.13126pt x 784.9325pt>
+File: ammonia_new_design.jpg Graphic file (type jpg)
+<use ammonia_new_design.jpg>
+Package pdftex.def Info: ammonia_new_design.jpg  used on input line 679.
+(pdftex.def)             Requested size: 398.33858pt x 190.51956pt.
+
+
+LaTeX Warning: Citation `luyben_design_2010' on page 11 undefined on input line 692.
+
+
+LaTeX Warning: Citation `sousa_deep-subsurface_2018' on page 11 undefined on input line 709.
+
+
+LaTeX Warning: File `methanol.gv' not found on input line 716.
+
+
+/home/ali/projects/storage/software/docs/ECOS_paper_chemical.tex:716: LaTeX Error: Unknown graphics extension: .gv.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.716 ...egraphics[width=12cm]{methanol\lyxdot gv}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `fig:A-cylindrical-domain' on page 11 undefined on input line 740.
+
+[11 <./ammonia_new_design.jpg>]
+
+LaTeX Warning: Reference `fig:A-cylindrical-domain' on page 12 undefined on input line 744.
+
+
+LaTeX Warning: Citation `hagoort_fundamentals_1988' on page 12 undefined on input line 783.
+
+
+LaTeX Warning: Citation `al-hussainy_application_1966' on page 12 undefined on input line 783.
+
+
+LaTeX Warning: Citation `al-hussainy_flow_1966' on page 12 undefined on input line 783.
+
+
+/home/ali/projects/storage/software/docs/ECOS_paper_chemical.tex:787: LaTeX Error: File `cylindrical_domain' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.787 ...degraphics[width=8cm]{cylindrical_domain}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[12]
+
+LaTeX Warning: Citation `eftekhari_fvtool_2015' on page 13 undefined on input line 836.
+
+
+LaTeX Warning: Reference `fig:Permeability-field' on page 13 undefined on input line 841.
+
+<CA_perm_harald.jpg, id=70, 2352.79pt x 783.92876pt>
+File: CA_perm_harald.jpg Graphic file (type jpg)
+<use CA_perm_harald.jpg>
+Package pdftex.def Info: CA_perm_harald.jpg  used on input line 844.
+(pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
+
+LaTeX Warning: Reference `fig:Permeability-field' on page 13 undefined on input line 857.
+
+[13 <./CA_perm_harald.jpg>]
+
+LaTeX Warning: Reference `fig:Bottom-hole-pressure-NH3' on page 14 undefined on input line 883.
+
+
+LaTeX Warning: Reference `fig:Pressure-profile-NH3' on page 14 undefined on input line 889.
+
+<ammonia_p_hist.jpg, id=76, 878.28125pt x 658.46pt>
+File: ammonia_p_hist.jpg Graphic file (type jpg)
+<use ammonia_p_hist.jpg>
+Package pdftex.def Info: ammonia_p_hist.jpg  used on input line 901.
+(pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
+<ammonia_pressure_harald.jpg, id=77, 2352.79pt x 783.92876pt>
+File: ammonia_pressure_harald.jpg Graphic file (type jpg)
+<use ammonia_pressure_harald.jpg>
+Package pdftex.def Info: ammonia_pressure_harald.jpg  used on input line 908.
+(pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
+[14 <./ammonia_p_hist.jpg>]
+
+LaTeX Warning: Reference `fig:concentration-profile-NH3' on page 15 undefined on input line 914.
+
+<ammonia_tracer_harald.jpg, id=81, 2352.79pt x 783.92876pt>
+File: ammonia_tracer_harald.jpg Graphic file (type jpg)
+<use ammonia_tracer_harald.jpg>
+Package pdftex.def Info: ammonia_tracer_harald.jpg  used on input line 926.
+(pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
+
+Overfull \hbox (2.20201pt too wide) in paragraph at lines 950--956
+[]\T1/cmr/m/n/12 Any potential energy storage solution must have an energy loss of less than 30%. Currently,
+ []
+
+[15 <./ammonia_pressure_harald.jpg> <./ammonia_tracer_harald.jpg>]
+/home/ali/projects/storage/software/docs/ECOS_paper_chemical.tex:1004: Undefined control sequence.
+<argument> ...ct \contentsline {chapter}{\bibname 
+                                                  }{\thepage }\protected@fil...
+l.1004 \addcontentsline{toc}{chapter}{\bibname}
+                                               \bibliography{energy_storage}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+No file ECOS_paper_chemical.bbl.
+[16]
+Overfull \hbox (2.1774pt too wide) in paragraph at lines 1051--1060
+[]\T1/cmr/m/n/12 however, its application for the continuous storage and extraction cycles especially with synthetic
+ []
+
+
+Overfull \hbox (18.29726pt too wide) in paragraph at lines 1061--1072
+\T1/cmr/m/n/12 transport pipelines, even though still functional, will have to be removed as part of the abandonment
+ []
+
+[17] (./ECOS_paper_chemical.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.72pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3377 strings out of 483107
+ 47637 string characters out of 5964630
+ 286076 words of memory out of 5000000
+ 18326 multiletter control sequences out of 15000+600000
+ 552580 words of font info for 81 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 31i,9n,31p,420b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1200.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1728.600pk> </home/ali/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on ECOS_paper_chemical.pdf (17 pages, 1064376 bytes).
+PDF statistics:
+ 511 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+

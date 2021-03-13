@@ -13,40 +13,55 @@
 \let\NAT@parse\undefined
 \makeatother
 \usepackage{hyperref}
+\usepackage{float}
 
 %\renewcommand{\rmdefault}{phv} % Arial
 %\renewcommand{\sfdefault}{phv} % Arial
 
-\title{\sffamily ECOS 2021: Template for manuscripts  \\ - next line of the title}
+\title{\sffamily A thermodynamic and technical feasibility study of subsurface storage of energy in the North Sea abandoned reservoirs}
 \rmfamily
-\author{First A. Author$^{a}$, Second B. Author$^{b}$, Third Author$^{c}$ and Fourth Author$^{d}$}
+\author{Ali A. Eftekhari$^{a}$}
 
 %\heading{First A. Author, Second B. Author and Third C. Author}
 
-\address{$^{a}$ Institution,
-City,
-Country,
-e-mail
-\and
-$^{b}$ Institution,
-City,
-Country,
-e-mail
-CA
-\and
-$^{c}$ Institution,
-City,
-Country,
-e-mail
-\and
-$^{d}$ Institution,
-City,
-Country,
-e-mail}
+\address{$^{a}$ Technical University of Denmark,
+Lyngby,
+Denmark,
+aliak@dtu.dk}
 
-\abstract{\small Manuscript submitted to ECOS Conference must describe original, previously unpublished work (in a journal or a conference with refereed proceedings), and must not be simultaneously submitted or be under review for publication elsewhere. Authors are kindly requested to prepare the manuscript by using This template. Please note that detailed info on paper preparation can be found from Section 2.}
+\abstract{\small The oil and gas extraction from the Danish sector of the North Sea
+has been declining, which will lead to the cessation of production
+and abandonment (i.e., plugging of the wells and removal of the facilities).
+Simultaneously, the existing and in development offshore windmills
+in the North Sea will ensure the availability of abundant and cheap
+electricity in the region yet fail to address the intermittent nature
+of the wind resources. This paper hypothesizes that the surplus electricity
+in the windy days and off-peak time can be converted to physical (compressed
+hot fluids) or chemical (synthetic fuels, e.g., hydrogen, ammonia,
+methanol, or methane) forms and stored in the vast space of the abandoned
+oil and gas reservoirs under the North Sea. The stored energy can
+be extracted and consumed as carbon-neutral fuels or be converted
+back to electricity when there is a shortage of wind. This work studies
+the technical and thermodynamic feasibility of offshore conversion
+of electricity to physical and chemical energy sources and their storage/extraction
+in/from the North Sea oil and gas reservoirs. The technical feasibility
+study deals with the sufficiency of the existing infrastructures including
+platforms, pipelines, and surface facilities to accommodate the process
+equipment for the conversion of electricity to physical and chemical
+storable forms. Several processes including nitrogen and carbon dioxide
+separation from the atmosphere, electrolysis of seawater, and reduction
+of CO$_{2}$ and N$_{2}$ to synthetic fuels are simulated in a commercial
+process simulator. The simulation results are used for the sizing
+of process equipment and the calculation of required platform area.
+The thermodynamic analysis quantifies the exergy loss during the offshore
+conversion, transportation, and storage/extraction of physical and chemical energy in the reservoirs based on the results of an in-house
+opensource dynamic model that simulates the multi-component non-isothermal
+flow of fluids in the subsurface. The results will finally estimate
+the amount of wind electricity, offshore installations, and subsurface
+space that is required to make Denmark self-sufficient and independent
+of fossil fuels.}
 
-\keywords{\small Thermodynamics, Energy, ECOS Conference, Exergy, Sustainability.}
+\keywords{\small Exergy analysis, Electricity to fuel, energy storage, Energy transition}
 
 \begin{document}
 
@@ -54,11 +69,272 @@ e-mail}
 
 \sffamily \Large \section{Introduction} \label{Introduction} 
 \rmfamily \normalsize 
-Papers that already appeared in unpublished or informally published workshop proceedings may be submitted (in this case please cite the prior publication in the list of references and contact the ECOS International Scientific chair for permission). Information on Ethics in Publishing and Ethical guidelines for journal publication see at: \url{http://www.elsevier.com/publishingethics} and \url{http://www.elsevier.com/ethicalguidelines}.
 
-\sffamily \large \subsection{Submission} \label{Submission}
+Wind electricity is an intermittent and volatile source of energy.
+When there is no or little wind, there is not enough electricity to
+match the demand; when there is too much wind, if the electricity
+is not consumed immediately, it will be wasted. The Ciara storm in
+February 2020, which was only partially felt in Denmark, increased
+the Danish wind electricity production to 1000 Mega Watts (MW) above
+consumption, i.e. 20\% higher equivalent to the average demand of
+one million European citizens. There were reports of significant curtailments
+up to several thousand MW from other countries in the North Sea region.
+Curtailment, which means accepting less renewable electricity than
+what windfarms can deliver is another word for wasted resources. It
+will soon become more severe when the North Sea is hit by a technological
+storm in the form of several large wind farms that are currently evaluated,
+planned, and licensed \cite{GlobalOffshoreRenewable}. More importantly,
+since the electricity distribution is planned based on the unavailability
+of wind resources, the biomass (that is regularly switched to coal)
+power plants must always be running to compensate for the shortage
+of wind, thus emitting a large amount of carbon dioxide and other
+pollutants. The solution is to store electricity when production is
+higher than demand and consume it when demand is higher than production. 
+
+The oil and gas extraction from the Danish sector of the North Sea
+has been declining, which will lead to the cessation of production
+and abandonment (i.e., plugging of the wells and removal of the facilities).
+Simultaneously, the existing and in development offshore windmills
+in the North Sea will ensure the availability of abundant and cheap
+electricity in the region yet fail to address the intermittent nature
+of the wind resources. This chapter hypothesizes that the surplus
+electricity in the windy days and off-peak time can be converted to
+chemical energy (synthetic fuels, i.e. hydrogen, ammonia, methanol,
+or methane) forms and stored in the vast space of the abandoned oil
+and gas reservoirs under the North Sea. The stored energy can be extracted
+and consumed as carbon-neutral fuels for transportation or be converted
+back to electricity when there is a shortage of wind. This chapter
+studies the technical and thermodynamic feasibility of offshore conversion
+of electricity to chemical energy sources. The technical feasibility
+study deals with the sufficiency of the existing infrastructures including
+platforms, pipelines, and surface facilities to accommodate the process
+equipment for the conversion of electricity to chemical storable forms.
+Several processes including nitrogen and carbon dioxide separation
+from the atmosphere, electrolysis of seawater, and reduction of CO$_{2}$
+and N$_{2}$ to synthetic fuels are simulated in Aspen Plus process
+simulator. The simulation results are used for the sizing of process
+equipment and the calculation of required platform area. The thermodynamic
+analysis quantifies the exergy loss during the conversion of electricity
+to fuel and back, and storage/extraction of chemical energy in the
+reservoirs based on the results of an in-house opensource dynamic
+model that simulates the multicomponent non-isothermal flow of fluids
+in the subsurface.
+
+Background and methodology 
+
+The electricity and heat are first transferred to a storage medium
+and then injected into a suitable subsurface storage space. Several
+technologies based on combinations of storage media and storage space
+will be studied. The storage medium can be a chemical that is made
+of readily available materials with a production process that is fossil-fuel
+independent \cite{eftekhariQuantifyingRoleLiquid2020} or a fluid
+that can be compressed in a capped porous rock, shown schematically
+in Figure 1. The main candidates for a chemical medium are ammonia,
+methanol, methane, and hydrogen made of nitrogen (from the atmosphere),
+hydrogen (electrolysis of water), and carbon dioxide or other carbon
+sources coming from the atmosphere (known as air capture), or biomass
+(plant-based carbohydrates). These energy-intensive processes will
+reduce the overall efficiency of the process as shown in Figure 2.
+The subsurface that is utilized for energy storage will be subject
+to cyclic physical (high and low pressure and temperature during compressed
+air storage and extraction) and chemical impacts that alter the chemical
+and mechanical properties of the rock. The large contact area between
+the porous medium and the injected fluids enhances these alterations
+and often adversely affects the storage capacity and energy and fluid
+loss. Leakage of fluid and heat to the surrounding strata, e.g. aquifers,
+can also have negative environmental impacts, i.e. by promoting and
+accelerating biochemical activities \cite{bauerImpactsUseGeological2013}.
+
+This paper will investigate the feasibility of the alternative use
+of the ``to-be-abandoned'' fields of the North Sea and their infrastructure
+as a large energy storage project that can address the intermittency
+of the wind energy in the North Sea region.
+
+There are three major questions that will be answered in this work.
+First, how much energy storage is needed in Denmark? Secondly, to
+what extent can the subsurface storage be helpful? Thirdly, what are
+the promising technologies from a technical point of view. This paper
+will provide simple, reproducible, and realistic procedures and quantitative
+answers to these questions.
+
+\sffamily \large \subsection{Future energy need of Denmark} \label{Submission}
 \rmfamily \normalsize
-Authors are requested to submit their manuscripts, using EasyChair platform by accessing the Conference page \url{http://ecos2020.org/} and, through the submission login, authors should upload the full manuscript file.
+
+Denmark currently consumes around 100 kWh per person per day of energy
+in different forms. Eftekhari \cite{eftekhari_quantifying_2020} showed
+that this can be further categorized into a 30-30-40 category: 30\%
+electricity, 30\% heat, and 40\% hydrocarbon fuel. Note that the hydrocarbon
+consumption for electricity production is not included in the 40\%
+hydrocarbon fuel. We can assume that in the future, all the warming
+systems and short distance transport will be electrified; therefore,
+by assuming a realistic coefficient of performance for the future
+warming systems, the 30-30-40 can be roughly converted to 45-40, i.e.
+a demand of 45 kWh/day electricity per person and 40 kWh/day liquid
+fuel per person. This is the energy demand that I will use in the
+rest of this report. As for electricity production, the current plan
+is to quadruple the current electricity capacity of the wind mills
+in the North Sea. Since the capacity is not equal to the actual produced
+electricity (due to, e.g. technical problems, curtailment, weather
+conditions, etc.) I will estimate the intermittent electricity production
+of the windmills by quadrupling the current electricity production
+in Denmark. The data is available from Energinet.dk website and also
+as an electronic attachment to this report, including several Matlab
+functions for analysis and visualizations.
+
+Fig. \ref{fig:Current-and-future} shows the electricity supply and
+demand for January 2020 (left) and January 2050 (right). We can use
+the following equation to integrate the data and obtain the average
+energy supply and demand over different periods of time, i.e. from
+24 hours to 6 month, as shown in Fig. \ref{eq:average-energy-demand}:
+\begin{equation}
+\bar{E}=\frac{1}{t_{2}-t_{1}}\int_{t_{1}}^{t_{2}}E\left(t\right)dt,\label{eq:average-energy-demand}
+\end{equation}
+where $E(t)$ {[}MW{]} is the electricity supply or demand in the
+future and $t_{1}$ {[}s{]} and $t_{2}$ {[}s{]} represent a certain
+time period. The future energy supply and demand are estimated by
+using the correction factor extracted from \cite{eftekhari_quantifying_2020},
+e.g.
+\begin{equation}
+E_{future}=\lambda_{i}E_{current},\quad i=s,\,d\label{eq:demand-adjust}
+\end{equation}
+where $\lambda_{d}=1.5$ denotes a 50\% in electricity demand and
+$\lambda_{s}=4.0$ denotes a 400\% increase of windmill capacity in
+Denmark \cite{noauthor_denmark_2020,noauthor_energy_2021}. Note that
+this increase will be on the offshore sector only; however, here we
+assume that the overall wind energy capacity will increase by a factor
+of four. The other assumption in Eq. (\ref{eq:demand-adjust}) is
+that the weather (more specifically, wind) in 2050 will be similar
+to the weather condition in 2020. The visualized energy supply and
+demand in Fig. \ref{fig:Current-and-future} shows that periodically,
+the wind electricity supply is higher or lower than the electricity
+demand, creating electricity surplus and shortage, respectively. The
+alternation between surplus and shortage can occur within a few hours
+to few weeks. This is better visualized in Fig. \ref{fig:Average-electricity-supply}
+that shows the average surplus and shortage for periods of 24 hours
+to 8 months. It can be observed that after around 6 months, the average
+surplus and shortage reach a constant value. This plot unveils three
+critical pieces of information about the wind electricity supply and
+demand in 2050: first, the average shortage of electricity is 1.6
+GW, which is a large amount of power and gives an indication of the
+amount of energy that needs to be stored (although sometimes the actual
+power shortage is temporarily higher as shown later). The good news
+is that the average electricity surplus is 2.25 GW, which is 620 MW
+higher than the average electricity shortage. These two numbers, however,
+serve as a constraint for the energy storage technology that is defined
+by
+\[
+\eta_{storage}>\frac{\text{Average shortage}}{\text{Average surplus}}=0.72,
+\]
+i.e. the efficiency of the storage technology must be higher than
+72\%.
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{denmark_elec_jan2021}\includegraphics[width=8cm]{supply_demand_jan2050_dk}
+
+\caption{\label{fig:Current-and-future}Current and future electricity supply
+and demand of Denmark }
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{supply_demand_six_month_dk}
+
+\caption{\label{fig:Average-electricity-supply}Average electricity supply
+and demand for Denmark adjusted for May 2050 to January 2051; see
+Eq. (\ref{eq:average-energy-demand})}
+\end{figure}
+
+Although the previous analysis provides the average storage value,
+the real time electricity surplus that needs to be stored varies with
+time. The same occurs with the electricity shortage, i.e. the occasional
+electricity shortage can be much higher than its long-term average
+value. Both of these values are shown in Fig. \ref{fig:Electricity-surplus-smooth}.
+Any feasible storage process must be able to store a maximum power
+surplus of 5.0 to 10.0 GW (see the peaks of the curves in Fig. \ref{fig:Electricity-surplus-smooth}-left)
+and recuperate the stored power with a maximum rate of 3.0 to 6.0
+GW (see the peaks of the curves in Fig. \ref{fig:Electricity-surplus-smooth}-right).
+These values are critical in the design of the storage and recuperation
+processes. The sizing of the required equipment and sub-processes
+will be discussed in the next sections. 
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{smoothed_surplus}\includegraphics[width=8cm]{smoothed_deficit}
+
+\caption{\label{fig:Electricity-surplus-smooth}Electricity surplus (left)
+and shortage (right) adjusted for 2050; the smoothed curve is shown
+by area plot.}
+\end{figure}
+
+We end this section by estimating the subsurface volume that is required
+to store enough energy to cover for a eight month energy shortage.
+Table \ref{tab:Exergy-value-efficiency} shows the exergy per unit
+mole of different energy storage media that are studied in this report.
+Exergy, $ex_{i}$ {[}kJ/mol{]} is the amount of energy in a system
+that can be converted to mechanical work, i.e. movement or electricity.
+The maximum efficiency of producing each medium, $\eta_{i}$, is also
+reported in Table \ref{tab:Exergy-value-efficiency}. For these calculations,
+we need to have the density of the stored fluids at reservoir conditions,
+$T_{res}$ {[}K{]} and $p_{res}$ {[}bar{]}. We used the typical reservoir
+conditions of the chalk fields in the Danish sector of the North Sea,
+i.e. 70$^{o}$C and 200 bar. The volume of the reservoir is calculated
+by
+\[
+V_{res,i}=\frac{\bar{E}_{shortage}t_{storage}MW_{i}}{ex_{i}\rho_{i}\varphi},
+\]
+where $\bar{E}_{shortage}$ {[}kW{]} is the average electricity shortage,
+$t_{shortage}$ {[}s{]} is the period over which the electricity shortage
+is estimated (here 8 months), $MW_{i}$ {[}kg/mol{]} is the molecular
+weight of the stored fluid, $\rho_{i}$ {[}kg/m$^{3}${]} is the density
+of the stored fluid at reservoir condition, and $\varphi$ {[}-{]}
+is the porosity of the reservoir. Assuming a reservoir thickness of
+100 m, the diameter of a chalk reservoir that can store the equivalent
+of eight-month electricity shortage in 2050 is visualized in Fig.
+\ref{fig:Diameter-reservoir}. The diameter is calculated assuming
+an efficiency factor of one for all the energy conversions. A 2 to
+3 times larger reservoir volume is required if all the efficiency
+factors are included in the computations. All in all, the required
+volume for the energy storage is only a small fraction of the available
+reservoir volumes in the North Sea. Therefore, the reservoir volume
+is not a bottleneck in the subsurface energy storage. A reservoir
+with a thickness of 100 m and a radius between 100 m to 3000 m (considering
+the efficiency factors) can hold enough energy to compensate for 8
+months of electricity shortage in Denmark in 2050. 
+
+\begin{table}[H]
+\caption{\label{tab:Exergy-value-efficiency}Exergy value and the efficiency
+of producing different energy storage media and the thermodynamic
+properties at reservoir condition (70$^{o}$C, 200 bar); the efficiency
+factors are only considered for the electricity to fuel conversion.}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Component & $\rho$ {[}kg/m$^{3}${]} & $ex$ {[}kJ/mol{]} & $V_{res}$ {[}10$^{6}$ m$^{3}${]} & $\eta$ {[}-{]}\tabularnewline
+\hline 
+\hline 
+NH$_{3}$ & 667.7 & 340 & 2.50 & 0.45\tabularnewline
+\hline 
+CH$_{4}$ & 386.6 & 831 & 1.66 & 0.36\tabularnewline
+\hline 
+H$_{2}$ & 67.7 & 236 & 4.21 & 0.7\tabularnewline
+\hline 
+CH$_{3}$OH & 871.2 & 720 & 1.70 & 0.4\tabularnewline
+\hline 
+Air & 733.5 & 22.0 & 59.89 & 1.0\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{res_radius_8month_storage}
+
+\caption{\label{fig:Diameter-reservoir}Diameter of a 100 m thick chalk reservoir
+for the storage of fuel equivalent of 8-month electricity shortage
+in 2050. All the efficiency factors are assumed to be one.}
+\end{figure}
+
+In the next chapter, several energy storage solutions will be discussed,
+and a thermodynamic model will be used to compare these solutions.
+The last chapter discusses the technical opportunities and limitations
+of each solution. 
 
 \sffamily \large \subsection{Information} \label{Information}
 \rmfamily \normalsize 
@@ -342,32 +618,10 @@ References to electronic data available only from personal Web sites or commerci
 Citations should be given according to the examples in the section References for articles in journals \footnote{Journal titles can be abbreviated, see URL: http://www.efm.leeds.ac.uk/~mark/ISIabbr/.} \cite{journal}, \cite{journal2} and proceedings \cite{proceedings}, chapter in book \cite{chapter} as well as for books \cite{books}, technical reports \cite{report}, dissertations \cite{dissertation} and web available sources \cite{web_references}.
 
 \sffamily \Large
-\begin{thebibliography}{99}
+% \begin{thebibliography}{99}
 \rmfamily \normalsize
-
-\bibitem{journal} Sciacovelli A., Verda V.
-\textit{Entropy generation analysis in a monolithic-type solid oxide fuel cell (SOFC)}. Energy 2009;34(7):850-65.
-
-\bibitem{journal2} Yapici H., Kayatas N., Albayrak B., Basturk G.,
-\textit{Numerical calculation of local entropy generation in a methane air burner}. Energy Convers Manage 2005;46:1885-919 \footnote{If a journal carries continuous pagination throughout a volume the month and issue number may be omitted.}.
-
-\bibitem{proceedings} Bolliger R., Favrat D., Maréchal F.,
-\textit{Advanced Power Plant Design Methodology using Process Integration and Multi-Objective Thermo-Economic Optimisation}. In: Kjelstrup S., Hustad E., Gundersen T., Røsjorde A., Tsatsaronis G., editors. ECOS 2005: Proceedings of the 18th International Conference on Efficiency, Cost, Optimization, Simulation, and Environmental Impact of Energy Systems; 2005 Jun 20-25; Trondheim, Norway. Tapir Academic Press:777-84.
-
-\bibitem{chapter}  El-Halwagy MM.
-\textit{Sustainable pollution prevention through mass integration.}. In: Sikdar S, Diwekar U, editors. Tools and methods for pollution prevention. Dordrecht, Netherlands: Kluwer Academic Publisher. 1999. p. 233-76.
-
-\bibitem{books}  Bejan A.
-\textit{Shape and structure, from engineering to nature.}. Cambridge, UK: Cambridge University Press; 2000.
-
-\bibitem{report}  Holland A., O’Sullivan B.
-\textit{Weighted super solutions for constraint programs.} Cork, Ireland: University College Cork, Cork Constraint Computation Centre; 2004 Dec. Technical Report No.: UCC-CS-2004-12-02.
-
-\bibitem{dissertation}  Magistri L.
-\textit{Hybrid Systems for Distributed Generation [dissertation]} Genova, Italy: Università  di Genova; 2003.
-
-\bibitem{web_references}  National Institute of Standards and Technology.
-\textit{NIST-JANAF Thermochemical Tables} Available at: \url{http://kinetics.nist.gov/ janaf/} [accessed 12.3.2008].
-\end{thebibliography}
+\bibliographystyle{plain}
+\bibliography{energy_storage}
+% \end{thebibliography}
 
 \end{document}
