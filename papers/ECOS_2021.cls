@@ -16,7 +16,7 @@
 
 \ProcessOptions\relax
 
-\LoadClass[a4paper,12pt]{article}
+\LoadClass[a4paper,10pt]{article}
 
 \RequirePackage{calc}
 \RequirePackage{indentfirst}

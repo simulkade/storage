@@ -3592,12 +3592,12 @@ Any potential energy storage solution must have an energy loss of less than
 \end_layout
 
 \begin_layout Enumerate
-For 2050, a capacity of > 1000 MW electricity storage is required.
+For 2050, a capacity of greater than 1000 MW electricity storage is required.
  The largest commercial hydrogen electrolysis units are in the order of
  20 MW and have a relatively large footprint that makes them unsuitable
  for the offshore installations.
  Moreover, there is currently no hydrogen gas turbine in the market and
- hydrogen can only be utilized in the form of hydrocarbon mixtures.
+ hydrogen can only be utilized in hydrocarbon mixtures.
  
 \end_layout
 
@@ -3615,7 +3615,7 @@ Methanol and methane require a large carbon source, e.g.
 from the atmosphere) is energy intensive and reduces the overall production
  efficiency of the carbon-based liquid and gaseous fuels.
  They also have a large footprint and do not fit on the offshore platforms.
- The only other option is the capture and transport of CO
+ The only other option is the capture and transportation of CO
 \begin_inset Formula $_{2}$
 \end_inset
 
@@ -3647,8 +3647,9 @@ The near-well and pipeline pressure drops limit the compressed air storage
 
 \begin_layout Enumerate
 Recuperation of the stored fuel with the desired flow rate is a limiting
- factor in all the studied cases that reduces the efficiency of energy storage
- to the unfeasible values of 1-2%.
+ factor in all the studied cases.
+ It reduces the efficiency of energy storage to the unfeasible values of
+ 1-2%.
  
 \end_layout
 

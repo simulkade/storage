@@ -1,0 +1,1676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>A thermodynamic and technical feasibility study of subsurface storage of energy in
+the North Sea abandoned reservoirs</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="ECOS_paper_chemical.tex"> 
+<link rel="stylesheet" type="text/css" href="ECOS_paper_chemical.css"> 
+</head><body 
+>
+<div class="maketitle">
+
+
+
+<h2 class="titleHead">A thermodynamic and technical feasibility study
+of subsurface storage of energy in the North Sea
+abandoned reservoirs</h2>
+<div class="author" ><span 
+class="ecrm-1200">Ali A. Eftekhari</span></div><br />
+<div class="date" ></div>
+</div><div 
+class="abstract" 
+>
+<div class="center" 
+>
+<!--l. 34--><p class="noindent" >
+<!--l. 34--><p class="noindent" ><span 
+class="ecbx-0900">Abstract</span></div>
+     <!--l. 35--><p class="indent" >    <span 
+class="ecrm-0900">The oil and gas extraction from the Danish sector of the North Sea</span>
+     <span 
+class="ecrm-0900">has been declining, which will lead to the cessation of production and</span>
+     <span 
+class="ecrm-0900">abandonment (i.e., plugging of the wells and removal of the facilities).</span>
+     <span 
+class="ecrm-0900">Simultaneously, the existing and in development offshore windmills in the</span>
+     <span 
+class="ecrm-0900">North Sea will ensure the availability of abundant and cheap electricity</span>
+     <span 
+class="ecrm-0900">in  the  region  yet  fail  to  address  the  intermittent  nature  of  the  wind</span>
+     <span 
+class="ecrm-0900">resources. This paper hypothesizes that the surplus electricity in the windy</span>
+     <span 
+class="ecrm-0900">days  and  off-peak  time  can  be  converted  to  physical  (compressed  hot</span>
+     <span 
+class="ecrm-0900">fluids) or chemical (synthetic fuels, e.g., hydrogen, ammonia, methanol,</span>
+     <span 
+class="ecrm-0900">or methane) forms and stored in the vast space of the abandoned oil and</span>
+     <span 
+class="ecrm-0900">gas reservoirs under the North Sea. The stored energy can be extracted</span>
+     <span 
+class="ecrm-0900">and consumed as carbon-neutral fuels or be converted back to electricity</span>
+     <span 
+class="ecrm-0900">when there is a shortage of wind. This work studies the technical and</span>
+     <span 
+class="ecrm-0900">thermodynamic feasibility of offshore conversion of electricity to physical</span>
+     <span 
+class="ecrm-0900">and  chemical  energy  sources  and  their  storage/extraction  in/from  the</span>
+     <span 
+class="ecrm-0900">North Sea oil and gas reservoirs. The technical feasibility study deals</span>
+     <span 
+class="ecrm-0900">with the sufficiency of the existing infrastructures including platforms,</span>
+     <span 
+class="ecrm-0900">pipelines, and surface facilities to accommodate the process equipment</span>
+     <span 
+class="ecrm-0900">for the conversion of electricity to physical and chemical storable forms.</span>
+     <span 
+class="ecrm-0900">Several processes including nitrogen and carbon dioxide separation from</span>
+     <span 
+class="ecrm-0900">the atmosphere, electrolysis of seawater, and reduction of CO</span><sub><span 
+class="cmr-6">2</span></sub>  <span 
+class="ecrm-0900">and N</span><sub><span 
+class="cmr-6">2</span></sub>
+     <span 
+class="ecrm-0900">to synthetic fuels are simulated in a commercial process simulator. The</span>
+     <span 
+class="ecrm-0900">simulation  results  are  used  for  the  sizing  of  process  equipment  and</span>
+     <span 
+class="ecrm-0900">the calculation of required platform area. The thermodynamic analysis</span>
+
+     <span 
+class="ecrm-0900">quantifies the exergy loss during the offshore conversion, transportation,</span>
+     <span 
+class="ecrm-0900">and storage/extraction of physical and chemical energy in the reservoirs</span>
+     <span 
+class="ecrm-0900">based  on  the  results  of  an  in-house  opensource  dynamic  model  that</span>
+     <span 
+class="ecrm-0900">simulates  the  multi-component  non-isothermal  flow  of  fluids  in  the</span>
+     <span 
+class="ecrm-0900">subsurface. The results will finally estimate the amount of wind electricity,</span>
+     <span 
+class="ecrm-0900">offshore  installations,  and  subsurface  space  that  is  required  to  make</span>
+     <span 
+class="ecrm-0900">Denmark self-sufficient and independent of fossil fuels.</span>
+     <!--l. 68--><p class="indent" >    <span 
+class="ecrm-0900">Keywords: Subsurface energy storage</span>
+     <!--l. 70--><p class="indent" >    <span 
+class="ecrm-0900">Exergy analysis</span>
+     <!--l. 72--><p class="indent" >    <span 
+class="ecrm-0900">Electricity to fuel</span>
+     <!--l. 74--><p class="indent" >    <span 
+class="ecrm-0900">Large scale storage</span>
+     <!--l. 76--><p class="indent" >    <span 
+class="ecrm-0900">Energy transition</span>
+</div>
+<h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 81--><p class="noindent" >Wind electricity is an intermittent and volatile source of energy <span class="cite">[<a 
+href="#XgibescuEstimationVariabilityPredictability2009">22</a>,&#x00A0;<a 
+href="#XummelsImpactsWindPower2007">41</a>]</span>. When there
+is no or little wind, there is not enough electricity to match the demand; when there
+is too much wind, if the electricity is not consumed immediately, it will be wasted.
+The Ciara storm in February 2020, which was only partially felt in Denmark,
+increased the Danish wind electricity production to 1000 Mega Watts (MW) above
+consumption, i.e. 20% higher that is equivalent to the average demand of one
+million European citizens. There were reports of significant curtailments
+up to several thousand MW from other countries in the North Sea region.
+Curtailment <span class="cite">[<a 
+href="#XlewWindSolarCurtailment2013">28</a>]</span>, which means accepting less renewable electricity than what
+windfarms can deliver is another word for wasted resources. It will soon
+become more severe when the North Sea is hit by a technological storm in the
+form of several large wind farms that are currently evaluated, planned, and
+licensed <span class="cite">[<a 
+href="#XGlobalOffshoreRenewable">1</a>]</span>. More importantly, since the electricity distribution is planned
+based on the unavailability of wind resources, the biomass (that is regularly
+switched to coal) power plants must always be running to compensate for
+the shortage of wind, thus emitting a large amount of carbon dioxide and
+other pollutants <span class="cite">[<a 
+href="#XmeibomEnergyComesTogether2013">33</a>]</span>. The solution is to store electricity when production is
+higher than demand and consume it when demand is higher than production
+<span class="cite">[<a 
+href="#XpedersenEnergyStorageTechnologies2019">37</a>]</span>.
+<!--l. 105--><p class="noindent" >The oil and gas extraction from the Danish sector of the North Sea has been
+declining, which will lead to the cessation of production and abandonment (i.e.,
+plugging of the wells and removal of the facilities). Simultaneously, the existing and
+in development offshore windmills in the North Sea will ensure the availability of
+abundant and cheap electricity in the region yet fail to address the intermittent
+nature of the wind resources. This paper hypothesizes that the surplus electricity in
+the windy days and off-peak time can be converted to chemical energy (synthetic
+fuels, i.e. hydrogen, ammonia, methanol, or methane) forms and stored in the vast
+space of the abandoned oil and gas reservoirs under the North Sea. The
+stored energy can be extracted and consumed as carbon-neutral fuels for
+transportation or be converted back to electricity when there is a shortage of wind.
+This paper studies the technical and thermodynamic feasibility of offshore
+conversion of electricity to chemical energy sources. The technical feasibility study
+
+deals with the sufficiency of the existing infrastructures including platforms,
+pipelines, and surface facilities to accommodate the process equipment for the
+conversion of electricity to chemical storable forms. Several processes including
+nitrogen and carbon dioxide separation from the atmosphere, electrolysis of
+seawater, and reduction of CO<sub><span 
+class="cmr-7">2</span></sub> and N<sub><span 
+class="cmr-7">2</span></sub> to synthetic fuels are simulated in
+Aspen Plus process simulator. The simulation results are used for the sizing
+of process equipment and the calculation of required platform area. The
+thermodynamic analysis quantifies the exergy loss during the conversion of
+electricity to fuel and back, and storage/extraction of chemical energy in the
+reservoirs based on the results of an in-house opensource dynamic model that
+simulates the multicomponent non-isothermal flow of fluids in the subsurface
+<span class="cite">[<a 
+href="#XeftekhariFVToolFiniteVolume2015b">13</a>]</span>.
+<!--l. 134--><p class="noindent" >There are three major questions that will be answered in this work. First, how much
+energy storage is needed in Denmark? Secondly, to what extent can the subsurface
+storage be helpful in addressing the intermittency of the renewable electricity?
+Thirdly, what are the promising technologies from a technical point of view? This
+paper will provide simple, reproducible, and realistic procedures and quantitative
+answers to these questions.
+<!--l. 142--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Future energy need of Denmark</h3>
+<!--l. 144--><p class="noindent" >Denmark currently consumes around 100 kWh per person per day of energy in
+different forms. Eftekhari <span class="cite">[<a 
+href="#XeftekhariQuantifyingRoleLiquid2020">15</a>]</span> showed that this can be further categorized into 30%
+electricity, 30% heat, and 40% hydrocarbon fuel. Note that the hydrocarbon
+consumption for electricity production is not included in the 40% hydrocarbon fuel.
+We can assume that in the future, all the warming systems and short distance
+transport will be electrified; therefore, by assuming a realistic (yet conservative)
+coefficient of performance of 2.0 for the future warming systems, we can estimate a
+demand of 45 kWh/day electricity per person and 40 kWh/day liquid fuel per person.
+As for electricity production, the current plan is to quadruple the current
+electricity capacity of the wind mills in the North Sea. Since the capacity is not
+equal to the actual produced electricity (due to, e.g. technical problems,
+curtailment, weather conditions, etc.) we will estimate the intermittent electricity
+production of the windmills by quadrupling the current electricity production in
+Denmark that is available from Energinet.dk website and also available as a
+public repository <span class="cite">[<a 
+href="#XeftekhariSimulkadeStorageFirst2021">14</a>]</span>, including several Matlab functions for analysis and
+visualizations.
+<!--l. 164--><p class="noindent" >Fig. <a 
+href="#x1-2003r1">1<!--tex4ht:ref: fig:Electricity-surplus-smooth --></a> shows the electricity supply and demand from May 2021 to January
+2021 (left) and for the same period in 2050 (right). We can use Eq. (<a 
+href="#x1-2001r1">1<!--tex4ht:ref: eq:average-energy-demand --></a>) to
+integrate the data and obtain the average energy supply and demand over
+different periods of time, i.e. from 24 hours to nine month, as shown in Fig.
+<a 
+href="#x1-2001r1">1<!--tex4ht:ref: eq:average-energy-demand --></a>:
+<table 
+class="equation"><tr><td>
+
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical0x.png" alt=" ¯   --1---&#x222B; t2
+E =  t2 - t1 t E (t)dt,
+            1
+" class="math-display" ><a 
+ id="x1-2001r1"></a></center></td><td class="equation-label">(1)</td></tr></table>
+<!--l. 172--><p class="nopar" >
+where <span 
+class="cmmi-10">E</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">t</span><span 
+class="cmr-10">) </span>[MW] is the electricity supply or demand in the future and <span 
+class="cmmi-10">t</span><sub><span 
+class="cmr-7">1</span></sub> [s]
+and <span 
+class="cmmi-10">t</span><sub><span 
+class="cmr-7">2</span></sub> [s] represent a certain time period. The future energy supply and
+demand are estimated by using the correction factor extracted from <span class="cite">[<a 
+href="#XeftekhariQuantifyingRoleLiquid2020">15</a>]</span>,
+e.g.
+<table 
+class="equation"><tr><td>
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical1x.png" alt="Efuture = &#x03BB;iEcurrent, i = s, d
+" class="math-display" ><a 
+ id="x1-2002r2"></a></center></td><td class="equation-label">(2)</td></tr></table>
+<!--l. 180--><p class="nopar" >
+where <span 
+class="cmmi-10">&#x03BB;</span><sub><span 
+class="cmmi-7">d</span></sub> <span 
+class="cmr-10">= 1</span><span 
+class="cmmi-10">.</span><span 
+class="cmr-10">5 </span>denotes a 50% in electricity demand <span class="cite">[<a 
+href="#XeftekhariQuantifyingRoleLiquid2020">15</a>]</span> and <span 
+class="cmmi-10">&#x03BB;</span><sub><span 
+class="cmmi-7">s</span></sub> <span 
+class="cmr-10">= 4</span><span 
+class="cmmi-10">.</span><span 
+class="cmr-10">0 </span>denotes a 400%
+increase of windmill capacity in Denmark <span class="cite">[<a 
+href="#XdanishenergyagencyEnergyIslands2021">4</a>,&#x00A0;<a 
+href="#XdandreaSynergiesOffshoreEnergy2021">12</a>]</span>. Note that this increase will be on
+the offshore sector only; however, here we assume that the overall wind energy
+capacity will increase by a factor of four. The other assumption in Eq. (<a 
+href="#x1-2002r2">2<!--tex4ht:ref: eq:demand-adjust --></a>) is that
+the weather (more specifically, wind) in 2050 will be similar to the weather
+condition in 2020. The visualized energy supply and demand in Fig. <a 
+href="#x1-2003r1">1<!--tex4ht:ref: fig:Electricity-surplus-smooth --></a> shows
+that periodically, the wind electricity supply is higher or lower than the
+electricity demand, creating periods with electricity surplus and shortage,
+respectively. The alternation between surplus and shortage can occur within a
+few hours to few weeks. This is better visualized in Fig. <a 
+href="#x1-2004r2">2<!--tex4ht:ref: fig:Average-electricity-supply --></a> that shows the
+average surplus and shortage for periods of 24 hours to 8 months. It can be
+observed that after around six months, the average surplus and shortage
+reach a constant value. This plot unveils three critical pieces of information
+about the wind electricity supply and demand in 2050: first, the average
+shortage of electricity is 1.6 GW, which is a large amount of power and gives
+an indication of the amount of energy that needs to be stored (although
+sometimes the actual power shortage is temporarily higher as shown later).
+The good news is that the average electricity surplus is 2.25 GW, which is
+620 MW higher than the average electricity shortage. These two numbers,
+however, serve as a constraint for the efficiency of the energy storage technology,
+i.e.
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical2x.png" alt="         Average-shortage-
+&#x03B7;storage &#x003E; Average surplus = 0.72.
+" class="math-display" ></center>
+<!--l. 208--><p class="nopar" > This means that the efficiency of the storage technology must be higher than
+72%.
+<!--l. 212--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-2003r1"></a>
+
+<!--l. 213--><p class="noindent" ><img 
+src="0C__projects_storage_software_docs_smoothed_surplus.jpg" alt="PIC"  
+width="227" height="227" ><img 
+src="1C__projects_storage_software_docs_smoothed_deficit.jpg" alt="PIC"  
+width="227" height="227" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">Electricity surplus (left) and shortage (right) adjusted for 2050; the
+smoothed curve is shown by area plot.</span></div><!--tex4ht:label?: x1-2003r1 -->
+
+<!--l. 218--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 220--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-2004r2"></a>
+
+<!--l. 221--><p class="noindent" ><img 
+src="2C__projects_storage_software_docs_supply_demand_six_month_dk.jpg" alt="PIC"  
+width="227" height="227" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">Average electricity supply and demand for Denmark adjusted for May
+2050 to January 2051; see Eq. (<a 
+href="#x1-2001r1">1<!--tex4ht:ref: eq:average-energy-demand --></a>)</span></div><!--tex4ht:label?: x1-2004r2 -->
+
+<!--l. 226--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 228--><p class="noindent" >Although the previous analysis provides the average storage value, the real
+time electricity surplus that needs to be stored varies with time. The same
+occurs with the electricity shortage, i.e. the occasional electricity shortage
+can be much higher than its long-term average value. Both of these values
+are shown in Fig. <a 
+href="#x1-2003r1">1<!--tex4ht:ref: fig:Electricity-surplus-smooth --></a>. Any feasible storage process must be able to store a
+maximum power surplus of 5.0 to 10.0 GW (see the peaks of the curves in
+Fig. <a 
+href="#x1-2003r1">1<!--tex4ht:ref: fig:Electricity-surplus-smooth --></a>-left) and recuperate the stored power with a maximum rate of 3.0
+to 6.0 GW (see the peaks of the curves in Fig. <a 
+href="#x1-2003r1">1<!--tex4ht:ref: fig:Electricity-surplus-smooth --></a>-right). These values are
+critical in the design of the storage and recuperation processes. The sizing
+of the required equipment and sub-processes will be discussed in the next
+sections.
+<!--l. 241--><p class="noindent" >We end this section by estimating the subsurface volume that is required to store
+enough energy to cover for a eight month energy shortage. Table <a 
+href="#x1-2005r1">1<!--tex4ht:ref: tab:Exergy-value-efficiency --></a> shows the exergy
+per unit mole of different energy storage media that are studied in this report.
+Exergy, <span 
+class="cmmi-10">ex</span><sub><span 
+class="cmmi-7">i</span></sub> [kJ/mol] is the amount of energy in a system that can be converted to
+mechanical work, i.e. movement. The maximum efficiency of producing each medium,
+<span 
+class="cmmi-10">&#x03B7;</span><sub><span 
+class="cmmi-7">i</span></sub>, is also reported in Table <a 
+href="#x1-2005r1">1<!--tex4ht:ref: tab:Exergy-value-efficiency --></a>. For these calculations, we need to have the density of
+the stored fluids at reservoir conditions, <span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">res</span></sub> [K] and <span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">res</span></sub> [bar]. We used the
+typical reservoir conditions of the chalk fields in the Danish sector of the
+North Sea, i.e. 70<sup><span 
+class="cmmi-7">o</span></sup>C and 200 bar. The volume of the reservoir is calculated
+by
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical3x.png" alt="V    = ¯EshortagetstorageM-Wi-,
+ res,i         exi&#x03C1;i&#x03C6;
+" class="math-display" ></center>
+<!--l. 256--><p class="nopar" > where <span class="bar-css"><span 
+class="cmmi-10">E</span></span><sub><span 
+class="cmmi-7">shortage</span></sub> [kW] is the average electricity shortage, <span 
+class="cmmi-10">t</span><sub><span 
+class="cmmi-7">shortage</span></sub> [s] is the period
+over which the electricity shortage is estimated (here 8 months), <span 
+class="cmmi-10">MW</span><sub><span 
+class="cmmi-7">i</span></sub> [kg/mol] is
+the molecular weight of the stored fluid, <span 
+class="cmmi-10">&#x03C1;</span><sub><span 
+class="cmmi-7">i</span></sub> [kg/m<sup><span 
+class="cmr-7">3</span></sup>] is the density of the stored fluid
+at reservoir condition, and <span 
+class="cmmi-10">&#x03C6; </span>[-] is the porosity of the reservoir. Assuming a reservoir
+thickness of 100 m, the diameter of a chalk reservoir that can store the equivalent of
+eight-month electricity shortage in 2050 is visualized in Fig. <a 
+href="#x1-2006r3">3<!--tex4ht:ref: fig:Diameter-reservoir --></a>. The diameter is
+calculated assuming an efficiency factor of one for all the energy conversions. A 2
+to 3 times larger reservoir volume is required if all the efficiency factors
+are included in the computations. All in all, the required volume for the
+energy storage is only a small fraction of the available reservoir volumes in
+the North Sea. Therefore, the reservoir volume is not a bottleneck in the
+subsurface energy storage. A reservoir with a thickness of 100 m and a radius
+between 100 m to 3000 m (considering the efficiency factors) can hold enough
+energy to compensate for 8 months of electricity shortage in Denmark in
+2050.
+<div class="table">
+
+<!--l. 276--><p class="noindent" ><a 
+ id="x1-2005r1"></a><hr class="float"><div class="float" 
+>
+
+ <div class="caption" 
+><span class="id">Table&#x00A0;1: </span><span  
+class="content">Exergy value and the efficiency of producing different energy storage
+media and the thermodynamic properties at reservoir condition (70<sup><span 
+class="cmmi-7">o</span></sup>C, 200 bar);
+the efficiency factors are only considered for the electricity to fuel conversion.</span></div><!--tex4ht:label?: x1-2005r1 -->
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"><col 
+id="TBL-2-2"><col 
+id="TBL-2-3"><col 
+id="TBL-2-4"><col 
+id="TBL-2-5"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-1"  
+class="td11">Component</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-2"  
+class="td11"><span 
+class="cmmi-10">&#x03C1; </span>[kg/m<sup><span 
+class="cmr-7">3</span></sup>]</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-3"  
+class="td11"><span 
+class="cmmi-10">ex </span>[kJ/mol]</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-4"  
+class="td11"><span 
+class="cmmi-10">V</span> <sub><span 
+class="cmmi-7">res</span></sub> [10<sup><span 
+class="cmr-7">6</span></sup> m<sup><span 
+class="cmr-7">3</span></sup>]</td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-1-5"  
+class="td11"><span 
+class="cmmi-10">&#x03B7; </span>[-]</td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-1"  
+class="td11">   NH<sub><span 
+class="cmr-7">3</span></sub>      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-2"  
+class="td11">  667.7   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-3"  
+class="td11">   340     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-4"  
+class="td11">    2.50      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-2-5"  
+class="td11">0.45</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-1"  
+class="td11">   CH<sub><span 
+class="cmr-7">4</span></sub>      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-2"  
+class="td11">  386.6   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-3"  
+class="td11">   831     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-4"  
+class="td11">    1.66      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-3-5"  
+class="td11">0.36</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-1"  
+class="td11">    H<sub><span 
+class="cmr-7">2</span></sub>        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-2"  
+class="td11">  67.7    </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-3"  
+class="td11">   236     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-4"  
+class="td11">    4.21      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-4-5"  
+class="td11"> 0.7 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-1"  
+class="td11">  CH<sub><span 
+class="cmr-7">3</span></sub>OH   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-2"  
+class="td11">  871.2   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-3"  
+class="td11">   720     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-4"  
+class="td11">    1.70      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-5-5"  
+class="td11"> 0.4 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-1"  
+class="td11">    Air      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-2"  
+class="td11">  733.5   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-3"  
+class="td11">   22.0     </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-4"  
+class="td11">    59.89      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-2-6-5"  
+class="td11"> 1.0 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:center;" id="TBL-2-7-1"  
+class="td11">          </td></tr></table></div>
+
+</div><hr class="endfloat" />
+</div>
+<!--l. 319--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-2006r3"></a>
+
+<!--l. 320--><p class="noindent" ><img 
+src="3C__projects_storage_software_docs_res_radius_8month_storage.jpg" alt="PIC"  
+width="227" height="227" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;3: </span><span  
+class="content">Diameter of a 100 m thick chalk reservoir for the storage of fuel
+equivalent of 8-month electricity shortage in 2050. All the efficiency factors are
+assumed to be one.</span></div><!--tex4ht:label?: x1-2006r3 -->
+
+<!--l. 325--><p class="noindent" ></div><hr class="endfigure">
+<h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Synthetic fuel storage</h3>
+<!--l. 330--><p class="noindent" >The conversion of electricity to carbon-neutral fuels, known as power2x, p2x,
+e-refinery, and several other names, is a topic that is extensively studied, e.g.
+<span class="cite">[<a 
+href="#XfreiMethanolHydrogenCarrier2020b">19</a>,&#x00A0;<a 
+href="#XbarbarossaCO2ConversionCH42013">9</a>,&#x00A0;<a 
+href="#XghaibPowertoMethaneStateoftheartReview2018">21</a>,&#x00A0;<a 
+href="#XguerraMethaneProductionCombined2018">24</a>,&#x00A0;<a 
+href="#XkoponenReviewWaterElectrolysis2015">27</a>,&#x00A0;<a 
+href="#Xmendoza-hernandezExergyValorizationWater2019">34</a>]</span>. To produce a carbon-neutral fuel, the raw material for the
+production of the synthetic fuels must come from the dead state, i.e. atmosphere and
+sea water. The dead state refers to the average composition of the atmosphere,
+Earth&#8217;s crust, and oceans that theoretically does not have any potential to do
+work. Here, we consider the production of hydrogen, ammonia, methane,
+and methanol. The raw material for the production of these fuels are air
+and seawater and the only driving force for the production processes is the
+surplus electricity from the windfarms. From the atmosphere, nitrogen and
+carbon dioxide need to be separated. From the seawater, hydrogen will be
+extracted via an electrolysis process. These processes are discussed in the next
+section.
+<!--l. 346--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-40003.1"></a>Nitrogen</h4>
+<!--l. 348--><p class="noindent" >Nitrogen can be extracted from the air through the cryogenic distillation of air. In
+this process, shown in Fig. <a 
+href="#x1-4001r4">4<!--tex4ht:ref: fig:Ammonia-synthesis-cryogenic --></a>, air is filtered, compressed, and liquefied by passing
+through a series of heat exchangers. The liquefied air then enters a high
+pressure followed by a low pressure distillation column. The separation of
+nitrogen from oxygen and other minor constituents of air is done based on
+the difference of their boiling points. Nitrogen is separated from the top
+side of the low pressure column. To liquefy air, a utility stream of around
+-200<sup><span 
+class="cmmi-7">o</span></sup>C is required, that is often provided through the sudden expansion of a
+compressed refrigerant. Therefore, the entropy generation is high and the process
+is exergy intensive. Different values are reported in the literature for the
+electricity consumption per unit mole of separated nitrogen. These values depend
+on the heat integration of the process. The largest value reported in the
+literature is around 15 kJ/mol air distilled. In our simulation, we obtained
+a value of 32 kJ/mol, which is perhaps due to the poor heat integration
+in the simplified simulations; thus, we used the value of 15 kJ/mol in our
+analysis.
+<!--l. 367--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-4001r4"></a>
+
+<!--l. 368--><p class="noindent" ><img 
+src="4C__projects_storage_software_docs_ammonia_cryogenic.jpg" alt="PIC"  
+width="398" height="398" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;4: </span><span  
+class="content">Ammonia synthesis process based on electrolysis and cryogenic air
+separation</span></div><!--tex4ht:label?: x1-4001r4 -->
+
+<!--l. 372--><p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
+ id="x1-50003.2"></a>Carbon dioxide</h4>
+<!--l. 377--><p class="noindent" >Carbon dioxide is a stable molecule that exist in a small concentration of around 40
+ppm (40<span 
+class="cmsy-10">&#x00D7;</span>10<sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">6</span></sup> mole fraction) in the atmosphere. Theoretically, it can be separated
+from the atmosphere by spending an energy amount that is equal to the chemical
+exergy of carbon dioxide <span class="cite">[<a 
+href="#XsankaranarayananEfficiencySustainabilityEnergy2010">39</a>]</span>, i.e.
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical4x.png" alt="exCO2 = - RT00lnxCO2,
+" class="math-display" ></center>
+<!--l. 384--><p class="nopar" > where <span 
+class="cmmi-10">R </span>[8.314 J/(mol.K)] is the universal gas constant, <span 
+class="cmmi-10">T</span><sub><span 
+class="cmr-7">00</span></sub> [K] is the dead state
+temperature (15<sup><span 
+class="cmmi-7">o</span></sup>C or 288.15 K in the North Sea region), and <span 
+class="cmmi-10">x</span><sub><span 
+class="cmmi-7">CO</span><sub><span 
+class="cmr-5">2</span></sub></sub> is the mole
+fraction of CO<sub><span 
+class="cmr-7">2</span></sub> in the atmosphere. This gives a value of 18744 J/mol, or
+roughly 20000 J/mol. Based on the previous experiences in the gas industry for
+the separation of low concentration acid gases such as CO<sub><span 
+class="cmr-7">2</span></sub>, SO<sub><span 
+class="cmr-7">2</span></sub>, and H<sub><span 
+class="cmr-7">2</span></sub>S,
+the efficiency of such a process is quite low and rarely exceeds 5% <span class="cite">[<a 
+href="#XkeithWhyCaptureCO22009a">26</a>,&#x00A0;<a 
+href="#XmahmoudkhaniLowenergySodiumHydroxide2009">31</a>]</span>.
+This means that the energy requirement for the separation of CO<sub><span 
+class="cmr-7">2</span></sub> from
+the atmosphere is around 400 kJ/mol or 9.0 MJ/kg CO<sub><span 
+class="cmr-7">2</span></sub>. In practice, this
+number is around 10 MJ/kg CO<sub><span 
+class="cmr-7">2</span></sub> which is both accurate and memorable,
+although larger numbers are reported for the state of the art technology
+<span class="cite">[<a 
+href="#XinternationalenergyagencyDirectAirCapture">5</a>]</span>.
+<!--l. 399--><p class="noindent" >Besides being energy-intensive, the separation of atmospheric CO<sub><span 
+class="cmr-7">2</span></sub> (also
+known as air capture) has a large footprint since a large mass transfer area
+is needed between the air and adsorbents/absorbents; the footprint of the
+equipment is between 0.5 to 2 km<sup><span 
+class="cmr-7">2</span></sup> for capturing 1 million ton of CO<sub><span 
+class="cmr-7">2</span></sub> per year
+<span class="cite">[<a 
+href="#XDirectAirCapture2021">3</a>,&#x00A0;<a 
+href="#XmcqueenCostAnalysisDirect2020">32</a>]</span>. This means that the direct air capture equipment cannot fit on a
+platform.
+<!--l. 406--><p class="noindent" >There are other ways of providing -close to- CO<sub><span 
+class="cmr-7">2</span></sub>-neutral carbon sources, e.g. from
+biomass. The captured CO<sub><span 
+class="cmr-7">2</span></sub> from the industrial point sources, e.g. steel and cement
+industries or fossil fuel power plants, if the capturing and conversion to fuel is
+performed in a close cycle can also be carbon-neutral. However, these two sources
+are available onshore and it is therefore easier to utilize them as close to
+the source as possible. The other source of carbon is the remaining oil and
+gas in the reservoirs, which can be extracted by, e.g. insitu combustion.
+However, this carbon source is not sustainable and we will not consider
+it.
+<!--l. 417--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
+ id="x1-60003.3"></a>Hydrogen</h4>
+<!--l. 419--><p class="noindent" >Recent developments in the electrolysis technology has considerably increased the
+efficiency of hydrogen production from water. If the process is driven by the clean
+wind electricity, the produced hydrogen is a zero-emission fuel. Currently, hydrogen is
+included in all the energy scenarios for the countries in the North Sea region.
+
+For the offshore hydrogen production and storage, the following aspects
+need further investigations: fitting the water treatment, electrolysis, and
+compression equipment on a platform; pipeline integrity (for storage and gas
+transport); physico-bio-chemical interactions of hydrogen with the formation fluids
+and the chalk reservoir; capacity of reservoirs for storage of hydrogen and
+flow of hydrogen in the reservoir; energy efficiency and economic value of
+the process. Here, the energy requirement of the process, the size of the
+process equipment, and the flow of hydrogen in the chalk reservoirs will be
+addressed.
+<!--l. 434--><p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">3.3.1   </span> <a 
+ id="x1-70003.3.1"></a>Green hydrogen production </h5>
+<!--l. 436--><p class="noindent" >Hydrogen can be produced from the electrolysis of water in the following
+reaction:
+<center class="par-math-display" >
+<img 
+src="ECOS_paper_chemical5x.png" alt="2H2O  &#x2192; 2H2 + O2.
+" class="par-math-display" ></center>
+<!--l. 441--><p class="nopar" >
+<!--l. 443--><p class="noindent" >The minimum energy required for this reaction is given by the change of Gibbs free
+energy <span class="cite">[<a 
+href="#XrosenEnergyExergyAnalyses1995">38</a>]</span>. This reaction requires 39 kWh of electricity per kg hydrogen,
+but with the state of the art technology the value is closer to 48 kWh/kg
+<span class="cite">[<a 
+href="#XgardnerHydrogenProductionRenewables2009">20</a>,&#x00A0;<a 
+href="#XozarslanLargescaleHydrogenEnergy2012">36</a>]</span>.
+<!--l. 448--><p class="noindent" >Hydrogen is purified by cooling it down to 308 K using cooling water. It removes the
+moisture from the hydrogen stream. The condensed water is recycled <span class="cite">[<a 
+href="#XrosenEnergyExergyAnalyses1995">38</a>]</span>. Some extra
+moisture remains in the hydrogen stream, which will be removed later in the
+intercoolers between the compression stages <span class="cite">[<a 
+href="#XrosenEnergyExergyAnalyses1995">38</a>]</span>. Electricity must be provided as
+direct current (DC), which introduces a loss of 2.5% for AC-DC conversion <span class="cite">[<a 
+href="#XrosenEnergyExergyAnalyses1995">38</a>]</span>.
+Rosen assumes an exergy efficiency of around 70% for the electrolysis of
+water for a mature electrolysis technology in 1995 (not considering other
+losses). He does not give more information on other steps of the process, e.g.
+water treatment and purification. There are several technologies to produce
+hydrogen from water using electricity among which two are more mature
+and are available as commercial packages, viz. alkaline electrolysis <span class="cite">[<a 
+href="#XbraunsAlkalineWaterElectrolysis2020">11</a>]</span> and
+polymer electrolyte membrane cells (PEM) <span class="cite">[<a 
+href="#XbabicCriticalReviewIdentifying2017">8</a>]</span>. If the electricity is supplied by
+renewable resources, the produced hydrogen is called &#8220;green hydrogen&#8221; <span class="cite">[<a 
+href="#XgranovskiiExergeticLifeCycle2007">23</a>]</span>.
+An efficiency of 60% to 70% is expected for these electrolysis processes, in
+which most of the energy loss is converted to heat. The energy loss during
+the compression of hydrogen will be calculated separately in the following
+sections.
+<!--l. 470--><p class="noindent" >The storage of hydrogen in the subsurface is a relatively old topic <span class="cite">[<a 
+href="#XozarslanLargescaleHydrogenEnergy2012">36</a>,&#x00A0;<a 
+href="#XzivarUndergroundHydrogenStorage2020">42</a>]</span>. Due to
+the high consumption of hydrogen, the petrochemical plants have been using salt
+caverns to store large volumes of hydrogen in the subsurface <span class="cite">[<a 
+href="#XozarslanLargescaleHydrogenEnergy2012">36</a>]</span>. Currently, the
+subsurface storage of green hydrogen is being studied by several investigators in
+different continents.
+
+<!--l. 478--><p class="noindent" >As this report is being written, there are several green hydrogen production projects
+being announced. Ørsted has announced that as part of the project H2RES,
+supported by The Energy Technology Development and Demonstration Programme
+(EUDP) under the Danish Energy Agency, a hydrogen production unit with a 2 MW
+capacity will be built by the end of 2021 <span class="cite">[<a 
+href="#XOrstedTakesFinal">2</a>]</span> that will produce up to 1000
+kg/day of green hydrogen. These capacities, although an step forward, will
+not address the GW scale energy shortage that will certainly occur due to
+the intermittent nature of renewable electricity, as was discussed in section
+<a 
+href="#x1-10001">1<!--tex4ht:ref: chap:Problem-definition --></a>.
+<!--l. 489--><p class="noindent" >The other issue that needs to be addressed here is the footprint of the electrolysis
+equipment. We saw in section <a 
+href="#x1-10001">1<!--tex4ht:ref: chap:Problem-definition --></a> that the synthetic fuel production units are expected
+to consume several GW of surplus electricity. The main problem with these large
+amounts of power is that the electrolysis units are currently designed and built in
+MW scale. For example, one of the largest commercial PEM electrolysis units offered
+by NEL hydrogen has a capacity of 25 MW and requires 3<span 
+class="cmsy-10">&#x00D7;</span>12 m<sup><span 
+class="cmr-7">2</span></sup> area for
+installation. Therefore, a 500 MW electrolysis plant that is made of 20 PEM
+cells is unlikely to to fit on a platform with other equipment although it is
+not impossible. A better option for the offshore hydrogen production is the
+installation of these electrolysis cells onboard a ship designed for this purpose.
+Otherwise, the onshore production of hydrogen seems to be the more realistic
+option.
+<!--l. 504--><p class="noindent" >Last but not least is the conversion of the stored hydrogen to electricity. Currently,
+there is no gas turbine that can work with pure hydrogen as a fuel. Therefore, the
+produced hydrogen must be mixed with a hydrocarbon fuel such as methane. This
+will cause some carbon dioxide emission unless a carbon capture process is used,
+which will in turn reduce the efficiency of the process. Fitting a GW scale
+turbine on a platform is possible but similar to electrolysis cells highly unlikely
+for GW capacities. As an example, Dan F host 6,800 tonnes of facilities
+and provides a power of 55 MW to the facilities. The highest point on the
+platform is 132 m above water. A typical 25 MW turbine that is designed for
+offshore platforms and consumes a mixture of methane and hydrogen weighs
+approximately 250 tonnes. Therefore, up to several hundred MW of gas turbine
+capacity can fit on a platform. But reaching to GW capacities can be a
+challenge.
+<!--l. 519--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">3.4   </span> <a 
+ id="x1-80003.4"></a>Methane</h4>
+<!--l. 521--><p class="noindent" >Methanation process for the catalytic conversion of CO<sub><span 
+class="cmr-7">2</span></sub> and CO to methane
+was first suggested by Sendersen and Sabatier <span class="cite">[<a 
+href="#XboltCriticalReviewSynthetic2020">10</a>]</span>. The reaction occurs in
+multiple steps starting with capturing of CO<sub><span 
+class="cmr-7">2</span></sub> or from an industrial or natural
+source or producing a mixture of CO<sub><span 
+class="cmr-7">2</span></sub> and CO by burning hydrocarbons (i.e.
+fossil fuels) or carbohydrates (i.e. biomass). In the presence of water vapor
+and at high temperatures, a considerable amount of CO and H<sub><span 
+class="cmr-7">2</span></sub> are also
+produced. H<sub><span 
+class="cmr-7">2</span></sub> can react with CO<sub><span 
+class="cmr-7">2</span></sub> and CO and convert them to methane. The
+reduction of CO<sub><span 
+class="cmr-7">2</span></sub> to methane by hydrogen is known as Sabatier reaction
+<span class="cite">[<a 
+href="#XboltCriticalReviewSynthetic2020">10</a>]</span>:
+<table 
+class="equation"><tr><td>
+
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical6x.png" alt="CO2 + 4H2 &#x21C4;  CH4 + 2H2O    &#x0394;H0  = - 165 kJ/mol.
+" class="math-display" ><a 
+ id="x1-8001r3"></a></center></td><td class="equation-label">(3)</td></tr></table>
+<!--l. 534--><p class="nopar" >
+If the reactants, i.e. hydrogen and CO<sub><span 
+class="cmr-7">2</span></sub> are obtained from the dead state (i.e.
+seawater and atmosphere) using renewable electricity, the produced methane is
+carbon-neutral and sustainable. The reaction can be catalyzed by nickel or ruthenium
+and can be conducted in a packed bed reactor. The reaction rate in different ranges
+of pressure and temperature are reported in the literature. Although other reactions
+can occur at the high temperature and pressure of the methanations reactors, it is
+observed that the selectivity of the reaction towards methane is high <span class="cite">[<a 
+href="#XloderReactionKineticsCO22020">29</a>]</span>. A
+selectivity of close to 100% is observed for catalytic methanation of CO<sub><span 
+class="cmr-7">2</span></sub> over nickel
+catalyst at a temperature close to 300<sup><span 
+class="cmmi-7">o</span></sup>C. Although theoretically the reaction reaches
+100% yield at room temperature, in practice the reaction rate is too small and the
+methane yield is zero. A temperature of at least 200<sup><span 
+class="cmmi-7">o</span></sup>C is needed to get the
+catalytic reaction started. At temperatures above 500<sup><span 
+class="cmmi-7">o</span></sup>C, the reaction goes
+backward, i.e. conversion of methane and water to hydrogen and CO<sub><span 
+class="cmr-7">2</span></sub>. This
+reaction is also known as methane reforming that is currently the main reaction
+for the production of the so-called &#8220;blue&#8221; hydrogen, i.e. hydrogen that is
+produced from a hydrocarbon. A schematic of the process for the production of
+green methane is shown in Fig. <a 
+href="#x1-8003r5">5<!--tex4ht:ref: fig:methane-process --></a>. In this process, the required hydrogen and
+carbon dioxide are produced by the electrolysis of water and separation of
+atmospheric CO<sub><span 
+class="cmr-7">2</span></sub>, respectively. The carbon source can also be provided from other
+alternative sources such as biomass or from the captured carbon dioxide from, e.g.
+cement or steel industries. However, capturing CO<sub><span 
+class="cmr-7">2</span></sub> from the atmosphere has
+the benefit of making the produced methane carbon-neutral or so-called
+&#8220;green&#8221;. The reactor pressure is 20-70 bar <span class="cite">[<a 
+href="#Xer-rbibModellingSimulationMethanation2013">18</a>]</span> and the temperature is between
+473 to 673 K. The overall efficiency of the produced methane is calculated
+by
+<table 
+class="equation"><tr><td>
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical7x.png" alt="               (   4exch     exch                         ) -1
+&#x03B7;methane = exchCH4  -----H2---+ --CO2--+ -----excompression------   ,
+                 &#x03B7;electrolysis   &#x03B7;capture   &#x03B7;comp&#x03B7;driver&#x03B7;transmission
+
+" class="math-display" ><a 
+ id="x1-8002r4"></a></center></td><td class="equation-label">(4)</td></tr></table>
+<!--l. 567--><p class="nopar" >
+where <span 
+class="cmmi-10">ex</span><sub><span 
+class="cmmi-7">i</span></sub><sup><span 
+class="cmmi-7">ch</span></sup> [kJ/mol] denotes the chemical exergy of component <span 
+class="cmmi-10">i</span>, and <span 
+class="cmmi-10">&#x03B7;</span><sub><span 
+class="cmmi-7">j</span></sub> [-] shows
+the exergetic efficiency <span class="cite">[<a 
+href="#XeftekhariExergyAnalysisUnderground2012f">16</a>]</span> of the process <span 
+class="cmmi-10">j</span>; <span 
+class="cmmi-10">ex</span><sub><span 
+class="cmmi-7">compression</span></sub> [kJ/mol methane] denotes
+the exergy requirement for the compression of hydrogen and CO<sub><span 
+class="cmr-7">2</span></sub> to the pressure of
+the methanation reactor in a multistage compressor. Since the reaction is exothermic,
+we assume that the heat of reaction is sufficient to heat up the reactor to the required
+temperature of 673 K. By calculating the compression energy and replacing other
+efficiency factors from the previous sections, we obtain <span 
+class="cmmi-10">&#x03B7;</span><sub><span 
+class="cmmi-7">methane</span></sub> <span 
+class="cmr-10">= 36%</span>.
+This is much lower than the expected value of 72%. Moreover, since this
+process requires a large footprint for the direct atmospheric capture of CO<sub><span 
+class="cmr-7">2</span></sub>
+and electrolysis of water, we do not consider it as a feasible option that
+can address the intermittency of the wind energy in Denmark. It is worth
+mentioning that this process can easily fit on a platform and if both hydrogen and
+CO<sub><span 
+class="cmr-7">2</span></sub> are provided, e.g. via pipelines, operating this process on a platform is
+viable.
+<!--l. 585--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-8003r5"></a>
+
+<!--l. 586--><p class="noindent" > <img 
+src="5C__projects_storage_software_docs_sabatier_gv-.png" alt="PIC"  
+width="341" height="341" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;5:  </span><span  
+class="content">A  block  flow  diagram  of  Sabatier  process  for  the  production  of
+methane <span class="cite">[<a 
+href="#XeftekhariQuantifyingRoleLiquid2020">15</a>]</span></span></div><!--tex4ht:label?: x1-8003r5 -->
+
+<!--l. 590--><p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">3.5   </span> <a 
+ id="x1-90003.5"></a>Ammonia</h4>
+<!--l. 595--><p class="noindent" >The block flow diagram of ammonia production is shown in Fig. <a 
+href="#x1-9001r6">6<!--tex4ht:ref: fig:Haber-process --></a>. Ammonia is
+produced by an exothermic catalytic reaction between nitrogen and hydrogen:
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical8x.png" alt="N  + 3H  &#x2192; 2N H .
+  2     2       3
+" class="math-display" ></center>
+<!--l. 600--><p class="nopar" > An ammonia reactor is operated at 200 bar and a temperature of 300 to 500<sup><span 
+class="cmmi-7">o</span></sup>C
+<span class="cite">[<a 
+href="#XelnashaieSimulationOptimizationIndustrial1988">17</a>,&#x00A0;<a 
+href="#XmorudAnalysisInstabilityIndustrial1998">35</a>]</span>. The raw material for the production of ammonia, i.e. nitrogen and
+hydrogen, can be obtained from the air and seawater by the cryogenic air
+separation and electrolysis units, respectively. The nitrogen and hydrogen
+feed streams are compressed to 150 to 250 bar and react in a packed bed
+reactor at 673 to 773 K. The reaction is exothermic and therefore does not
+require external heating; it also produces high temperature heat that can be
+used in the process. The process can fit on a platform even for large scale
+ammonia production. However, as discussed before, the electrolysis unit for GW
+scale production of hydrogen does not fit on the platform. The cryogenic
+separation of nitrogen from air can fit on the platform; however, having
+long and heavy distillation columns (i.e. 60 theoretical trays) that work at
+very low temperatures on a platform can present several challenges for the
+stability of the platform and the extra room that is needed for the utilities.
+Therefore, we suggest an alternative design that is shown in Fig. <a 
+href="#x1-9002r7">7<!--tex4ht:ref: fig:ammonia-new-design --></a>. In this
+new design, the separation of nitrogen from the atmosphere is done by a
+combustion reaction between the green hydrogen (produced in an electrolysis
+unit) and air in a gas turbine and later separating the mixture of steam and
+nitrogen by condensing the steam in a two phase separator. The separated
+nitrogen can either go to another Rankine cycle to produce some extra work or
+go to the ammonia reactor via a multistage compressor, where it reacts
+with compressed green hydrogen. The efficiency of the process is calculated
+by
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical9x.png" alt="                (                 ch                                  )-1
+&#x03B7;ammonia = excNhH3  (1.5+-0.21&#x2215;0.79)exH2+  ----excompression------- exturbine    ,
+                      &#x03B7;electrolysis        &#x03B7;comp&#x03B7;driver&#x03B7;transmission
+" class="math-display" ></center>
+<!--l. 629--><p class="nopar" > where the factor 0.21/0.79 indicates the number of moles of hydrogen that is
+consumed to burn oxygen for separating it from the nitrogen in the air. The efficiency
+of the new process for the production of ammonia is 43% which is lower but
+comparable to the 50% efficiency of the same process when nitrogen is separated in a
+cryogenic unit (see Fig. <a 
+href="#x1-4001r4">4<!--tex4ht:ref: fig:Ammonia-synthesis-cryogenic --></a>). It must be noted that currently there is no gas turbine
+that can operate on pure hydrogen and therefore the process can only be operational
+in the future.
+
+<!--l. 639--><p class="noindent" >Ammonia has the highest synthesis energy efficiency among the considered fuels
+because of the lower energy demand of nitrogen separation and the fact that
+hydrogen directly reacts with nitrogen with no need for sacrificing extra molecules of
+hydrogen to remove the oxygen atoms as is the case when carbon dioxide is used as a
+reactant <span class="cite">[<a 
+href="#XelnashaieSimulationOptimizationIndustrial1988">17</a>]</span>.
+<!--l. 645--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-9001r6"></a>
+
+<!--l. 646--><p class="noindent" > <img 
+src="6C__projects_storage_software_docs_haber_gv-.png" alt="PIC"  
+width="341" height="341" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;6: </span><span  
+class="content">Haber process for the production of ammonia<span class="cite">[<a 
+href="#XeftekhariQuantifyingRoleLiquid2020">15</a>]</span></span></div><!--tex4ht:label?: x1-9001r6 -->
+
+<!--l. 649--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 651--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-9002r7"></a>
+
+<!--l. 652--><p class="noindent" ><img 
+src="7C__projects_storage_software_docs_ammonia_new_design.jpg" alt="PIC"  
+width="398" height="398" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;7: </span><span  
+class="content">A new design for offshore ammonia production</span></div><!--tex4ht:label?: x1-9002r7 -->
+
+<!--l. 655--><p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">3.6   </span> <a 
+ id="x1-100003.6"></a>Methanol</h4>
+<!--l. 660--><p class="noindent" >Methanol can be synthesized from the catalytic reaction of hydrogen and carbon
+dioxide with the following reaction:
+<table 
+class="equation"><tr><td>
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical10x.png" alt="CO2 + 3H2 &#x2192; CH3OH   + H2O
+" class="math-display" ><a 
+ id="x1-10001r5"></a></center></td><td class="equation-label">(5)</td></tr></table>
+<!--l. 664--><p class="nopar" >
+The reactor operates at 100 bar and 264<sup><span 
+class="cmmi-7">o</span></sup>C <span class="cite">[<a 
+href="#XluybenDesignControlMethanol2010">30</a>]</span>. The reaction is exothermic and
+therefore the system is cooled down by circulating water that produces steam. The
+material streams need to be compressed to 50 to 100 bar in the reactor. Compared
+to methane production in which two molecules of water is produced per
+molecule of methane, only one molecule of water is produced during the
+reduction of CO<sub><span 
+class="cmr-7">2</span></sub> to methanol. Therefore, even though the chemical exergy
+of methanol is lower than that of methane, the synthesis of methanol is
+slightly more efficient than the synthesis of methane. Similar to the methane
+and ammonia production, the efficiency of methanol synthesis is calculated
+by
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical11x.png" alt="                  (                                          ) -1
+            ch      --3exchH2---  excChO2--  ----excompression------
+&#x03B7;methanol = exCH3OH  &#x03B7;electrolysis + &#x03B7;capture + &#x03B7;comp&#x03B7;driver&#x03B7;transmission    ,
+" class="math-display" ></center>
+<!--l. 678--><p class="nopar" > which is estimated to be 40%.
+<!--l. 681--><p class="noindent" >The subsurface storage of methanol, however, is not advisable since methanol can be
+degraded by the subsurface microorganisms <span class="cite">[<a 
+href="#XsousaDeepsubsurfaceSulfateReducer2018">40</a>]</span>. Therefore, we did not include
+methanol in our subsurface model, although only the input component name need to
+be changed in the attached Matlab script to estimate the energy efficiency of
+the subsurface storage of methanol (excluding the microbial degradation
+reactions).
+<!--l. 688--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-10002r8"></a>
+
+<!--l. 689--><p class="noindent" > <img 
+src="8C__projects_storage_software_docs_methanol_gv-.png" alt="PIC"  
+width="341" height="341" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;8: </span><span  
+class="content">A schematic of the methanol synthesis process <span class="cite">[<a 
+href="#XeftekhariQuantifyingRoleLiquid2020">15</a>]</span></span></div><!--tex4ht:label?: x1-10002r8 -->
+
+<!--l. 692--><p class="noindent" ></div><hr class="endfigure">
+<h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-110004"></a>Subsurface energy storage</h3>
+<!--l. 697--><p class="noindent" >Although there are several reservoirs that can be used for the storage of
+energy, we can divide them into two main groups of sandstone reservoir
+(e.g. Harald West) and chalk reservoirs (e.g. Halfdan). Harald West is a
+sandstone gas reservoir at a depth of approximately 3500 m and a temperature of
+135<sup><span 
+class="cmmi-7">o</span></sup>C. The porosity of the reservoir is 0.17 with a permeability of 1 to 50
+mD in different layers. The thickness of the two high permeable layers (9
+and 54 mD) is approximately 100 m. The Halfdan chalk reservoir is 2000
+m deep with an average porosity of 0.31 and an average permeability of 3
+mD. The wells in Harald West are vertical and the chalk fields are typically
+producing through long horizontal wells. In the case of a the vertical wells, we
+assume a thickness of 100 m for the reservoir, which means that a radius of
+100 to 1000 m around the well will be utilized as the fuel storage space.
+For the longer horizontal wells, a smaller area around the well is required
+for the energy storage. We assume a well diameter of 5&#8221; for all the energy
+storage and production wells. The geometry of the reservoir is shown in Fig.
+<a 
+href="#x1-12001r9">9<!--tex4ht:ref: fig:A-cylindrical-domain --></a>.
+<!--l. 715--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
+ id="x1-120004.1"></a>Problem formulation</h4>
+<!--l. 717--><p class="noindent" >Figure <a 
+href="#x1-12001r9">9<!--tex4ht:ref: fig:A-cylindrical-domain --></a> shows a gas reservoir represented as a cylindrical domain. The top and
+bottom of the reservoir are closed, i.e. no flow, and the outskirt of the domain can
+either be closed or at hydrostatic pressure. The top side of the reservoir is located at
+depth <span 
+class="cmmi-10">L </span>[m], the thickness of the reservoir is <span 
+class="cmmi-10">H</span><sub><span 
+class="cmmi-7">res</span></sub> [m] and the radius of the well and
+the reservoir are <span 
+class="cmr-10">0</span><span 
+class="cmmi-10">.</span><span 
+class="cmr-10">5</span><span 
+class="cmmi-10">D</span><sub><span 
+class="cmmi-7">well</span></sub> [m] and <span 
+class="cmmi-10">R</span><sub><span 
+class="cmmi-7">res</span></sub> [m] respectively. The injection rate is
+calculated based on the surplus electricity and the efficiency factor of the synthetic
+fuel (or compressed air) production. The total injection velocity is calculated
+by
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical12x.png" alt="      Esurpluss&#x03B7;jM-Wj-
+uinj = &#x03C0;DwellHresexcjh&#x03C1;j,
+" class="math-display" ></center>
+<!--l. 729--><p class="nopar" > where <span 
+class="cmmi-10">&#x03C1;</span><sub><span 
+class="cmmi-7">j</span></sub> [kg/m<sup><span 
+class="cmr-7">3</span></sup>] is the density of the synthetic fuel <span 
+class="cmmi-10">j </span>and is calculated at the
+bottom hole pressure and injection temperature (that is assumed to be close to the
+reservoir temperature). The bottom hole pressure is unknown and is calculated by
+trial and error between the reservoir model and the injection boundary condition that
+is obtained from the above equation. For the compressed air, the value of <span 
+class="cmmi-10">ex</span><sub><span 
+class="cmmi-7">j</span></sub><sup><span 
+class="cmmi-7">ch</span></sup>
+[kJ/mol] that denotes the chemical exergy of the synthetic fuel <span 
+class="cmmi-10">j </span>is replaced by the
+physical exergy of the compressed air which is again a function of the bottom hole
+pressure and is calculated by trial and error. The compression work for the injection
+of the gaseous fluid is calculated for the injection pressure of <span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">inj</span></sub> <span 
+class="cmr-10">= </span><span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">bh</span></sub> <span 
+class="cmr-10">+ &#x0394;</span><span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">pipe</span></sub>,
+
+where <span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">bh</span></sub> [Pa] is the bottom hole pressure and <span 
+class="cmr-10">&#x0394;</span><span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">pipe</span></sub> [Pa] is the pressure
+drop in the pipe that is calculated by the &#8220;pipe&#8221; unit in the software Aspen
+Plus.
+<!--l. 746--><p class="noindent" >We assume that for 2 months from 1st of October to 1st of December we only store
+the fluids in the subsurface (when surplus electricity is available) and after that
+storage period, depending on the electricity supply and demand we will have storage
+or production phases. The produced fluid from the reservoir is used for the supply of
+the electricity shortage; therefore, the withdrawal rate is determined by the
+electricity shortage. If the withdrawal rate is too high, the reservoir might not
+have enough driving force to produce the requested flow. In these situations,
+the bottom hole pressure becomes negative and the program produces an
+error. A better approach is to estimate the maximum productivity of the
+reservoir using an analytical solution <span class="cite">[<a 
+href="#XhagoortFundamentalsGasReservoir1988">25</a>,&#x00A0;<a 
+href="#Xal-hussainyApplicationRealGas1966">6</a>,&#x00A0;<a 
+href="#Xal-hussainyFlowRealGases1966">7</a>]</span>. This approach is not currently
+implemented.
+<!--l. 759--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-12001r9"></a>
+
+<!--l. 760--><p class="noindent" > <img 
+src="9C__projects_storage_software_docs_cylindrical_domain-.png" alt="PIC"  
+width="227" height="227" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;9: </span><span  
+class="content">A cylindrical domain for the simulation of synthetic fuel storage in
+the subsurface</span></div><!--tex4ht:label?: x1-12001r9 -->
+
+<!--l. 764--><p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
+ id="x1-130004.2"></a>Subsurface storage model</h4>
+<!--l. 769--><p class="noindent" >For the storage of the synthetic fuels and compressed air in the gas reservoirs, we use
+a single-phase multi-component flow formulation. The storage of gas in the water
+flooded reservoirs is not a good idea since most of the gas will be trapped by capillary
+forces, and therefore will be permanently stored. It is possible to dry out the
+reservoir and prepare it for the gas injection by, e.g. injection of superheated
+steam or hot gases. However, it will require large amounts of energy and
+can potentially create thermally-induced fractures in the reservoir. We will
+therefore consider only the gas reservoirs for the storage of gaseous phase energy
+careers. For the liquid phase, we will use both gas and oil reservoirs. In both
+cases, we will include the compressibility of the fluids in the model as it is a
+major contributing driving force in the extraction of the fluids from the
+reservoir.
+<!--l. 783--><p class="noindent" >The single phase compressible flow in porous media reads
+<table 
+class="equation"><tr><td>
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical13x.png" alt="-&#x2202; (&#x03C6; &#x03C1;)+ &#x2207;.(&#x03C1;u) = 0,
+&#x2202;t
+" class="math-display" ><a 
+ id="x1-13001r6"></a></center></td><td class="equation-label">(6)</td></tr></table>
+<!--l. 787--><p class="nopar" >
+where the Darcy velocity (assuming single phase flow and negligible gravity effect) is
+described by
+<table 
+class="equation"><tr><td>
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical14x.png" alt="u = - k&#x2207;p,
+     &#x03BC;
+" class="math-display" ><a 
+ id="x1-13002r7"></a></center></td><td class="equation-label">(7)</td></tr></table>
+
+<!--l. 792--><p class="nopar" >
+The flow of the synthetic fuel in the subsurface is described by the advection-diffusion
+equation:
+<table 
+class="equation"><tr><td>
+<center class="math-display" >
+<img 
+src="ECOS_paper_chemical15x.png" alt=" &#x2202;
+-- (&#x03C6;c)+ &#x2207; (uc- &#x03C6;D &#x2207;c ) = 0.
+&#x2202;t
+" class="math-display" ><a 
+ id="x1-13003r8"></a></center></td><td class="equation-label">(8)</td></tr></table>
+<!--l. 797--><p class="nopar" >
+In the above equations, <span 
+class="cmmi-10">&#x03C6; </span>[-] denotes porosity, <span 
+class="cmmi-10">k </span>[m<sup><span 
+class="cmr-7">2</span></sup>] denotes permeability, <span 
+class="cmmi-10">&#x03C1; </span>[kg/m<sup><span 
+class="cmr-7">3</span></sup>]
+denotes the fluid density, <span 
+class="cmmi-10">p </span>[Pa] denotes the reservoir pressure, <span 
+class="cmmi-10">&#x03BC; </span>[Pa.s] denotes the
+fluid viscosity, <span 
+class="cmsy-10"><img 
+src="cmsy10-44.png" alt="D" class="10x-x-44" /> </span>[m<sup><span 
+class="cmr-7">2</span></sup>/s] denotes the diffusivity of the synthetic fuel, and <span 
+class="cmmi-10">c </span>[mol/m<sup><span 
+class="cmr-7">3</span></sup>]
+is the concentration of the synthetic fuel. Both viscosity and density are
+functions of the fuel concentration. As discussed before, the injection rate
+in the well is a function of the supplied electricity that is obtained by the
+real surplus electricity data of 2020 adjusted for 2050. The above equations
+are solved numerically with the finite volume method. We performed the
+discretizition in the free Matlab software package FVTool <span class="cite">[<a 
+href="#XeftekhariFVToolFiniteVolume2015b">13</a>]</span> in a two-dimensional
+axisymmetric (i.e. cylindrical) coordinate. We used different permeability fields,
+including higher permeability near the wellbore region. A version with the
+possibility of adding fracture is also implemented. The permeability field that
+represents Harald West field with an stimulated near-well zone is shown in Fig.
+<a 
+href="#x1-13004r10">10<!--tex4ht:ref: fig:Permeability-field --></a>.
+<!--l. 816--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-13004r10"></a>
+
+<!--l. 817--><p class="noindent" ><img 
+src="10C__projects_storage_software_docs_CA_perm_harald.jpg" alt="PIC"  
+width="398" height="398" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;10: </span><span  
+class="content">Permeability field for the simulation of compressed air and ammonia
+injection in the Harald West reservoir; the permeability in the near-well region
+is 100 times higher than the average permeability of the field.</span></div><!--tex4ht:label?: x1-13004r10 -->
+
+<!--l. 823--><p class="noindent" ></div><hr class="endfigure">
+<h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-140005"></a>Results and discussion</h3>
+<!--l. 828--><p class="noindent" >In this section, we discuss the results of the compressed air storage and ammonia
+storage in the Harald West field. The permeability field is as shown in Fig. <a 
+href="#x1-13004r10">10<!--tex4ht:ref: fig:Permeability-field --></a>. A
+radius of 20 m around the well is stimulated to obtain a permeability 100 times
+higher than the average permeability of the reservoir. This stimulation is necessary
+for the injection of the large flow rates that are required for the storage of energy in
+MW to GW scales. The withdrawal from the reservoir starts on 1st of December 2050
+whenever there is an electricity shortage. The production rate is adjusted such that
+the bottom hole pressure is high enough, i.e. it can overcome the pressure drop in the
+well and also generate electricity in the gas turbine on the platform. The efficiency
+of the turbine is similar to the efficiency of the injection compressor and
+does not vary with the operating condition. We assume that 20 MW of the
+surplus electricity is directed to the compressed air storage unit in Harald
+West.
+<!--l. 844--><p class="noindent" >In the previous section, we saw that the storage of compressed air which has a
+limited exergy value (i.e. potential to do mechanical work) compared to synthetic
+fuels requires larger volumes and subsequently very high injection and withdrawal
+rates that leads to unrealistically large pressure gradients in the reservoir.
+This is a problem that can be addressed by the conversion and storage of
+energy in a medium with a higher exergy per unit volume such as ammonia.
+Here, we assume that 100 MW of the surplus electricity is provided to the
+ammonia production and storage unit in Harald West, which is 5 times higher
+than the electricity consumption in the compressed air storage unit. As can
+be seen in Fig. <a 
+href="#x1-14001r11">11<!--tex4ht:ref: fig:Bottom-hole-pressure-NH3 --></a>, the injection pressure in the reservoir is only 150 bar
+higher than the hydrostatic pressure and thus within a reasonable range. The
+pressure fluctuation is between 200 to 350 bar, which can create geomechanical
+failure in the reservoir and needs to be further investigated. Once again, the
+production rate is controlled by the low permeability of the reservoir as
+can be seen in Fig. <a 
+href="#x1-14002r12">12<!--tex4ht:ref: fig:Pressure-profile-NH3 --></a>. To avoid a negative bottom hole pressure in the
+simulations, we imposed a withdrawal rate limit that is 20% of the maximum
+injection rate during the storage phase. With this limit, the efficiency of the
+electricity production (assuming an efficiency of 60% for the conversion of
+ammonia to electricity) from the stored ammonia is only 2.3%. This is higher
+than the efficiency of compressed air energy storage but does not provide
+the 72% efficiency that is required for a feasible storage solution that can
+address the intermittency of renewable electricity production in the North Sea
+windfarms.
+<!--l. 871--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-14001r11"></a>
+
+<!--l. 872--><p class="noindent" ><img 
+src="11C__projects_storage_software_docs_ammonia_p_hist.jpg" alt="PIC"  
+width="227" height="227" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;11: </span><span  
+class="content">Bottom hole pressure (BHP) of the storage well in the Harald West
+ammonia storage facility</span></div><!--tex4ht:label?: x1-14001r11 -->
+
+<!--l. 876--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 878--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-14002r12"></a>
+
+<!--l. 879--><p class="noindent" ><img 
+src="12C__projects_storage_software_docs_ammonia_pressure_harald.jpg" alt="PIC"  
+width="398" height="398" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;12: </span><span  
+class="content">Pressure profile in the reservoir at the end of 4 months of ammonia
+injection and production</span></div><!--tex4ht:label?: x1-14002r12 -->
+
+<!--l. 883--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 885--><p class="noindent" >Finally, Fig. <a 
+href="#x1-14003r13">13<!--tex4ht:ref: fig:concentration-profile-NH3 --></a> shows the normalized concentration profile of ammonia in the
+reservoir after four months of injection and production. Ammonia has diffused to a
+300 m radius around the well. Considering only the areas with a lower pressure as
+non-reproducible zones and by integrating the concentration of ammonia in those
+zones, an initial loss of 30% can be expected for the injected ammonia. We expect
+that the synthetic fuel loss in the reservoir will not increase significantly and only
+occurs at the beginning of the storage process in which the reservoir is pressurized for
+the future re-production.
+<!--l. 896--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-14003r13"></a>
+
+<!--l. 897--><p class="noindent" ><img 
+src="13C__projects_storage_software_docs_ammonia_tracer_harald.jpg" alt="PIC"  
+width="398" height="398" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;13: </span><span  
+class="content">The concentration profile of ammonia after 4 months of storage and
+withdrawal in the Harald West reservoir</span></div><!--tex4ht:label?: x1-14003r13 -->
+
+<!--l. 902--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 904--><p class="noindent" >We repeated the simulations for the injection of compressed air and synthetic fuels
+into a longer horizontal well; although the pressure profile is different and the
+pressure fluctuation is significantly reduced especially for the stimulated wells, the
+overall energy efficiency remains unchanged. This implies that the subsurface storage
+of physical and chemical energy must be performed in a confined zone, e.g. a salt
+cavern, instead of a large reservoir in which the fluids can spread due to the diffusive
+nature of flow in a porous medium.
+<h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-150006"></a>Conclusions and suggestions</h3>
+<!--l. 915--><p class="noindent" >In this report, we studied the possibility of the subsurface storage of the future
+surplus electricity that is produced in the North Sea wind farms in the form of
+physical, i.e. compressed air and chemical, i.e. synthetic fuels to address the
+intermittency of the renewable wind power. We showed that
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-15002x1">Any potential energy storage solution must have an energy loss of less
+     than 30%. Currently, only hydropower storage and batteries offer this
+     efficiency,  which  are  location  dependent  and  only  available  in  smaller
+     scales, respectively. None of the studied synthetic fuels, with the possible
+     exception of green hydrogen in certain conditions, can be produced with
+     the required efficiency.
+     </li>
+     <li 
+  class="enumerate" id="x1-15004x2">For  2050,  a  capacity  of  greater  than  1000  MW  electricity  storage  is
+     required. The largest commercial hydrogen electrolysis units are in the
+     order of 20 MW and have a relatively large footprint that makes them
+     unsuitable for the offshore installations. Moreover, there is currently no
+     hydrogen gas turbine in the market and hydrogen can only be utilized in
+     hydrocarbon mixtures.
+     </li>
+     <li 
+  class="enumerate" id="x1-15006x3">Methanol and methane require a large carbon source, e.g. CO<sub><span 
+class="cmr-7">2</span></sub>. Air capture
+     (the direct absorption of CO<sub><span 
+class="cmr-7">2</span></sub>from the atmosphere) is energy intensive
+     and reduces the overall production efficiency of the carbon-based liquid
+     and gaseous fuels. They also have a large footprint and do not fit on the
+     offshore platforms. The only other option is the capture and transportation
+     of CO<sub><span 
+class="cmr-7">2</span></sub> from the point sources by pipelines or ships to the platforms for
+     the production of methane and methanol. The production processes can
+     fit easily on a platform.
+     </li>
+     <li 
+  class="enumerate" id="x1-15008x4">Ammonia  is  the  most  promising  fuel  by  a  relatively  high  synthesis
+     efficiency and a low footprint (since it does not require a carbon source).
+     We introduced a new design that does not need cryogenic air separation
+     and is more suitable for the offshore ammonia production.
+     </li>
+     <li 
+  class="enumerate" id="x1-15010x5">The near-well and pipeline pressure drops limit the compressed air storage
+
+     capacity to 10-20 MW through a single vertical well in the Harald West
+     gas reservoir. Moreover, the storage is limited to high-perm sandstone or
+     highly stimulated or fractured chalk reservoirs since very large flow rates
+     need to pass through the reservoir that creates large pressure gradients
+     and pressure fluctuations that can make the reservoir unstable (from a
+     mechanical point of view).
+     </li>
+     <li 
+  class="enumerate" id="x1-15012x6">Recuperation of the stored fuel with the desired flow rate is a limiting
+     factor in all the studied cases. It reduces the efficiency of energy storage
+     to the unfeasible values of 1-2%.
+     </li>
+     <li 
+  class="enumerate" id="x1-15014x7">A  confined  subsurface  space,  e.g.  a  salt  cavern,  is  a  more  realistic
+     alternative to the fuel storage in the North sea reservoirs.</li></ol>
+<!--l. 959--><p class="noindent" >The simulation files offer the possibility of linking the Aspen Plus process simulation
+flowsheets to the subsurface storage models through a Matlab script, which can
+provide an automated solution for investigating more subsurface energy storage
+scenarios and the possible optimization of processes.
+<!--l. 965--><p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-160006"></a>Acknowledgment</h3>
+<!--l. 967--><p class="noindent" >For their valuable discussion and support, AAE would like to thank Charlotte Larsen
+and Charlotte Lassen and other colleagues in the program management
+and technology maturation team at the Danish Hydrocarbon Research and
+Technology Centre (DHRTC) at the Technical University of Denmark. The
+research that led to this report is funded by the abandonment program of the
+DHRTC.
+<!--l. 1--><p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-170006"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XGlobalOffshoreRenewable"></a>Global  Offshore  Renewable  Map  |  4C  Offshore.    Library  Catalog:
+    www.4coffshore.com.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XOrstedTakesFinal"></a>Orsted  takes  final  investment  decision  on  first  renewable  hydrogen
+    project.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XDirectAirCapture2021"></a>Direct  Air  Capture:  Resource  Considerations  and  Costs  for  Carbon
+    Removal, January 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XdanishenergyagencyEnergyIslands2021"></a>Danish&#x00A0;Energy Agency. About Energy Islands, March 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XinternationalenergyagencyDirectAirCapture"></a>International&#x00A0;Energy Agency. Direct Air Capture - Analysis.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xal-hussainyApplicationRealGas1966"></a>R.&#x00A0;Al-Hussainy  and  H.&#x00A0;J.  Ramey&#x00A0;Jr.   Application  of  real  gas  flow
+    theory to well testing and deliverability forecasting. <span 
+class="ecti-1000">Journal of Petroleum</span>
+    <span 
+class="ecti-1000">Technology</span>,  18(05):637&#8211;642,  1966.     Publisher:  Society  of  Petroleum
+    Engineers.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xal-hussainyFlowRealGases1966"></a>Rafi  Al-Hussainy,  H.&#x00A0;J.  Ramey&#x00A0;Jr,  and  P.&#x00A0;B.  Crawford.   The  flow
+    of  real  gases  through  porous  media.   <span 
+class="ecti-1000">journal of Petroleum Technology</span>,
+    18(05):624&#8211;636, 1966. Publisher: Society of Petroleum Engineers.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XbabicCriticalReviewIdentifying2017"></a>Ugljesa  Babic,  Michel  Suermann,  Felix&#x00A0;N.  BÃ&#338;chi,  Lorenz  Gubler,
+    and  Thomas&#x00A0;J.  Schmidt.   Critical  Review  -  Identifying  Critical  Gaps
+    for  Polymer  Electrolyte  Water  Electrolysis  Development.    <span 
+class="ecti-1000">Journal  of</span>
+    <span 
+class="ecti-1000">The Electrochemical Society</span>, 164(4):F387, February 2017.  Publisher: IOP
+    Publishing.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XbarbarossaCO2ConversionCH42013"></a>V.&#x00A0;Barbarossa,   C.&#x00A0;Bassano,   P.&#x00A0;Deiana,   and   G.&#x00A0;Vanga.       CO2
+    Conversion  to  CH4.   In  Marcello&#x00A0;De  Falco,  Gaetano  Iaquaniello,  and
+    Gabriele Centi, editors, <span 
+class="ecti-1000">CO2: A Valuable Source of Carbon</span>, Green Energy
+    and Technology, pages 123&#8211;145, London, 2013. Springer.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XboltCriticalReviewSynthetic2020"></a>Andre  Bolt,  Ibrahim  Dincer,  and  Martin  Agelin-Chaab.   A  Critical
+    Review of Synthetic Natural Gas Production Techniques and Technologies.
+    <span 
+class="ecti-1000">Journal of Natural Gas Science and Engineering</span>, page 103670, October
+    2020.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XbraunsAlkalineWaterElectrolysis2020"></a>JÃ<span 
+class="cmsy-10">¶</span>rn Brauns and Thomas Turek. Alkaline Water Electrolysis Powered
+    by  Renewable  Energy:  A  Review.   <span 
+class="ecti-1000">Processes</span>,  8(2):248,  February  2020.
+    Number: 2 Publisher: Multidisciplinary Digital Publishing Institute.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XdandreaSynergiesOffshoreEnergy2021"></a>Matteo  DAndrea,  Mario&#x00A0;Garzon  Gonzalez,  and  Russell  McKenna.
+    Synergies   in   offshore   energy:   a   roadmap   for   the   Danish   sector.
+    <span 
+class="ecti-1000">arXiv:2102.13581 [physics]</span>, February 2021. arXiv: 2102.13581.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XeftekhariFVToolFiniteVolume2015b"></a>A.&#x00A0;A. Eftekhari and K.&#x00A0;SchÃ&#338;ller. <span 
+class="ecti-1000">FVTool: a finite volume toolbox for</span>
+    <span 
+class="ecti-1000">Matlab</span>. 2015.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XeftekhariSimulkadeStorageFirst2021"></a>Ali&#x00A0;A Eftekhari.   simulkade/storage: The first release for the ECOS
+    2021 conference, March 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XeftekhariQuantifyingRoleLiquid2020"></a>Ali&#x00A0;Akbar Eftekhari. Quantifying the role of liquid hydrocarbons in the
+    current and future energy balance of a self-sufficient Denmark. In <span 
+class="ecti-1000">The 33rd</span>
+    <span 
+class="ecti-1000">International  Conference  on  Efficiency,  Cost,  Optimization,  Simulation</span>
+    <span 
+class="ecti-1000">and Environmental Impact of Energy Systems, Osaka, Japan</span>, Osaka, Japan,
+    July 2020.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XeftekhariExergyAnalysisUnderground2012f"></a>Ali&#x00A0;Akbar  Eftekhari,  Hedzer  Van  Der&#x00A0;Kooi,  and  Hans  Bruining.
+    Exergy analysis of underground coal gasification with simultaneous storage
+    of carbon dioxide. <span 
+class="ecti-1000">Energy</span>, 45(1):729&#8211;745, 2012. Publisher: Elsevier.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XelnashaieSimulationOptimizationIndustrial1988"></a>Said&#x00A0;S.   Elnashaie,   Mohamed&#x00A0;E.   Abashar,   and   Abdulrahman&#x00A0;S.
+    Al-Ubaid.  Simulation and optimization of an industrial ammonia reactor.
+    <span 
+class="ecti-1000">Industrial &amp; Engineering Chemistry Research</span>, 27(11):2015&#8211;2022, November
+    1988. Publisher: American Chemical Society.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xer-rbibModellingSimulationMethanation2013"></a>Hanaa  Er-rbib  and  Chakib  Bouallou.   Modelling  and  simulation  of
+    methanation catalytic reactor for renewable electricity storage.  <span 
+class="ecti-1000">Chemical</span>
+    <span 
+class="ecti-1000">engineering transactions</span>, 2013.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [19]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XfreiMethanolHydrogenCarrier2020b"></a>Matthias&#x00A0;S.  Frei,  Cecilia  Mondelli,  Marion  I.&#x00A0;M.  Short,  and  Javier
+    PÃ<span 
+class="cmsy-10">©</span>rez-RamÃrez.      Methanol   as   a   Hydrogen   Carrier:   Kinetic   and
+    Thermodynamic Drivers for its CO2-Based Synthesis and Reforming over
+    Heterogeneous  Catalysts.   <span 
+class="ecti-1000">ChemSusChem</span>,  13(23):6330&#8211;6337,  December
+    2020. Publisher: John Wiley &amp; Sons, Ltd.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XgardnerHydrogenProductionRenewables2009"></a>Dale  Gardner.   Hydrogen  production  from  renewables.   <span 
+class="ecti-1000">Renewable</span>
+    <span 
+class="ecti-1000">Energy Focus</span>, 9(7):34&#8211;37, January 2009.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XghaibPowertoMethaneStateoftheartReview2018"></a>Karim  Ghaib  and  Fatima-Zahrae  Ben-Fares.   Power-to-Methane:  A
+    state-of-the-art  review.     <span 
+class="ecti-1000">Renewable  and  Sustainable  Energy  Reviews</span>,
+    81:433&#8211;446, January 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [22]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XgibescuEstimationVariabilityPredictability2009"></a>Madeleine Gibescu, Arno&#x00A0;J. Brand, and Wil&#x00A0;L. Kling.  Estimation of
+    variability                    and                    predictability                    of
+    large-scale wind energy in The Netherlands. <span 
+class="ecti-1000">Wind Energy</span>, 12(3):241&#8211;260,
+    2009. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/we.291.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [23]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XgranovskiiExergeticLifeCycle2007"></a>Mikhail Granovskii, Ibrahim Dincer, and Marc&#x00A0;A. Rosen.  Exergetic
+    life cycle assessment of hydrogen production from renewables.  <span 
+class="ecti-1000">Journal of</span>
+    <span 
+class="ecti-1000">Power Sources</span>, 167(2):461&#8211;471, May 2007.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [24]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XguerraMethaneProductionCombined2018"></a>L.&#x00A0;Guerra,  S.&#x00A0;Rossi,  J.&#x00A0;Rodrigues,  J.&#x00A0;Gomes,  J.&#x00A0;Puna,  and  M.&#x00A0;T.
+    Santos.    Methane  production  by  a  combined  Sabatier  reaction/water
+    electrolysis  process.    <span 
+class="ecti-1000">Journal  of  Environmental  Chemical  Engineering</span>,
+    6(1):671&#8211;676, February 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [25]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XhagoortFundamentalsGasReservoir1988"></a>Jacques Hagoort. <span 
+class="ecti-1000">Fundamentals of gas reservoir engineering</span>. Elsevier,
+    1988.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [26]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XkeithWhyCaptureCO22009a"></a>David&#x00A0;W. Keith.  Why capture CO2 from the atmosphere?  <span 
+class="ecti-1000">Science</span>,
+    325(5948):1654&#8211;1655,  2009.    Publisher:  American  Association  for  the
+    Advancement of Science.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [27]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XkoponenReviewWaterElectrolysis2015"></a>Joonas  Koponen.     Review  of  water  electrolysis  technologies  and
+    design  of  renewable  hydrogen  production  systems.    2015.    Accepted:
+    2015-04-23T10:08:56Z.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [28]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XlewWindSolarCurtailment2013"></a>Debra Lew, Lori Bird, Michael Milligan, Bethany Speer, Enrico&#x00A0;Maria
+    Carlini, Ana Estanqueiro, Damian Flynn, Emilio Gomez-Lazaro, Hannele
+    Holttinen,  and  Nickie  Menemenlis.      Wind  and  solar  curtailment:
+    International experience and practices. In <span 
+class="ecti-1000">12th International Workshop on</span>
+    <span 
+class="ecti-1000">Large-Scale Integration of Wind Power into Power Systems as well as on</span>
+    <span 
+class="ecti-1000">Transmission Networks for Offshore Wind Power Plants</span>, 2013.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [29]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XloderReactionKineticsCO22020"></a>A.&#x00A0;Loder, M.&#x00A0;Siebenhofer, and S.&#x00A0;Lux.  The reaction kinetics of CO2
+    methanation on a bifunctional Ni/MgO catalyst. <span 
+class="ecti-1000">Journal of Industrial and</span>
+    <span 
+class="ecti-1000">Engineering Chemistry</span>, 85:196&#8211;207, May 2020.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [30]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XluybenDesignControlMethanol2010"></a>William&#x00A0;L.                                                                   Luyben.
+    Design and Control of a Methanol Reactor/Column Process. <span 
+class="ecti-1000">Industrial &amp;</span>
+    <span 
+class="ecti-1000">Engineering Chemistry Research</span>, 49(13):6150&#8211;6163, July 2010.  Publisher:
+    American Chemical Society.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [31]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XmahmoudkhaniLowenergySodiumHydroxide2009"></a>Maryam  Mahmoudkhani  and  David&#x00A0;W.  Keith.   Low-energy  sodium
+    hydroxide recovery for CO2 capture from atmospheric air - Thermodynamic
+    analysis.  <span 
+class="ecti-1000">International Journal of Greenhouse Gas Control</span>, 3(4):376&#8211;384,
+    2009. Publisher: Elsevier.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [32]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XmcqueenCostAnalysisDirect2020"></a>Noah  McQueen,  Peter  Psarras,  Helene  Pilorge,  Simona  Liguori,
+    Jiajun  He,  Mengyao  Yuan,  Caleb&#x00A0;M.  Woodall,  Kourosh  Kian,  Lara
+    Pierpoint,  and  Jacob  Jurewicz.   Cost  Analysis  of  Direct  Air  Capture
+    and Sequestration Coupled to Low-Carbon Thermal Energy in the United
+    States.    <span 
+class="ecti-1000">Environmental  science  &amp;  technology</span>,  54(12):7542&#8211;7551,  2020.
+    Publisher: ACS Publications.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [33]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XmeibomEnergyComesTogether2013"></a>Peter Meibom, Klaus&#x00A0;Baggesen Hilger, Henrik Madsen, and Dorthe
+    Vinther.   Energy  Comes  Together  in  Denmark:  The  Key  to  a  Future
+    Fossil-Free  Danish  Power  System.   <span 
+class="ecti-1000">IEEE Power and Energy Magazine</span>,
+    11(5):46&#8211;55, September 2013. Conference Name: IEEE Power and Energy
+    Magazine.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [34]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xmendoza-hernandezExergyValorizationWater2019"></a>Omar&#x00A0;S.  Mendoza-Hernandez,  Asuka  Shima,  Hiroshige  Matsumoto,
+    Mitsuhiro Inoue, Takayuki Abe, Yoshio Matsuzaki, and Yoshitsugu Sone.
+    Exergy valorization of a water electrolyzer and CO 2 hydrogenation tandem
+    system for hydrogen and methane production. <span 
+class="ecti-1000">Scientific Reports</span>, 9(1):6470,
+    April 2019. Number: 1 Publisher: Nature Publishing Group.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [35]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XmorudAnalysisInstabilityIndustrial1998"></a>John&#x00A0;C. Morud and Sigurd Skogestad.  Analysis of instability in an
+    industrial ammonia reactor. <span 
+class="ecti-1000">AIChE Journal</span>, 44(4):888&#8211;895, 1998. _eprint:
+    https://aiche.onlinelibrary.wiley.com/doi/pdf/10.1002/aic.690440414.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [36]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XozarslanLargescaleHydrogenEnergy2012"></a>Ahmet Ozarslan.  Large-scale hydrogen energy storage in salt caverns.
+    <span 
+class="ecti-1000">International Journal of Hydrogen Energy</span>, 37(19):14265&#8211;14277, October
+    2012.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [37]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XpedersenEnergyStorageTechnologies2019"></a>Allan&#x00A0;SchrÃ&#382;der Pedersen, Rune Christensen, Arghya Bhowmik, and
+    Poul Norby.  Energy storage technologies in a Danish and international
+    perspective. 2019. Publisher: Technical University of Denmark.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [38]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XrosenEnergyExergyAnalyses1995"></a>M.&#x00A0;A.  Rosen.   Energy  and  exergy  analyses  of  electrolytic  hydrogen
+    production. <span 
+class="ecti-1000">International Journal of Hydrogen Energy</span>, 20(7):547&#8211;553, July
+    1995.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [39]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XsankaranarayananEfficiencySustainabilityEnergy2010"></a>Krishnan Sankaranarayanan, Jakob de&#x00A0;Swaan&#x00A0;Arons, and Hedzer&#x00A0;J.
+    Van&#x00A0;der Kooi.  <span 
+class="ecti-1000">Efficiency and sustainability in the energy and chemical</span>
+    <span 
+class="ecti-1000">industries: scientific principles and case studies</span>. Crc Press, 2010.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [40]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XsousaDeepsubsurfaceSulfateReducer2018"></a>Diana&#x00A0;Z. Sousa, Michael Visser, Antonie&#x00A0;H. Van&#x00A0;Gelder, Sjef Boeren,
+    Mervin&#x00A0;M. Pieterse, Martijn&#x00A0;WH Pinkse, Peter&#x00A0;DEM Verhaert, Carsten
+    Vogt, Steffi Franke, and Steffen KÃ&#338;mmel.  The deep-subsurface sulfate
+    reducer Desulfotomaculum kuznetsovii employs two methanol-degrading
+    pathways.   <span 
+class="ecti-1000">Nature  communications</span>,  9(1):1&#8211;9,  2018.   Publisher:  Nature
+    Publishing Group.
+    </p>
+
+    <p class="bibitem" ><span class="biblabel">
+ [41]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XummelsImpactsWindPower2007"></a>Bart&#x00A0;C. Ummels, Madeleine Gibescu, Engbert Pelgrum, Wil&#x00A0;L. Kling,
+    and Arno&#x00A0;J. Brand. Impacts of Wind Power on Thermal Generation Unit
+    Commitment and Dispatch.  <span 
+class="ecti-1000">IEEE Transactions on Energy Conversion</span>,
+    22(1):44&#8211;51, March 2007. Conference Name: IEEE Transactions on Energy
+    Conversion.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [42]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XzivarUndergroundHydrogenStorage2020"></a>Davood  Zivar,  Sunil  Kumar,  and  Jalal  Foroozesh.    Underground
+    hydrogen  storage:  A  comprehensive  review.    <span 
+class="ecti-1000">International  Journal  of</span>
+    <span 
+class="ecti-1000">Hydrogen Energy</span>, September 2020.
+</p>
+    </div>
+ 
+</body></html> 
+
+
+
