@@ -1,803 +1,497 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.10.16)  31 MAY 2021 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.10)  31 MAY 2021 23:36
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**ECOS_2021-subsurface-storage-paper-v03.tex
-(./ECOS_2021-subsurface-storage-paper-v03.tex
-LaTeX2e <2019-10-01> patch level 1
-(./ECOS_2021.cls (c:/texlive/2019/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
-(c:/texlive/2019/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+**/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v03
+(/home/ali/projects/storage/papers/ECOS_2021-subsurface-storage-paper-v03.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (./ECOS_2021.cls (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
-)
-(c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count88
-\calc@Bcount=\count89
-\calc@Adimen=\dimen103
-\calc@Bdimen=\dimen104
-\calc@Askip=\skip43
-\calc@Bskip=\skip44
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count90
-\calc@Cskip=\skip45
-)
-(c:/texlive/2019/texmf-dist/tex/latex/tools/indentfirst.sty
+\calc@Ccount=\count177
+\calc@Cskip=\skip51
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-)
-(c:/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitkv@toks@=\toks14
-\labelindent=\skip46
-\enit@outerparindent=\dimen105
+\labelindent=\skip52
+\enit@outerparindent=\dimen137
 \enit@toks=\toks15
-\enit@inbox=\box27
-\enit@count@id=\count91
-\enitdp@description=\count92
-))
-(c:/texlive/2019/texmf-dist/tex/latex/psnfss/times.sty
+\enit@inbox=\box45
+\enit@count@id=\count178
+\enitdp@description=\count179
+)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-)
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
-
-(c:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-(c:/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen106
-\Gin@req@width=\dimen107
-)
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2019/04/01 v2.17c AMS math features
-\@mathmargin=\skip47
+\Gin@req@height=\dimen138
+\Gin@req@width=\dimen139
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen108
-))
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\ex@=\dimen140
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen109
-)
-(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen141
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count180
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count181
+\leftroot@=\count182
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count183
+\DOTSCASE@=\count184
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
-\big@size=\dimen110
+\Mathstrutbox@=\box46
+\strutbox@=\box47
+\big@size=\dimen142
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
-\dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
+\macc@depth=\count185
+\c@MaxMatrixCols=\count186
+\dotsspace@=\muskip16
+\c@parentequation=\count187
+\dspbrk@lvl=\count188
 \tag@help=\toks18
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
+\row@=\count189
+\column@=\count190
+\maxfields@=\count191
 \andhelp@=\toks19
-\eqnshift@=\dimen111
-\alignsep@=\dimen112
-\tagshift@=\dimen113
-\tagwidth@=\dimen114
-\totwidth@=\dimen115
-\lineht@=\dimen116
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
 \@envbody=\toks20
-\multlinegap=\skip48
-\multlinetaggap=\skip49
+\multlinegap=\skip54
+\multlinetaggap=\skip55
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2855.
-LaTeX Info: Redefining \] on input line 2856.
-)
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(c:/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2019/07/31 v1.22 mathematical typesetting tools
-
-(c:/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
+ (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count105
-\l_MT_multwidth_dim=\dimen117
-\origjot=\skip50
-\l_MT_shortvdotswithinadjustabove_dim=\dimen118
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen119
-\l_MT_above_intertext_sep=\dimen120
-\l_MT_below_intertext_sep=\dimen121
-\l_MT_above_shortintertext_sep=\dimen122
-\l_MT_below_shortintertext_sep=\dimen123
-)
-(c:/texlive/2019/texmf-dist/tex/latex/cite/cite.sty
+\g_MT_multlinerow_int=\count192
+\l_MT_multwidth_dim=\dimen149
+\origjot=\skip56
+\l_MT_shortvdotswithinadjustabove_dim=\dimen150
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen151
+\l_MT_above_intertext_sep=\dimen152
+\l_MT_below_intertext_sep=\dimen153
+\l_MT_above_shortintertext_sep=\dimen154
+\l_MT_below_shortintertext_sep=\dimen155
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-)
-(c:/texlive/2019/texmf-dist/tex/latex/was/gensymb.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+) (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(c:/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
-
-(c:/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
-
-
-(c:/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
-(c:/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(c:/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)
-(c:/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-)
-\@linkdim=\dimen124
-\Hy@linkcounter=\count106
-\Hy@pagecounter=\count107
-
-(c:/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen156
+\Hy@linkcounter=\count193
+\Hy@pagecounter=\count194
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count108
-
-(c:/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
-)
-Package hyperref Info: Hyper figures OFF on input line 4540.
-Package hyperref Info: Link nesting OFF on input line 4545.
-Package hyperref Info: Hyper index ON on input line 4548.
-Package hyperref Info: Plain pages OFF on input line 4555.
-Package hyperref Info: Backreferencing OFF on input line 4560.
+\Hy@SavedSpaceFactor=\count195
+\pdfmajorversion=\count196
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4793.
-\c@Hy@tempcnt=\count109
-
-(c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count197
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5152.
-\XeTeXLinkMargin=\dimen125
-\Fld@menulength=\count110
-\Field@Width=\dimen126
-\Fld@charsize=\dimen127
-Package hyperref Info: Hyper figures OFF on input line 6423.
-Package hyperref Info: Link nesting OFF on input line 6428.
-Package hyperref Info: Hyper index ON on input line 6431.
-Package hyperref Info: backreferencing OFF on input line 6438.
-Package hyperref Info: Link coloring OFF on input line 6443.
-Package hyperref Info: Link coloring with OCG OFF on input line 6448.
-Package hyperref Info: PDF/A mode OFF on input line 6453.
-LaTeX Info: Redefining \ref on input line 6493.
-LaTeX Info: Redefining \pageref on input line 6497.
-\Hy@abspage=\count111
-\c@Item=\count112
-\c@Hfootnote=\count113
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen157
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count198
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+ (/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count199
+\c@Item=\count266
+\c@Hfootnote=\count267
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(c:/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
-\Fld@listcount=\count114
-\c@bookmark@seq@number=\count115
-
-(c:/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Hy@SectionHShift=\skip51
+\Fld@listcount=\count268
+\c@bookmark@seq@number=\count269
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-(c:/texlive/2019/texmf-dist/tex/latex/float/float.sty
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip57
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count116
+\c@float@type=\count270
 \float@exts=\toks22
-\float@box=\box30
+\float@box=\box48
 \@float@everytoks=\toks23
-\@floatcapt=\box31
-)
-(c:/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/10/15 3.35 The Babel package
-
-(c:/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/10/15 3.35 Babel switching mechanism
+\@floatcapt=\box49
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
 )
 Package babel Info: You haven't specified a language. I'll use 'nil'
-(babel)             as the main language. Reported on input line 584.
-
-(c:/texlive/2019/texmf-dist/tex/generic/babel/nil.ldf
-Language: nil 2019/10/15 3.35 Nil language
-
-(c:/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/10/15 3.35 Babel common definitions
-\babel@savecnt=\count117
-\U@D=\dimen128
-
-(c:/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count118
+(babel)             as the main language. Reported on input line 572.
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2020/02/14 3.40 Nil language
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count271
+\U@D=\dimen160
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
 )
-\l@nil=\language85
-))
-(c:/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2019/09/01 v3.3d Customizing captions (AR)
-
-(c:/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen129
-\captionmargin@=\dimen130
-\captionwidth=\dimen131
-\caption@tempdima=\dimen132
-\caption@indent=\dimen133
-\caption@parindent=\dimen134
-\caption@hangindent=\dimen135
+\l@nil=\language7
+)) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen161
+\captionmargin@=\dimen162
+\captionwidth=\dimen163
+\caption@tempdima=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionskip \sbox \@tempboxa {\normalsize \fontsize {10}{12}\selectfont {\bf #1}: #2}\ifdim \wd \@tempboxa >\hsize \normalsize \fontsize {10}{12}\selectfont {\bf #1}: #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1082.
 )
 
-Package caption Warning: Unsupported document class (or package) detected,
-(caption)                usage of the caption package is not recommended.
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
-p \sbox \@tempboxa {\normalsize \fontsize {10}{12}\selectfont {\bf #1}: #2}\ifd
-im \wd \@tempboxa >\hsize \normalsize \fontsize {10}{12}\selectfont {\bf #1}: #
-2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil
- }\fi \vskip \belowcaptionskip .
-\c@caption@flags=\count119
-\c@ContinuedFloat=\count120
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 2
-7.
- (c:/texlive/2019/texmf-dist/tex/latex/psnfss/ot1phv.fd
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 27.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-)
-(./ECOS_2021-subsurface-storage-paper-v03.aux)
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count275
+\l__pdf_internal_box=\box50
+) (./ECOS_2021-subsurface-storage-paper-v03.aux)
 \openout1 = `ECOS_2021-subsurface-storage-paper-v03.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
-
-
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
-
-
-(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <18> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 71.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 71.
-LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 71.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 71.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 75.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 71.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 71.
-
-(c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 75.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen136
-\scratchbox=\box32
-\nofMPsegments=\count122
-\nofMParguments=\count123
+\scratchcounter=\count276
+\scratchdimen=\dimen168
+\scratchbox=\box51
+\nofMPsegments=\count277
+\nofMParguments=\count278
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen137
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
+\MPscratchCnt=\count279
+\MPscratchDim=\dimen169
+\MPnumerator=\count280
+\makeMPintoPDFobject=\count281
 \everyMPtoPDFconversion=\toks25
-) (c:/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(c:/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(c:/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \celsius on input line 71.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 71.
-
+LaTeX Info: Redefining \celsius on input line 75.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 75.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 71.
-Package gensymb Info: Using \Omega for \ohm on input line 71.
+LaTeX Info: Redefining \ohm on input line 75.
+Package gensymb Info: Using \Omega for \ohm on input line 75.
 
 Package gensymb Warning: Not defining \micro.
 
-\AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 71.
-(c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring OFF on input line 75.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-
-(c:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count282
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
-
-(./ECOS_2021-subsurface-storage-paper-v03.out)
-(./ECOS_2021-subsurface-storage-paper-v03.out)
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
+ (./ECOS_2021-subsurface-storage-paper-v03.out) (./ECOS_2021-subsurface-storage-paper-v03.out)
 \@outlinefile=\write3
 \openout3 = `ECOS_2021-subsurface-storage-paper-v03.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ [1
 
-
-LaTeX Warning: Citation `gibescuEstimationVariabilityPredictability2009' on pag
-e 1 undefined on input line 78.
-
-
-LaTeX Warning: Citation `ummelsImpactsWindPower2007' on page 1 undefined on inp
-ut line 78.
-
-
-LaTeX Warning: Citation `lewWindSolarCurtailment2013' on page 1 undefined on in
-put line 87.
-
-
-LaTeX Warning: Citation `GlobalOffshoreRenewable' on page 1 undefined on input 
-line 92.
-
-
-LaTeX Warning: Citation `meibomEnergyComesTogether2013' on page 1 undefined on 
-input line 97.
-
-
-LaTeX Warning: Citation `pedersenEnergyStorageTechnologies2019' on page 1 undef
-ined on input line 99.
-
-
-LaTeX Warning: Citation `eftekhariFVToolFiniteVolume2015b' on page 1 undefined 
-on input line 128.
-
-[1
-
-{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `eftekhariSimulkadeStorageFirst2021' on page 2 undefine
-d on input line 148.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 2 undefine
-d on input line 151.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 2 undefine
-d on input line 165.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 2 undefine
-d on input line 170.
-
-
-LaTeX Warning: Citation `danishenergyagencyEnergyIslands2021' on page 2 undefin
-ed on input line 172.
-
-
-LaTeX Warning: Citation `dandreaSynergiesOffshoreEnergy2021' on page 2 undefine
-d on input line 172.
-
-<smoothed_surplus.jpg, id=83, 878.28125pt x 658.46pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<smoothed_surplus.jpg, id=98, 878.28125pt x 658.46pt>
 File: smoothed_surplus.jpg Graphic file (type jpg)
 <use smoothed_surplus.jpg>
-Package pdftex.def Info: smoothed_surplus.jpg  used on input line 203.
+Package pdftex.def Info: smoothed_surplus.jpg  used on input line 207.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
-<smoothed_deficit.jpg, id=84, 878.28125pt x 658.46pt>
+<smoothed_deficit.jpg, id=99, 878.28125pt x 658.46pt>
 File: smoothed_deficit.jpg Graphic file (type jpg)
 <use smoothed_deficit.jpg>
-Package pdftex.def Info: smoothed_deficit.jpg  used on input line 203.
+Package pdftex.def Info: smoothed_deficit.jpg  used on input line 207.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 207.
-[2]
-<supply_demand_six_month_dk.jpg, id=97, 878.28125pt x 658.46pt>
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 211.
+ [2]
+<supply_demand_six_month_dk.jpg, id=117, 878.28125pt x 658.46pt>
 File: supply_demand_six_month_dk.jpg Graphic file (type jpg)
 <use supply_demand_six_month_dk.jpg>
-Package pdftex.def Info: supply_demand_six_month_dk.jpg  used on input line 212
-.
+Package pdftex.def Info: supply_demand_six_month_dk.jpg  used on input line 216.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
- [3 <./smoothed_surplus.jpg> <./smoothed_deficit.jpg> <./supply_demand_six_mont
-h_dk.jpg>]
-
-LaTeX Warning: Citation `freiMethanolHydrogenCarrier2020b' on page 4 undefined 
-on input line 293.
-
-
-LaTeX Warning: Citation `ghaibPowertoMethaneStateoftheartReview2018' on page 4 
-undefined on input line 293.
-
-
-LaTeX Warning: Citation `guerraMethaneProductionCombined2018' on page 4 undefin
-ed on input line 293.
-
-
-LaTeX Warning: Citation `koponenReviewWaterElectrolysis2015' on page 4 undefine
-d on input line 293.
-
-
-LaTeX Warning: Citation `mendoza-hernandezExergyValorizationWater2019' on page 
-4 undefined on input line 293.
-
-<ammonia_cryogenic.jpg, id=111, 1467.4825pt x 530.98375pt>
+ [3 <./smoothed_surplus.jpg> <./smoothed_deficit.jpg> <./supply_demand_six_month_dk.jpg>]
+<ammonia_cryogenic.jpg, id=136, 1467.4825pt x 530.98375pt>
 File: ammonia_cryogenic.jpg Graphic file (type jpg)
 <use ammonia_cryogenic.jpg>
-Package pdftex.def Info: ammonia_cryogenic.jpg  used on input line 330.
+Package pdftex.def Info: ammonia_cryogenic.jpg  used on input line 334.
 (pdftex.def)             Requested size: 398.33858pt x 144.12912pt.
-
-LaTeX Warning: Citation `sankaranarayananEfficiencySustainabilityEnergy2010' on
- page 4 undefined on input line 343.
-
-
-LaTeX Warning: Citation `keithWhyCaptureCO22009a' on page 4 undefined on input 
-line 354.
-
-
-LaTeX Warning: Citation `mahmoudkhaniLowenergySodiumHydroxide2009' on page 4 un
-defined on input line 354.
-
-
-LaTeX Warning: Citation `internationalenergyagencyDirectAirCapture' on page 4 u
-ndefined on input line 359.
-
-[4 <./ammonia_cryogenic.jpg>]
-
-LaTeX Warning: Citation `DirectAirCapture2021' on page 5 undefined on input lin
-e 365.
-
-
-LaTeX Warning: Citation `mcqueenCostAnalysisDirect2020' on page 5 undefined on 
-input line 365.
-
-
-LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 5 undefined on 
-input line 406.
-
-
-LaTeX Warning: Citation `gardnerHydrogenProductionRenewables2009' on page 5 und
-efined on input line 408.
-
-
-LaTeX Warning: Citation `ozarslanLargescaleHydrogenEnergy2012' on page 5 undefi
-ned on input line 408.
-
-
-LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 5 undefined on 
-input line 412.
-
-
-LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 5 undefined on 
-input line 414.
-
-
-LaTeX Warning: Citation `rosenEnergyExergyAnalyses1995' on page 5 undefined on 
-input line 416.
-
-
-LaTeX Warning: Citation `braunsAlkalineWaterElectrolysis2020' on page 5 undefin
-ed on input line 423.
-
-
-LaTeX Warning: Citation `babicCriticalReviewIdentifying2017' on page 5 undefine
-d on input line 424.
-
-
-LaTeX Warning: Citation `granovskiiExergeticLifeCycle2007' on page 5 undefined 
-on input line 427.
-
-
-LaTeX Warning: Citation `ozarslanLargescaleHydrogenEnergy2012' on page 5 undefi
-ned on input line 433.
-
-
-LaTeX Warning: Citation `zivarUndergroundHydrogenStorage2020' on page 5 undefin
-ed on input line 433.
-
-
-LaTeX Warning: Citation `ozarslanLargescaleHydrogenEnergy2012' on page 5 undefi
-ned on input line 436.
-
-
-LaTeX Warning: Citation `OrstedTakesFinal' on page 5 undefined on input line 44
-5.
-
-[5]
-
-LaTeX Warning: Citation `boltCriticalReviewSynthetic2020' on page 6 undefined o
-n input line 484.
-
-
-LaTeX Warning: Citation `boltCriticalReviewSynthetic2020' on page 6 undefined o
-n input line 492.
-
-
-LaTeX Warning: Citation `loderReactionKineticsCO22020' on page 6 undefined on i
-nput line 505.
-
-
-LaTeX Warning: Citation `er-rbibModellingSimulationMethanation2013' on page 6 u
-ndefined on input line 524.
-
-
-LaTeX Warning: Citation `eftekhariExergyAnalysisUnderground2012f' on page 6 und
-efined on input line 531.
-
-<sabatier.png, id=126, 636.33736pt x 152.4897pt>
+ [4 <./ammonia_cryogenic.jpg>] [5]
+<sabatier.png, id=195, 636.33736pt x 152.4897pt>
 File: sabatier.png Graphic file (type png)
 <use sabatier.png>
-Package pdftex.def Info: sabatier.png  used on input line 549.
+Package pdftex.def Info: sabatier.png  used on input line 553.
 (pdftex.def)             Requested size: 341.43306pt x 81.82199pt.
-LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <9> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 552.
-LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 552.
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 6 undefine
-d on input line 552.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 6 undefine
-d on input line 552.
-
-[6]
-
-LaTeX Warning: Citation `elnashaieSimulationOptimizationIndustrial1988' on page
- 7 undefined on input line 565.
-
-
-LaTeX Warning: Citation `morudAnalysisInstabilityIndustrial1998' on page 7 unde
-fined on input line 565.
-
-
-LaTeX Warning: Citation `elnashaieSimulationOptimizationIndustrial1988' on page
- 7 undefined on input line 598.
-
-<haber.png, id=138, 638.50545pt x 98.2872pt>
+ [6]
+<haber.png, id=216, 638.50545pt x 98.2872pt>
 File: haber.png Graphic file (type png)
 <use haber.png>
-Package pdftex.def Info: haber.png  used on input line 602.
+Package pdftex.def Info: haber.png  used on input line 606.
 (pdftex.def)             Requested size: 341.43306pt x 52.55687pt.
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 7 undefine
-d on input line 604.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 7 undefine
-d on input line 604.
-
-
-LaTeX Warning: Citation `luybenDesignControlMethanol2010' on page 7 undefined o
-n input line 614.
-
-
-LaTeX Warning: Citation `sousaDeepsubsurfaceSulfateReducer2018' on page 7 undef
-ined on input line 631.
-
-[7 <./sabatier.png> <./haber.png>]
-<methanol.png, id=148, 656.57295pt x 152.4897pt>
+ [7 <./sabatier.png> <./haber.png>]
+<methanol.png, id=233, 656.57295pt x 152.4897pt>
 File: methanol.png Graphic file (type png)
 <use methanol.png>
-Package pdftex.def Info: methanol.png  used on input line 639.
+Package pdftex.def Info: methanol.png  used on input line 643.
 (pdftex.def)             Requested size: 341.43306pt x 79.29741pt.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 8 undefine
-d on input line 641.
-
-
-LaTeX Warning: Citation `eftekhariQuantifyingRoleLiquid2020' on page 8 undefine
-d on input line 641.
-
-
-LaTeX Warning: Citation `hagoortFundamentalsGasReservoir1988' on page 8 undefin
-ed on input line 701.
-
-
-LaTeX Warning: Citation `al-hussainyApplicationRealGas1966' on page 8 undefined
- on input line 701.
-
-
-LaTeX Warning: Citation `al-hussainyFlowRealGases1966' on page 8 undefined on i
-nput line 701.
-
-[8 <./methanol.png>]
-
-LaTeX Warning: Citation `eftekhariFVToolFiniteVolume2015b' on page 9 undefined 
-on input line 747.
-
-<ammonia_p_hist.jpg, id=157, 878.28125pt x 658.46pt>
+ [8 <./methanol.png>]
+<ammonia_p_hist.jpg, id=252, 878.28125pt x 658.46pt>
 File: ammonia_p_hist.jpg Graphic file (type jpg)
 <use ammonia_p_hist.jpg>
-Package pdftex.def Info: ammonia_p_hist.jpg  used on input line 785.
+Package pdftex.def Info: ammonia_p_hist.jpg  used on input line 789.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
-<ammonia_pressure_harald.jpg, id=158, 2352.79pt x 783.92876pt>
+<ammonia_pressure_harald.jpg, id=253, 2352.79pt x 783.92876pt>
 File: ammonia_pressure_harald.jpg Graphic file (type jpg)
 <use ammonia_pressure_harald.jpg>
-Package pdftex.def Info: ammonia_pressure_harald.jpg  used on input line 793.
+Package pdftex.def Info: ammonia_pressure_harald.jpg  used on input line 797.
 (pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
-[9 <./ammonia_p_hist.jpg>]
-<ammonia_tracer_harald.jpg, id=171, 2352.79pt x 783.92876pt>
+ [9 <./ammonia_p_hist.jpg>]
+<ammonia_tracer_harald.jpg, id=265, 2352.79pt x 783.92876pt>
 File: ammonia_tracer_harald.jpg Graphic file (type jpg)
 <use ammonia_tracer_harald.jpg>
-Package pdftex.def Info: ammonia_tracer_harald.jpg  used on input line 812.
+Package pdftex.def Info: ammonia_tracer_harald.jpg  used on input line 816.
 (pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
- [10 <./ammonia_pressure_harald.jpg> <./ammonia_tracer_harald.jpg>]
-No file ECOS_2021-subsurface-storage-paper-v03.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 882.
-[11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 882.
+ [10 <./ammonia_pressure_harald.jpg> <./ammonia_tracer_harald.jpg>] (./ECOS_2021-subsurface-storage-paper-v03.bbl
+LaTeX Font Info:    Trying to load font information for OMS+phv on input line 4.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 208--213
+[]\OT1/phv/m/n/10 John C. Morud and Sigurd Skogestad.  Analysis of instability in an
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--213
+\OT1/phv/m/n/10 industrial ammonia reactor.  \OT1/phv/m/sl/10 AIChE Journal\OT1/phv/m/n/10 , 44(4):888--895, 1998.  []eprint:
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 886.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 886.
  (./ECOS_2021-subsurface-storage-paper-v03.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 882.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 882.
-Package rerunfilecheck Info: File `ECOS_2021-subsurface-storage-paper-v03.out' 
-has not changed.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 886.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 886.
+Package rerunfilecheck Info: File `ECOS_2021-subsurface-storage-paper-v03.out' has not changed.
 (rerunfilecheck)             Checksum: 406C910088DD6E10A873CA324833F72F;925.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 882.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 886.
  ) 
 Here is how much of TeX's memory you used:
- 9169 strings out of 492167
- 137889 string characters out of 6129158
- 251139 words of memory out of 5000000
- 13357 multiletter control sequences out of 15000+600000
- 29492 words of font info for 70 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 38i,9n,45p,426b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2019/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/u
-hvb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/
-texlive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2019/te
-xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ECOS_2021-subsurface-storage-paper-v03.pdf (11 pages, 825335 
-bytes).
+ 9390 strings out of 483107
+ 146235 string characters out of 5964630
+ 422370 words of memory out of 5000000
+ 24135 multiletter control sequences out of 15000+600000
+ 556431 words of font info for 78 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 41i,9n,42p,456b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on ECOS_2021-subsurface-storage-paper-v03.pdf (12 pages, 838821 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
