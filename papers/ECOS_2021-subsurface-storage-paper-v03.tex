@@ -35,9 +35,7 @@ Denmark,
 aliak@dtu.dk}
 
 \abstract{\normalsize The oil and gas extraction from the Danish sector of the North Sea
-has been declining, which will lead to the cessation of production
-and abandonment (i.e., plugging of the wells and removal of the facilities).
-Simultaneously, the existing and in development offshore windmills
+will soon end. Simultaneously, the existing and in development offshore windmills
 in the North Sea will ensure the availability of abundant and cheap
 electricity in the region yet fail to address the intermittent nature
 of the wind resources. This paper hypothesizes that the surplus electricity
@@ -66,8 +64,8 @@ address the wind energy fluctuation. However, depending on the future supply of 
 a large energy loss in the process should be expected. Several technical problems regarding 
 the electrolysis capacity, hydrogen turbines, and efficiency of compressors need to be addressed. 
 Moreover, the estimated discharge rate from the subsurface storage can be too slow for addressing 
-urgent surges of the electricity demand. Offshore subsurface storage seems to be a solution 
-for the storage of chemicals to be used as transport fuel or raw materials. 
+urgent surges of the electricity demand. Offshore subsurface storage seems to be a more suitable solution 
+for the storage of chemicals to be used as transport fuel or raw materials that do not require high discharge rates. 
 }
 
 \keywords{\normalsize Thermodynamic analysis, Electricity to fuel, energy storage, Energy transition}
@@ -127,36 +125,55 @@ simulator. The simulation results are used for the sizing of process
 equipment and the calculation of required platform area. The thermodynamic
 analysis quantifies the exergy loss during the conversion of electricity
 to fuel and back, and storage/extraction of chemical energy in the
-reservoirs based on the results of an in-house opensource dynamic
-model that simulates the multicomponent non-isothermal flow of fluids
+reservoirs based on the results of an in-house open-source dynamic
+model that simulates the multi-component non-isothermal flow of fluids
 in the subsurface \cite{eftekhariFVToolFiniteVolume2015b}.
 
 There are three major questions that will be answered in this work.
-First, how much energy storage is needed in Denmark? Secondly, to
-what extent can the subsurface storage be helpful in addressing the
+First, how much energy storage is needed in Denmark? This question is answered by 
+quantifying the gap between the estimated future renewable electricity supply and demand. 
+The answer helps to estimate the subsurface space required to address the intermittency 
+issue of the wind electricity but does not discuss the expected dynamics of the storage process, 
+i.e., the charge and discharge rate of the storage system. This leads to the second question that 
+is answered here: to what extent can the subsurface storage be helpful in addressing the
 intermittency of the renewable electricity? Thirdly, what are the
 promising technologies from a technical point of view? This paper
 will provide simple, reproducible, and realistic procedures and quantitative
-answers to these questions.
+answers to these questions. There are several major projects that have investigated the feasibility and 
+associated risks of storing energy in the subsurface \cite{bauerImpactsUseGeological2013,
+bauerQuantifyingInducedEffects2015a} both onshore and offshore. Among these projects, the storage 
+of hydrogen has gained considerable attention \cite{hassanpouryouzbandOffshoreGeologicalStorage2021}. 
+These investigations, however, are focused on the technical aspects of the subsurface fuel storage using the 
+so-called thermo-hydro-mechanical-chemical (THMC) models, both experimentally and theoretically. 
+There is no work that deals with the dynamics of the subsurface flow of fluids 
+with the fluctuating supply and demand side of the energy network, which can lead to 
+considerable loss of efficiency. The current work provide a preliminary answer to 
+these concerns.
 
 \sffamily \section{Future energy need of Denmark}
 \normalsize
 
-The current plan is to quadruple the current
-electricity production capacity of the windmills in the North Sea. Since the
+The current plan for the developments of the wind farms in the North Sea 
+is to quadruple the existing capacity of electricity production. Since the
 capacity is not equal to the actual produced electricity (due to,
-e.g. technical problems, curtailment, weather conditions, etc.) we
+e.g. technical problems, curtailment, weather conditions, etc.) I
 will estimate the intermittent electricity production of the windmills
-by quadrupling the current electricity production in Denmark that
-is available from Energinet.dk website and also available as a public
+by quadrupling the current electricity production in Denmark. The data
+is available from Energinet.dk website and also as a public
 repository \cite{eftekhariSimulkadeStorageFirst2021}, including several
-Matlab functions for analysis and visualizations. We can also assume that the 
+Matlab functions for data analysis and visualization. One can also assume that the 
 domestic transport and heating will be fully electrified by 2050, which will add 50\% 
-to the current electricity demand \cite{eftekhariQuantifyingRoleLiquid2020}.
+to the current electricity demand \cite{eftekhariQuantifyingRoleLiquid2020}. 
+It must be noted that these two assumptions, used here for the estimation of the 
+future electricity supply and demand, are not written in stone and, in case of political agreements, can be of 
+a temporary nature. The reader is therefore advised to use the outcome of the first section of the 
+paper more cautiously. Even better, the reader can use the provided computer codes to update 
+the assumptions with their own estimations that might be more realistic. The calculation 
+procedure is based on the conservation of energy and thus fundamentally correct. 
 
 Fig. \ref{fig:Electricity-surplus-smooth} shows the electricity supply
 and demand from May 2020 to January 2021 (left) and for the same period
-in 2050 (right). We can use Eq. (\ref{eq:average-energy-demand})
+in 2050 (right). One can use Eq. (\ref{eq:average-energy-demand})
 to integrate the data and obtain the average energy supply and demand
 over different periods of time, i.e. from 24 hours to nine month,
 as shown in Fig. \ref{eq:average-energy-demand}:
@@ -171,11 +188,11 @@ e.g.
 \begin{equation}
 E_{future}=\lambda_{i}E_{current},\quad i=s,\,d\label{eq:demand-adjust}
 \end{equation}
-where $\lambda_{d}=1.5$ denotes a 50\% in electricity demand \cite{eftekhariQuantifyingRoleLiquid2020}
-and $\lambda_{s}=4.0$ denotes a 400\% increase of windmill capacity
+where $\lambda_{d}=1.5$ denotes a 50\% increase of the electricity demand \cite{eftekhariQuantifyingRoleLiquid2020}
+and $\lambda_{s}=4.0$ denotes a 400\% increase of wind electricity capacity
 in Denmark \cite{danishenergyagencyEnergyIslands2021,dandreaSynergiesOffshoreEnergy2021}.
 Note that this increase will be on the offshore sector only; however,
-here we assume that the overall wind energy capacity will increase
+here I assume that the overall wind energy capacity will increase
 by a factor of four. The other assumption in Eq. (\ref{eq:demand-adjust})
 is that the weather (more specifically, wind) in 2050 will be similar
 to the weather condition in 2020. The visualized energy supply and
@@ -186,7 +203,8 @@ The alternation between surplus and shortage can occur within a few
 hours to few weeks. This is better visualized in Fig. \ref{fig:Average-electricity-supply}
 that shows the average surplus and shortage for periods of 24 hours
 to 8 months. It can be observed that after around six months, the
-average surplus and shortage reach a constant value. This plot unveils
+average surplus and shortage reach a constant value. Repeating the calculations 
+for different periods of 2019 and 2020 produced the same results. This plot unveils
 three critical pieces of information about the wind electricity supply
 and demand in 2050: first, the average shortage of electricity is
 1.6 GW, which is a large amount of power and gives an indication of
@@ -200,7 +218,10 @@ technology, i.e.
 \eta_{storage}>\frac{\text{Average shortage}}{\text{Average surplus}}=0.72.
 \]
 This means that the efficiency of the storage technology must be higher
-than 72\%.
+than 72\%. As was discussed in the previous section, this value is based on a number of 
+assumptions and estimations that are uncertain. One can utilize the provided computer codes 
+to recalculate this constraint with adjusted and perhaps more certain values for the future 
+supply and demand of electricity.
 
 \begin{figure}[H]
 \centering
@@ -216,8 +237,9 @@ by area plot.}
 \includegraphics[width=8cm]{supply_demand_six_month_dk}
 
 \caption{\label{fig:Average-electricity-supply}Average electricity supply
-and demand for Denmark adjusted for May 2050 to January 2051; see
-Eq. (\ref{eq:average-energy-demand})}
+and demand for Denmark adjusted for May 2050 to January 2051; the averaging is done using 
+Eq. (\ref{eq:average-energy-demand}) by keeping the starting time fixed at May 2050 and averaging over 
+gradually extending periods of time until reaching a non-fluctuating value.}
 \end{figure}
 
 Although the previous analysis provides the average storage value,
@@ -233,16 +255,20 @@ These values are critical in the design of the storage and recuperation
 processes. The sizing of the required equipment and sub-processes
 will be discussed in the next sections. 
 
-We end this section by estimating the subsurface volume that is required
+I end this section by estimating the subsurface volume that is required
 to store enough energy to cover for a eight month energy shortage.
 Table \ref{tab:Exergy-value-efficiency} shows the exergy per unit
 mole of different energy storage media that are studied in this paper.
 Exergy, $ex_{i}$ {[}kJ/mol{]} is the amount of energy in a system
 that can be converted to mechanical work, i.e. movement. The maximum
 efficiency of producing each medium, $\eta_{i}$, is also reported
-in Table \ref{tab:Exergy-value-efficiency}. For these calculations,
-we need to have the density of the stored fluids at reservoir conditions,
-$T_{res}$ {[}K{]} and $p_{res}$ {[}bar{]}. We used the typical reservoir
+in Table \ref{tab:Exergy-value-efficiency}. These values represent the 
+highest efficiency of the state of the art technology for producing each chemical 
+from the dead state in an electricity-driven process. For air, we assumed that the 
+atmospheric air can be directly utilized without further treatments, thus the
+efficiency factor of 100\%. For these calculations,
+one needs to have the density of the stored fluids at the reservoir conditions,
+$T_{res}$ {[}K{]} and $p_{res}$ {[}bar{]}. I used the typical reservoir
 conditions of the chalk fields in the Danish sector of the North Sea,
 i.e. 70$^{o}$C and 200 bar. The volume of the reservoir is calculated
 by
@@ -294,16 +320,18 @@ Air & 733.5 & 22.0 & 59.89 & 1.0\tabularnewline
 
 The conversion of electricity to carbon-neutral fuels, known as power2x,
 p2x, e-refinery, and several other names, is a topic that is extensively
-studied, e.g. \cite{freiMethanolHydrogenCarrier2020b,ghaibPowertoMethaneStateoftheartReview2018,guerraMethaneProductionCombined2018,koponenReviewWaterElectrolysis2015,mendoza-hernandezExergyValorizationWater2019}.
+studied, e.g. \cite{freiMethanolHydrogenCarrier2020b,
+ghaibPowertoMethaneStateoftheartReview2018,guerraMethaneProductionCombined2018,
+koponenReviewWaterElectrolysis2015,mendoza-hernandezExergyValorizationWater2019}.
 To produce a carbon-neutral fuel, the raw material for the production
 of the synthetic fuels must come from the dead state, i.e. atmosphere
 and sea water. The dead state refers to the average composition of
 the atmosphere, Earth's crust, and oceans that theoretically does
-not have any potential to do work. Here, we consider the production
+not have any potential to do work. Here, I consider the production
 of hydrogen, ammonia, methane, and methanol. The raw material for
 the production of these fuels are air and seawater and the only driving
 force for the production processes is the surplus electricity from
-the windfarms. From the atmosphere, nitrogen and carbon dioxide need
+the wind farms. From the atmosphere, nitrogen and carbon dioxide need
 to be separated. From the seawater, hydrogen will be extracted via
 an electrolysis process. These processes are discussed in the next
 section.
@@ -320,13 +348,13 @@ on the difference of their boiling points. Nitrogen is separated from
 the top side of the low pressure column. To liquefy air, a utility
 stream of around -200$^{o}$C is required, that is often provided
 through the sudden expansion of a compressed refrigerant. Therefore,
-the entropy generation is high and the process is exergy intensive.
+the entropy generation is high and the process is exergy-intensive.
 Different values are reported in the literature for the electricity
 consumption per unit mole of separated nitrogen. These values depend
 on the heat integration of the process. The largest value reported
 in the literature is around 15 kJ/mol air distilled. In our simulation,
-we obtained a value of 32 kJ/mol, which is perhaps due to the poor
-heat integration in the simplified simulations; thus, we used the
+I obtained a value of 32 kJ/mol, which is perhaps due to the poor
+heat integration in the simplified simulations; thus, I used the
 value of 15 kJ/mol in our analysis.
 
 \begin{figure}[H]
@@ -378,7 +406,7 @@ are available onshore and it is therefore easier to utilize them as
 close to the source as possible. The other source of carbon is the
 remaining oil and gas in the reservoirs, which can be extracted by,
 e.g. insitu combustion. However, this carbon source is not sustainable
-and we will not consider it. 
+and is not considered further in this study. 
 
 \sffamily \subsection{Hydrogen}
 \normalsize
@@ -536,13 +564,13 @@ $i$, and $\eta_{j}$ {[}-{]} shows the exergetic efficiency \cite{eftekhariExergy
 of the process $j$; $ex_{compression}$ {[}kJ/mol methane{]} denotes
 the exergy requirement for the compression of hydrogen and CO$_{2}$
 to the pressure of the methanation reactor in a multistage compressor.
-Since the reaction is exothermic, we assume that the heat of reaction
+Since the reaction is exothermic, I assume that the heat of reaction
 is sufficient to heat up the reactor to the required temperature of
 673 K. By calculating the compression energy and replacing other efficiency
-factors from the previous sections, we obtain $\eta_{methane}=36\%$.
+factors from the previous sections, I obtain $\eta_{methane}=36\%$.
 This is much lower than the expected value of 72\%. Moreover, since
 this process requires a large footprint for the direct atmospheric
-capture of CO$_{2}$ and electrolysis of water, we do not consider
+capture of CO$_{2}$ and electrolysis of water, I do not consider
 it as a feasible option that can address the intermittency of the
 wind energy in Denmark. It is worth mentioning that this process can
 easily fit on a platform and if both hydrogen and CO$_{2}$ are provided,
@@ -633,7 +661,7 @@ which is estimated to be 40\%.
 
 The subsurface storage of methanol, however, is not advisable since
 methanol can be degraded by the subsurface microorganisms \cite{sousaDeepsubsurfaceSulfateReducer2018}.
-Therefore, we did not include methanol in our subsurface model, although
+Therefore, I did not include methanol in our subsurface model, although
 only the input component name need to be changed in the attached Matlab
 script to estimate the energy efficiency of the subsurface storage
 of methanol (excluding the microbial degradation reactions). 
@@ -649,7 +677,7 @@ of methanol (excluding the microbial degradation reactions).
 \sffamily \section{Subsurface energy storage}
 \normalsize
 Although there are several reservoirs that can be used for the storage
-of energy, we can divide them into two main groups of sandstone reservoir
+of energy, I can divide them into two main groups of sandstone reservoir
 (e.g. Harald West) and chalk reservoirs (e.g. Halfdan). Harald West
 is a sandstone gas reservoir at a depth of approximately 3500 m and
 a temperature of 135$^{o}$C. The porosity of the reservoir is 0.17
@@ -658,16 +686,16 @@ of the two high permeable layers (9 and 54 mD) is approximately 100
 m. The Halfdan chalk reservoir is 2000 m deep with an average porosity
 of 0.31 and an average permeability of 3 mD. The wells in Harald West
 are vertical and the chalk fields are typically producing through
-long horizontal wells. In the case of a the vertical wells, we assume
+long horizontal wells. In the case of a the vertical wells, I assume
 a thickness of 100 m for the reservoir, which means that a radius
 of 100 to 1000 m around the well will be utilized as the fuel storage
 space. For the longer horizontal wells, a smaller area around the
-well is required for the energy storage. We assume a well diameter
+well is required for the energy storage. I assume a well diameter
 of 5'' for all the energy storage and production wells. 
 
 \sffamily \subsection{Problem formulation}
 \normalsize
-We assume a gas reservoir represented
+I assume a gas reservoir represented
 as a cylindrical domain. The top and bottom of the reservoir are closed,
 i.e. no flow, and the outskirt of the domain can either be closed
 or at hydrostatic pressure. The top side of the reservoir is located
@@ -692,13 +720,13 @@ is the bottom hole pressure and $\Delta p_{pipe}$ {[}Pa{]} is the
 pressure drop in the pipe that is calculated by the ``pipe'' unit
 in the software Aspen Plus.
 
-We assume that for 2 months from 1st of October to 1st of December
+I assume that for 2 months from 1st of October to 1st of December,
 we only store the fluids in the subsurface (when surplus electricity
 is available) and after that storage period, depending on the electricity
-supply and demand we will have storage or production phases. The produced
+supply and demand, we will have storage or production phases. The produced
 fluid from the reservoir is used for the supply of the electricity
-shortage; therefore, the withdrawal rate is determined by the electricity
-shortage. If the withdrawal rate is too high, the reservoir might
+shortage; therefore, the discharge rate is determined by the electricity
+shortage. If the discharge rate is too high, the reservoir might
 not have enough driving force to produce the requested flow. In these
 situations, the bottom hole pressure becomes negative and the program
 produces an error. A better approach is to estimate the maximum productivity
@@ -709,16 +737,16 @@ This approach is not currently implemented.
 \sffamily \subsection{Subsurface storage model}
 \normalsize
 For the storage of the synthetic fuels in the gas
-reservoirs, we use a single-phase multi-component flow formulation.
+reservoirs, I use a single-phase multi-component flow formulation.
 The storage of gas in the water flooded reservoirs is not a good idea
 since most of the gas will be trapped by capillary forces, and therefore
 will be permanently stored. It is possible to dry out the reservoir
 and prepare it for the gas injection by, e.g. injection of superheated
 steam or hot gases. However, it will require large amounts of energy
 and can potentially create thermally-induced fractures in the reservoir.
-We will therefore consider only the gas reservoirs for the storage
-of gaseous phase energy careers. For the liquid phase, we will use
-both gas and oil reservoirs. In both cases, we will include the compressibility
+I will therefore consider only the gas reservoirs for the storage
+of gaseous phase energy careers. For the liquid phase, I will use
+both gas and oil reservoirs. In both cases, I will include the compressibility
 of the fluids in the model as it is a major contributing driving force
 in the extraction of the fluids from the reservoir.
 
@@ -747,9 +775,9 @@ are functions of the fuel concentration. As discussed before, the
 injection rate in the well is a function of the supplied electricity
 that is obtained by the real surplus electricity data of 2020 adjusted
 for 2050. The above equations are solved numerically with the finite
-volume method. We performed the discretizition in the free Matlab
+volume method. I performed the discretizition in the free Matlab
 software package FVTool \cite{eftekhariFVToolFiniteVolume2015b} in
-a two-dimensional axisymmetric (i.e. cylindrical) coordinate. We used
+a two-dimensional axisymmetric (i.e. cylindrical) coordinate. I used
 different permeability fields, including higher permeability near
 the wellbore region. A version with the possibility of adding fracture
 is also implemented.
@@ -757,15 +785,15 @@ is also implemented.
 
 \sffamily \section{Results and discussion}
 \normalsize
-In this section, we discuss the results of the ammonia storage in the Harald West field. A radius of 20
+In this section, I discuss the results of the ammonia storage in the Harald West field. A radius of 20
 m around the well is stimulated to obtain a permeability 100 times
 higher than the average permeability of the reservoir. This stimulation
 is necessary for the injection of the large flow rates that are required
-for the storage of energy in MW to GW scales. The withdrawal from
+for the storage of energy in MW to GW scales. The withdrawal (or discharge) from
 the reservoir starts on 1st of December 2050 whenever there is an
 electricity shortage. The production rate is adjusted such that the
 bottom hole pressure is high enough, i.e. it can overcome the pressure
-drop in the well. We assume
+drop in the well. I assume
 that 100 MW of the surplus electricity is provided to the ammonia
 production and storage unit in Harald West.
 As can be seen in Fig. \ref{fig:Bottom-hole-pressure-NH3}, the injection
@@ -775,7 +803,7 @@ is between 200 to 350 bar, which can create geomechanical failure
 in the reservoir and needs to be further investigated. Once again,
 the production rate is controlled by the low permeability of the reservoir
 as can be seen in Fig. \ref{fig:Pressure-profile-NH3}. To avoid a
-negative bottom hole pressure in the simulations, we imposed a withdrawal
+negative bottom hole pressure in the simulations, I imposed a discharge
 rate limit that is 20\% of the maximum injection rate during the storage
 phase. With this limit, the efficiency of the electricity production
 (assuming an efficiency of 60\% for the conversion of ammonia to electricity)
@@ -806,7 +834,7 @@ of injection and production. Ammonia has diffused to a 300 m radius
 around the well. Considering only the areas with a lower pressure
 as non-reproducible zones and by integrating the concentration of
 ammonia in those zones, an initial loss of 30\% can be expected for
-the injected ammonia. We expect that the synthetic fuel loss in the
+the injected ammonia. One can expect that the synthetic fuel loss in the
 reservoir will not increase significantly and only occurs at the beginning
 of the storage process in which the reservoir is pressurized for the
 future re-production. 
@@ -816,11 +844,11 @@ future re-production.
 \includegraphics[width=14cm]{ammonia_tracer_harald}
 
 \caption{\label{fig:concentration-profile-NH3}The concentration profile of
-ammonia after 4 months of storage and withdrawal in the Harald West
+ammonia after 4 months of storage and discharge in the Harald West
 reservoir}
 \end{figure}
 
-We repeated the simulations for the injection of synthetic fuels into a longer horizontal well; although the pressure
+I repeated the simulations for the injection of synthetic fuels into a longer horizontal well; although the pressure
 profile is different and the pressure fluctuation is significantly
 reduced especially for the stimulated wells, the overall energy efficiency
 remains unchanged. This implies that the subsurface storage of physical
@@ -830,10 +858,10 @@ due to the diffusive nature of flow in a porous medium.
 
 \sffamily \section{Conclusions and suggestions}
 \normalsize
-In this paper, we studied the possibility of the subsurface storage
+In this paper, I studied the possibility of the subsurface storage
 of the future surplus electricity that is produced in the North Sea
 wind farms in the form of synthetic fuels to address the intermittency of the renewable
-wind power. We showed that 
+wind power. I showed that 
 \begin{enumerate}
 \item Any potential energy storage solution must have an energy loss of
 less than 30\%. Currently, only hydropower storage and batteries offer
@@ -858,13 +886,18 @@ of methane and methanol. The production processes can fit easily on
 a platform. 
 \item Ammonia is the most promising fuel by a relatively high synthesis
 efficiency and a low footprint (since it does not require a carbon
-source). We introduced a new design that does not need cryogenic air
+source). I introduced a new design that does not need cryogenic air
 separation and is more suitable for the offshore ammonia production. 
 \item Recuperation of the stored fuel with the desired flow rate is a limiting
 factor in all the studied cases. It reduces the efficiency of energy
 storage to the unfeasible values of 1-2\%. 
 \item A confined subsurface space, e.g. a salt cavern, is a more realistic
 alternative to the fuel storage in the North sea reservoirs.
+\item Another potential use of the reservoir is for the permanent storage of carbon dioxide
+captured from the fossil fuel power plants and other CO$_2$ point sources,
+which can serve as a temporary solution during the green transition period. Moreover, the roll out 
+of smart energy system and their integration with the subsurface energy storage 
+can be investigated in the future.
 \end{enumerate}
 
 \sffamily \section*{Acknowledgment}

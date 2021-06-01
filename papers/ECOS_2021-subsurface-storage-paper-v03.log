@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.10)  31 MAY 2021 23:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.7.10)  1 JUN 2021 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -311,34 +311,34 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 ) (./ECOS_2021-subsurface-storage-paper-v03.aux)
 \openout1 = `ECOS_2021-subsurface-storage-paper-v03.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 75.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 73.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 75.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 73.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count276
@@ -358,19 +358,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \celsius on input line 75.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 75.
+LaTeX Info: Redefining \celsius on input line 73.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 73.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 75.
-Package gensymb Info: Using \Omega for \ohm on input line 75.
+LaTeX Info: Redefining \ohm on input line 73.
+Package gensymb Info: Using \Omega for \ohm on input line 73.
 
 Package gensymb Warning: Not defining \micro.
 
 \AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 75.
+Package hyperref Info: Link coloring OFF on input line 73.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -380,9 +380,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count282
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
  (./ECOS_2021-subsurface-storage-paper-v03.out) (./ECOS_2021-subsurface-storage-paper-v03.out)
 \@outlinefile=\write3
 \openout3 = `ECOS_2021-subsurface-storage-paper-v03.out'.
@@ -391,107 +391,109 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<smoothed_surplus.jpg, id=98, 878.28125pt x 658.46pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<smoothed_surplus.jpg, id=121, 878.28125pt x 658.46pt>
 File: smoothed_surplus.jpg Graphic file (type jpg)
 <use smoothed_surplus.jpg>
-Package pdftex.def Info: smoothed_surplus.jpg  used on input line 207.
+Package pdftex.def Info: smoothed_surplus.jpg  used on input line 228.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
-<smoothed_deficit.jpg, id=99, 878.28125pt x 658.46pt>
+<smoothed_deficit.jpg, id=122, 878.28125pt x 658.46pt>
 File: smoothed_deficit.jpg Graphic file (type jpg)
 <use smoothed_deficit.jpg>
-Package pdftex.def Info: smoothed_deficit.jpg  used on input line 207.
+Package pdftex.def Info: smoothed_deficit.jpg  used on input line 228.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 211.
- [2]
-<supply_demand_six_month_dk.jpg, id=117, 878.28125pt x 658.46pt>
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 232.
+<supply_demand_six_month_dk.jpg, id=123, 878.28125pt x 658.46pt>
 File: supply_demand_six_month_dk.jpg Graphic file (type jpg)
 <use supply_demand_six_month_dk.jpg>
-Package pdftex.def Info: supply_demand_six_month_dk.jpg  used on input line 216.
+Package pdftex.def Info: supply_demand_six_month_dk.jpg  used on input line 237.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
  [3 <./smoothed_surplus.jpg> <./smoothed_deficit.jpg> <./supply_demand_six_month_dk.jpg>]
-<ammonia_cryogenic.jpg, id=136, 1467.4825pt x 530.98375pt>
+<ammonia_cryogenic.jpg, id=142, 1467.4825pt x 530.98375pt>
 File: ammonia_cryogenic.jpg Graphic file (type jpg)
 <use ammonia_cryogenic.jpg>
-Package pdftex.def Info: ammonia_cryogenic.jpg  used on input line 334.
+Package pdftex.def Info: ammonia_cryogenic.jpg  used on input line 362.
 (pdftex.def)             Requested size: 398.33858pt x 144.12912pt.
- [4 <./ammonia_cryogenic.jpg>] [5]
-<sabatier.png, id=195, 636.33736pt x 152.4897pt>
+ [4] [5 <./ammonia_cryogenic.jpg>] [6]
+<sabatier.png, id=210, 636.33736pt x 152.4897pt>
 File: sabatier.png Graphic file (type png)
 <use sabatier.png>
-Package pdftex.def Info: sabatier.png  used on input line 553.
+Package pdftex.def Info: sabatier.png  used on input line 581.
 (pdftex.def)             Requested size: 341.43306pt x 81.82199pt.
- [6]
-<haber.png, id=216, 638.50545pt x 98.2872pt>
+<haber.png, id=219, 638.50545pt x 98.2872pt>
 File: haber.png Graphic file (type png)
 <use haber.png>
-Package pdftex.def Info: haber.png  used on input line 606.
+Package pdftex.def Info: haber.png  used on input line 634.
 (pdftex.def)             Requested size: 341.43306pt x 52.55687pt.
- [7 <./sabatier.png> <./haber.png>]
-<methanol.png, id=233, 656.57295pt x 152.4897pt>
+ [7 <./sabatier.png>]
+<methanol.png, id=236, 656.57295pt x 152.4897pt>
 File: methanol.png Graphic file (type png)
 <use methanol.png>
-Package pdftex.def Info: methanol.png  used on input line 643.
+Package pdftex.def Info: methanol.png  used on input line 671.
 (pdftex.def)             Requested size: 341.43306pt x 79.29741pt.
- [8 <./methanol.png>]
-<ammonia_p_hist.jpg, id=252, 878.28125pt x 658.46pt>
+ [8 <./haber.png> <./methanol.png>]
+Overfull \hbox (6.18904pt too wide) in paragraph at lines 739--752
+[]\OT1/phv/m/n/10 For the storage of the synthetic fuels in the gas reservoirs, I use a single-phase multi-component flow formulation.
+ []
+
+<ammonia_p_hist.jpg, id=255, 878.28125pt x 658.46pt>
 File: ammonia_p_hist.jpg Graphic file (type jpg)
 <use ammonia_p_hist.jpg>
-Package pdftex.def Info: ammonia_p_hist.jpg  used on input line 789.
+Package pdftex.def Info: ammonia_p_hist.jpg  used on input line 817.
 (pdftex.def)             Requested size: 227.62204pt x 170.65302pt.
-<ammonia_pressure_harald.jpg, id=253, 2352.79pt x 783.92876pt>
+[9]
+<ammonia_pressure_harald.jpg, id=269, 2352.79pt x 783.92876pt>
 File: ammonia_pressure_harald.jpg Graphic file (type jpg)
 <use ammonia_pressure_harald.jpg>
-Package pdftex.def Info: ammonia_pressure_harald.jpg  used on input line 797.
+Package pdftex.def Info: ammonia_pressure_harald.jpg  used on input line 825.
 (pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
- [9 <./ammonia_p_hist.jpg>]
-<ammonia_tracer_harald.jpg, id=265, 2352.79pt x 783.92876pt>
+<ammonia_tracer_harald.jpg, id=271, 2352.79pt x 783.92876pt>
 File: ammonia_tracer_harald.jpg Graphic file (type jpg)
 <use ammonia_tracer_harald.jpg>
-Package pdftex.def Info: ammonia_tracer_harald.jpg  used on input line 816.
+Package pdftex.def Info: ammonia_tracer_harald.jpg  used on input line 844.
 (pdftex.def)             Requested size: 398.33858pt x 132.71588pt.
- [10 <./ammonia_pressure_harald.jpg> <./ammonia_tracer_harald.jpg>] (./ECOS_2021-subsurface-storage-paper-v03.bbl
+ [10 <./ammonia_p_hist.jpg> <./ammonia_pressure_harald.jpg> <./ammonia_tracer_harald.jpg>] (./ECOS_2021-subsurface-storage-paper-v03.bbl
 LaTeX Font Info:    Trying to load font information for OMS+phv on input line 4.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 208--213
+ [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 232--237
 []\OT1/phv/m/n/10 John C. Morud and Sigurd Skogestad.  Analysis of instability in an
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--213
+Underfull \hbox (badness 10000) in paragraph at lines 232--237
 \OT1/phv/m/n/10 industrial ammonia reactor.  \OT1/phv/m/sl/10 AIChE Journal\OT1/phv/m/n/10 , 44(4):888--895, 1998.  []eprint:
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 886.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 886.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 919.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 919.
  (./ECOS_2021-subsurface-storage-paper-v03.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 886.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 886.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 919.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 919.
 Package rerunfilecheck Info: File `ECOS_2021-subsurface-storage-paper-v03.out' has not changed.
 (rerunfilecheck)             Checksum: 406C910088DD6E10A873CA324833F72F;925.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 886.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 919.
  ) 
 Here is how much of TeX's memory you used:
- 9390 strings out of 483107
- 146235 string characters out of 5964630
- 422370 words of memory out of 5000000
- 24135 multiletter control sequences out of 15000+600000
+ 9398 strings out of 483107
+ 146491 string characters out of 5964630
+ 422579 words of memory out of 5000000
+ 24138 multiletter control sequences out of 15000+600000
  556431 words of font info for 78 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 41i,9n,42p,456b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,42p,519b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ECOS_2021-subsurface-storage-paper-v03.pdf (12 pages, 838821 bytes).
+Output written on ECOS_2021-subsurface-storage-paper-v03.pdf (13 pages, 842581 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
