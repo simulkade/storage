@@ -1,0 +1,428 @@
+Hour UTC
+Description	
+A date and time (interval), shown in UTC time zone, where the values are valid. 00:00 o\u2019clock is the first hour of a given day interval 00:00 - 00:59 and 01:00 covers the second hour (interval) of the day and so forth. Please note: The naming is based on the length of the interval of the finest grain of the resolution.
+
+Comment	
+Please note that the format shown in the example applies to data download as JSON, XML or fetched through the API and is in accordance with the ISO 8601 standard. The format is slightly different when it is shown on screen or downloaded manually as CSV or XLSX. This is mainly due to readability and consideration for Excel users.
+
+In preview (in the GUI) all timestamps are shown as (display convention) YYYY-MM-DD hh:mmZ e.g. 2017-07-14 08:00Z. The Z will remind viewers that this is UTC.
+
+In download (CSV and XLSX) the date time are exported as YYYY-MM-DD hh:mm e.g. 2017-07-14 08:00. That is without the \u201cT\u201d and the \u201cZ\u201d and the seconds. Excel will recognize it as date-time. The user must remember the convention about time zones.
+
+In download (JSON and XML) the full format is used YYYY-MM-DDThh:mmZ e.g. 2017-07-14T08:00Z.
+
+Name	
+HourUTC
+
+Type	
+datetime
+
+Unit	
+Size	
+17
+
+Example	
+2017-07-14T08:00Z
+
+Format	
+Validation rules	Always full hours, i.e. minutes are 00
+Hour DK
+Description	
+A date and time (interval), shown in Danish time zone, where the values are valid. 00:00 o\u2019clock is the first hour of a given day, interval 00:00 - 00:59, and 01:00 covers the second hour period (interval) of the day and so forth.
+
+Comment	
+On one normal day there will be 24 intervals.
+
+When daylight saving times shifts there will be either 23 or 25 intervals.
+
+Please note that the format shown in the example applies to data download as JSON, XML or fetched through the API and is in accordance with the ISO 8601 standard. The format is slightly different when it is shown on screen or downloaded manually as CSV or XLSX. This is mainly due to readability and consideration for Excel users.
+
+In preview (in the GUI) all timestamps are shown as (display convention) YYYY-MM-DD hh:mm e.g. 2017-07-14 08:00. Please note that is no time zone indicator, showning that this is local (Danish) time.
+
+In download (CSV and XLSX) the date time are exported as YYYY-MM-DD hh:mm e.g. 2017-07-14 08:00. That is without the \u201cT\u201d and the seconds. Excel will recognize it as date-time. The user must remember that this is local (Danish) time.
+
+In download (JSON and XML) the format used is YYYY-MM-DDThh:mm e.g. 2017-07-14T08:00.
+
+Name	
+HourDK
+
+Type	
+datetime
+
+Unit	
+Size	
+17
+
+Example	
+2017-07-14T08:00
+
+Format	
+Validation rules	Always full hours, i.e. minutes are 00
+Price area
+Description	
+DK1 is Jutland and Fyen and DK2 is Zealand and islands
+
+Comment	
+DK1 and DK2 are the standard abbreviation for the two Danish price areas
+
+Name	
+PriceArea
+
+Type	
+string
+
+Unit	
+Size	
+3
+
+Example	
+DK1
+
+Format	
+DK1 | DK2
+
+Validation rules	DK1 or DK2
+Total load
+Description	
+Sum of the consumption incl. transmission loss
+
+Comment	
+Name	
+TotalLoad
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Biomass
+Description	
+Sum of production from power plants with Biomass as main fuel
+
+Comment	
+Name	
+Biomass
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Fossil gas
+Description	
+Sum of production from power plants with fossil gas as main fuel
+
+Comment	
+Name	
+FossilGas
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Fossil hard coal
+Description	
+Sum of production from power plants with Fossil Hard Coal as main fuel
+
+Comment	
+Name	
+FossilHardCoal
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Fossil oil
+Description	
+Sum of production from power plants with fossil oil as main fuel
+
+Comment	
+Name	
+FossilOil
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Hydro power
+Description	
+Sum of production from hydro power plants
+
+Comment	
+Name	
+HydroPower
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Other renewable
+Description	
+Sum of production from power plant with other fuels as main fuel
+
+Comment	
+Name	
+OtherRenewable
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Solar power
+Description	
+Electricity production from Solar power
+
+Comment	
+Name	
+SolarPower
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Waste
+Description	
+Sum of production from power plant with waste as main fuel
+
+Comment	
+Name	
+Waste
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Onshore wind power
+Description	
+Electricity production from onshore wind power
+
+Name	
+OnshoreWindPower
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Offshore wind power
+Description	
+Electricity production from offshore wind power
+
+Name	
+OffshoreWindPower
+
+Type	
+number
+
+Unit	
+MWh per hour
+
+Size	
+9.1
+
+Example	
+184.3
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	>=0
+Exchange continent
+Description	
+Exchange of electricity towards continental Europe
+
+Comment	
+A positive exchange is import of electricity, while a negative is export.
+
+Both DK1 and DK2 are only connected to Germany until 2019, where DK1 also will be connected the the Netherlands through the COBRA connection.
+
+Name	
+ExchangeContinent
+
+Type	
+integer
+
+Unit	
+MWh per hour
+
+Size	
+9
+
+Example	
+15
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	
+Exchange Great Belt
+Description	
+Exchange of electricity over the Great Belt connection between DK1 and DK2
+
+Comment	
+A positive exchange is import of electricity, while a negative is export.
+
+Name	
+ExchangeGreatBelt
+
+Type	
+integer
+
+Unit	
+MWh per hour
+
+Size	
+9
+
+Example	
+15.1
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	
+Exchange Nordic countries
+Description	
+Exchange of electricity towards Norway and Sweden.
+
+Comment	
+A positive exchange is import of electricity, while a negative is export.
+
+DK1 are connected to both Norway and Sweden, DK2 only to Sweden
+
+Name	
+ExchangeNordicCountries
+
+Type	
+integer
+
+Unit	
+MWh per hour
+
+Size	
+9
+
+Example	
+15
+
+Format	
+([0-9]*[,])[0-9]
+
+Validation rules	
